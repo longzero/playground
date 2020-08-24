@@ -1,0 +1,33 @@
+// Compile with command line:
+// sass src/css/styles.scss:docs/css/styles.css
+
+// Use --watch to watch
+// sass src/css/styles.scss:docs/css/styles.css --watch
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
+// The management of the CSS is
+// a mixture of ITCSS and Atomic Design
+
+// SETTINGS
+@import 'partials/variables';
+
+ // TOOLS
+@import 'partials/functions';
+
+// ELEMENTS
+@import 'partials/base';
+
+// OBJECTS
+@import 'partials/layout';
+
+// COMPONENTS
+@import 'partials/site';
+
+// TRUMPS
+@import 'partials/helpers';
+
+// PAGES

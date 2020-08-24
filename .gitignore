@@ -1,0 +1,13 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.cache-loader
+.DS_Store
+.htaccess
+# dist
+node_modules
+npm-debug.log
+wordpress/wp-content/uploads/cache/
+vendor
+wp-config.php
+wp-content/uploads
+yarn-error.log
