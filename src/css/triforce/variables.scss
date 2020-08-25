@@ -1,0 +1,59 @@
+// SITE SETTINGS
+// Used to calculate other variables
+$site-margin: 20px;
+$site-width: 1220px;
+
+
+// BREAKPOINTS
+$breakpoint-android: 360px;
+$breakpoint-iphone: 375px;
+$breakpoint-iphone-plus: 414px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 600px;
+$breakpoint-ipad: 768px;
+$breakpoint-desktop: 991px;
+$breakpoint-ipad-landscape: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-air: 1400px;
+$breakpoint-big: 1600px;
+$breakpoint-hd: 1900px;
+
+$breakpoint-navigation: $breakpoint-air;
+$breakpoint-site-width: $site-width + 2 * $site-margin;
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat:wght@900&display=swap');
+$font-default: 'Maven Pro', sans-serif;
+$font-family: 'Maven Pro', sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+$font-line-height: 1.2;
+$font-size: 17px;
+$font-weight: 400;
+$font-semibold: 600;
+$font-bold: bold;
+
+
+// COLORS
+// Basic colours
+$color-1: #6CB33F; // purple
+
+// Brands
+$color-facebook: #3b5998;
+$color-instagram: #c13584;
+$color-linkedin: #0077b5;
+$color-pinterest: #bd081c;
+$color-spotify: #1db954;
+$color-twitter: #1da1f2;
+$color-youtube: #ff0000;
+
+// Specific colours
+$color-active: $color-1;
+$color-copy: #000;
+$color-footer-background: #19191A;
+$color-footer-box: #2B2B2C;
+$color-footer-font: #fff;
+$color-hover: $color-1;
+$color-link: $color-1;
+
+// OTHER VARIABLES
+$layer-header: 100;

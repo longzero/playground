@@ -2,12 +2,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 body {
   background-color: #fff;
@@ -16,52 +14,41 @@ body {
   font-weight: 400;
   line-height: 1;
   width: 100%;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 a {
   color: #6CB33F;
   cursor: pointer;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 button {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 h2 {
-  font-size: 1.5294117647rem;
-}
-@media (min-width: 768px) {
-  h2 {
-    font-size: 2.4705882353rem;
-  }
-}
+  font-size: 1.5294117647rem; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.4705882353rem; } }
 
 h3 {
-  font-size: 1.5294117647rem;
-}
+  font-size: 1.5294117647rem; }
 
 iframe, img, video {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 p, ul, ol {
   line-height: 1.5;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .container {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1180px;
-  width: 100%;
-}
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

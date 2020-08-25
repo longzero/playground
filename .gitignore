@@ -3,6 +3,7 @@
 .cache-loader
 .DS_Store
 .htaccess
+.sass-cache/
 # dist
 node_modules
 npm-debug.log
