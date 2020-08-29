@@ -36,6 +36,7 @@ $font-bold: bold;
 // COLORS
 // Basic colours
 $color-1: #6CB33F; // purple
+$color-2: #19191A;
 
 // Brands
 $color-facebook: #3b5998;
@@ -48,8 +49,10 @@ $color-youtube: #ff0000;
 
 // Specific colours
 $color-active: $color-1;
+$color-banner-background: $color-2;
+$color-banner-copy: #fff;
 $color-copy: #000;
-$color-footer-background: #19191A;
+$color-footer-background: $color-2;
 $color-footer-box: #2B2B2C;
 $color-footer-font: #fff;
 $color-hover: $color-1;

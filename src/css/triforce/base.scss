@@ -5,6 +5,7 @@
 }
 
 html {
+  font-size: $font-size;
 	scroll-behavior: smooth;
 }
 
@@ -12,6 +13,7 @@ body {
 	background-color: #fff;
 	color: $color-copy;
 	font-family: $font-default;
+  font-size: $font-size;
 	font-weight: $font-weight;
 	line-height: 1.75;
 	width: 100%;

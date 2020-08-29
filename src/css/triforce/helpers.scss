@@ -1,3 +1,16 @@
+.h-desktop {
+  display: none;
+  @media (min-width: $breakpoint-ipad) {
+    display: block;
+  }
+}
+
+.h-mobile {
+  @media (min-width: $breakpoint-ipad) {
+    display: none;
+  }
+}
+
 .h-triangle-top-right {
   border-color: transparent $color-footer-background transparent transparent;
   border-style: solid;
