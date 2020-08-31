@@ -1,6 +1,41 @@
 .container {
-	margin: 0 auto;
-	padding: 0 $site-margin;
-	max-width: $site-width;
-	width: 100%;
+  margin: 0 auto;
+  padding: 0 $site-margin;
+  max-width: $site-width;
+  width: 100%;
+}
+
+.columns {
+  margin-bottom: 50px;
+
+  @media (min-width: $breakpoint-ipad) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+}
+
+.columns--reverse {
+  @media (min-width: $breakpoint-ipad) {
+    flex-direction: row-reverse;
+  }
+}
+
+.column-50 {
+  @media (min-width: $breakpoint-ipad) {
+    flex: 0 0 calc(50% - 20px);
+    width: calc(50% - 20px);
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint-ipad) {
+      margin-bottom: 0;
+    }
+  }
 }
