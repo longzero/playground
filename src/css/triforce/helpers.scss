@@ -1,3 +1,8 @@
+.h-color,
+.h-color-1 {
+  color: $color-1;
+}
+
 .h-desktop {
   display: none;
   @media (min-width: $breakpoint-ipad) {
@@ -5,10 +10,31 @@
   }
 }
 
-.h-mobile {
-  @media (min-width: $breakpoint-ipad) {
-    display: none;
-  }
+.h-font-300 {
+  font-weight: 300;
+}
+
+.h-font-bold {
+  font-weight: bold;
+}
+
+.h-font-heading {
+  font-family: $font-heading;
+  line-height: 1.2;
+}
+
+.h-font-heading-bold {
+  font-family: $font-heading;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.h-font-size-35 {
+  font-size: rem(35);
+}
+
+.h-font-uppercase {
+  text-transform: uppercase;
 }
 
 .h-image-triangle-white-bottom-left {
@@ -41,6 +67,12 @@
   }
   img {
     display: block;
+  }
+}
+
+.h-mobile {
+  @media (min-width: $breakpoint-ipad) {
+    display: none;
   }
 }
 
