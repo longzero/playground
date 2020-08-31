@@ -1,5 +1,25 @@
 "use strict";
 
+const navigation = document.querySelector('.js-site-navigation');
+const navigationToggle = document.querySelector('.js-navigation-toggle');
+
+const navigationLink = document.querySelectorAll('.js-site-navigation > ul > li > a');
+for (let i = 0; i < navigationLink.length; i++) {
+  navigationLink[i].addEventListener('click', function(){
+    if (this.nextSibling) {
+      console.log('has a sibling')
+      document.body.classList.toggle('open-sub-navigation')
+      this.parentNode.classList.toggle('active');
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  })
+}
+
+navigationToggle.addEventListener('click', function(){
+  document.body.classList.toggle('open-navigation')
+})
+
 // --------------------------------------------------------------------------------------------
 // FOR DEVELOPMENT ONLY
 // --------------------------------------------------------------------------------------------

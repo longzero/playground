@@ -20,9 +20,27 @@
   }
 }
 
+.columns-3 {
+  margin-bottom: 50px;
+
+  @media (min-width: $breakpoint-ipad-landscape) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+}
+
 .columns--reverse {
   @media (min-width: $breakpoint-ipad) {
     flex-direction: row-reverse;
+  }
+}
+
+.column-30 {
+  @media (min-width: $breakpoint-ipad-landscape) {
+    flex: 0 0 calc(33% - 20px);
+    width: calc(33% - 20px);
   }
 }
 
@@ -37,9 +55,6 @@
   }
 
   img {
-    margin-bottom: 20px;
-    @media (min-width: $breakpoint-ipad) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 }
