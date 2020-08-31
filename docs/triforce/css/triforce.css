@@ -58,12 +58,19 @@ p, ul, ol {
   line-height: 1.5;
   margin-bottom: 1rem;
 }
+p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
 
 .container {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1220px;
   width: 100%;
+}
+
+.container--small {
+  max-width: 1010px;
 }
 
 .columns {
@@ -477,6 +484,10 @@ p, ul, ol {
   font-size: 2.0588235294rem;
 }
 
+.h-font-size-85 {
+  font-size: 5rem;
+}
+
 .h-font-uppercase {
   text-transform: uppercase;
 }
@@ -511,6 +522,10 @@ p, ul, ol {
 }
 .h-image-triangle-white-bottom-left img {
   display: block;
+}
+
+.h-margin-bottom-20 {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {

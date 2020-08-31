@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.container--small {
+  max-width: $site-width-small;
+}
+
 .columns {
   margin-bottom: 50px;
 

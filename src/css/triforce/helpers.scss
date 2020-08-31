@@ -33,6 +33,10 @@
   font-size: rem(35);
 }
 
+.h-font-size-85 {
+  font-size: rem(85);
+}
+
 .h-font-uppercase {
   text-transform: uppercase;
 }
@@ -68,6 +72,10 @@
   img {
     display: block;
   }
+}
+
+.h-margin-bottom-20 {
+  margin-bottom: 20px;
 }
 
 .h-mobile {
