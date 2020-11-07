@@ -1,0 +1,133 @@
+.site-banner {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site-banner--2 {
+  .site-banner__body {
+    @media (min-width: $breakpoint-ipad) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      max-width: 500px;
+      min-height: 370px;
+
+      &:after {
+        width: 370px;
+      }
+    }
+  }
+}
+
+.site-banner--3 {
+  .site-banner__body {
+    @media (min-width: $breakpoint-ipad) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      max-width: 600px;
+      min-height: 530px;
+
+      &:after {
+        width: 533px;
+      }
+
+      h1 {
+        font-size: rem(55);
+      }
+    }
+  }
+}
+
+.site-banner__body {
+  background-color: $color-banner-background;
+  color: $color-banner-copy;
+  font-family: $font-heading;
+  font-size: rem(35);
+  line-height: 1.2;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-ipad) {
+    display: inline-flex;
+    align-items: center;
+    font-size: rem(45);
+    padding-top: 20px;
+    padding-left: 67px;
+    min-width: 45%;
+    max-width: 50%;
+    min-height: 160px;
+  }
+
+  &::after {
+    @media (min-width: $breakpoint-ipad) {
+      // https://codepen.io/natchiketa/pen/rxqPZz
+      background-image: linear-gradient(to right top, $color-banner-background 0%, $color-banner-background 50%, transparent 50%);
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(100% - 1px);
+      width: 160px;
+      height: 100%;
+    }
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: $font-default;
+    font-size: rem(22);
+    line-height: calc(27 / 22);
+    text-transform: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.site-banner__container {
+  @media (min-width: $breakpoint-ipad) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.site-banner__cta-container {
+  @media (min-width: $breakpoint-ipad) {
+    display: flex;
+  }
+  .button {
+    margin-top: 20px;
+    margin-right: 30px;
+  }
+}
+
+.site-banner__triangle-desktop {
+  display: none;
+  @media (min-width: $breakpoint-ipad) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 1px);
+    height: 100%;
+  }
+}
+
+.site-banner__triangle-mobile {
+  display: block;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  @media (min-width: $breakpoint-ipad) {
+    display: none;
+  }
+}

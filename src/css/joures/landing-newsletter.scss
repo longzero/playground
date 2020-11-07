@@ -1,0 +1,106 @@
+// DIN 2014 Italic
+// font-family: din-2014, sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// DIN 2014 Regular
+// font-family: din-2014, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// DIN 2014 Bold Italic
+// font-family: din-2014, sans-serif;
+// font-weight: 700;
+// font-style: italic;
+
+// DIN 2014 Bold
+// font-family: din-2014, sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// BREAKPOINTS
+$breakpoint-android: 360px;
+$breakpoint-iphone: 375px;
+$breakpoint-iphone-plus: 414px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 600px;
+$breakpoint-ipad: 768px;
+$breakpoint-desktop: 991px;
+$breakpoint-ipad-landscape: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-air: 1400px;
+$breakpoint-big: 1600px;
+$breakpoint-hd: 1900px;
+$color-1: #ffe3d5;
+$color-2: #1f1f1f;
+$font-newsletter: 'din-2014', sans-serif;
+
+.landing-newsletter {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYWxxdWVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgNjUyLjI2IDEwODAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZT4uc3Qwe2ZpbGw6I2ZjYzQ0Zn0uc3Qxe2ZpbGw6I2U1MzgyZX0uc3Qye2ZpbGw6IzFmMWYxZn0uc3Qze2ZpbGw6IzAwMmJjY30uc3Q0e2ZpbGw6I2ZmZTNkNH0uc3Q1e2ZpbGw6IzAwNjk2OX0uc3Q2e2ZpbGw6I2U4ZThlM308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTYuNTQgMTA4LjYxYzAgMzUuMTItMjguNDcgNjMuNi02My42IDYzLjYtMzUuMTIgMC02My42LTI4LjQ3LTYzLjYtNjMuNiAwLTM1LjEyIDI4LjQ3LTYzLjYgNjMuNi02My42IDM1LjEzLjAxIDYzLjYgMjguNDggNjMuNiA2My42Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE5Ni45MiAzMDkuNTJsLTI0LjYxIDI0LjYtMTAzLjM0LTkxLjA0IDM3LjUyLTM3LjUzeiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOTEuMjQgMjY1LjEzYy0zNS4xMiAwLTYzLjYgMjguNDctNjMuNiA2My42aDEyNy4xOWMuMDEtMzUuMTMtMjguNDYtNjMuNi02My41OS02My42Ii8+PHBhdGggY2xhc3M9InN0MyIgZD0iTTIyNi41OCAxMDguNjFoMTI5LjMzdjEyOS4zM0gyMjYuNTh6Ii8+PHBhdGggY2xhc3M9InN0NCIgZD0iTTUxOS43MSAzMzAuMzJINDAzLjY2di0xMjcuMkg1MTkuN2MzNS4xMy4wMiA2My41OCAyOC40NyA2My41OCA2My42LjAxIDM1LjExLTI4LjQ0IDYzLjU4LTYzLjU3IDYzLjYiLz48cGF0aCBjbGFzcz0ic3Q1IiBkPSJNNDcxLjE5IDM1LjUxbC04Mi4yOCAxMjkuMzJoMTY0LjU3eiIvPjxwYXRoIGNsYXNzPSJzdDYiIGQ9Ik0yMzIuNDggMjUuNDloMTY0LjU5djMwLjM4SDIzMi40OHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTk2LjU0IDQ4Mi4wMWMwIDM1LjEyLTI4LjQ3IDYzLjYtNjMuNiA2My42LTM1LjEyIDAtNjMuNi0yOC40Ny02My42LTYzLjZzMjguNDctNjMuNiA2My42LTYzLjZjMzUuMTMuMDEgNjMuNiAyOC40OCA2My42IDYzLjYiLz48cGF0aCBmaWxsPSIjZmY0NzJlIiBkPSJNMTk2LjkyIDY4Mi45MmwtMjQuNiAyNC42LTEwMy4zNS05MS4wNCAzNy41Mi0zNy41M3oiLz48cGF0aCBjbGFzcz0ic3QyIiBkPSJNMjkxLjI0IDYzOC41M2MtMzUuMTIgMC02My42IDI4LjQ3LTYzLjYgNjMuNmgxMjcuMTljLjAxLTM1LjEzLTI4LjQ2LTYzLjYtNjMuNTktNjMuNiIvPjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik0yMjYuNTggNDgyLjAxaDEyOS4zM3YxMjkuMzNIMjI2LjU4eiIvPjxwYXRoIGQ9Ik01MTkuNzEgNzAzLjcySDQwMy42NnYtMTI3LjJINTE5LjdjMzUuMTMuMDIgNjMuNTggMjguNDcgNjMuNTggNjMuNi4wMSAzNS4xMS0yOC40NCA2My41OC02My41NyA2My42IiBmaWxsPSIjZmZlM2JkIi8+PHBhdGggZmlsbD0iI2FkZGVkMSIgZD0iTTQ3MS4xOSA0MDguOTFsLTgyLjI4IDEyOS4zMmgxNjQuNTd6Ii8+PHBhdGggY2xhc3M9InN0NiIgZD0iTTIzMi40OCAzODkuNDZoMTY0LjU5djM5LjhIMjMyLjQ4eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTYuNTQgODMyLjgxYzAgMzUuMTItMjguNDcgNjMuNi02My42IDYzLjYtMzUuMTIgMC02My42LTI4LjQ3LTYzLjYtNjMuNiAwLTM1LjEyIDI4LjQ3LTYzLjYgNjMuNi02My42czYzLjYgMjguNDggNjMuNiA2My42Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTY4Ljk3IDk2Ny4yOGw4NS44MyA3NS42MWgzMi45NWw5LjE3LTkuMTgtOTAuNDMtMTAzLjk2eiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOTEuMjQgOTg5LjMzYy0zNS4xMiAwLTYzLjYgMjguNDctNjMuNiA2My42aDEyNy4xOWMuMDEtMzUuMTMtMjguNDYtNjMuNi02My41OS02My42Ii8+PHBhdGggY2xhc3M9InN0MyIgZD0iTTIyNi41OCA4MzIuODFoMTI5LjMzdjEyOS4zM0gyMjYuNTh6Ii8+PHBhdGggY2xhc3M9InN0NCIgZD0iTTUxOS43MSAxMDU0LjUxSDQwMy42NnYtMTI3LjJINTE5LjdjMzUuMTMuMDIgNjMuNTggMjguNDcgNjMuNTggNjMuNi4wMSAzNS4xMi0yOC40NCA2My41OS02My41NyA2My42Ii8+PHBhdGggY2xhc3M9InN0NSIgZD0iTTQ3MS4xOSA3NTkuN2wtODIuMjggMTI5LjMzaDE2NC41N3oiLz48cGF0aCBjbGFzcz0ic3Q2IiBkPSJNMjMyLjQ4IDc0MC4yNmgxNjQuNTl2MzkuOEgyMzIuNDh6Ii8+PC9zdmc+");
+  background-position: calc(100% + 85px) -70px;
+  background-repeat: repeat-y;
+  font-family: $font-newsletter;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  @media (min-width: $breakpoint-ipad) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.landing-newsletter__content {
+  background-color: rgba(255,255,255,.88);
+  padding: 20px;
+  text-align: center;
+  max-width: 430px;
+  width: 100%;
+  @media (min-width: $breakpoint-ipad-landscape) {
+    margin-left: calc((100% - 350px - 430px) / 2); // Subtract width of background image and content width, then divide the remaining white space by 2 (left and right)
+  }
+  p {
+    font-size: rem(21);
+    line-height: 1.55;
+    margin-bottom: 1em;
+  }
+}
+
+.landing-newsletter-form__button,
+.landing-newsletter-form__input {
+  border: 0;
+  border-radius: 0;
+  font-size: rem(14);
+}
+.landing-newsletter-form {
+  border: 2px solid $color-2;
+  display: flex;
+  margin-top: 50px;
+}
+.landing-newsletter-form__button {
+  background-color: $color-1;
+  color: $color-2;
+  padding: 20px 15px;
+}
+.landing-newsletter-form__input {
+  flex-grow: 1;
+  padding: 20px 18px;
+}
+
+.logo-box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 51px;
+  max-width: 383px;
+  width: 100%;
+  svg {
+    max-width: 100%;
+  }
+}
+
+.sub-line {
+  font-size: rem(25.5);
+  font-weight: bold;
+  margin-bottom: 56px;
+  text-transform: uppercase;
+}

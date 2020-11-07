@@ -1,0 +1,14 @@
+.typography {
+  &.columns {
+    font-size: rem(16);
+  }
+
+  h3 {
+    font-family: $font-heading;
+    text-transform: uppercase;
+
+    span {
+      color: $color-1;
+    }
+  }
+}

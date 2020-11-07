@@ -1,0 +1,92 @@
+.site-navigation {
+  display: none;
+
+  > ul > li {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      > a {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  a {
+    color: #000;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
+  li li {
+    padding: 0 30px;
+    text-align: left;
+
+    &:before {
+      // <svg width="20" height="33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 16.531c.281-.281.281-.75 0-1.062l-4.25-4.25c-.313-.281-.781-.281-1.063 0l-.718.719c-.282.312-.282.78 0 1.062L10 16.031l-3.031 3c-.282.282-.282.75 0 1.063l.718.687c.282.313.75.313 1.063 0l4.25-4.25z" fill="#6CB33F"/></svg>
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzIDE2LjUzMWMuMjgxLS4yODEuMjgxLS43NSAwLTEuMDYybC00LjI1LTQuMjVjLS4zMTMtLjI4MS0uNzgxLS4yODEtMS4wNjMgMGwtLjcxOC43MTljLS4yODIuMzEyLS4yODIuNzggMCAxLjA2MkwxMCAxNi4wMzFsLTMuMDMxIDNjLS4yODIuMjgyLS4yODIuNzUgMCAxLjA2M2wuNzE4LjY4N2MuMjgyLjMxMy43NS4zMTMgMS4wNjMgMGw0LjI1LTQuMjV6IiBmaWxsPSIjNkNCMzNGIi8+PC9zdmc+");
+      background-position: center;
+      content: '';
+      display: inline-block;
+      margin-top: -3px;
+      margin-right: 5px;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    ul {
+      display: none;
+    }
+  }
+
+  .button {
+    color: #fff;
+    display: inline-flex;
+  }
+}
+
+
+.open-navigation {
+  .site-header {
+    background-color: #fff;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  .site-navigation {
+    display: block;
+    padding-top: 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: calc(100% - 90px)
+  }
+}
+
+.open-sub-navigation {
+  .site-navigation {
+    .active {
+      background-color: #fff;
+      padding-top: 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      > a {
+        display: block;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      > ul {
+        display: block;
+      }
+    }
+  }
+}

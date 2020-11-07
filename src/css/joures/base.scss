@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-size: $font-size;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+	color: $color-copy;
+	font-family: $font-default;
+  font-size: $font-size;
+	font-weight: $font-weight;
+	overflow-x: hidden;
+}
+
+a {
+	color: $color-link;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 600;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: rem(26);
+	@media (min-width: $breakpoint-ipad) {
+		font-size: rem(42);
+	}
+}
+
+h3 {
+	font-size: rem(26);
+}
+
+iframe,img,video {
+	max-width: 100%;
+}
+
+p,ul,ol {
+	margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
