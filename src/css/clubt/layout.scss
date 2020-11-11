@@ -3,6 +3,11 @@
   padding: 0 $site-margin;
   max-width: $site-width;
   width: 100%;
+
+  @media (min-width: $breakpoint-site-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .container--small {

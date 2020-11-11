@@ -1,12 +1,38 @@
+// Default values, unless set in CMS
+$site-banner-background-color: transparent;
+$site-banner-background-image: 'no';
+$site-banner-background-image-mobile: 'no';
+$site-banner-button-ghost: 'no';
+$site-banner-copy-color: $color-copy;
+$site-banner-full-width: 'yes';
+$site-banner-new-tab: 'no';
+$site-banner-overlay-opacity: .5;
+$site-banner-video: 'no';
+
+$site-banner-content-alignment: 'left';
+// h-text-center
+// h-text-right
+
+$site-banner-content-alignment-mobile: 'left';
+// h-text-center-mobile
+// h-text-right-mobile
+
+$site-banner-content-position: 'left';
+// site-banner--center
+// site-banner--right
+
+$site-banner-overlap: 'no';
+// site-banner--overlap
+
 .site-banner {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   font-size: rem(17);
-  text-align: center;
+  position: relative;
   height: 628px;
 }
 
@@ -14,6 +40,8 @@
   background-color: #fff;
   line-height: 2;
   padding: 50px;
+  position: relative;
+  z-index: 1;
   max-width: 702px;
 }
 
@@ -40,3 +68,73 @@
   line-height: 1;
   text-transform: uppercase;
 }
+
+
+.site-banner.left {
+  @extend .h-text-left;
+
+  .site-banner__body {
+    @extend .container;
+  }
+
+  .site-banner__delimiter {
+    path {
+      stroke: #fff;
+    }
+  }
+
+  .site-banner__text {
+    max-width: 702px;
+  }
+
+  .site-banner__title {
+    font-size: rem(65);
+  }
+}
+
+
+.site-banner--transparent {
+  @extend .h-overlay;
+
+  .site-banner__body {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .site-banner__delimiter {
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+
+
+// -------------------------------------------------------
+// SITE-BANNER--WHITE-ALIGN-LEFT
+// -------------------------------------------------------
+
+// .site-banner--white-align-left {
+//   background-color: #fff;
+//   text-align: left;
+
+//   .site-banner__body {
+//     @extend .container;
+//     background-color: transparent;
+//     color: #fff;
+//   }
+
+//   .site-banner__delimiter {
+//     path {
+//       stroke: #fff;
+//     }
+//   }
+
+//   .site-banner__text {
+//     max-width: 702px;
+//   }
+
+//   .site-banner__title {
+//     font-size: rem(65);
+//   }
+// }
