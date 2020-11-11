@@ -1,0 +1,99 @@
+.h-color,
+.h-color-1 {
+  color: $color-1;
+}
+
+.h-desktop {
+  display: none;
+  @media (min-width: $breakpoint-ipad) {
+    display: block;
+  }
+}
+
+.h-font-300 {
+  font-weight: 300;
+}
+
+.h-font-bold {
+  font-weight: bold;
+}
+
+.h-font-heading {
+  font-family: $font-heading;
+  line-height: 1.2;
+}
+
+.h-font-heading-bold {
+  font-family: $font-heading;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.h-font-size-35 {
+  font-size: rem(35);
+}
+
+.h-font-size-85 {
+  font-size: rem(85);
+}
+
+.h-font-uppercase {
+  text-transform: uppercase;
+}
+
+.h-image-triangle-white-bottom-left {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    // https://codepen.io/natchiketa/pen/rxqPZz
+    background-image: linear-gradient(to right top, #fff 0%, #fff 50%, transparent 50%);
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+  }
+  &:after {
+    background-image: linear-gradient(90deg, #387C2B 13.32%, #6CB33F 69.92%);
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: translateY(-160px) rotate(45deg);
+    width: 250px;
+    height: 15px;
+  }
+  img {
+    display: block;
+  }
+}
+
+.h-margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.h-mobile {
+  @media (min-width: $breakpoint-ipad) {
+    display: none;
+  }
+}
+
+.h-triangle-top-right {
+  border-color: transparent $color-footer-background transparent transparent;
+  border-style: solid;
+  border-width: 0 82px 82px 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+}
+
+.h-wrap {
+  flex-wrap: wrap;
+}

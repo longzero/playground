@@ -1,0 +1,132 @@
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-box {
+  background-color: $color-footer-box;
+  padding: 30px 40px 30px 20px;
+  position: relative;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-column {
+  list-style: none;
+
+  &:nth-child(n+2) {
+    display: none;
+    padding-left: 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+      padding-top: 30px;
+    }
+  }
+}
+
+.footer-column-item {
+  margin-bottom: .75em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-content {
+  margin-bottom: 45px;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    position: relative;
+
+    &::after {
+      border-bottom: 1px solid #3F3F41;
+      content: '';
+      display: block;
+      margin: 0 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 40px);
+    }
+  }
+}
+
+.footer-copyright {
+  font-size: rem(14);
+  order: 1;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 0;
+  }
+}
+
+.footer-link {
+  color: inherit;
+
+  &:hover {
+    color: $color-link;
+  }
+}
+
+.logo-footer-link {
+  margin-bottom: 27px;
+}
+
+.footer-social,
+.footer-social-link,
+.footer-social-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social {
+  justify-content: center;
+  font-size: rem(14);
+  padding-bottom: 30px;
+}
+
+.footer-social-link {
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 14px;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.site-footer {
+  background-color: $color-footer-background;
+  color: $color-footer-font;
+  padding-top: 30px;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+}

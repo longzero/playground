@@ -1,0 +1,42 @@
+.site-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(17);
+  text-align: center;
+  height: 628px;
+}
+
+.site-banner__body {
+  background-color: #fff;
+  line-height: 2;
+  padding: 50px;
+  max-width: 702px;
+}
+
+.site-banner__button {
+  font-size: rem(16);
+}
+
+.site-banner__delimiter {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.site-banner__prefix {
+  font-size: rem(22);
+}
+
+.site-banner__text {
+  margin-bottom: 30px;
+}
+
+.site-banner__title {
+  font-family: $font-heading;
+  font-size: rem(45);
+  line-height: 1;
+  text-transform: uppercase;
+}
