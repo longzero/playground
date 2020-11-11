@@ -48,7 +48,7 @@ $site-banner-overlap: 'no';
   align-items: center;
   font-size: rem(17);
   position: relative;
-  height: 628px;
+  min-height: 628px;
 }
 
 .site-banner__body {
@@ -147,10 +147,53 @@ $site-banner-overlap: 'no';
   }
 }
 
+
+
 .site-banner--overlap.site-banner--content-position-center {
   background-position: center;
 }
 
+
+
 .site-banner--overlap.site-banner--content-position-right {
   background-position: 0 center;
+}
+
+
+
+.site-banner--solid-background {
+  background-size: auto calc(100% - 88px); // Faking padding top and bottom
+
+  &:after {
+    background-color: $color-7;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 70%;
+    height: 100%;
+  }
+
+  .site-banner__body {
+    background-color: #fff;
+  }
+}
+
+
+
+.site-banner--solid-background.site-banner--content-position-center {
+  &:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.site-banner--solid-background.site-banner--content-position-right {
+  &:after {
+    left: auto;
+    right: 0;
+  }
 }
