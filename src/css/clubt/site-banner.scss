@@ -1,3 +1,16 @@
+// Compile with command line:
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css
+
+// Use --watch to watch
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css --watch
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
+
+
 // Default values, unless set in CMS
 $site-banner-background-color: transparent;
 $site-banner-background-image: 'no';
@@ -10,27 +23,29 @@ $site-banner-overlay-opacity: .5;
 $site-banner-video: 'no';
 
 $site-banner-content-alignment: 'left';
-// h-text-center
-// h-text-right
+// h-text-center DONE
+// h-text-right DONE
 
 $site-banner-content-alignment-mobile: 'left';
 // h-text-center-mobile
 // h-text-right-mobile
 
 $site-banner-content-position: 'left';
-// site-banner--center
-// site-banner--right
+// site-banner--content-position-center
+// site-banner--content-position-right
 
 $site-banner-overlap: 'no';
 // site-banner--overlap
+
+
 
 .site-banner {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: color-3;
   display: flex;
   align-items: center;
-  // justify-content: center;
   font-size: rem(17);
   position: relative;
   height: 628px;
@@ -38,7 +53,7 @@ $site-banner-overlap: 'no';
 
 .site-banner__body {
   background-color: #fff;
-  line-height: 2;
+  line-height: 1.33;
   padding: 50px;
   position: relative;
   z-index: 1;
@@ -52,6 +67,9 @@ $site-banner-overlap: 'no';
 .site-banner__delimiter {
   padding-top: 15px;
   padding-bottom: 15px;
+  path {
+    stroke: currentColor;
+  }
 }
 
 .site-banner__prefix {
@@ -59,82 +77,46 @@ $site-banner-overlap: 'no';
 }
 
 .site-banner__text {
+  line-height: 2;
   margin-bottom: 30px;
 }
 
 .site-banner__title {
+  color: $color-2;
   font-family: $font-heading;
   font-size: rem(45);
-  line-height: 1;
   text-transform: uppercase;
 }
 
 
-.site-banner.left {
-  @extend .h-text-left;
 
-  .site-banner__body {
-    @extend .container;
-  }
-
-  .site-banner__delimiter {
-    path {
-      stroke: #fff;
-    }
-  }
-
-  .site-banner__text {
-    max-width: 702px;
-  }
-
-  .site-banner__title {
-    font-size: rem(65);
-  }
-}
-
-
-.site-banner--transparent {
+.site-banner--overlay {
   @extend .h-overlay;
+  color: #fff;
 
   .site-banner__body {
     background-color: transparent;
-    color: #fff;
   }
 
-  .site-banner__delimiter {
-    path {
-      stroke: #fff;
-    }
+  .site-banner__title {
+    color: currentColor;
   }
 }
 
 
 
-// -------------------------------------------------------
-// SITE-BANNER--WHITE-ALIGN-LEFT
-// -------------------------------------------------------
+.site-banner--content-position-center {
+  .site-banner__body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-// .site-banner--white-align-left {
-//   background-color: #fff;
-//   text-align: left;
 
-//   .site-banner__body {
-//     @extend .container;
-//     background-color: transparent;
-//     color: #fff;
-//   }
 
-//   .site-banner__delimiter {
-//     path {
-//       stroke: #fff;
-//     }
-//   }
-
-//   .site-banner__text {
-//     max-width: 702px;
-//   }
-
-//   .site-banner__title {
-//     font-size: rem(65);
-//   }
-// }
+.site-banner--content-position-right {
+  .site-banner__body {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}

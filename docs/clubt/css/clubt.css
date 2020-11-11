@@ -63,14 +63,14 @@ p:last-child, ul:last-child, ol:last-child {
   margin-bottom: 0;
 }
 
-.container, .site-banner.left .site-banner__body {
+.container {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1220px;
   width: 100%;
 }
 @media (min-width: 1260px) {
-  .container, .site-banner.left .site-banner__body {
+  .container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -161,6 +161,7 @@ p:last-child, ul:last-child, ol:last-child {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: color-3;
   display: flex;
   align-items: center;
   font-size: 1.0625rem;
@@ -170,7 +171,7 @@ p:last-child, ul:last-child, ol:last-child {
 
 .site-banner__body {
   background-color: #fff;
-  line-height: 2;
+  line-height: 1.33;
   padding: 50px;
   position: relative;
   z-index: 1;
@@ -185,38 +186,44 @@ p:last-child, ul:last-child, ol:last-child {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.site-banner__delimiter path {
+  stroke: currentColor;
+}
 
 .site-banner__prefix {
   font-size: 1.375rem;
 }
 
 .site-banner__text {
+  line-height: 2;
   margin-bottom: 30px;
 }
 
 .site-banner__title {
+  color: #231F20;
   font-family: "Abril Fatface", cursive;
   font-size: 2.8125rem;
-  line-height: 1;
   text-transform: uppercase;
 }
 
-.site-banner.left .site-banner__delimiter path {
-  stroke: #fff;
-}
-.site-banner.left .site-banner__text {
-  max-width: 702px;
-}
-.site-banner.left .site-banner__title {
-  font-size: 4.0625rem;
-}
-
-.site-banner--transparent .site-banner__body {
-  background-color: transparent;
+.site-banner--overlay {
   color: #fff;
 }
-.site-banner--transparent .site-banner__delimiter path {
-  stroke: #fff;
+.site-banner--overlay .site-banner__body {
+  background-color: transparent;
+}
+.site-banner--overlay .site-banner__title {
+  color: currentColor;
+}
+
+.site-banner--content-position-center .site-banner__body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-banner--content-position-right .site-banner__body {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .h-font-size-16 {
@@ -243,10 +250,10 @@ p:last-child, ul:last-child, ol:last-child {
   font-size: 4.0625rem;
 }
 
-.h-overlay, .site-banner--transparent {
+.h-overlay, .site-banner--overlay {
   position: relative;
 }
-.h-overlay::before, .site-banner--transparent::before {
+.h-overlay::before, .site-banner--overlay::before {
   background-color: rgba(0, 0, 0, 0.5);
   content: "";
   display: block;
@@ -256,7 +263,7 @@ p:last-child, ul:last-child, ol:last-child {
   width: 100%;
   height: 100%;
 }
-.h-overlay > *, .site-banner--transparent > * {
+.h-overlay > *, .site-banner--overlay > * {
   position: relative;
   z-index: 1;
 }
@@ -265,7 +272,7 @@ p:last-child, ul:last-child, ol:last-child {
   text-align: center;
 }
 
-.h-text-left, .site-banner.left {
+.h-text-left {
   text-align: left;
 }
 
