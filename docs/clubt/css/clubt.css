@@ -143,13 +143,23 @@ p:last-child, ul:last-child, ol:last-child {
   font-weight: 700;
   line-height: 1;
   padding: 20px 60px;
+  transition-duration: 0.3s;
   min-width: 220px;
   min-height: 60px;
+}
+.button:hover {
+  background-color: transparent;
+  color: #231F20;
 }
 
 .button--ghost {
   background-color: transparent;
   color: #231F20;
+}
+.button--ghost:hover {
+  background-color: #231F20;
+  border-color: #231F20;
+  color: #fff;
 }
 
 .button--white {
@@ -161,12 +171,12 @@ p:last-child, ul:last-child, ol:last-child {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: color-3;
+  color: #4F4C4D;
   display: flex;
   align-items: center;
   font-size: 1.0625rem;
   position: relative;
-  height: 628px;
+  min-height: 628px;
 }
 
 .site-banner__body {
@@ -201,9 +211,19 @@ p:last-child, ul:last-child, ol:last-child {
 
 .site-banner__title {
   color: #231F20;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface", serif;
   font-size: 2.8125rem;
   text-transform: uppercase;
+}
+
+.site-banner--content-position-center .site-banner__body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-banner--content-position-right .site-banner__body {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .site-banner--overlay {
@@ -216,14 +236,63 @@ p:last-child, ul:last-child, ol:last-child {
   color: currentColor;
 }
 
-.site-banner--content-position-center .site-banner__body {
-  margin-left: auto;
-  margin-right: auto;
+.site-banner--overlap,
+.site-banner--overlap.site-banner--overlay {
+  background-position: 100% center;
+  background-size: auto 100%;
+  color: #4F4C4D;
+}
+.site-banner--overlap:before,
+.site-banner--overlap.site-banner--overlay:before {
+  display: none;
+}
+.site-banner--overlap .site-banner__body,
+.site-banner--overlap.site-banner--overlay .site-banner__body {
+  background-color: #F6F5F3;
+  padding: 30px;
+}
+.site-banner--overlap .site-banner__prefix,
+.site-banner--overlap.site-banner--overlay .site-banner__prefix {
+  font-size: 1.0625rem;
+}
+.site-banner--overlap .site-banner__title,
+.site-banner--overlap.site-banner--overlay .site-banner__title {
+  font-size: 2.1875rem;
 }
 
-.site-banner--content-position-right .site-banner__body {
-  margin-left: auto;
-  margin-right: 0;
+.site-banner--overlap.site-banner--content-position-center {
+  background-position: center;
+}
+
+.site-banner--overlap.site-banner--content-position-right {
+  background-position: 0 center;
+}
+
+.site-banner--solid-background {
+  background-size: auto calc(100% - 88px);
+}
+.site-banner--solid-background:after {
+  background-color: #F6F5F3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 70%;
+  height: 100%;
+}
+.site-banner--solid-background .site-banner__body {
+  background-color: #fff;
+}
+
+.site-banner--solid-background.site-banner--content-position-center:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-banner--solid-background.site-banner--content-position-right:after {
+  left: auto;
+  right: 0;
 }
 
 .h-font-size-16 {
