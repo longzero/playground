@@ -24,7 +24,7 @@ $breakpoint-site-width: $site-width + 2 * $site-margin;
 
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Assistant:wght@300;400;500;600;700;800&display=swap');
-$font-1: 'Abril Fatface', cursive;
+$font-1: 'Abril Fatface', serif;// cursive;
 $font-2: 'Assistant', sans-serif;
 
 $font-default: $font-2;
@@ -44,6 +44,7 @@ $color-2: #231F20;
 $color-3: #4F4C4D;
 $color-4: #1A1401;
 $color-5: #D9EFEC;
+$color-7: #F6F5F3;
 
 // Brands
 $color-facebook: #3b5998;
