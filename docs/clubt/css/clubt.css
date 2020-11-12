@@ -17,7 +17,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
-  padding-top: 90px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -141,7 +140,7 @@ p:last-child, ul:last-child, ol:last-child {
   font-family: "Assistant", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
   padding: 20px 60px;
   transition-duration: 0.3s;
   min-width: 220px;
@@ -181,10 +180,15 @@ p:last-child, ul:last-child, ol:last-child {
 
 .site-banner__body {
   line-height: 1.33;
-  padding: 50px;
+  padding: 20px;
   position: relative;
   z-index: 1;
   max-width: 702px;
+}
+@media (min-width: 768px) {
+  .site-banner__body {
+    padding: 50px;
+  }
 }
 .site-banner__body:before {
   background-color: #fff;
@@ -248,20 +252,19 @@ p:last-child, ul:last-child, ol:last-child {
 
 .site-banner--overlap,
 .site-banner--overlap.site-banner--overlay {
-  background-position: 100px center;
-  background-size: auto 100%;
+  background-position: center top;
+  background-size: auto 300px;
   color: #4F4C4D;
-}
-@media (min-width: 600px) {
-  .site-banner--overlap,
-.site-banner--overlap.site-banner--overlay {
-    background-position: 200px center;
-  }
+  align-items: flex-start;
+  padding-top: 200px;
 }
 @media (min-width: 768px) {
   .site-banner--overlap,
 .site-banner--overlap.site-banner--overlay {
     background-position: 250px center;
+    background-size: auto 100%;
+    align-items: center;
+    padding-top: 0;
   }
 }
 @media (min-width: 1024px) {
@@ -297,18 +300,12 @@ p:last-child, ul:last-child, ol:last-child {
   font-size: 2.1875rem;
 }
 
-.site-banner--overlap.site-banner--content-position-center {
-  background-position: center;
-}
-
-.site-banner--overlap.site-banner--content-position-right {
-  background-position: calc(100% - 100px) center;
-}
-@media (min-width: 600px) {
-  .site-banner--overlap.site-banner--content-position-right {
-    background-position: calc(100% - 200px) center;
+@media (min-width: 768px) {
+  .site-banner--overlap.site-banner--content-position-center {
+    background-position: center;
   }
 }
+
 @media (min-width: 768px) {
   .site-banner--overlap.site-banner--content-position-right {
     background-position: calc(100% - 250px) center;
@@ -326,17 +323,36 @@ p:last-child, ul:last-child, ol:last-child {
 }
 
 .site-banner--solid-background {
-  background-size: auto calc(100% - 88px);
+  background-size: calc(100% - 40px) auto;
+  padding-bottom: 36px;
+  min-height: 0;
+}
+@media (min-width: 768px) {
+  .site-banner--solid-background {
+    background-size: auto calc(100% - 88px);
+    padding-bottom: 0;
+    min-height: 628px;
+  }
 }
 .site-banner--solid-background:after {
   background-color: #F6F5F3;
   content: "";
   position: absolute;
-  top: 0;
+  top: 115px;
+  bottom: 0;
   left: 0;
   z-index: -1;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .site-banner--solid-background:after {
+    top: 0;
+    width: 70%;
+  }
+}
+.site-banner--solid-background .site-banner__body {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .site-banner--solid-background .site-banner__body:before {
   background-color: #fff;

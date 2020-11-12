@@ -39,6 +39,9 @@ $site-banner-overlap: 'no';
 
 
 
+$site-banner-height: 628px;
+
+
 .site-banner {
   background-position: center;
   background-repeat: no-repeat;
@@ -48,15 +51,19 @@ $site-banner-overlap: 'no';
   align-items: center;
   font-size: rem(17);
   position: relative;
-  min-height: 628px;
+  min-height: $site-banner-height;
 }
 
 .site-banner__body {
   line-height: 1.33;
-  padding: 50px;
+  padding: 20px;
   position: relative;
   z-index: 1;
   max-width: 702px;
+
+  @media (min-width: $breakpoint-ipad) {
+    padding: 50px;
+  }
 
   &:before {
     background-color: #fff;
@@ -138,16 +145,21 @@ $site-banner-overlap: 'no';
 
 .site-banner--overlap,
 .site-banner--overlap.site-banner--overlay {
-  background-position: 100px center;
-  background-size: auto 100%;
+  background-position: center top;
+  background-size: auto 300px;
   color: $color-3;
+  align-items: flex-start;
+  padding-top: 200px;
 
-  @media (min-width: $breakpoint-tablet) {
-    background-position: 200px center;
-  }
+  // @media (min-width: $breakpoint-tablet) {
+  //   background-position: 200px center;
+  // }
 
   @media (min-width: $breakpoint-ipad) {
     background-position: 250px center;
+    background-size: auto 100%;
+    align-items: center;
+    padding-top: 0;
   }
 
   @media (min-width: $breakpoint-ipad-landscape) {
@@ -182,18 +194,14 @@ $site-banner-overlap: 'no';
 
 
 .site-banner--overlap.site-banner--content-position-center {
-  background-position: center;
+  @media (min-width: $breakpoint-ipad) {
+    background-position: center;
+  }
 }
 
 
 
 .site-banner--overlap.site-banner--content-position-right {
-  background-position: calc(100% - 100px) center;
-
-  @media (min-width: $breakpoint-tablet) {
-    background-position: calc(100% - 200px) center;
-  }
-
   @media (min-width: $breakpoint-ipad) {
     background-position: calc(100% - 250px) center;
   }
@@ -210,20 +218,36 @@ $site-banner-overlap: 'no';
 
 
 .site-banner--solid-background {
-  background-size: auto calc(100% - 88px); // Faking padding top and bottom
+  background-size: calc(100% - 40px) auto;
+  padding-bottom: 36px;
+  min-height: 0;
+
+  @media (min-width: $breakpoint-ipad) {
+    background-size: auto calc(100% - 88px); // Faking padding top and bottom
+    padding-bottom: 0;
+    min-height: $site-banner-height;
+  }
 
   &:after {
     background-color: $color-7;
     content: '';
     position: absolute;
-    top: 0;
+    top: 115px;
+    bottom: 0;
     left: 0;
     z-index: -1;
-    width: 70%;
-    height: 100%;
+    width: 100%;
+
+    @media (min-width: $breakpoint-ipad) {
+      top: 0;
+      width: 70%;
+    }
   }
 
   .site-banner__body {
+    margin-left: 20px;
+    margin-right: 20px;
+
     &:before {
       background-color: #fff;
     }
