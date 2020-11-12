@@ -17,7 +17,16 @@
   -->
   <div class="site-banner" style="background-image: url(images/unknown-species.png);">
     <div class="container">
-      <div class="site-banner__body">
+      <!--
+        Conditional dynamic CSS class
+        <style>
+          .site-banner__body--inline-background:before {
+            <?= if ($background_color) 'background-color: '.$background_color.';' ?>
+            <?= if ($opacity) 'opacity: '.$opacity.';' ?>
+          }
+        </style>
+      -->
+      <div class="site-banner__body site-banner__body--inline-background">
         <div class="site-banner__prefix">Prefix</div>
         <div class="site-banner__title">Default</div>
         <div class="site-banner__delimiter">

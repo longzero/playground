@@ -52,12 +52,23 @@ $site-banner-overlap: 'no';
 }
 
 .site-banner__body {
-  background-color: #fff;
   line-height: 1.33;
   padding: 50px;
   position: relative;
   z-index: 1;
   max-width: 702px;
+
+  &:before {
+    background-color: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .site-banner__button {
@@ -113,7 +124,9 @@ $site-banner-overlap: 'no';
   color: #fff;
 
   .site-banner__body {
-    background-color: transparent;
+    &:before {
+      background-color: transparent;
+    }
   }
 
   .site-banner__title {
@@ -150,8 +163,11 @@ $site-banner-overlap: 'no';
   }
 
   .site-banner__body {
-    background-color: $color-7;
     padding: 30px;
+
+    &:before {
+      background-color: $color-7;
+    }
   }
 
   .site-banner__prefix {
@@ -208,7 +224,9 @@ $site-banner-overlap: 'no';
   }
 
   .site-banner__body {
-    background-color: #fff;
+    &:before {
+      background-color: #fff;
+    }
   }
 }
 
