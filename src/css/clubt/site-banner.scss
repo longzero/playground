@@ -245,8 +245,10 @@ $site-banner-height: 628px;
   }
 
   .site-banner__body {
-    margin-left: 20px;
-    margin-right: 20px;
+    @media (max-width: $breakpoint-ipad - 1) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
 
     &:before {
       background-color: #fff;
@@ -261,6 +263,8 @@ $site-banner-height: 628px;
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media (min-width: $breakpoint-ipad) {}
 }
 
 

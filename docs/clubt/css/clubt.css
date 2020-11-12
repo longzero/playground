@@ -350,9 +350,11 @@ p:last-child, ul:last-child, ol:last-child {
     width: 70%;
   }
 }
-.site-banner--solid-background .site-banner__body {
-  margin-left: 20px;
-  margin-right: 20px;
+@media (max-width: 767px) {
+  .site-banner--solid-background .site-banner__body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 .site-banner--solid-background .site-banner__body:before {
   background-color: #fff;
@@ -362,7 +364,6 @@ p:last-child, ul:last-child, ol:last-child {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .site-banner--solid-background.site-banner--content-position-right:after {
   left: auto;
   right: 0;
