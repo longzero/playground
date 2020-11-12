@@ -125,9 +125,21 @@ $site-banner-overlap: 'no';
 
 .site-banner--overlap,
 .site-banner--overlap.site-banner--overlay {
-  background-position: 100% center;
+  background-position: 100px center;
   background-size: auto 100%;
   color: $color-3;
+
+  @media (min-width: $breakpoint-ipad) {
+    background-position: 250px center;
+  }
+
+  @media (min-width: $breakpoint-ipad-landscape) {
+    background-position: 300px center;
+  }
+
+  @media (min-width: $breakpoint-air) {
+    background-position: 100% center;
+  }
 
   &:before {
     display: none;
@@ -196,4 +208,12 @@ $site-banner-overlap: 'no';
     left: auto;
     right: 0;
   }
+}
+
+
+
+.site-banner.container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: $site-width-banner;
 }

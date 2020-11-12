@@ -2,6 +2,7 @@
 // Used to calculate other variables
 $site-margin: 20px;
 $site-width: 1220px;
+$site-width-banner: 1530px;
 $site-width-small: 1010px;
 
 
@@ -20,7 +21,9 @@ $breakpoint-big: 1600px;
 $breakpoint-hd: 1900px;
 
 $breakpoint-navigation: $breakpoint-air;
+$breakpoint-site-width-banner: $site-width-banner + 2 * $site-margin;
 $breakpoint-site-width: $site-width + 2 * $site-margin;
+$breakpoint-site-width-small: $site-width-small + 2 * $site-margin;
 
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Assistant:wght@300;400;500;600;700;800&display=swap');

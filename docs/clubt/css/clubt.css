@@ -238,9 +238,27 @@ p:last-child, ul:last-child, ol:last-child {
 
 .site-banner--overlap,
 .site-banner--overlap.site-banner--overlay {
-  background-position: 100% center;
+  background-position: 100px center;
   background-size: auto 100%;
   color: #4F4C4D;
+}
+@media (min-width: 768px) {
+  .site-banner--overlap,
+.site-banner--overlap.site-banner--overlay {
+    background-position: 250px center;
+  }
+}
+@media (min-width: 1024px) {
+  .site-banner--overlap,
+.site-banner--overlap.site-banner--overlay {
+    background-position: 300px center;
+  }
+}
+@media (min-width: 1400px) {
+  .site-banner--overlap,
+.site-banner--overlap.site-banner--overlay {
+    background-position: 100% center;
+  }
 }
 .site-banner--overlap:before,
 .site-banner--overlap.site-banner--overlay:before {
@@ -293,6 +311,12 @@ p:last-child, ul:last-child, ol:last-child {
 .site-banner--solid-background.site-banner--content-position-right:after {
   left: auto;
   right: 0;
+}
+
+.site-banner.container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1530px;
 }
 
 .h-font-size-16 {

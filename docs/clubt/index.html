@@ -8,7 +8,14 @@
 </head>
 <body>
 
-  <div class="site-banner" style="background-image: url(images/unknown-species.png)">
+  <!--
+    Conditional CSS class
+    <?= ($full_width) ? '':'container' ?>
+
+    Conditional inline CSS
+    <?= if ($color) 'color: '.$color.';' ?>
+  -->
+  <div class="site-banner" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -19,14 +26,21 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <!--
+          Conditional CSS class
+          <?= if ($button_outline) 'button--ghost' ?>
+
+          Conditional attribute
+          <?= if ($new_tab) 'target="_blank"' ?>
+        -->
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner h-text-center" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner h-text-center" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -37,14 +51,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner h-text-right" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner h-text-right" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -55,14 +69,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--content-position-center" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--content-position-center" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -73,14 +87,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--content-position-right" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--content-position-right" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -91,14 +105,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlay h-text-center" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlay h-text-center" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -109,14 +123,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlay site-banner--content-position-center h-text-center" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlay site-banner--content-position-center h-text-center" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -127,14 +141,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlap" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlap" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -145,14 +159,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button button--ghost">Call to action</div>
+        <a class="site-banner__button button button--ghost" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlay site-banner--content-position-center site-banner--overlap" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlay site-banner--content-position-center site-banner--overlap" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -163,14 +177,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button">Call to action</div>
+        <a class="site-banner__button button" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlay site-banner--content-position-right site-banner--overlap" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlay site-banner--content-position-right site-banner--overlap" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -181,14 +195,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button button--ghost">Call to action</div>
+        <a class="site-banner__button button button--ghost" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlap site-banner--solid-background" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlap site-banner--solid-background" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -199,14 +213,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button button--ghost">Call to action</div>
+        <a class="site-banner__button button button--ghost" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlap site-banner--solid-background site-banner--content-position-center" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlap site-banner--solid-background site-banner--content-position-center" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -217,14 +231,14 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button button--ghost">Call to action</div>
+        <a class="site-banner__button button button--ghost" href="#">Call to action</a>
       </div>
     </div>
   </div>
 
   <div style="height: 200px;"></div>
 
-  <div class="site-banner site-banner--overlap site-banner--solid-background site-banner--content-position-right" style="background-image: url(images/unknown-species.png)">
+  <div class="site-banner site-banner--overlap site-banner--solid-background site-banner--content-position-right" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <div class="site-banner__body">
         <div class="site-banner__prefix">Prefix</div>
@@ -235,7 +249,7 @@
         <div class="site-banner__text">
           Texte de description qui accompagne le bandeau et qui peut prendre deux lignes en fonction du contenu que l’on désire présenter
         </div>
-        <div class="site-banner__button button button--ghost">Call to action</div>
+        <a class="site-banner__button button button--ghost" href="#">Call to action</a>
       </div>
     </div>
   </div>
