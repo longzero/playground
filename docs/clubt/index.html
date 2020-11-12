@@ -14,8 +14,16 @@
 
     Conditional inline CSS
     <?= if ($color) 'color: '.$color.';' ?>
+
+    Conditional dynamic CSS class (remove inline placeholder)
+    <style>
+      .background-image {background-image: url($background_url);}
+      @media (max-width: 767px) {
+        .background-image {background-image: url($background_url_mobile);}
+      }
+    </style>
   -->
-  <div class="site-banner" style="background-image: url(images/unknown-species.png);">
+  <div class="site-banner background-image" style="background-image: url(images/unknown-species.png);">
     <div class="container">
       <!--
         Conditional dynamic CSS class
