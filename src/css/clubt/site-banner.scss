@@ -197,6 +197,12 @@ $site-banner-height: 628px;
   @media (min-width: $breakpoint-ipad) {
     background-position: center;
   }
+
+  &.site-banner--solid-background.container {
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
 
