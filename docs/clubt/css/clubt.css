@@ -297,6 +297,7 @@ p:last-child, ul:last-child, ol:last-child {
 }
 .site-banner--overlap .site-banner__title,
 .site-banner--overlap.site-banner--overlay .site-banner__title {
+  color: #231F20;
   font-size: 2.1875rem;
 }
 
@@ -304,6 +305,9 @@ p:last-child, ul:last-child, ol:last-child {
   .site-banner--overlap.site-banner--content-position-center {
     background-position: center;
   }
+}
+.site-banner--overlap.site-banner--content-position-center.site-banner--solid-background.container:after {
+  width: 100%;
 }
 
 @media (min-width: 768px) {

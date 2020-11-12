@@ -151,10 +151,6 @@ $site-banner-height: 628px;
   align-items: flex-start;
   padding-top: 200px;
 
-  // @media (min-width: $breakpoint-tablet) {
-  //   background-position: 200px center;
-  // }
-
   @media (min-width: $breakpoint-ipad) {
     background-position: 250px center;
     background-size: auto 100%;
@@ -187,6 +183,7 @@ $site-banner-height: 628px;
   }
 
   .site-banner__title {
+    color: $color-2;
     font-size: rem(35);
   }
 }
