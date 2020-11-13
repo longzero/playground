@@ -52,6 +52,7 @@ $site-banner-height: 628px;
   font-size: rem(17);
   position: relative;
   min-height: $site-banner-height;
+  overflow: hidden;
 }
 
 .site-banner__body {
@@ -106,6 +107,45 @@ $site-banner-height: 628px;
   text-transform: uppercase;
 }
 
+.site-banner__video {
+  display: none;
+
+  @media (min-width: $breakpoint-ipad) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &:before {
+    background-color: rgba(0,0,0,.5);
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+
+    .site-banner--overlay & {
+      background-color: rgba(0,0,0,.5);
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 
 .site-banner--content-position-center {
@@ -129,6 +169,10 @@ $site-banner-height: 628px;
 .site-banner--overlay {
   @extend .h-overlay;
   color: #fff;
+
+  > .site-banner__video {
+    position: absolute;
+  }
 
   .site-banner__body {
     &:before {
@@ -186,6 +230,20 @@ $site-banner-height: 628px;
     color: $color-2;
     font-size: rem(35);
   }
+
+  .site-banner__video {
+    left: 250px;
+    width: calc(16 / 9 * #{$site-banner-height});
+
+    @media (min-width: $breakpoint-ipad-landscape) {
+      left: 300px;
+    }
+
+    @media (min-width: $breakpoint-air) {
+      left: auto;
+      right: 0;
+    }
+  }
 }
 
 
@@ -199,6 +257,12 @@ $site-banner-height: 628px;
     &:after {
       width: 100%;
     }
+  }
+
+  .site-banner__video {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -215,6 +279,12 @@ $site-banner-height: 628px;
 
   @media (min-width: $breakpoint-air) {
     background-position: 0 center;
+  }
+
+  .site-banner__video {
+    top: 0;
+    left: 0;
+    transform: none;
   }
 }
 
@@ -257,6 +327,10 @@ $site-banner-height: 628px;
       background-color: #fff;
     }
   }
+
+  .site-banner__video {
+    width: calc(16 / 9 * (#{$site-banner-height} - 88px));
+  }
 }
 
 
@@ -267,7 +341,11 @@ $site-banner-height: 628px;
     transform: translateX(-50%);
   }
 
-  @media (min-width: $breakpoint-ipad) {}
+  .site-banner__video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 
@@ -276,6 +354,11 @@ $site-banner-height: 628px;
   &:after {
     left: auto;
     right: 0;
+  }
+
+  .site-banner__video {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
