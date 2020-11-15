@@ -461,6 +461,94 @@ p:last-child, ul:last-child, ol:last-child {
   max-width: 1530px;
 }
 
+@media (min-width: 768px) {
+  .banner-group {
+    display: flex;
+  }
+}
+.banner-group .site-banner {
+  margin-bottom: 50px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+  .banner-group .site-banner:last-child {
+    margin-right: 20px;
+  }
+}
+.banner-group .site-banner:last-child {
+  margin-bottom: 0;
+}
+.banner-group .site-banner:only-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+.banner-group .site-banner .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.banner-group .site-banner__video {
+  display: none;
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner--overlap,
+.banner-group .site-banner--overlap.site-banner--overlay {
+    background-position: 150px center;
+  }
+}
+@media (min-width: 1400px) {
+  .banner-group .site-banner--overlap,
+.banner-group .site-banner--overlap.site-banner--overlay {
+    background-position: 200px center;
+  }
+}
+@media (min-width: 1600px) {
+  .banner-group .site-banner--overlap,
+.banner-group .site-banner--overlap.site-banner--overlay {
+    background-position: 250px center;
+  }
+}
+@media (min-width: 1900px) {
+  .banner-group .site-banner--overlap,
+.banner-group .site-banner--overlap.site-banner--overlay {
+    background-position: 300px center;
+  }
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner--overlap.site-banner--content-position-center {
+    background-position: center;
+  }
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner--overlap.site-banner--content-position-right {
+    background-position: calc(100% - 150px) center;
+  }
+}
+@media (min-width: 1400px) {
+  .banner-group .site-banner--overlap.site-banner--content-position-right {
+    background-position: calc(100% - 200px) center;
+  }
+}
+@media (min-width: 1600px) {
+  .banner-group .site-banner--overlap.site-banner--content-position-right {
+    background-position: calc(100% - 250px) center;
+  }
+}
+@media (min-width: 1900px) {
+  .banner-group .site-banner--overlap.site-banner--content-position-right {
+    background-position: calc(100% - 300px) center;
+  }
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner--solid-background.site-banner--content-position-center {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .h-font-size-16 {
   font-size: 1rem;
 }
