@@ -62,7 +62,7 @@ $site-banner-height: 628px;
   z-index: 1;
   max-width: 702px;
 
-  @media (min-width: $breakpoint-ipad) {
+  @media (min-width: $breakpoint-ipad-landscape) {
     padding: 50px;
   }
 
@@ -103,8 +103,12 @@ $site-banner-height: 628px;
 .site-banner__title {
   color: $color-2;
   font-family: $font-heading;
-  font-size: rem(45);
+  font-size: rem(35);
   text-transform: uppercase;
+
+  @media (min-width: $breakpoint-ipad-landscape) {
+    font-size: rem(45);
+  }
 }
 
 .site-banner__video {

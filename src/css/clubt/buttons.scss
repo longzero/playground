@@ -10,10 +10,14 @@
   font-size: rem(16);
   font-weight: 700;
   line-height: 1.2;
-  padding: 20px 60px;
+  padding: 20px;
   transition-duration: .3s;
-  min-width: 220px;
   min-height: 60px;
+
+  @media (min-width: $breakpoint-ipad-landscape) {
+    padding: 20px 60px;
+    min-width: 220px;
+  }
 
   &:hover {
     background-color: transparent;

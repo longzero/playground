@@ -85,3 +85,47 @@
     }
   }
 }
+
+
+
+.banner-group {
+  // The trick is to select the first child when it's also the nth-from-the-last child.
+  // This effectively selects based on the number of siblings.
+  // https://stackoverflow.com/a/12198561/2716287
+  .site-banner:first-child:nth-last-child(3),
+  .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    background-position: center 0;
+    background-size: 100% auto;
+    padding-top: 150px;
+    min-height: 0;
+
+    @media (min-width: $breakpoint-mobile) {
+      padding-top: 220px;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 290px;
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+      background-size: auto 250px;
+      padding-top: 200px;
+    }
+
+    @media (min-width: $breakpoint-air) {
+      background-size: auto 300px;
+      padding-top: 250px;
+    }
+
+    @media (min-width: $breakpoint-big) {
+      background-size: auto 420px;
+      padding-top: 370px;
+    }
+
+    .site-banner__body {
+      &:before {
+        background-color: $color-7;
+      }
+    }
+  }
+}

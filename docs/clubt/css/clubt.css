@@ -141,10 +141,15 @@ p:last-child, ul:last-child, ol:last-child {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
-  padding: 20px 60px;
+  padding: 20px;
   transition-duration: 0.3s;
-  min-width: 220px;
   min-height: 60px;
+}
+@media (min-width: 1024px) {
+  .button {
+    padding: 20px 60px;
+    min-width: 220px;
+  }
 }
 .button:hover {
   background-color: transparent;
@@ -186,7 +191,7 @@ p:last-child, ul:last-child, ol:last-child {
   z-index: 1;
   max-width: 702px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .site-banner__body {
     padding: 50px;
   }
@@ -227,8 +232,13 @@ p:last-child, ul:last-child, ol:last-child {
 .site-banner__title {
   color: #231F20;
   font-family: "Abril Fatface", serif;
-  font-size: 2.8125rem;
+  font-size: 2.1875rem;
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .site-banner__title {
+    font-size: 2.8125rem;
+  }
 }
 
 .site-banner__video {
@@ -547,6 +557,51 @@ p:last-child, ul:last-child, ol:last-child {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+.banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+  background-position: center 0;
+  background-size: 100% auto;
+  padding-top: 150px;
+  min-height: 0;
+}
+@media (min-width: 480px) {
+  .banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    padding-top: 220px;
+  }
+}
+@media (min-width: 600px) {
+  .banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    padding-top: 290px;
+  }
+}
+@media (min-width: 768px) {
+  .banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    background-size: auto 250px;
+    padding-top: 200px;
+  }
+}
+@media (min-width: 1400px) {
+  .banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    background-size: auto 300px;
+    padding-top: 250px;
+  }
+}
+@media (min-width: 1600px) {
+  .banner-group .site-banner:first-child:nth-last-child(3),
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+    background-size: auto 420px;
+    padding-top: 370px;
+  }
+}
+.banner-group .site-banner:first-child:nth-last-child(3) .site-banner__body:before,
+.banner-group .site-banner:first-child:nth-last-child(3) ~ .site-banner .site-banner__body:before {
+  background-color: #F6F5F3;
 }
 
 .h-font-size-16 {
