@@ -1,3 +1,14 @@
+// Compile with command line:
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css
+
+// Use --watch to watch
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css --watch
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
 .banner-group {
   @media (min-width: $breakpoint-ipad) {
     display: flex;
@@ -29,6 +40,33 @@
       padding-left: 20px;
       padding-right: 20px;
     }
+  }
+
+  .site-banner__button {
+    background-color: transparent;
+    border: 0;
+    color: $color-copy;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .site-banner__delimiter {
+    display: none;
+  }
+
+  .site-banner__prefix {
+    font-size: rem(17);
+    margin-bottom: 5px;
+  }
+
+  .site-banner__text,
+  .site-banner__title {
+    margin-bottom: 20px;
+  }
+
+  .site-banner__title {
+    font-size: rem(28);
   }
 
   .site-banner__video {
@@ -96,7 +134,11 @@
   .site-banner:first-child:nth-last-child(3) ~ .site-banner {
     background-position: center 0;
     background-size: 100% auto;
+    color: $color-copy;
+    align-items: stretch;
+    font-size: rem(13);
     padding-top: 150px;
+    text-align: left;
     min-height: 0;
 
     @media (min-width: $breakpoint-mobile) {
@@ -122,10 +164,41 @@
       padding-top: 370px;
     }
 
+    &:before,
+    &:after {
+      display: none;
+    }
+
     .site-banner__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      height: 100%;
+
       &:before {
         background-color: $color-7;
       }
+    }
+
+    .site-banner__button {
+      display: block;
+      text-align: right;
+    }
+
+    .site-banner__delimiter,
+    .site-banner__prefix {
+      display: none;
+    }
+
+    .site-banner__text {
+      margin-bottom: 5px;
+    }
+
+    .site-banner__title {
+      color: #000;
+      font-size: rem(28);
+      margin-bottom: 5px;
     }
   }
 }
