@@ -133,6 +133,12 @@
     min-height: 50px;
   }
 
+  .site-banner__prefix {
+    @media (min-width: $breakpoint-desktop) {
+      font-size: rem(22);
+    }
+  }
+
   .site-banner__text,
   .site-banner__video {
     display: none;
@@ -140,5 +146,9 @@
 
   .site-banner__title {
     font-size: rem(22);
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: rem(35);
+    }
   }
 }

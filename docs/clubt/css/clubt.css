@@ -606,12 +606,22 @@ p:last-child, ul:last-child, ol:last-child {
   padding-bottom: 14px;
   min-height: 50px;
 }
+@media (min-width: 991px) {
+  .banner-carousel .site-banner__prefix {
+    font-size: 1.375rem;
+  }
+}
 .banner-carousel .site-banner__text,
 .banner-carousel .site-banner__video {
   display: none;
 }
 .banner-carousel .site-banner__title {
   font-size: 1.375rem;
+}
+@media (min-width: 991px) {
+  .banner-carousel .site-banner__title {
+    font-size: 2.1875rem;
+  }
 }
 
 @media (min-width: 768px) {
