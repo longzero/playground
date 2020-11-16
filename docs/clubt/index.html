@@ -12,7 +12,13 @@
   <div style="height: 200px;"></div>
 
   <div class="banner-carousel owl-carousel">
-    <div class="site-banner site-banner--overlap container site-banner--solid-background site-banner--content-position-right" style="background-image: url(images/unknown-species.jpg);">
+    <div class="site-banner site-banner--overlap container site-banner--solid-background site-banner--content-position-right background-image">
+      <style>
+        .background-image {background-image: url(images/unknown-species.jpg);}
+        @media (max-width: 767px) {
+          .background-image {background-image: url(images/Rectangle-40.jpg);}
+        }
+      </style>
       <div class="site-banner__video">
           <iframe src="https://www.youtube.com/embed/q8c6qgbJUa0?autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=q8c6qgbJUa0" allow="accelerometer; autoplay; loop; encrypted-media; gyroscope;" frameborder="0"></iframe>
       </div>
@@ -34,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="site-banner h-text-center" style="background-image: url(images/unknown-species.jpg);">
+    <div class="site-banner h-text-center background-image">
       <div class="container">
         <div class="site-banner__body">
           <div class="site-banner__content">
@@ -53,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="site-banner h-text-center" style="background-image: url(images/unknown-species.jpg);">
+    <div class="site-banner h-text-center background-image">
       <div class="container">
         <div class="site-banner__body">
           <div class="site-banner__content">
@@ -624,8 +630,8 @@
         margin:10,
         nav: true,
         navText: [
-          '<svg width="20" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.51 17.21c-.68-.66-.68-1.76 0-2.42L15.18.495c.756-.66 1.89-.66 2.57 0l1.74 1.686c.68.66.68 1.76 0 2.493L7.845 15.964 19.49 27.325c.68.734.68 1.833 0 2.493l-1.74 1.686c-.68.66-1.814.66-2.57 0L.51 17.21z" fill="#231F20"/></svg>',
-          '<svg width="20" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.49 17.21c.68-.66.68-1.76 0-2.42L4.82.495c-.756-.66-1.89-.66-2.57 0L.51 2.18c-.68.66-.68 1.76 0 2.493l11.645 11.29L.51 27.325c-.68.734-.68 1.833 0 2.493l1.74 1.686c.68.66 1.814.66 2.57 0L19.49 17.21z" fill="#231F20"/></svg>'
+          '<svg viewbox="0 0 20 32" width="20" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.51 17.21c-.68-.66-.68-1.76 0-2.42L15.18.495c.756-.66 1.89-.66 2.57 0l1.74 1.686c.68.66.68 1.76 0 2.493L7.845 15.964 19.49 27.325c.68.734.68 1.833 0 2.493l-1.74 1.686c-.68.66-1.814.66-2.57 0L.51 17.21z" fill="#231F20"/></svg>',
+          '<svg viewbox="0 0 20 32" width="20" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.49 17.21c.68-.66.68-1.76 0-2.42L4.82.495c-.756-.66-1.89-.66-2.57 0L.51 2.18c-.68.66-.68 1.76 0 2.493l11.645 11.29L.51 27.325c-.68.734-.68 1.833 0 2.493l1.74 1.686c.68.66 1.814.66 2.57 0L19.49 17.21z" fill="#231F20"/></svg>'
         ]
       });
     });

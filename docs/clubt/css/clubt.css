@@ -496,6 +496,12 @@ p:last-child, ul:last-child, ol:last-child {
   margin-right: auto;
   max-width: 1530px;
 }
+@media (min-width: 768px) {
+  .banner-carousel {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 .banner-carousel button.owl-dot {
   border-radius: 50%;
   display: inline-flex;
@@ -529,25 +535,52 @@ p:last-child, ul:last-child, ol:last-child {
 }
 .banner-carousel .owl-nav button.owl-prev,
 .banner-carousel .owl-nav button.owl-next {
-  font-size: 4em;
   font-weight: bold;
   line-height: 1;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 129px;
+}
+@media (min-width: 768px) {
+  .banner-carousel .owl-nav button.owl-prev,
+.banner-carousel .owl-nav button.owl-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .banner-carousel .owl-nav button.owl-prev {
-  left: -40px;
+  left: 15px;
 }
 .banner-carousel .owl-nav button.owl-next {
-  right: -40px;
+  right: 15px;
+}
+.banner-carousel .owl-nav svg {
+  width: 12px;
 }
 .banner-carousel .site-banner {
-  background-position: center 142px;
-  background-size: calc(100% - 148px) auto;
+  background-position: center 100%;
+  background-size: calc(100% - 40px) auto;
   align-items: flex-start;
-  padding-top: 59px;
+  padding-top: 40px;
   text-align: center;
+  min-height: 490px;
+}
+@media (min-width: 480px) {
+  .banner-carousel .site-banner {
+    min-height: 610px;
+  }
+}
+@media (min-width: 600px) {
+  .banner-carousel .site-banner {
+    min-height: 740px;
+  }
+}
+@media (min-width: 768px) {
+  .banner-carousel .site-banner {
+    background-position: center 142px;
+    background-size: calc(100% - 148px) auto;
+    padding-top: 59px;
+    min-height: 700px;
+  }
 }
 .banner-carousel .site-banner:after {
   background-color: #F6F5F3;
@@ -558,15 +591,27 @@ p:last-child, ul:last-child, ol:last-child {
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 500px;
+  height: calc(100% - 200px);
 }
 .banner-carousel .site-banner__body {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 125px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: calc(100% - 40px);
+}
+.banner-carousel .site-banner__button {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-height: 50px;
 }
 .banner-carousel .site-banner__text,
 .banner-carousel .site-banner__video {
   display: none;
+}
+.banner-carousel .site-banner__title {
+  font-size: 1.375rem;
 }
 
 @media (min-width: 768px) {
