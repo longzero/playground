@@ -116,6 +116,18 @@
     }
   }
 
+  .site-banner--overlay {
+    .site-banner__button {
+      background-color: transparent;
+      color: $color-copy;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-copy;
+      }
+    }
+  }
+
   .site-banner--solid-background.site-banner--content-position-center {
     @media (min-width: $breakpoint-ipad) {
       padding-top: 20px;

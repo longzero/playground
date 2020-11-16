@@ -717,6 +717,14 @@ p:last-child, ul:last-child, ol:last-child {
     background-position: calc(100% - 300px) center;
   }
 }
+.banner-group .site-banner--overlay .site-banner__button {
+  background-color: transparent;
+  color: #4F4C4D;
+}
+.banner-group .site-banner--overlay .site-banner__button:hover {
+  background-color: transparent;
+  color: #4F4C4D;
+}
 @media (min-width: 768px) {
   .banner-group .site-banner--solid-background.site-banner--content-position-center {
     padding-top: 20px;
