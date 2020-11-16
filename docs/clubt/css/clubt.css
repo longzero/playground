@@ -291,6 +291,26 @@ p:last-child, ul:last-child, ol:last-child {
 .site-banner--overlay {
   color: #fff;
 }
+.site-banner--overlay:not(.site-banner--content-position-center) .site-banner__button, .site-banner--overlay:not(.site-banner--overlap) .site-banner__button {
+  background-color: #fff;
+  border-color: #fff;
+  color: #4F4C4D;
+}
+.site-banner--overlay:not(.site-banner--content-position-center) .site-banner__button:hover, .site-banner--overlay:not(.site-banner--overlap) .site-banner__button:hover {
+  background-color: #231F20;
+  border-color: #231F20;
+  color: #fff;
+}
+.site-banner--overlay:not(.site-banner--content-position-center) .button--ghost, .site-banner--overlay:not(.site-banner--overlap) .button--ghost {
+  background-color: transparent;
+  border-color: #fff;
+  color: #4F4C4D;
+}
+.site-banner--overlay:not(.site-banner--content-position-center) .button--ghost:hover, .site-banner--overlay:not(.site-banner--overlap) .button--ghost:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #4F4C4D;
+}
 .site-banner--overlay > .site-banner__video {
   position: absolute;
 }
