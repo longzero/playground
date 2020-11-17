@@ -1,0 +1,37 @@
+// Compile with command line:
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css
+
+// Use --watch to watch
+// sass src/css/clubt.scss:docs/clubt/css/clubt.css --watch
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
+.site-banner--contenu-descriptif {
+  text-align: center;
+  min-height: 0;
+
+  .site-banner__body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: none;
+
+    @media (min-width: $breakpoint-ipad-landscape) {
+      padding-top: 68px;
+      padding-bottom: 68px;
+    }
+
+    &:before {
+      background-color: $color-7;
+    }
+  }
+
+  .site-banner__title {
+    @media (min-width: $breakpoint-ipad) {
+      font-size: rem(45);
+      margin-bottom: 25px;
+    }
+  }
+}

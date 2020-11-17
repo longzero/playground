@@ -238,6 +238,7 @@ p:last-child, ul:last-child, ol:last-child {
 @media (min-width: 1024px) {
   .site-banner__title {
     font-size: 2.8125rem;
+    letter-spacing: 3px;
   }
 }
 
@@ -621,6 +622,31 @@ p:last-child, ul:last-child, ol:last-child {
 @media (min-width: 991px) {
   .banner-carousel .site-banner__title {
     font-size: 2.1875rem;
+  }
+}
+
+.site-banner--contenu-descriptif {
+  text-align: center;
+  min-height: 0;
+}
+.site-banner--contenu-descriptif .site-banner__body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: none;
+}
+@media (min-width: 1024px) {
+  .site-banner--contenu-descriptif .site-banner__body {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+}
+.site-banner--contenu-descriptif .site-banner__body:before {
+  background-color: #F6F5F3;
+}
+@media (min-width: 768px) {
+  .site-banner--contenu-descriptif .site-banner__title {
+    font-size: 2.8125rem;
+    margin-bottom: 25px;
   }
 }
 
