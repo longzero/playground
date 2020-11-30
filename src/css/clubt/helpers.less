@@ -1,0 +1,188 @@
+.h-arrow-down {
+    // ARROW DOWN
+    // <svg fill="#127ec2" width="2048" height="2048" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+    // PHN2ZyBmaWxsPSIjMTI3ZWMyIiB3aWR0aD0iMjA0OCIgaGVpZ2h0PSIyMDQ4IiB2aWV3Qm94PSIwIDAgMjA0OCAyMDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNTIzIDg2NHEwIDEzLTEwIDIzbC00NjYgNDY2cS0xMCAxMC0yMyAxMHQtMjMtMTBsLTQ2Ni00NjZxLTEwLTEwLTEwLTIzdDEwLTIzbDUwLTUwcTEwLTEwIDIzLTEwdDIzIDEwbDM5MyAzOTMgMzkzLTM5M3ExMC0xMCAyMy0xMHQyMyAxMGw1MCA1MHExMCAxMCAxMCAyM3oiLz48L3N2Zz4=
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMTI3ZWMyIiB3aWR0aD0iMjA0OCIgaGVpZ2h0PSIyMDQ4IiB2aWV3Qm94PSIwIDAgMjA0OCAyMDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNTIzIDg2NHEwIDEzLTEwIDIzbC00NjYgNDY2cS0xMCAxMC0yMyAxMHQtMjMtMTBsLTQ2Ni00NjZxLTEwLTEwLTEwLTIzdDEwLTIzbDUwLTUwcTEwLTEwIDIzLTEwdDIzIDEwbDM5MyAzOTMgMzkzLTM5M3ExMC0xMCAyMy0xMHQyMyAxMGw1MCA1MHExMCAxMCAxMCAyM3oiLz48L3N2Zz4=");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    content: '';
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-2px);
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
+.h-background-1 {
+    background-color: @color-1;
+}
+
+.h-display-block {
+    display: block;
+}
+
+.h-field-input {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: @radius;
+    box-shadow: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: 40px;
+}
+
+.h-flex {
+    display: flex;
+}
+
+.h-flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-font-heading {
+  color: @color-2;
+    font-family: @font-heading;
+    .rem(35);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.h-font-size-16 {
+  .rem(16);
+}
+
+.h-font-size-17 {
+  .rem(17);
+}
+
+.h-font-size-18 {
+  .rem(18);
+}
+
+.h-font-size-22 {
+  .rem(22);
+}
+
+.h-font-size-45 {
+  .rem(45);
+}
+
+.h-font-size-65 {
+  .rem(65);
+}
+
+.h-font-weight {
+    font-weight: 700;
+}
+
+.h-margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.h-margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.h-margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.h-margin-top-100 {
+    margin-top: 100px;
+}
+
+.h-overlay {
+  position: relative;
+
+  &::before {
+    background-color: rgba(0,0,0,0.5);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.h-padding-bottom-60 {
+    padding-bottom: 60px;
+}
+
+.h-text-center {
+  text-align: center;
+}
+
+.h-text-left {
+  text-align: left;
+}
+
+.h-text-right {
+  text-align: right;
+}
+
+.sr-only,
+.visually-hidden,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0); // This is getting deprecated. Only for old browsers https://caniuse.com/#feat=mdn-css_properties_clip
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px); // This is new and browser support is in the works https://caniuse.com/#feat=css-clip-path
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px); // This is new and browser support is in the works https://caniuse.com/#feat=css-clip-path
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+.sr-only-undo,
+.visually-hidden-undo,
+.visuallyhidden-undo {
+    clip: auto; // This is getting deprecated. Only for old browsers https://caniuse.com/#feat=mdn-css_properties_clip
+    -webkit-clip-path: none; // This is new and browser support is in the works https://caniuse.com/#feat=css-clip-path
+    clip-path: none; // This is new and browser support is in the works https://caniuse.com/#feat=css-clip-path
+    margin: 0;
+    padding: 0;
+    position: static;
+    white-space: normal;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}

@@ -1,0 +1,284 @@
+.banner-group {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    @media (min-width: @breakpoint-ipad) {
+        display: flex;
+    }
+
+    .site-banner {
+        margin-bottom: 50px;
+        width: 100%;
+
+        @media (min-width: @breakpoint-ipad) {
+            margin-left: 20px;
+            margin-bottom: 0;
+
+            &:last-child {
+                margin-right: 20px;
+            }
+        }
+
+        &:nth-child(n+4) {
+            display: none;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:only-child {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &:not(.site-banner--cta) {
+            .site-banner__button {
+                background-color: transparent;
+                border: 0;
+                color: @color-copy;
+                padding: 0;
+                min-width: 0;
+                min-height: 0;
+            }
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .site-banner__delimiter {
+        display: none;
+    }
+
+    .site-banner__prefix {
+        .rem(17);
+        margin-bottom: 5px;
+    }
+
+    .site-banner__text,
+    .site-banner__title {
+        margin-bottom: 20px;
+    }
+
+    .site-banner__title {
+        .rem(28);
+    }
+
+    .site-banner__video {
+        display: none;
+    }
+
+    .site-banner--cta {
+        .site-banner__body {
+            min-height: 0;
+        }
+
+        .site-banner__button {
+            background-color: transparent;
+            border-color: @color-copy;
+            color: @color-copy;
+
+            &:hover {
+                background-color: @color-copy;
+                color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+
+    .site-banner--overlap,
+    .site-banner--overlap.site-banner--overlay {
+        @media (min-width: @breakpoint-ipad) {
+            background-position: 150px center;
+        }
+
+        @media (min-width: @breakpoint-air) {
+            background-position: 200px center;
+        }
+
+        @media (min-width: @breakpoint-big) {
+            background-position: 250px center;
+        }
+
+        @media (min-width: @breakpoint-hd) {
+            background-position: 300px center;
+        }
+    }
+
+    .site-banner--overlap.site-banner--content-position-center {
+        @media (min-width: @breakpoint-ipad) {
+            background-position: center;
+        }
+    }
+
+    .site-banner--overlap.site-banner--content-position-right {
+        @media (min-width: @breakpoint-ipad) {
+            background-position: ~"calc(100% - 150px)" center;
+        }
+
+        @media (min-width: @breakpoint-air) {
+            background-position: ~"calc(100% - 200px)" center;
+        }
+
+        @media (min-width: @breakpoint-big) {
+            background-position: ~"calc(100% - 250px)" center;
+        }
+
+        @media (min-width: @breakpoint-hd) {
+            background-position: ~"calc(100% - 300px)" center;
+        }
+    }
+
+    .site-banner--overlay {
+        .site-banner__button {
+            background-color: transparent;
+            color: @color-copy;
+
+            &:hover {
+                background-color: transparent;
+                color: @color-copy;
+            }
+        }
+    }
+
+    .site-banner--solid-background.site-banner--content-position-center {
+        @media (min-width: @breakpoint-ipad) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+
+.banner-group {
+    // The trick is to select the first child when it's also the nth-from-the-last child.
+    // This effectively selects based on the number of siblings.
+    // https://stackoverflow.com/a/12198561/2716287
+    .site-banner:first-child:nth-last-child(3),
+    .site-banner:first-child:nth-last-child(3) ~ .site-banner {
+        background-position: center 0;
+        background-size: 100% auto;
+        color: @color-copy;
+        align-items: stretch;
+        .rem(13);
+        padding-top: 150px;
+        text-align: left;
+        min-height: 0;
+
+        @media (min-width: @breakpoint-mobile) {
+            padding-top: 220px;
+        }
+
+        @media (min-width: @breakpoint-tablet) {
+            padding-top: 290px;
+        }
+
+        @media (min-width: @breakpoint-ipad) {
+            background-size: auto 250px;
+            padding-top: 200px;
+        }
+
+        @media (min-width: @breakpoint-air) {
+            background-size: auto 300px;
+            padding-top: 250px;
+        }
+
+        @media (min-width: @breakpoint-big) {
+            background-size: auto 420px;
+            padding-top: 370px;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        &:not(.site-banner--cta) {
+            .site-banner__button {
+                display: block;
+                text-align: right;
+            }
+        }
+
+        .site-banner__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            height: 100%;
+
+            &:before {
+                background-color: @color-7;
+                opacity: 1;
+            }
+        }
+
+        .site-banner__delimiter,
+        .site-banner__prefix {
+            display: none;
+        }
+
+        .site-banner__text {
+            margin-bottom: 5px;
+        }
+
+        .site-banner__title {
+            color: #000;
+            .rem(28);
+            margin-bottom: 5px;
+        }
+    }
+
+
+
+    .site-banner--cta:first-child:nth-last-child(2),
+    .site-banner--cta:first-child:nth-last-child(2) ~ .site-banner--cta {
+        background-position: center 0;
+        background-size: 100% auto;
+        color: @color-copy;
+        align-items: stretch;
+        .rem(13);
+        padding-top: 150px;
+        text-align: left;
+        min-height: 0;
+
+        @media (min-width: @breakpoint-mobile) {
+            padding-top: 220px;
+        }
+
+        @media (min-width: @breakpoint-tablet) {
+            padding-top: 290px;
+        }
+
+        @media (min-width: @breakpoint-ipad) {
+            padding-top: 170px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            padding-top: 215px;
+        }
+
+        @media (min-width: @breakpoint-air) {
+            padding-top: 270px;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        .site-banner__body {
+            justify-content: space-between;
+            max-width: none;
+            height: 100%;
+
+            &:before {
+                background-color: @color-7;
+            }
+        }
+    }
+}

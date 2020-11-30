@@ -1,0 +1,4 @@
+.rem(@sizeValue) {
+  @remValue: (@sizeValue / unit(@font-size));
+  font-size: ~"@{remValue}rem";
+}

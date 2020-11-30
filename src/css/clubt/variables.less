@@ -1,0 +1,108 @@
+// SITE SETTINGS
+// Used to calculate other variables
+@site-margin: 20px;
+@site-width: 1220px;
+@site-width-banner: 1530px;
+@site-width-small: 800px;
+
+
+
+// BREAKPOINTS
+@breakpoint-android: 360px;
+@breakpoint-iphone: 375px;
+@breakpoint-iphone-plus: 414px;
+@breakpoint-mobile: 480px;
+@breakpoint-tablet: 600px;
+@breakpoint-ipad: 768px;
+@breakpoint-desktop: 991px;
+@breakpoint-ipad-landscape: 1024px;
+@breakpoint-large: 1200px;
+@breakpoint-air: 1400px;
+@breakpoint-big: 1600px;
+@breakpoint-hd: 1900px;
+
+@breakpoint-navigation: @breakpoint-air;
+@breakpoint-site-width-banner: ~"calc(@{site-width-banner} + 2 * @{site-margin})";
+@breakpoint-site-width: ~"calc(@{site-width} + 2 * @{site-margin})";
+@breakpoint-site-width-small: ~"calc(@{site-width-small} + 2 * @{site-margin})";
+
+@breakpoint-category: @breakpoint-desktop;
+@breakpoint-design: 1260px;
+@breakpoint-navigation: @breakpoint-ipad;
+@breakpoint-toolbar: @breakpoint-desktop;
+
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Assistant:wght@300;400;500;600;700;800&display=swap');
+@font-1: 'Abril Fatface', serif;
+@font-2: 'Assistant', sans-serif;
+
+@font-default: @font-2;
+@font-family: @font-2;
+@font-heading: @font-1;
+@font-line-height: 1.2;
+@font-size: 16px;
+@font-weight: 400;
+@font-semibold: 600;
+@font-bold: bold;
+
+
+
+// COLORS
+// Basic colours
+@color-1: #D9EFEC;
+@color-2: #231F20;
+@color-3: #4F4C4D;
+@color-4: #1A1401;
+@color-5: #F6FCFB;
+@color-6: #2F3437;
+@color-7: #F6F5F3;
+@color-8: #464F53;
+@color-9: #D7D6D7;
+
+// Brands
+@color-facebook: #3b5998;
+@color-instagram: #c13584;
+@color-linkedin: #0077b5;
+@color-pinterest: #bd081c;
+@color-spotify: #1db954;
+@color-twitter: #1da1f2;
+@color-youtube: #ff0000;
+
+// Specific colours
+@color-active: @color-1;
+@color-banner-background: @color-2;
+@color-banner-copy: #fff;
+@color-footer-background: @color-2;
+@color-footer-box: #2B2B2C;
+@color-footer-font: #fff;
+@color-heading: @color-2;
+@color-hover: @color-1;
+@color-link: @color-1;
+@color-navigation-link: @color-2;
+
+@color-background: @color-2;
+@color-button: @color-2;
+@color-button-copy: #fff;
+@color-copy: @color-3;
+@color-debug: #dedede;
+@color-error: red;
+@color-password-background-medium: #f3ef99;
+@color-password-background-strong: #a5e9a7;
+@color-password-background-weak: #ed9797;
+@color-price-old: #898989;
+@color-product-available: #a5e9a7;
+@color-product-unavailable: #ed9797;
+
+
+
+// OTHER VARIABLES
+@border-radius: 5px;
+@burger-position-bottom: 20px;
+@burger-navigation-position: 70px + @burger-position-bottom;
+@content-width: 800px;
+@layer-header: 100;
+@layer-modal: 1000 !important;
+@radius: @border-radius;
+@shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.05);

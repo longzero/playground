@@ -1,0 +1,42 @@
+// Compile with command line:
+// lessc src/css/clubt.less docs/clubt/css/clubt.css
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
+// The management of the CSS is
+// a mixture of ITCSS and Atomic Design
+
+// SETTINGS
+@import 'clubt/variables';
+
+// TOOLS
+@import 'clubt/functions';
+
+// ELEMENTS
+@import 'clubt/base';
+
+// OBJECTS
+@import 'clubt/layout';
+
+// COMPONENTS
+@import 'clubt/albert';
+// @import 'clubt/burger';
+@import 'clubt/buttons';
+// @import 'clubt/footer';
+// @import 'clubt/footer-cta';
+// @import 'clubt/header';
+// @import 'clubt/navigation';
+@import 'clubt/site';
+@import 'clubt/site-banner';
+@import 'clubt/site-banner-carousel';
+@import 'clubt/site-banner-contenu-descriptif';
+@import 'clubt/site-banner-group';
+// @import 'clubt/typography';
+
+// TRUMPS
+@import 'clubt/helpers';
+
+// PAGES

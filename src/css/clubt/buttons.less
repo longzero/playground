@@ -1,0 +1,54 @@
+a.action.primary,
+.action.primary,
+.action-primary,
+.action.tocart.primary,
+.button {
+    background-color: @color-button;
+    border: 1px solid @color-button;
+    border-radius: 0;
+    color: @color-button-copy;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 15px 60px;
+    text-decoration: none;
+    transition-duration: .3s;
+
+    &:hover {
+        background-color: @color-button;
+        border-color: @color-button;
+        color: @color-button-copy;
+        opacity: .7;
+        text-decoration: none;
+    }
+}
+
+.actions-toolbar {
+    .primary {
+        .action {
+            margin-right: 30px;
+        }
+    }
+
+    .secondary {
+        color: @color-2;
+        font-weight: 700;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+.button--ghost {
+    background-color: transparent;
+    border: 1px solid @color-button;
+    color: @color-button;
+
+    &:hover {
+        background-color: @color-button;
+        color: @color-button-copy;
+        opacity: 1;
+    }
+}

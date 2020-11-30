@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+    line-height: 1.4;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: @color-2;
+
+    &:visited,
+    &:hover {
+        color: @color-2;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+body {
+    color: @color-copy;
+}
+
+button {
+    .button;
+}
+
+fieldset {
+    border: 0;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+input {
+    &[type="text"],
+    &[type="password"],
+    &[type="url"],
+    &[type="tel"],
+    &[type="search"],
+    &[type="number"],
+    &[type="datetime"],
+    &[type="email"] {
+        .h-field-input;
+
+        &.mage-error {
+            border-color: @color-error;
+
+            // This is the error message
+            + .mage-error {
+                color: @color-error;
+                font-size: .8rem;
+            }
+
+        }
+
+    }
+
+}
+
+input {
+    &[type="checkbox"],
+    &[type="radio"] {
+        margin-top: 4px;
+    }
+
+}
+
+// Remove arrows from input number
+// https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// Remove arrows from input number on Firefox
+// https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+ol,
+ul,
+p {
+    margin-bottom: 1em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+select {
+    .h-field-input;
+    appearance: none;
+    // ARROW DOWN
+    // <svg fill="#127ec2"width="2048"height="2048"viewBox="0 0 2048 2048"xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+    // PHN2ZyBmaWxsPSIjMTI3ZWMyIiB3aWR0aD0iMjA0OCIgaGVpZ2h0PSIyMDQ4IiB2aWV3Qm94PSIwIDAgMjA0OCAyMDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNTIzIDg2NHEwIDEzLTEwIDIzbC00NjYgNDY2cS0xMCAxMC0yMyAxMHQtMjMtMTBsLTQ2Ni00NjZxLTEwLTEwLTEwLTIzdDEwLTIzbDUwLTUwcTEwLTEwIDIzLTEwdDIzIDEwbDM5MyAzOTMgMzkzLTM5M3ExMC0xMCAyMy0xMHQyMyAxMGw1MCA1MHExMCAxMCAxMCAyM3oiLz48L3N2Zz4=
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMTI3ZWMyIiB3aWR0aD0iMjA0OCIgaGVpZ2h0PSIyMDQ4IiB2aWV3Qm94PSIwIDAgMjA0OCAyMDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNTIzIDg2NHEwIDEzLTEwIDIzbC00NjYgNDY2cS0xMCAxMC0yMyAxMHQtMjMtMTBsLTQ2Ni00NjZxLTEwLTEwLTEwLTIzdDEwLTIzbDUwLTUwcTEwLTEwIDIzLTEwdDIzIDEwbDM5MyAzOTMgMzkzLTM5M3ExMC0xMCAyMy0xMHQyMyAxMGw1MCA1MHExMCAxMCAxMCAyM3oiLz48L3N2Zz4=");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    padding: 5px 25px 5px 10px;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    font-size: 14rem / @font-size;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+    vertical-align: top;
+}
+
+textarea {
+    .h-field-input;
+    font-family: @font-family;
+}

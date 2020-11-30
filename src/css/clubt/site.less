@@ -1,0 +1,35 @@
+.action {
+    cursor: pointer;
+}
+
+.four-waves {}
+
+.page-title-wrapper {
+    display: none;
+}
+
+.page-title {
+    font-size: 42rem / @font-size;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.page-title-wrapper {
+    .container; // Addded for account. Needs to be checked on other pages.
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #000;
+    font-family: @font-heading;
+    .rem(45);
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+
+    + .four-waves {
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}

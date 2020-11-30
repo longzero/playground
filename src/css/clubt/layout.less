@@ -1,0 +1,117 @@
+.container {
+    padding-left: @site-margin;
+    padding-right: @site-margin;
+    max-width: @site-width;
+    width: 100%;
+
+    @media (min-width: @breakpoint-site-width) {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.container--small {
+    max-width: @site-width-small;
+}
+
+.layout-2-columns {
+    margin-top: 80px; // Without this, content sticks to the header when there is no top-banner
+
+    @media (min-width: @breakpoint-desktop) {
+        display: flex;
+    }
+
+    // .cta-block {
+    //     .cta-block-content-1,
+    //     .cta-block-content-2 {
+    //         width: 100%;
+    //     }
+    //     .cta-block-content-1 {
+    //         .h-flex-center();
+    //         flex-grow: 1;
+    //         @media (min-width: @breakpoint-ipad) {
+    //             margin-bottom: 30px;
+    //         }
+    //     }
+    //     .cta-block-content-2 {
+    //         justify-content: flex-start;
+    //         flex-grow: 0;
+    //         margin: 0;
+    //         padding: 0;
+    //     }
+    //     .cta-block-image-container {
+    //         position: static;
+    //         width: 100%;
+    //         height: auto;
+    //     }
+    //     .cta-block-link {
+    //         font-size: 1rem;
+    //     }
+    //     .cta-block-subtitle {
+    //         display: none;
+    //     }
+    //     .cta-block-title {
+    //         font-size: 21rem / @font-size;
+    //     }
+    // }
+    // .cta-group {
+    //     padding: 0;
+    //     .cta-block {
+    //         &:nth-child(n+4) {
+    //             display: none;
+    //         }
+    //     }
+    // }
+
+    .site-sidebar {
+        .rem(13);
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+
+        @media (min-width: @breakpoint-desktop) {
+            margin-left: 0;
+            margin-right: 2* @site-margin;
+            margin-bottom: 0;
+            width: 275px;
+        }
+
+        @media (min-width: @breakpoint-design) {
+            margin-right: 5* @site-margin;
+        }
+
+        // .cta-group {
+        //     .cta-block {
+        //         margin-bottom: 40px;
+        //         width: 100%;
+        //     }
+        // }
+    }
+}
+
+
+
+.page-layout-2columns-left {
+    .columns {
+        .container;
+        display: flex;
+        flex-direction: row-reverse;
+
+        @media (max-width: @breakpoint-category) {
+            flex-direction: column;
+        }
+    }
+    .column.main {
+        flex-grow: 1;
+        padding: 0;
+        float: none;
+        width: auto;
+
+        @media (min-width: (@breakpoint-desktop + 1)) {
+            // margin-left: 40px;
+        }
+    }
+}
