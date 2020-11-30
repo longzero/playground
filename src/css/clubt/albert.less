@@ -20,11 +20,15 @@
     background-color: @color-1;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     padding: 60px 50px;
     position: relative;
     width: 275px;
     height: 250px;
+
+    @media (min-width: @breakpoint-large) {
+        margin-bottom: 50px;
+    }
 
     &:first-child {
         margin-left: 0;
@@ -70,23 +74,38 @@
 }
 
 .albert-group {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: @breakpoint-large) {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
 
     &:before {
         background-color: @color-9;
         content: '';
-        display: block;
+        display: none;
         position: absolute;
         bottom: 0;
         left: 50%;
         width: 1px;
-        height: 309px;
+
+        @media (min-width: @breakpoint-ipad) {
+            height: 730px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            display: block;
+            height: 309px;
+        }
     }
 
     .albert-group {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         max-width: 560px;
         width: 100%;
 

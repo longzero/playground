@@ -295,11 +295,16 @@ textarea {
   background-color: #D9EFEC;
   margin-left: 5px;
   margin-right: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   padding: 60px 50px;
   position: relative;
   width: 275px;
   height: 250px;
+}
+@media (min-width: 1200px) {
+  .albert-box {
+    margin-bottom: 50px;
+  }
 }
 .albert-box:first-child {
   margin-left: 0;
@@ -336,22 +341,40 @@ textarea {
   margin-right: 10px;
 }
 .albert-group {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1200px) {
+  .albert-group {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
 }
 .albert-group:before {
   background-color: #D7D6D7;
   content: '';
-  display: block;
+  display: none;
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 1px;
-  height: 309px;
+}
+@media (min-width: 768px) {
+  .albert-group:before {
+    height: 730px;
+  }
+}
+@media (min-width: 1200px) {
+  .albert-group:before {
+    display: block;
+    height: 309px;
+  }
 }
 .albert-group .albert-group {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   max-width: 560px;
   width: 100%;
 }
@@ -1392,6 +1415,9 @@ a.action.primary:hover,
 }
 .h-margin-bottom-100 {
   margin-bottom: 100px;
+}
+.h-margin-top-20 {
+  margin-top: 20px;
 }
 .h-margin-top-100 {
   margin-top: 100px;
