@@ -71,6 +71,7 @@ p:last-child, ul:last-child, ol:last-child {
   flex-grow: 0;
   flex-shrink: 0;
   text-align: center;
+  text-decoration: none;
   max-width: 455px;
   min-height: 455px;
   width: 100%;

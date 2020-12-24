@@ -10,6 +10,7 @@ $astro-wrapper-width: calc(3 * #{$astro-item-width});
   flex-grow: 0;
   flex-shrink: 0;
   text-align: center;
+  text-decoration: none;
   max-width: $astro-item-width;
   min-height: $astro-item-height;
   width: 100%;
