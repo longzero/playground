@@ -63,6 +63,137 @@ p:last-child, ul:last-child, ol:last-child {
   margin-bottom: 0;
 }
 
+.astro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  max-width: 455px;
+  min-height: 455px;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .astro-item {
+    width: calc(100% / 3);
+  }
+}
+
+.astro-item-details {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 1rem;
+}
+
+.astro-item-name {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .astro-item-name {
+    font-size: 2.2rem;
+  }
+}
+
+.astro-item-symbol {
+  position: relative;
+  width: calc(100% / 3);
+}
+.astro-item-symbol:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+.astro-item-symbol svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.astro-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(3 * 455px);
+  min-height: 455px;
+}
+
+.astro-item--balance {
+  background-color: #AEDED2;
+  color: #006869;
+}
+
+.astro-item--belier {
+  background-color: #FE2E24;
+  color: #fff;
+}
+
+.astro-item--cancer {
+  background-color: #fff;
+  color: #002CCB;
+}
+
+.astro-item--capricorne {
+  background-color: #FFE1BB;
+  color: #FE2E24;
+}
+
+.astro-item--gemeaux {
+  background-color: #FFE3D5;
+  color: #FE2E24;
+}
+
+.astro-item--lion {
+  background-color: #FFC750;
+  color: #fff;
+}
+
+.astro-item--poisson {
+  background-color: #FFE3D5;
+  color: #002CCB;
+}
+
+.astro-item--sagittaire {
+  background-color: #002ccb;
+  color: #fff;
+}
+
+.astro-item--scorpion {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.astro-item--taureau {
+  background-color: #006869;
+  color: #fff;
+}
+
+.astro-item--verseau {
+  background-color: #AEDED2;
+  color: #002CCB;
+}
+
+.astro-item--vierge {
+  background-color: #006869;
+  color: #AEDED2;
+}
+
 .landing-newsletter {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYWxxdWVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgNjUyLjI2IDEwODAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZT4uc3Qwe2ZpbGw6I2ZjYzQ0Zn0uc3Qxe2ZpbGw6I2U1MzgyZX0uc3Qye2ZpbGw6IzFmMWYxZn0uc3Qze2ZpbGw6IzAwMmJjY30uc3Q0e2ZpbGw6I2ZmZTNkNH0uc3Q1e2ZpbGw6IzAwNjk2OX0uc3Q2e2ZpbGw6I2U4ZThlM308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTYuNTQgMTA4LjYxYzAgMzUuMTItMjguNDcgNjMuNi02My42IDYzLjYtMzUuMTIgMC02My42LTI4LjQ3LTYzLjYtNjMuNiAwLTM1LjEyIDI4LjQ3LTYzLjYgNjMuNi02My42IDM1LjEzLjAxIDYzLjYgMjguNDggNjMuNiA2My42Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE5Ni45MiAzMDkuNTJsLTI0LjYxIDI0LjYtMTAzLjM0LTkxLjA0IDM3LjUyLTM3LjUzeiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOTEuMjQgMjY1LjEzYy0zNS4xMiAwLTYzLjYgMjguNDctNjMuNiA2My42aDEyNy4xOWMuMDEtMzUuMTMtMjguNDYtNjMuNi02My41OS02My42Ii8+PHBhdGggY2xhc3M9InN0MyIgZD0iTTIyNi41OCAxMDguNjFoMTI5LjMzdjEyOS4zM0gyMjYuNTh6Ii8+PHBhdGggY2xhc3M9InN0NCIgZD0iTTUxOS43MSAzMzAuMzJINDAzLjY2di0xMjcuMkg1MTkuN2MzNS4xMy4wMiA2My41OCAyOC40NyA2My41OCA2My42LjAxIDM1LjExLTI4LjQ0IDYzLjU4LTYzLjU3IDYzLjYiLz48cGF0aCBjbGFzcz0ic3Q1IiBkPSJNNDcxLjE5IDM1LjUxbC04Mi4yOCAxMjkuMzJoMTY0LjU3eiIvPjxwYXRoIGNsYXNzPSJzdDYiIGQ9Ik0yMzIuNDggMjUuNDloMTY0LjU5djMwLjM4SDIzMi40OHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTk2LjU0IDQ4Mi4wMWMwIDM1LjEyLTI4LjQ3IDYzLjYtNjMuNiA2My42LTM1LjEyIDAtNjMuNi0yOC40Ny02My42LTYzLjZzMjguNDctNjMuNiA2My42LTYzLjZjMzUuMTMuMDEgNjMuNiAyOC40OCA2My42IDYzLjYiLz48cGF0aCBmaWxsPSIjZmY0NzJlIiBkPSJNMTk2LjkyIDY4Mi45MmwtMjQuNiAyNC42LTEwMy4zNS05MS4wNCAzNy41Mi0zNy41M3oiLz48cGF0aCBjbGFzcz0ic3QyIiBkPSJNMjkxLjI0IDYzOC41M2MtMzUuMTIgMC02My42IDI4LjQ3LTYzLjYgNjMuNmgxMjcuMTljLjAxLTM1LjEzLTI4LjQ2LTYzLjYtNjMuNTktNjMuNiIvPjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik0yMjYuNTggNDgyLjAxaDEyOS4zM3YxMjkuMzNIMjI2LjU4eiIvPjxwYXRoIGQ9Ik01MTkuNzEgNzAzLjcySDQwMy42NnYtMTI3LjJINTE5LjdjMzUuMTMuMDIgNjMuNTggMjguNDcgNjMuNTggNjMuNi4wMSAzNS4xMS0yOC40NCA2My41OC02My41NyA2My42IiBmaWxsPSIjZmZlM2JkIi8+PHBhdGggZmlsbD0iI2FkZGVkMSIgZD0iTTQ3MS4xOSA0MDguOTFsLTgyLjI4IDEyOS4zMmgxNjQuNTd6Ii8+PHBhdGggY2xhc3M9InN0NiIgZD0iTTIzMi40OCAzODkuNDZoMTY0LjU5djM5LjhIMjMyLjQ4eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTYuNTQgODMyLjgxYzAgMzUuMTItMjguNDcgNjMuNi02My42IDYzLjYtMzUuMTIgMC02My42LTI4LjQ3LTYzLjYtNjMuNiAwLTM1LjEyIDI4LjQ3LTYzLjYgNjMuNi02My42czYzLjYgMjguNDggNjMuNiA2My42Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTY4Ljk3IDk2Ny4yOGw4NS44MyA3NS42MWgzMi45NWw5LjE3LTkuMTgtOTAuNDMtMTAzLjk2eiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOTEuMjQgOTg5LjMzYy0zNS4xMiAwLTYzLjYgMjguNDctNjMuNiA2My42aDEyNy4xOWMuMDEtMzUuMTMtMjguNDYtNjMuNi02My41OS02My42Ii8+PHBhdGggY2xhc3M9InN0MyIgZD0iTTIyNi41OCA4MzIuODFoMTI5LjMzdjEyOS4zM0gyMjYuNTh6Ii8+PHBhdGggY2xhc3M9InN0NCIgZD0iTTUxOS43MSAxMDU0LjUxSDQwMy42NnYtMTI3LjJINTE5LjdjMzUuMTMuMDIgNjMuNTggMjguNDcgNjMuNTggNjMuNi4wMSAzNS4xMi0yOC40NCA2My41OS02My41NyA2My42Ii8+PHBhdGggY2xhc3M9InN0NSIgZD0iTTQ3MS4xOSA3NTkuN2wtODIuMjggMTI5LjMzaDE2NC41N3oiLz48cGF0aCBjbGFzcz0ic3Q2IiBkPSJNMjMyLjQ4IDc0MC4yNmgxNjQuNTl2MzkuOEgyMzIuNDh6Ii8+PC9zdmc+");
   background-position: calc(100% + 85px) -70px;

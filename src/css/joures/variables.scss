@@ -23,9 +23,11 @@ $breakpoint-navigation: $breakpoint-air;
 $breakpoint-site-width: $site-width + 2 * $site-margin;
 
 // FONTS
-$font-default: 'din-2014', sans-serif;
-$font-family: 'din-2014', sans-serif;
-$font-heading: 'din-2014', sans-serif;
+$font-1: 'din-2014', sans-serif;
+$font-2: 'adobe-garamond-pro', serif;
+$font-default: $font-1;
+$font-family: $font-default;
+$font-heading: $font-2;
 $font-line-height: 1.2;
 $font-size: 16px;
 $font-weight: 400;
