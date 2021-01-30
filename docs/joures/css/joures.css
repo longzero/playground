@@ -232,7 +232,9 @@ p:last-child, ul:last-child, ol:last-child {
   flex-grow: 0;
   flex-shrink: 0;
   font-size: calc(14 / 16 * 1rem);
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   text-decoration: none;
   max-width: 500px;
@@ -244,17 +246,46 @@ p:last-child, ul:last-child, ol:last-child {
     width: calc(100% / 2);
   }
 }
+@media (min-width: 1150px) {
+  .brand-page-item {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.brand-page-item-action {
+  background-color: #ffe3d5;
+  color: #1f1f1f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14 / 16 * 1rem);
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+.brand-page-item-action:hover {
+  background-color: #fdc5a8;
+  text-decoration: none;
+}
 
 .brand-page-item-details {
   line-height: calc(22 / 14);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .brand-page-item-image {
   display: block;
+  max-width: 100%;
 }
 
 .brand-page-item-media {
+  display: none;
   margin-bottom: 50px;
 }
 

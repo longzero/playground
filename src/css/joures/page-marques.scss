@@ -1,9 +1,23 @@
+$breakpoint-ipad: 768px;
+$breakpoint-brands: 1150px;
+
+$color-1: #ffe3d5;
+$color-2: #1f1f1f;
+$color-3: #aeded2;
+$color-4: #000000;
+$color-5: #fdc5a8;
+$color-6: #99c9bd;
+
+$color-copy: #1f1f1f;
+
+$font-heading: 'adobe-garamond-pro', serif;
+$font-size-unitless: 16;
+
 $brand-page-item-width: 500px;
 $brand-page-item-height: 0;
 $brand-page-wrapper-width: 1130px;
 
 .brand-page-item {
-  // background-color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,25 +25,62 @@ $brand-page-wrapper-width: 1130px;
   flex-grow: 0;
   flex-shrink: 0;
   font-size: calc(14 / #{$font-size-unitless} * 1rem);
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   text-decoration: none;
-  max-width: 500px;
+  max-width: $brand-page-item-width;
   width: 100%;
   height: 100%;
-
   @media (min-width: $breakpoint-ipad) {
     width: calc(100% / 2);
   }
+  @media (min-width: $breakpoint-brands) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // &:hover {
+  //   .brand-page-item-details {
+  //     -webkit-line-clamp: 100;
+  //   }
+  // }
+}
+.brand-page-item-action {
+  background-color: $color-1;
+  color: $color-2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14 / #{$font-size-unitless} * 1rem);
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .3s;
+  &:hover {
+    background-color: $color-5;
+    text-decoration: none;
+  }
 }
 .brand-page-item-details {
+  // display: -webkit-box; // For line clamping
+  // -webkit-box-orient: vertical;
+  // -webkit-line-clamp: 3;
   line-height: calc(22 / 14);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
 }
 .brand-page-item-image {
   display: block;
+  max-width: 100%;
 }
 .brand-page-item-media {
+  display: none;
   margin-bottom: 50px;
 }
 .brand-page-item-name {
