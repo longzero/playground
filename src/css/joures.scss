@@ -25,11 +25,12 @@
 // @import 'joures/layout';
 
 // COMPONENTS
-// @import 'joures/site';
+@import 'joures/buttons';
 
 // TRUMPS
 // @import 'joures/helpers';
 
 // PAGES
-@import 'joures/astrologie';
+@import 'joures/page-astrologie';
+@import 'joures/page-marques';
 @import 'joures/landing-newsletter';
