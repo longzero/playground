@@ -1,0 +1,160 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Header"}} @-->
+<!--@vars {
+"var logo_url":"Email Logo Image URL",
+"var logo_alt":"Email Logo Alt Text",
+"var logo_height":"Email Logo Image Height",
+"var logo_width":"Email Logo Image Width",
+"var template_styles|raw":"Template CSS"
+} @-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+        {{var template_styles|raw}}
+
+        {{css file="css/email.css"}}
+    </style>
+</head>
+<body>
+{{inlinecss file="css/email-inline.css"}}
+
+<!-- Begin wrapper table -->
+<table class="wrapper" width="100%">
+    <tr>
+        <td class="wrapper-inner" align="center">
+            <table class="main" align="center">
+                <tr>
+                    <td class="header">
+                        <a class="logo" href="{{store url=""}}">
+                            <img
+                                {{if logo_width}}
+                                    width="{{var logo_width}}"
+                                {{else}}
+                                    width="180"
+                                {{/if}}
+
+                                {{if logo_height}}
+                                    height="{{var logo_height}}"
+                                {{/if}}
+
+                                src="images/email/logo.png"
+                                alt="{{var logo_alt}}"
+                                border="0"
+                            />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-content">
+                    <!-- Begin Content -->
+
+
+
+
+
+
+
+
+
+                    <!-- End Content -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: #D9EFEC; padding-top: 20px; padding-bottom: 20px;">
+                        <table>
+                            <tr>
+                                <td align="center">
+                                    <p>{{trans "FIND INSPIRATION AND SHARE YOUR CREATIONS"}}<br>
+                                        <strong style="color: #ff00db;">#CLUBTISSUS</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table width="130">
+                                        <tr>
+                                            <td align="center" style="padding-left: 10px; padding-right: 10px;">
+                                                <a href="#">
+                                                    <img src='{{view url="images/email/icons/facebook.png"}}' alt="" width="20" height="20">
+                                                </a>
+                                            </td>
+                                            <td align="center" style="padding-left: 10px; padding-right: 10px;">
+                                                <a href="#">
+                                                    <img src='{{view url="images/email/icons/instagram.png"}}' alt="" width="20" height="20">
+                                                </a>
+                                            </td>
+                                            <td align="center" style="padding-left: 10px; padding-right: 10px;">
+                                                <a href="#">
+                                                    <img src='{{view url="images/email/icons/youtube.png"}}' alt="" width="20" height="20">
+                                                </a>
+                                            </td>
+                                            <td align="center" style="padding-left: 10px; padding-right: 10px;">
+                                                <a href="#">
+                                                    <img src='{{view url="images/email/icons/pinterest.png"}}' alt="" width="20" height="20">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td height="10"></td></tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: #F6F5F3; padding-top: 20px; padding-bottom: 20px;">
+                        <a href='{{trans "https://promo.clubtissus.com/subscribe-newsletter-club-tissus/"}}' style="color: #ff00db; text-decoration: none;">
+                            {{trans "SUBSCRIBE TO OUR NEWSLETTER"}}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: #D9EFEC; padding-top: 40px; padding-bottom: 40px;">
+                        <table>
+                            <tr>
+                                <td align="center" valign="top" style="padding-left: 10px; padding-right: 10px;">
+                                    <a href='{{trans "https://clubtissus.com/en/become-a-member"}}' style="color: #000000; text-decoration: none;">
+                                        <img src='{{view url="images/email/icons/ico_footer_membre.png"}}' width="30" height="24" alt="" style="margin-bottom: 10px;"><br>
+                                        {{trans "MEMBERSHIP"}}
+                                    </a>
+                                </td>
+                                <td width="1" style="border-left: 1px solid #000; width: 1px;"></td>
+                                <td align="center" valign="top" style="padding-left: 10px; padding-right: 10px;">
+                                    <a href='{{trans "https://clubtissus.com/en/contact/"}}' style="color: #000000; text-decoration: none;">
+                                        <img src='{{view url="images/email/icons/ico_footer_mail.png"}}' width="30" height="24" alt="" style="margin-bottom: 10px;"><br>
+                                        {{trans "ANY QUESTION?"}}<br>
+                                        {{trans "CONTACT US!"}}
+                                    </a>
+                                </td>
+                                <td width="1" style="border-left: 1px solid #000; width: 1px;"></td>
+                                <td align="center" valign="top" style="padding-left: 10px; padding-right: 10px;">
+                                    <a href='{{trans "https://clubtissus.com/en/contact/"}}' style="color: #000000; text-decoration: none;">
+                                        <img src='{{view url="images/email/icons/ico_footer_storelocator.png"}}' width="30" height="24" alt="" style="margin-bottom: 10px;"><br>
+                                        {{trans "FIND A STORE"}}
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: #F6F5F3; padding-top: 20px; padding-bottom: 20px;">
+                        <p>{{trans "Club Tissus - 1651, boulevard des Promenades, Saint-Hubert, QC J3Y 5K2 - Canada"}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End wrapper table -->
+</body>
