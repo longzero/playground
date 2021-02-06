@@ -224,6 +224,23 @@ p:last-child, ul:last-child, ol:last-child {
   color: #AEDED2;
 }
 
+.brand-page-expand {
+  background-color: transparent;
+  border: none;
+  color: #c2c2c2;
+  cursor: pointer;
+  font-family: "din-2014", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+.brand-page-expand:hover {
+  color: #000;
+}
+.brand-page-expand span:nth-child(n+2) {
+  display: none;
+}
+
 .brand-page-item {
   display: flex;
   flex-direction: column;
@@ -278,6 +295,26 @@ p:last-child, ul:last-child, ol:last-child {
   line-height: calc(22 / 14);
   margin-bottom: 2em;
 }
+.brand-page-item-details.active p {
+  -webkit-line-clamp: 1000;
+  max-height: 1000px;
+}
+.brand-page-item-details.active span {
+  display: block;
+}
+.brand-page-item-details.active span:nth-child(1) {
+  display: none;
+}
+.brand-page-item-details p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
+  transition-duration: 0.3s;
+  max-height: 70px;
+}
 
 .brand-page-item-image {
   display: block;
@@ -285,7 +322,7 @@ p:last-child, ul:last-child, ol:last-child {
 }
 
 .brand-page-item-media {
-  display: none;
+  background-color: #ffe3d5;
   margin-bottom: 50px;
 }
 
@@ -300,12 +337,14 @@ p:last-child, ul:last-child, ol:last-child {
 }
 .brand-page-item-name a {
   color: #1f1f1f;
+  text-decoration: none;
 }
 
 .brand-page-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 82px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1130px;

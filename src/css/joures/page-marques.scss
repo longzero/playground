@@ -10,13 +10,40 @@ $color-6: #99c9bd;
 
 $color-copy: #1f1f1f;
 
-$font-heading: 'adobe-garamond-pro', serif;
+// FONTS
+$font-1: 'din-2014', sans-serif;
+$font-2: 'adobe-garamond-pro', serif;
+$font-default: $font-1;
+$font-family: $font-default;
+$font-heading: $font-2;
+$font-line-height: 1.2;
+$font-size: 16px;
 $font-size-unitless: 16;
+$font-body-size: $font-size;
+$font-weight: 400;
+$font-semibold: 600;
+$font-bold: bold;
 
 $brand-page-item-width: 500px;
 $brand-page-item-height: 0;
 $brand-page-wrapper-width: 1130px;
 
+.brand-page-expand {
+  background-color: transparent;
+  border: none;
+  color: #c2c2c2;
+  cursor: pointer;
+  font-family: $font-1;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition-duration: .3s;
+  &:hover {
+    color: #000;
+  }
+  span:nth-child(n+2) {
+    display: none;
+  }
+}
 .brand-page-item {
   display: flex;
   flex-direction: column;
@@ -42,11 +69,6 @@ $brand-page-wrapper-width: 1130px;
     padding-left: 0;
     padding-right: 0;
   }
-  // &:hover {
-  //   .brand-page-item-details {
-  //     -webkit-line-clamp: 100;
-  //   }
-  // }
 }
 .brand-page-item-action {
   background-color: $color-1;
@@ -67,20 +89,39 @@ $brand-page-wrapper-width: 1130px;
   }
 }
 .brand-page-item-details {
-  // display: -webkit-box; // For line clamping
-  // -webkit-box-orient: vertical;
-  // -webkit-line-clamp: 3;
   line-height: calc(22 / 14);
   margin-bottom: 2em;
-  // text-overflow: ellipsis;
-  // overflow: hidden;
+  &.active {
+    p {
+      -webkit-line-clamp: 1000;
+      max-height: 1000px;
+    }
+    span {
+      display: block;
+      &:nth-child(1) {
+        display: none;
+      }
+    }
+  }
+  p {
+    // 5 lines for clamping
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition-duration: .3s;
+    max-height: 70px;
+  }
 }
 .brand-page-item-image {
   display: block;
   max-width: 100%;
 }
 .brand-page-item-media {
-  display: none;
+  background-color: $color-1;
+  // display: none;
   margin-bottom: 50px;
 }
 .brand-page-item-name {
@@ -100,6 +141,7 @@ $brand-page-wrapper-width: 1130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 82px;
   margin-left: auto;
   margin-right: auto;
   max-width: $brand-page-wrapper-width;

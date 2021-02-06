@@ -421,8 +421,12 @@
       </div>
       <figcaption>
         <h3 class="brand-page-item-name"><a href="https://joures.com/collections/znoet">Znoet</a></h3>
-        <div class="brand-page-item-details">
-          <p>Znoet provient des Pays-Bas. C'est une marque de jouets en bois, dotés d'un design novateur et d'une esthétique impeccable. En plus d'être écologiques, durables et certifiées FSC, les créations Znoet ont une vocation pédagogique certaine. À leur contact, on aiguise notre patience, on stimule notre mémoire et on peaufine notre doigté. Rehaussant à merveille n'importe quel décor, les jeux et jouets Znoet sauront ravir les bébés et les enfants, et sans doute aussi - au passage - les adolescents et les parents. Car la marque croit aux pouvoirs rassembleurs du jeu. Elle est même d'avis qu'il n'y a pas d'âge pour tester ses habiletés en rigolant et en s'amusant. Sécuritaires et de grande qualité, les produits Znoet sont aussi eco-friendly. Résistants et exempts de matières dangereuses, ils sont fabriqués de manière à laisser très peu d'empreinte écologique derrière eux. En parallèle de sa mission entrepreneuriale, la marque travaille à la reforestation de la planète, en collaborant d'étroite façon avec une organisation vouée au reboisement. </p>
+        <div class="brand-page-item-details js-brand-page-item-details">
+          <p>Znoet provient des Pays-Bas. C'est une marque de jouets en bois, dotés d'un design novateur et d'une esthétique impeccable. En plus d'être écologiques, durables et certifiées FSC, les créations Znoet ont une vocation pédagogique certaine. À leur contact, on aiguise notre patience, on stimule notre mémoire et on peaufine notre doigté. Rehaussant à merveille n'importe quel décor, les jeux et jouets Znoet sauront ravir les bébés et les enfants, et sans doute aussi - au passage - les adolescents et les parents. Car la marque croit aux pouvoirs rassembleurs du jeu. Elle est même d'avis qu'il n'y a pas d'âge pour tester ses habiletés en rigolant et en s'amusant. Sécuritaires et de grande qualité, les produits Znoet sont aussi eco-friendly. Résistants et exempts de matières dangereuses, ils sont fabriqués de manière à laisser très peu d'empreinte écologique derrière eux. En parallèle de sa mission entrepreneuriale, la marque travaille à la reforestation de la planète, en collaborant d'étroite façon avec une organisation vouée au reboisement.</p>
+          <button class="brand-page-expand js-brand-page-expand">
+            <span>Voir plus</span>
+            <span>Voir moins</span>
+          </button>
         </div>
         <div class="brand-page-item-actions">
           <a class="brand-page-item-action button" href="https://joures.com/collections/znoet">Voir la collection</a>
@@ -430,6 +434,16 @@
       </figcaption>
     </figure>
   </div>
+
+  <script>
+    const limitLines = document.querySelectorAll('.js-brand-page-item-details')
+    const limitLinesToggle = document.querySelectorAll('.js-brand-page-expand')
+    for (let i = 0; i < limitLinesToggle.length; i++) {
+      limitLinesToggle[i].addEventListener('click', function(){
+        this.parentNode.classList.toggle('active')
+      })
+    }
+  </script>
 
   <script type="text/javascript" src="../js/live.js"></script>
 
