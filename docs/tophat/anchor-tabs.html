@@ -188,6 +188,9 @@
     const tabTarget = document.querySelectorAll('[data-tab-target]')
     const tabToggle = document.querySelectorAll('[data-tab-toggle]')
     if (tabTarget.length === tabToggle.length) {
+
+      // Setup clicking mechanism, mostly in case
+      // people click on a tab already active.
       for (let i=0; i<tabTarget.length; i++) {
         tabToggle[i].addEventListener('click', function(){
           DEBUG && console.warn("Tab clicked")
@@ -202,11 +205,15 @@
         })
       }
 
+      // When page loads, if there is a hash,
+      // activate the corresponding tab
       if (window.location.hash) {
         DEBUG && console.log("Hash exists")
         toggleTabs()
       }
 
+      // When clicking tabs, hash changes,
+      // so load the correct tab
       window.addEventListener('hashchange', function(){
         DEBUG && console.warn("URL has changed.")
         toggleTabs()
