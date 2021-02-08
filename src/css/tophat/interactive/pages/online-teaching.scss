@@ -1,0 +1,346 @@
+.interactive.interactive--online-teaching {
+    ol,
+    p,
+    ul {
+        margin-bottom: calc(1rem * 1.125);
+    }
+
+    .callout-box {
+        &:after {
+            background-color: $color-1;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            font-size: inherit;
+        }
+    }
+
+    .callout-box--small {
+        @media (min-width: $breakpoint-ipad) {
+            font-size: calc(1rem * 1.125);
+        }
+
+        &:after {
+            background-color: #aaedd1;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    .color-box p {
+        font-size: calc(1.33333rem * 1.125);
+
+        &:last-child {
+            // Why just the last child? I am keeping this here in case it is important.
+            color: #fff;
+        }
+    }
+
+    // This seems to have been removed from the content, so I am commenting it.
+    // I am leaving it here in case the content is put back.
+    .media-content-box-media {
+        margin-right: 30px;
+    }
+
+    .page-header-i {
+        background-color: #aaedd1;
+        margin-bottom: 80px;
+        @media (min-width: $breakpoint-ipad) {
+            display: flex;
+            position: relative;
+            height: 928px;
+            overflow: hidden;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 150px;
+        }
+
+        .container,
+        .page-header-media {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header-media {
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 0;
+
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+
+    .page-header-content {
+        background-color: #000;
+        color: #fff;
+        margin: -160px auto 0;
+        padding: 35px 25px;
+        position: relative;
+        transform: translateY(30px);
+        @media (min-width: $breakpoint-ipad) {
+            margin: 0 0 0 calc(100vw / 12 * -5);
+            padding: 100px 100px 120px 106px;
+            transform: none;
+            max-width: 680px;
+            min-height: 543px;
+            width: 90vw;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-left: calc(100% / 12 * -4);
+        }
+        @media (min-width: $breakpoint-large) {
+            margin-left: calc(100% / 12 * -1.5);
+            width: 100%;
+        }
+
+        h1 {
+            font-size: calc(2.33333rem * 1.125);
+            line-height: 1.1;
+            @media (min-width: $breakpoint-ipad) {
+                font-size: calc(3.5rem * 1.125);
+                line-height: 1.2;
+            }
+        }
+
+        p {
+            color: white;
+            font-size: calc(1.33333rem * 1.125);
+            line-height: 1.5;
+            margin-top: 20px;
+            @media (min-width: $breakpoint-ipad) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .page-header-media {
+        margin-right: 20px;
+        @media (min-width: $breakpoint-ipad) {
+            text-align: right;
+            width: 50%;
+        }
+    }
+
+    .page-section {
+        overflow: visible;
+    }
+
+    .page-section-column--centered {
+        margin: 0 auto 20px;
+        max-width: 200px;
+        @media (min-width: $breakpoint-ipad) {
+            max-width: 100%;
+        }
+    }
+
+    .page-section-grid-image {
+        @media (min-width: $breakpoint-large) {
+            right: calc(#{$site-width} / 12 * -1);
+        }
+    }
+
+    .page-section-section--reverse {
+        .page-section-grid-image {
+            top: -10px;
+            left: -20px;
+            right: -20px;
+            max-width: calc(100% + 2 * 20px);
+            @media (min-width: $breakpoint-ipad) {
+                top: 0;
+                left: calc(100% / 12 * -1);
+                right: auto;
+                max-width: none;
+            }
+            @media (min-width: $breakpoint-large) {
+                left: calc(1180px / 12 * -1);
+            }
+        }
+
+        .page-section-grid-image--2 {
+            @media (min-width: $breakpoint-ipad) {
+                top: 60px;
+                left: -20px;
+                right: calc(1180px / 6 * -1);
+                max-width: none;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                left: auto;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-image {
+            margin: 0 auto 50px;
+            padding-top: 0;
+            display: block;
+            position: sticky;
+            top: 150px;
+        }
+
+        .page-section-section--reverse .page-section-image {
+            float: right;
+        }
+    }
+
+    .page-section-image-offset {
+        margin: 0 auto 50px;
+        position: sticky;
+        top: 150px;
+
+        &:after,
+        &:before {
+            border: 1px solid $color-1;
+            content: '';
+            display: block;
+            position: absolute;
+            top: -22px;
+            left: -22px;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:after {
+            background-color: $color-1;
+            top: 22px;
+            left: 22px;
+            z-index: -1;
+        }
+
+        .page-section-image {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-image-60 {
+            padding-top: 60px;
+
+            .page-section-image {
+                margin-top: -60px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-section--reverse svg.page-section-image {
+            float: none;
+        }
+    }
+
+    .page-section-section {
+        margin-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media (min-width: $breakpoint-large) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &.h-section-background {
+            @media (min-width: $breakpoint-ipad) {
+                padding-top: 150px;
+                padding-bottom: 150px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-section,
+        .page-section-section .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 150px;
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-section--short-grid {
+            .page-section-column--media {
+                margin-bottom: 150px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-ipad) {
+        .page-section-section--reverse,
+        .page-section-section--reverse .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .page-section-header {
+        background-image: url('../images/interactive/online-teaching/green-grid.png');
+        background-position: -93px 0;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+        padding-top: 10px;
+        position: relative;
+
+        @media (min-width: $breakpoint-desktop) {
+            background-position: 0 0;
+            margin: 0 auto 150px;
+            padding-top: 100px;
+            max-width: 1174px;
+            min-height: 1010px;
+        }
+    }
+
+    .page-section-header--no-background {
+        background-image: none;
+    }
+
+    .page-section-header-background-image {
+        display: none;
+        @media (min-width: $breakpoint-desktop) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: calc(100% / 12 * 2 - 0.7 * 20px);
+        }
+    }
+
+    .page-section-header-image {
+        margin-bottom: -95px;
+        max-width: 100%;
+        @media (min-width: $breakpoint-mobile) {
+            max-width: 600px;
+        }
+        @media (min-width: $breakpoint-ipad) {
+            max-width: 710px;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            position: absolute;
+            top: 160px;
+            right: 50%;
+        }
+    }
+
+    .typography li {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .fix-nav {
+        @media (min-width: $breakpoint-air) {
+            top: 150px;
+        }
+    }
+}

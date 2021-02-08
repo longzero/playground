@@ -1,0 +1,75 @@
+// SITE SETTINGS
+// Used to calculate other variables
+$site-margin: 20px;
+$site-width: 1180px;
+$site-width-small: 580px;
+
+// BREAKPOINTS
+$breakpoint-android: 360px;
+$breakpoint-iphone: 375px;
+$breakpoint-iphone-plus: 414px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 600px;
+$breakpoint-ipad: 768px;
+$breakpoint-desktop: 991px;
+$breakpoint-ipad-landscape: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-air: 1400px;
+$breakpoint-big: 1600px;
+$breakpoint-hd: 1900px;
+
+$breakpoint-navigation: $breakpoint-air;
+$breakpoint-site-width: $site-width + 2 * $site-margin;
+$breakpoint-site-width-small: $site-width-small + 2 * $site-margin;
+
+// FONTS
+$font-default: 'Source Sans Pro';
+$font-family: 'Source Sans Pro';
+$font-line-height: 1.2;
+$font-size: 18px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-26: 26px;
+$font-size-32: 32px;
+$font-size-39: 39px;
+$font-size-42: 42px;
+$font-size-55: 55px;
+$font-size-63: 63px;
+$font-weight: 400;
+$font-semibold: 600;
+$font-bold: bold;
+
+// COLORS
+// Basic colours
+$color-1: #934af4; // purple
+$color-2: #aaedd1;
+$color-3: #e5166b; // pink
+$color-4: #d9d9d9;
+$color-5: #eee6fc; // purple light
+$color-6: #c4c4c4;
+$color-7: #2d1258; // purple dark
+$color-8: #767676;
+$color-9: #f8f8f8;
+$color-10: #333;
+$color-11: #6820c5;
+$color-12: #f9f8fa;
+$color-13: #2d1159;
+$color-14: #fbf8ff;
+$color-15: #eee;
+$color-16: #fad1e1;
+$color-17: #555;
+$color-18: #e5e5e5;
+
+// Specific colours
+$color-active: $color-2;
+$color-author-border: $color-4;
+$color-copy: #000;
+$color-hover: $color-1;
+$color-link: $color-3;
+$color-pink: $color-3;
+$color-section-background: $color-5;
+
+// OTHER VARIABLES
+$layer-header: 100;
+$layer-sticky-scroll-navigation: 100;

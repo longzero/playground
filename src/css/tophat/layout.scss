@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+    padding: 0 $site-margin;
+    max-width: $site-width;
+    width: 100%;
+}
+
+.container--10 {
+    @media (min-width: $breakpoint-ipad-landscape) {
+        max-width: 1000px;
+    }
+}
+
+.container--small {
+    max-width: $site-width-small;
+    @media (min-width: $breakpoint-site-width-small) {
+        padding: 0;
+    }
+}

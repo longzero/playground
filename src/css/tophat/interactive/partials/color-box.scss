@@ -1,0 +1,18 @@
+.color-box {
+    background-color: $color-1;
+    color: #fff;
+    font-size: rem(24);
+    margin-bottom: 30px;
+    padding: 30px 25px;
+
+    @media (min-width: $breakpoint-ipad) {
+        margin-bottom: 60px;
+        padding: 40px;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.slider-nav-i {
+    /* Default position is absolute */
+    display: none;
+    @media (min-width: $breakpoint-navigation) {
+        display: block;
+        position: absolute;
+        padding: 0;
+        top: 25px;
+        left: 0;
+        z-index: $layer-sticky-scroll-navigation;
+        width: calc(19ch + 57px);
+    }
+}
+
+.slider-nav-i__item {
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 0;
+    margin-bottom: 0;
+
+    &:hover,
+    &.active {
+        .dash {
+            background: $color-1;
+            margin-left: 5px;
+            margin-right: 20px;
+            width: 37px;
+            height: 4px;
+        }
+        .slider-links {
+            color: $color-1;
+            font-size: rem(16);
+            font-weight: bold;
+            &:focus {
+                @include focus-shadow;
+            }
+        }
+    }
+
+    .typography & {
+        padding-left: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.slider-nav-i__btn {
+    .dash {
+        display: none;
+    }
+    .btn-pink {
+        margin-left: 37px;
+        font-weight: $bold;
+        font-size: rem(14);
+    }
+}
+
+.slider-links {
+    color: #333;
+    font-size: rem(14);
+    transition-duration: 0.3s;
+    width: 25ch;
+    &:focus {
+        @include focus-shadow;
+    }
+}
+
+.dash {
+    background: $color-5;
+    flex-shrink: 0;
+    margin-right: 15px;
+    transition-duration: 0.3s;
+    width: 22px;
+    height: 2px;
+}
+
+.fix-nav {
+    /* Active position is fixed */
+    display: none;
+    @media (min-width: $breakpoint-navigation) {
+        background: rgba(255, 255, 255, 0);
+        display: block;
+        opacity: 0.37;
+        padding: 10px 10px 10px 0;
+        position: fixed;
+        top: 150px;
+        right: 0;
+        transition-duration: 0.3s;
+
+        &:hover,
+		// Body class
+		.scrolling & {
+            background: rgba(255, 255, 255, 0.7);
+            opacity: 1;
+        }
+    }
+}
+
+.hidden {
+    /* Hide when no longer needed (reach footer) */
+    display: none;
+}

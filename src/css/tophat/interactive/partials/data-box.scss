@@ -1,0 +1,8 @@
+.data-box {
+    border: 1px solid $color-4;
+    line-height: calc(21 / 14);
+    padding: 20px;
+    @media (min-width: $breakpoint-ipad-landscape) {
+        padding: 40px 50px 50px;
+    }
+}

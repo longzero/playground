@@ -1,0 +1,36 @@
+// Compile with command line:
+// sass src/css/tophat.scss:docs/tophat/css/tophat.css
+
+// Use --watch to watch
+// sass src/css/tophat.scss:docs/tophat/css/tophat.css --watch
+
+// I know I could use something like Gulp.
+// I just don't want to have a node_module folder.
+
+// ------------------------------------------------------------------
+
+// The management of the CSS is
+// a mixture of ITCSS and Atomic Design
+
+// SETTINGS
+@import 'tophat/variables';
+
+ // TOOLS
+@import 'tophat/functions';
+
+// ELEMENTS
+@import 'tophat/base';
+
+// OBJECTS
+@import 'tophat/layout';
+
+// COMPONENTS
+@import 'tophat/anchor-links';
+
+// TRUMPS
+// @import 'tophat/helpers';
+
+// PAGES
+// @import 'tophat/page-astrologie';
+// @import 'tophat/page-marques';
+// @import 'tophat/landing-newsletter';

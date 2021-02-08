@@ -1,0 +1,32 @@
+.heading-big-number {
+    position: relative;
+
+    &:first-child() {
+        margin-top: 70px;
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 0;
+        }
+    }
+
+    &:nth-child(n + 2) {
+        margin-top: 70px;
+
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 100px;
+        }
+    }
+
+    span {
+        color: #eee;
+        font-size: rem(100);
+        line-height: 1;
+        position: absolute;
+        top: -64px;
+        left: -30px;
+        z-index: -1;
+        @media (min-width: $breakpoint-desktop) {
+            top: -55px;
+            left: -70px;
+        }
+    }
+}

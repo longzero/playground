@@ -1,0 +1,283 @@
+.h-align-items-center {
+    align-items: center;
+}
+
+.h-bold {
+    font-weight: bold;
+}
+
+.h-border-top-18 {
+    border-top: 1px solid $color-18;
+}
+
+.h-section-background {
+    background-color: $color-section-background;
+}
+
+.h-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-color,
+.h-color-1 {
+    color: $color-1;
+}
+
+.h-color-17 {
+    color: $color-17;
+}
+
+.h-font-size-14 {
+    font-size: rem(strip-unit($font-size-14)) !important;
+}
+
+.h-font-size-16 {
+    font-size: rem(strip-unit($font-size-16)) !important;
+}
+
+.h-font-size-18 {
+    font-size: rem(strip-unit($font-size-18)) !important;
+}
+
+.h-font-size-26 {
+    font-size: rem(strip-unit($font-size-26)) !important;
+    line-height: 1.1;
+}
+
+.h-font-size-26--desktop {
+    @media (min-width: $breakpoint-desktop) {
+        font-size: rem(strip-unit($font-size-32)) !important;
+    }
+}
+
+.h-font-size-32 {
+    font-size: rem(strip-unit($font-size-32)) !important;
+    @media (min-width: $breakpoint-desktop) {
+        font-size: rem(strip-unit($font-size-42)) !important;
+    }
+}
+
+.h-font-size-32--stick {
+    font-size: rem(strip-unit($font-size-32)) !important;
+    @media (min-width: $breakpoint-desktop) {
+        font-size: rem(strip-unit($font-size-32)) !important;
+    }
+}
+
+.h-font-size-39 {
+    font-size: rem(strip-unit($font-size-39)) !important;
+}
+
+.h-font-size-42 {
+    font-size: rem(strip-unit($font-size-42)) !important;
+}
+
+.h-font-size-42--desktop {
+    @media (min-width: $breakpoint-desktop) {
+        font-size: rem(strip-unit($font-size-42)) !important;
+    }
+}
+
+.h-font-size-55--desktop {
+    @media (min-width: $breakpoint-desktop) {
+        font-size: rem(strip-unit($font-size-55)) !important;
+    }
+}
+
+.h-font-size-63 {
+    font-size: rem(strip-unit($font-size-63)) !important;
+}
+
+.h-font-weight-600 {
+    font-weight: 600;
+}
+
+.h-height-300 {
+    height: 300px;
+}
+
+.h-layer-1 {
+    z-index: 1;
+}
+
+.h-layer-2 {
+    z-index: 2;
+}
+
+.h-line-height-1 {
+    line-height: 1;
+}
+
+.h-margin-0 {
+    margin: 0;
+}
+
+.h-margin-top-0 {
+    margin-top: 0;
+}
+
+.h-margin-top-10 {
+    margin-top: 10px;
+}
+
+.h-margin-top-20 {
+    margin-top: 20px;
+}
+
+.h-margin-top-30 {
+    margin-top: 30px;
+    @media (min-width: $breakpoint-desktop) {
+        margin-top: 60px;
+    }
+}
+
+.h-margin-top-40 {
+    margin-top: 40px;
+}
+
+.h-margin-top-60 {
+    margin-top: 60px;
+}
+
+.h-margin-top-100 {
+    margin-top: 100px;
+}
+
+.h-margin-top-150 {
+    margin-top: 150px;
+}
+
+.h-margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+.h-margin-bottom-10 {
+    margin-bottom: 10px;
+}
+.h-margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.h-margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.h-margin-bottom-40 {
+    margin-bottom: 40px;
+}
+
+.h-margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.h-margin-bottom-60 {
+    margin-bottom: 60px;
+}
+
+.h-margin-bottom-70 {
+    margin-bottom: 70px;
+}
+
+.h-margin-bottom-75 {
+    margin-bottom: 75px;
+}
+
+.h-margin-bottom-80 {
+    margin-bottom: 80px;
+}
+
+.h-margin-bottom-90 {
+    margin-bottom: 90px;
+}
+
+.h-margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.h-margin-left-spacing {
+    @media (min-width: $breakpoint-ipad) {
+        margin-left: calc(100% / 12);
+    }
+}
+
+.h-margin-right-spacing {
+    @media (min-width: $breakpoint-ipad) {
+        margin-right: calc(100% / 12);
+    }
+}
+
+.h-overflow-hidden {
+    overflow: hidden;
+}
+
+.h-padding-top {
+    padding-top: 100px;
+}
+
+.h-padding-top-20 {
+    padding-top: 20px;
+}
+
+.h-padding-top-100 {
+    padding-top: 100px;
+}
+
+.h-padding-top-150 {
+    padding-top: 150px;
+}
+
+.h-padding-bottom-0 {
+    padding-bottom: 0 !important;
+}
+
+.h-padding-bottom-1 {
+    padding-bottom: 1px !important;
+}
+
+.h-padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.h-padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.h-position-relative {
+    position: relative;
+}
+
+.h-print-only {
+    display: none;
+    @media print {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        img {
+            max-width: 90%;
+        }
+    }
+}
+
+.h-media-only {
+    @media print {
+        display: none !important;
+    }
+}
+
+.h-text-center {
+    text-align: center;
+}
+
+.h-text-uppercase {
+    text-transform: uppercase;
+}
+
+.h-unstick {
+    @media (min-width: $breakpoint-ipad-landscape) {
+        position: absolute !important;
+        top: 0 !important;
+    }
+}

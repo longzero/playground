@@ -1,0 +1,158 @@
+// Use this class to set a default for all animations.
+.animation {
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+// The following classes define animations that you want.
+// These are only examples.
+// Delete those you don't use.
+// Create your own.
+// Mix and match: I use both fade-in and move-up together, but their are basically the same as fade-in-up.
+// Think of this like shorthand vs detailed padding.
+
+// Have fun!
+
+.fade-in {
+    opacity: 0;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-3 {
+    opacity: 0.3;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-5 {
+    opacity: 0.5;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(50px);
+    &.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    &.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.move-up {
+    transform: translateY(50px);
+    &.animate {
+        transform: translateY(0);
+    }
+}
+
+$burger-buns-position: 13px;
+$burger-color-background: #ddd;
+$burger-color-slice: #000;
+$burger-margin: 20px;
+$burger-rounded: 50%;
+$burger-slice-thickness: 2px;
+$burger-slice-width: 20px;
+$burger-width: 40px;
+$burger-height: $burger-width;
+$navigation-trigger-layer: 100;
+$navigation-layer: $navigation-trigger-layer - 1;
+
+.burger {
+    background-color: $burger-color-background;
+    border-radius: $burger-rounded;
+    cursor: pointer;
+    margin: $burger-margin;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: $navigation-trigger-layer;
+    transition-duration: 0.3s;
+    width: $burger-width;
+    height: $burger-height;
+    .burger__B,
+    .burger__L,
+    .burger__T {
+        background-color: $burger-color-slice;
+        position: absolute;
+        left: 0.5 * ($burger-width - $burger-slice-width);
+        transition-duration: 0.3s;
+        width: $burger-slice-width;
+        height: $burger-slice-thickness;
+    }
+    .burger__B {
+        top: $burger-buns-position;
+    }
+    .burger__L {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .burger__T {
+        bottom: $burger-buns-position;
+    }
+
+    .navigation-open & {
+        .burger__B {
+            transform: translateY(
+                    1 *
+                        (
+                            0.5 * $burger-height - $burger-buns-position - 0.5 *
+                                $burger-slice-thickness
+                        )
+                )
+                rotate(45deg);
+        }
+        .burger__L {
+            transform: translateY(-50%) scale(5, 0);
+        }
+        .burger__T {
+            transform: translateY(
+                    -1 * (0.5 * $burger-height - $burger-buns-position - 0.5 *
+                                $burger-slice-thickness)
+                )
+                rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.navigation {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $navigation-layer;
+    transform: translateY(-100%);
+    transition-duration: 0.3s;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    .navigation-open & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navigation__link {
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}

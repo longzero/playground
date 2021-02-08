@@ -1,0 +1,97 @@
+.long-page-header {
+    background-color: $color-2;
+    margin-bottom: 80px;
+
+    @media (min-width: $breakpoint-ipad) {
+        display: flex;
+        position: relative;
+        height: 928px;
+        overflow: hidden;
+
+        .container,
+        .long-page-header-media {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .long-page-header-media {
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 0;
+
+            img {
+                visibility: hidden;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 150px;
+    }
+}
+
+.long-page-header-content {
+    background-color: #000;
+    color: #fff;
+    margin: -160px auto 0;
+    padding: 35px 25px;
+    position: relative;
+    transform: translateY(30px);
+
+    @media (min-width: $breakpoint-ipad) {
+        margin: 0 0 0 calc(100vw / 12 * -5);
+        padding: 100px 100px 120px 106px;
+        transform: none;
+        max-width: 680px;
+        min-height: 543px;
+        width: 90vw;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        margin-left: calc(100% / 12 * -4);
+    }
+
+    @media (min-width: $breakpoint-site-width) {
+        margin-left: calc(100% / 12 * -1.5);
+        width: 100%;
+    }
+
+    h1 {
+        font-size: rem(32);
+        line-height: 1.1;
+
+        @media (min-width: $breakpoint-iphone) {
+            font-size: rem(42);
+        }
+
+        @media (min-width: $breakpoint-ipad) {
+            font-size: rem(63);
+            line-height: 1.2;
+        }
+    }
+
+    p {
+        font-size: rem(24);
+        line-height: 1.5;
+        margin-top: 20px;
+
+        @media (min-width: $breakpoint-ipad) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.long-page-header-media {
+    margin-right: $site-margin;
+
+    @media (min-width: $breakpoint-ipad) {
+        text-align: right;
+        width: 50%;
+    }
+}

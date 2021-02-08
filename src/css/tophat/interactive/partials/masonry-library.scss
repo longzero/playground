@@ -1,0 +1,23 @@
+// Use with https://masonry.desandro.com/
+
+.masonry-item {
+    @media (min-width: $breakpoint-ipad) {
+        width: calc(50% - 32px); // subtract border, gutter and parent padding
+    }
+}
+
+.masonry-ltr-2 {
+    @media (min-width: $breakpoint-ipad) {
+        margin-left: calc(100% / 12);
+    }
+
+    .gutter-sizer {
+        width: calc(100% / 12);
+    }
+
+    .masonry-item {
+        @media (min-width: $breakpoint-ipad) {
+            width: 41%;
+        }
+    }
+}

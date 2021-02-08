@@ -1,0 +1,30 @@
+.offset-content-box {
+    margin-top: 75px;
+}
+.offset-content-box-image {
+    max-width: 180px;
+    max-height: 150px;
+}
+.page-section--offset-content {
+    .container {
+        flex-wrap: wrap;
+    }
+    .page-section-column {
+        &:nth-child(1) {
+            .offset-content-box {
+                &:nth-child(1) {
+                    margin-top: 0;
+                    @media (min-width: $breakpoint-ipad) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            @media (min-width: $breakpoint-ipad) {
+                margin-left: calc(100% / 12);
+                margin-right: 0;
+            }
+        }
+    }
+}

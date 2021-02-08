@@ -1,0 +1,41 @@
+nav,
+p {
+  + .anchor-target {
+    padding-top: 50px;
+  }
+}
+
+nav,
+.anchor-tab {
+  + .anchor-tab {
+    padding-top: 50px;
+  }
+}
+
+.anchor-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+}
+.anchor-link {
+  background-color: #ddd;
+  flex-grow: 1;
+  margin-right: 1px;
+  padding: 10px 20px;
+  transition-duration: .3s;
+  &:hover {
+    background-color: #fff;
+  }
+  &.active {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.anchor-tab {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

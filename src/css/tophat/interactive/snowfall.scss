@@ -1,0 +1,131 @@
+// The management of the CSS is
+// a mixture of ITCSS and Atomic Design
+
+// SETTINGS
+@import 'partials/variables';
+@import '../helpers/vars';
+@import '../helpers/functions';
+@import '../helpers/mixins';
+
+// TOOLS
+@import 'partials/functions';
+
+// ELEMENTS
+@import 'partials/base';
+
+// OBJECTS
+.interactive {
+    @import 'partials/layout';
+}
+
+@mixin btn-arrow() {
+    border-radius: 0;
+    position: relative;
+    background: none;
+    border: none;
+    color: $gray-med;
+
+    &:after {
+        @keyframes hover-bounce {
+            0%,
+            100% {
+                top: 0.55em;
+            }
+
+            50% {
+                top: 0.9em;
+            }
+        }
+        content: '\f063';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 600;
+        font-size: 0.889em;
+        margin-left: 0.6em;
+        position: absolute;
+        top: 0.55em;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $pink;
+
+        &:after {
+            animation: hover-bounce 1s ease-in-out infinite;
+        }
+    }
+}
+
+@mixin btn-small() {
+    width: 100%;
+    text-align: center;
+    @include sans-serif($bold);
+    font-size: rem(18);
+    line-height: 1.2;
+    display: inline-block;
+    padding: 8px 20px 10px;
+    border-radius: 0;
+    cursor: pointer !important;
+    transition: all 0.25s ease;
+    text-transform: none;
+    outline: none;
+
+    i {
+        font-weight: 600;
+        margin-left: 5px;
+    }
+    @media (min-width: $break-medium) {
+        width: auto;
+        font-size: rem(21);
+    }
+}
+
+@mixin btn-pink() {
+    background: $pink;
+    color: white;
+    border: 1px solid $pink;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $pink;
+        background: none;
+    }
+}
+
+// COMPONENTS
+.interactive {
+    @import 'partials/animations';
+    @import 'partials/callout-box';
+    @import 'partials/color-box';
+    @import 'partials/cta';
+    @import 'partials/data-box';
+    @import 'partials/heading-big-number';
+    @import 'partials/masonry';
+    @import 'partials/masonry-library';
+    @import 'partials/media-content-box';
+    @import 'partials/offset-content-box';
+    @import 'partials/page-header';
+    @import 'partials/page-section';
+    @import 'partials/page-section-header';
+    @import 'partials/pull-quote';
+    @import 'partials/site';
+    @import 'partials/sticky-scroll-navigation';
+    @import 'partials/table';
+}
+
+// TRUMPS
+.interactive {
+    @import 'partials/helpers';
+}
+
+// PAGES
+@import 'pages/assessments-lite';
+@import 'pages/community-ebook';
+@import 'pages/faculty-preparedness';
+@import 'pages/online-teaching';
+@import 'pages/student-survey';
+
+@media print {
+    @import 'partials/print';
+}
