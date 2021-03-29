@@ -3,12 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Anchor links</title>
+  <title>Anchor tabs</title>
   <link rel="stylesheet" type="text/css" href="css/tophat.css">
 </head>
 <body>
 
   <div class="container container--small">
+    <nav class="anchor-links" data-tab-navigation>
+      <a class="download-link" href="#pdf">
+        <span class="link-label">Download</span>
+        <svg width="12" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.594 12.875a.64.64 0 00.465-.191.66.66 0 00.191-.465v-.656c0-.165-.082-.329-.191-.465-.137-.11-.301-.192-.465-.192H1.406a.66.66 0 00-.465.192.64.64 0 00-.191.464v.657c0 .191.055.355.191.465.11.136.274.191.465.191h9.188zM8.789 5.191A.645.645 0 019.227 5c.164 0 .328.082.464.191l.465.465c.11.137.192.301.192.465a.66.66 0 01-.192.465l-3.691 3.719a.64.64 0 01-.465.191c-.191 0-.355-.055-.465-.191l-3.719-3.72a.544.544 0 01-.191-.437c0-.164.055-.328.219-.492l.437-.437A.584.584 0 012.746 5c.164 0 .328.082.465.191l1.805 1.805V1.281a.64.64 0 01.191-.465.66.66 0 01.465-.191h.656c.164 0 .328.082.465.191.11.137.191.301.191.465v5.715L8.79 5.191z" fill="#333"/></svg>
+      </a>
+    </nav>
+
     <div class="anchor-tab active" id="tab-1" data-tab-target>
       <h2 class="anchor-target">Anchor 1</h2>
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
@@ -35,6 +42,7 @@
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
     </div>
 
+    <!--
     <div class="anchor-tab" id="tab-4" data-tab-target>
       <h2 class="anchor-target">Anchor 4</h2>
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
@@ -94,6 +102,7 @@
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
     </div>
+    -->
 
     <div class="anchor-tab" id="tab-8" data-tab-target>
       <h2 class="anchor-target">Anchor 8</h2>
@@ -185,17 +194,20 @@
         section.id = sectionId // Set the ID of the section. Will be used to activate it.
       })
 
+      // Create HTML link
+      let nodes = navigationItems.map(item => {
+        let a = document.createElement('a')
+        a.className = 'anchor-link'
+        a.href = '#' + item.replace(/\s+/g, '-').toLowerCase()
+        a.setAttribute('data-tab-toggle','')
+        a.textContent = item
+        return a
+      });
+
       const tabTarget1 = document.querySelector('[data-tab-target]') // Get the first section to put the navigation before this.
       let navigation = '' // Navigation string
-      navigationItems.forEach((item) => {
-        let itemAnchor = item.replace(/\s+/g, '-').toLowerCase() // Create anchor link
-        navigation = navigation + '<a class="anchor-link" href="#'+itemAnchor+'" data-tab-toggle>'+item+'</a>' // Full HTML code for the link
-      })
-      let navigationElement = document.createElement('nav') // Create navigation block.
-      navigationElement.className = 'anchor-links' // Give the block a class.
-      // navigationElement.setAttribute('data-tab-navigation','')
-      navigationElement.innerHTML = navigation // Put all links in the block.
-      tabTarget1.parentNode.insertBefore(navigationElement, tabTarget1) // Put the navigation before the sections.
+      let navigationBlock = document.querySelector('[data-tab-navigation]') // Select the navigation block.
+      navigationBlock.prepend(...nodes) // Add navigation created from sections into the navigation block.
 
       tabToggle = document.querySelectorAll('[data-tab-toggle]') // Select all navigation link to listen to clicks.
 
