@@ -9,18 +9,6 @@
 <body>
 
   <div class="container container--small">
-    <nav class="anchor-links">
-      <a href="#tab-1" class="anchor-link active" data-tab-toggle>Anchor 1</a>
-      <a href="#tab-2" class="anchor-link" data-tab-toggle>Anchor 2</a>
-      <a href="#tab-3" class="anchor-link" data-tab-toggle>Anchor 3</a>
-      <a href="#tab-4" class="anchor-link" data-tab-toggle>Anchor 4</a>
-      <a href="#tab-5" class="anchor-link" data-tab-toggle>Anchor 5</a>
-      <a href="#tab-6" class="anchor-link" data-tab-toggle>Anchor 6</a>
-      <a href="#tab-7" class="anchor-link" data-tab-toggle>Anchor 7</a>
-      <a href="#tab-8" class="anchor-link" data-tab-toggle>Anchor 8</a>
-      <a href="#tab-9" class="anchor-link" data-tab-toggle>Anchor 9</a>
-    </nav>
-
     <div class="anchor-tab active" id="tab-1" data-tab-target>
       <h2 class="anchor-target">Anchor 1</h2>
       <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ullam dolor praesentium fuga asperiores doloremque ipsum, dicta placeat facere adipisci, perspiciatis omnis, minima in similique earum magnam velit. Doloribus!</p>
@@ -185,9 +173,29 @@
       }
     }
 
-    const tabTarget = document.querySelectorAll('[data-tab-target]')
-    const tabToggle = document.querySelectorAll('[data-tab-toggle]')
-    if (tabTarget.length === tabToggle.length) {
+    function createNavigation() {
+      let navigationItems = []
+
+      tabTarget.forEach((section) => {
+        let sectionTitle = section.querySelector('.anchor-target').innerHTML // Get section title
+        navigationItems.push(sectionTitle) // Put item in array
+        let sectionId = sectionTitle.replace(/\s+/g, '-').toLowerCase() // Lowercase and hyphenate
+        section.id = sectionId // Set the ID of the section. Will be used to activate it.
+      })
+
+      const tabTarget1 = document.querySelector('[data-tab-target]') // Get the first section to put the navigation before this.
+      let navigation = '' // Navigation string
+      navigationItems.forEach((item) => {
+        let itemAnchor = item.replace(/\s+/g, '-').toLowerCase() // Create anchor link
+        navigation = navigation + '<a class="anchor-link" href="#'+itemAnchor+'" data-tab-toggle>'+item+'</a>'
+      })
+      let navigationElement = document.createElement('nav')
+      navigationElement.innerHTML = navigation
+      navigationElement.className = 'anchor-links'
+      navigationElement.setAttribute('data-tab-navigation','')
+      tabTarget1.parentNode.insertBefore(navigationElement, tabTarget1)
+
+      tabToggle = document.querySelectorAll('[data-tab-toggle]')
 
       // Setup clicking mechanism, mostly in case
       // people click on a tab already active.
@@ -218,9 +226,14 @@
         DEBUG && console.warn("URL has changed.")
         toggleTabs()
       })
-    }
-    else {
-      DEBUG && console.error("You don’t have the same count of tab toggles and tab targets.")
+    } // END function createNavigation
+
+
+    // Make sure sections exist before creating the navigation and clicking mechanism
+    const tabTarget = document.querySelectorAll('[data-tab-target]')
+    let tabToggle
+    if (tabTarget) {
+      createNavigation()
     }
 
   </script>
