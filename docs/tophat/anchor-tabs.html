@@ -149,6 +149,8 @@
     // console.log = function() {}
     // console.warn = function() {}
 
+    // Everything hinges on the hash to allow for direct linking.
+
     function deactivateTabs() {
       DEBUG && console.log("Executing deactivateTabs()...")
       for (let j=0; j<tabTarget.length; j++) {
@@ -187,21 +189,22 @@
       let navigation = '' // Navigation string
       navigationItems.forEach((item) => {
         let itemAnchor = item.replace(/\s+/g, '-').toLowerCase() // Create anchor link
-        navigation = navigation + '<a class="anchor-link" href="#'+itemAnchor+'" data-tab-toggle>'+item+'</a>'
+        navigation = navigation + '<a class="anchor-link" href="#'+itemAnchor+'" data-tab-toggle>'+item+'</a>' // Full HTML code for the link
       })
-      let navigationElement = document.createElement('nav')
-      navigationElement.innerHTML = navigation
-      navigationElement.className = 'anchor-links'
-      navigationElement.setAttribute('data-tab-navigation','')
-      tabTarget1.parentNode.insertBefore(navigationElement, tabTarget1)
+      let navigationElement = document.createElement('nav') // Create navigation block.
+      navigationElement.className = 'anchor-links' // Give the block a class.
+      // navigationElement.setAttribute('data-tab-navigation','')
+      navigationElement.innerHTML = navigation // Put all links in the block.
+      tabTarget1.parentNode.insertBefore(navigationElement, tabTarget1) // Put the navigation before the sections.
 
-      tabToggle = document.querySelectorAll('[data-tab-toggle]')
+      tabToggle = document.querySelectorAll('[data-tab-toggle]') // Select all navigation link to listen to clicks.
 
       // Setup clicking mechanism, mostly in case
       // people click on a tab already active.
       for (let i=0; i<tabTarget.length; i++) {
         tabToggle[i].addEventListener('click', function(){
           DEBUG && console.warn("Tab clicked")
+          // DEBUG && console.warn(tabToggle[i].href)
           let hash = window.location.hash
           let clickedToggle = this.getAttribute('href')
           if (clickedToggle == hash && this.classList.contains('active')) {
