@@ -22,6 +22,8 @@
 */
 (function () {
 
+  console.warn("Loading live.js")
+
 	if (window.location.href.indexOf('.local') > -1) {
 
 	  var headers = { "Etag": 1, "Last-Modified": 1, "Content-Length": 1, "Content-Type": 1 },
@@ -134,6 +136,7 @@
 	            }
 	            // if changed, act
 	            if (hasChanged) {
+                console.log("File changed: " + url);
 	              Live.refreshResource(url, contentType);
 	              break;
 	            }
