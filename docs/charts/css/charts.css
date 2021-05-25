@@ -1,0 +1,849 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #1f1f1f;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.625rem;
+  }
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+iframe, img, video {
+  max-width: 100%;
+}
+
+p, ul, ol {
+  margin-bottom: 1em;
+}
+p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1220px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container--10 {
+    max-width: 1000px;
+  }
+}
+
+.container--small {
+  max-width: 1010px;
+}
+@media (min-width: 1050px) {
+  .container--small {
+    padding: 0;
+  }
+}
+
+[data-chart-value] {
+  background-color: #ddd;
+  overflow: visible;
+  width: 100px;
+}
+
+.chart-box {
+  margin-bottom: 200px;
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.chart-data {
+  position: relative;
+}
+
+.chart-data-value {
+  white-space: nowrap;
+}
+
+.chart-graphic {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.chart-graphic:before, .chart-graphic:after {
+  background-color: #aaa;
+  content: "";
+  display: block;
+  position: absolute;
+}
+.chart-graphic:before {
+  bottom: 0;
+  left: 20px;
+  width: 1px;
+  height: 100%;
+}
+.chart-graphic:after {
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+[data-chart-type=donut],
+[data-chart-type=doughnut] {
+  --donut-size: 500px;
+  --donut-thickness: 300px;
+  height: var(--donut-size);
+}
+[data-chart-type=donut] .chart-graphic,
+[data-chart-type=doughnut] .chart-graphic {
+  background: conic-gradient(#e5e5ff 54%, #d3356b 0 75%, #333333 0 86%, #767676 0 97%, #cc9ca4 0);
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--donut-size);
+  height: var(--donut-size);
+}
+[data-chart-type=donut] .chart-graphic:after,
+[data-chart-type=doughnut] .chart-graphic:after {
+  display: none;
+}
+[data-chart-type=donut] .chart-graphic:before,
+[data-chart-type=doughnut] .chart-graphic:before {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - var(--donut-thickness));
+  height: calc(100% - var(--donut-thickness));
+  z-index: 1;
+}
+
+[data-chart-type=horizontal] {
+  --label-font-size: .75em;
+  --label-width: 160px;
+  height: auto;
+  padding-left: var(--label-width);
+}
+[data-chart-type=horizontal] [data-chart-value="1"] {
+  width: 1%;
+}
+[data-chart-type=horizontal] [data-chart-value="2"] {
+  width: 2%;
+}
+[data-chart-type=horizontal] [data-chart-value="3"] {
+  width: 3%;
+}
+[data-chart-type=horizontal] [data-chart-value="4"] {
+  width: 4%;
+}
+[data-chart-type=horizontal] [data-chart-value="5"] {
+  width: 5%;
+}
+[data-chart-type=horizontal] [data-chart-value="6"] {
+  width: 6%;
+}
+[data-chart-type=horizontal] [data-chart-value="7"] {
+  width: 7%;
+}
+[data-chart-type=horizontal] [data-chart-value="8"] {
+  width: 8%;
+}
+[data-chart-type=horizontal] [data-chart-value="9"] {
+  width: 9%;
+}
+[data-chart-type=horizontal] [data-chart-value="10"] {
+  width: 10%;
+}
+[data-chart-type=horizontal] [data-chart-value="11"] {
+  width: 11%;
+}
+[data-chart-type=horizontal] [data-chart-value="12"] {
+  width: 12%;
+}
+[data-chart-type=horizontal] [data-chart-value="13"] {
+  width: 13%;
+}
+[data-chart-type=horizontal] [data-chart-value="14"] {
+  width: 14%;
+}
+[data-chart-type=horizontal] [data-chart-value="15"] {
+  width: 15%;
+}
+[data-chart-type=horizontal] [data-chart-value="16"] {
+  width: 16%;
+}
+[data-chart-type=horizontal] [data-chart-value="17"] {
+  width: 17%;
+}
+[data-chart-type=horizontal] [data-chart-value="18"] {
+  width: 18%;
+}
+[data-chart-type=horizontal] [data-chart-value="19"] {
+  width: 19%;
+}
+[data-chart-type=horizontal] [data-chart-value="20"] {
+  width: 20%;
+}
+[data-chart-type=horizontal] [data-chart-value="21"] {
+  width: 21%;
+}
+[data-chart-type=horizontal] [data-chart-value="22"] {
+  width: 22%;
+}
+[data-chart-type=horizontal] [data-chart-value="23"] {
+  width: 23%;
+}
+[data-chart-type=horizontal] [data-chart-value="24"] {
+  width: 24%;
+}
+[data-chart-type=horizontal] [data-chart-value="25"] {
+  width: 25%;
+}
+[data-chart-type=horizontal] [data-chart-value="26"] {
+  width: 26%;
+}
+[data-chart-type=horizontal] [data-chart-value="27"] {
+  width: 27%;
+}
+[data-chart-type=horizontal] [data-chart-value="28"] {
+  width: 28%;
+}
+[data-chart-type=horizontal] [data-chart-value="29"] {
+  width: 29%;
+}
+[data-chart-type=horizontal] [data-chart-value="30"] {
+  width: 30%;
+}
+[data-chart-type=horizontal] [data-chart-value="31"] {
+  width: 31%;
+}
+[data-chart-type=horizontal] [data-chart-value="32"] {
+  width: 32%;
+}
+[data-chart-type=horizontal] [data-chart-value="33"] {
+  width: 33%;
+}
+[data-chart-type=horizontal] [data-chart-value="34"] {
+  width: 34%;
+}
+[data-chart-type=horizontal] [data-chart-value="35"] {
+  width: 35%;
+}
+[data-chart-type=horizontal] [data-chart-value="36"] {
+  width: 36%;
+}
+[data-chart-type=horizontal] [data-chart-value="37"] {
+  width: 37%;
+}
+[data-chart-type=horizontal] [data-chart-value="38"] {
+  width: 38%;
+}
+[data-chart-type=horizontal] [data-chart-value="39"] {
+  width: 39%;
+}
+[data-chart-type=horizontal] [data-chart-value="40"] {
+  width: 40%;
+}
+[data-chart-type=horizontal] [data-chart-value="41"] {
+  width: 41%;
+}
+[data-chart-type=horizontal] [data-chart-value="42"] {
+  width: 42%;
+}
+[data-chart-type=horizontal] [data-chart-value="43"] {
+  width: 43%;
+}
+[data-chart-type=horizontal] [data-chart-value="44"] {
+  width: 44%;
+}
+[data-chart-type=horizontal] [data-chart-value="45"] {
+  width: 45%;
+}
+[data-chart-type=horizontal] [data-chart-value="46"] {
+  width: 46%;
+}
+[data-chart-type=horizontal] [data-chart-value="47"] {
+  width: 47%;
+}
+[data-chart-type=horizontal] [data-chart-value="48"] {
+  width: 48%;
+}
+[data-chart-type=horizontal] [data-chart-value="49"] {
+  width: 49%;
+}
+[data-chart-type=horizontal] [data-chart-value="50"] {
+  width: 50%;
+}
+[data-chart-type=horizontal] [data-chart-value="51"] {
+  width: 51%;
+}
+[data-chart-type=horizontal] [data-chart-value="52"] {
+  width: 52%;
+}
+[data-chart-type=horizontal] [data-chart-value="53"] {
+  width: 53%;
+}
+[data-chart-type=horizontal] [data-chart-value="54"] {
+  width: 54%;
+}
+[data-chart-type=horizontal] [data-chart-value="55"] {
+  width: 55%;
+}
+[data-chart-type=horizontal] [data-chart-value="56"] {
+  width: 56%;
+}
+[data-chart-type=horizontal] [data-chart-value="57"] {
+  width: 57%;
+}
+[data-chart-type=horizontal] [data-chart-value="58"] {
+  width: 58%;
+}
+[data-chart-type=horizontal] [data-chart-value="59"] {
+  width: 59%;
+}
+[data-chart-type=horizontal] [data-chart-value="60"] {
+  width: 60%;
+}
+[data-chart-type=horizontal] [data-chart-value="61"] {
+  width: 61%;
+}
+[data-chart-type=horizontal] [data-chart-value="62"] {
+  width: 62%;
+}
+[data-chart-type=horizontal] [data-chart-value="63"] {
+  width: 63%;
+}
+[data-chart-type=horizontal] [data-chart-value="64"] {
+  width: 64%;
+}
+[data-chart-type=horizontal] [data-chart-value="65"] {
+  width: 65%;
+}
+[data-chart-type=horizontal] [data-chart-value="66"] {
+  width: 66%;
+}
+[data-chart-type=horizontal] [data-chart-value="67"] {
+  width: 67%;
+}
+[data-chart-type=horizontal] [data-chart-value="68"] {
+  width: 68%;
+}
+[data-chart-type=horizontal] [data-chart-value="69"] {
+  width: 69%;
+}
+[data-chart-type=horizontal] [data-chart-value="70"] {
+  width: 70%;
+}
+[data-chart-type=horizontal] [data-chart-value="71"] {
+  width: 71%;
+}
+[data-chart-type=horizontal] [data-chart-value="72"] {
+  width: 72%;
+}
+[data-chart-type=horizontal] [data-chart-value="73"] {
+  width: 73%;
+}
+[data-chart-type=horizontal] [data-chart-value="74"] {
+  width: 74%;
+}
+[data-chart-type=horizontal] [data-chart-value="75"] {
+  width: 75%;
+}
+[data-chart-type=horizontal] [data-chart-value="76"] {
+  width: 76%;
+}
+[data-chart-type=horizontal] [data-chart-value="77"] {
+  width: 77%;
+}
+[data-chart-type=horizontal] [data-chart-value="78"] {
+  width: 78%;
+}
+[data-chart-type=horizontal] [data-chart-value="79"] {
+  width: 79%;
+}
+[data-chart-type=horizontal] [data-chart-value="80"] {
+  width: 80%;
+}
+[data-chart-type=horizontal] [data-chart-value="81"] {
+  width: 81%;
+}
+[data-chart-type=horizontal] [data-chart-value="82"] {
+  width: 82%;
+}
+[data-chart-type=horizontal] [data-chart-value="83"] {
+  width: 83%;
+}
+[data-chart-type=horizontal] [data-chart-value="84"] {
+  width: 84%;
+}
+[data-chart-type=horizontal] [data-chart-value="85"] {
+  width: 85%;
+}
+[data-chart-type=horizontal] [data-chart-value="86"] {
+  width: 86%;
+}
+[data-chart-type=horizontal] [data-chart-value="87"] {
+  width: 87%;
+}
+[data-chart-type=horizontal] [data-chart-value="88"] {
+  width: 88%;
+}
+[data-chart-type=horizontal] [data-chart-value="89"] {
+  width: 89%;
+}
+[data-chart-type=horizontal] [data-chart-value="90"] {
+  width: 90%;
+}
+[data-chart-type=horizontal] [data-chart-value="91"] {
+  width: 91%;
+}
+[data-chart-type=horizontal] [data-chart-value="92"] {
+  width: 92%;
+}
+[data-chart-type=horizontal] [data-chart-value="93"] {
+  width: 93%;
+}
+[data-chart-type=horizontal] [data-chart-value="94"] {
+  width: 94%;
+}
+[data-chart-type=horizontal] [data-chart-value="95"] {
+  width: 95%;
+}
+[data-chart-type=horizontal] [data-chart-value="96"] {
+  width: 96%;
+}
+[data-chart-type=horizontal] [data-chart-value="97"] {
+  width: 97%;
+}
+[data-chart-type=horizontal] [data-chart-value="98"] {
+  width: 98%;
+}
+[data-chart-type=horizontal] [data-chart-value="99"] {
+  width: 99%;
+}
+[data-chart-type=horizontal] [data-chart-value="100"] {
+  width: 100%;
+}
+[data-chart-type=horizontal] [data-chart-value] {
+  height: 50px;
+}
+[data-chart-type=horizontal] .chart-data {
+  margin: 20px 0;
+}
+[data-chart-type=horizontal] .chart-data-label,
+[data-chart-type=horizontal] .chart-data-value {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+[data-chart-type=horizontal] .chart-data-label {
+  font-size: var(--label-font-size);
+  right: calc(100% + 20px);
+  text-align: right;
+  width: var(--label-width);
+}
+[data-chart-type=horizontal] .chart-data-value {
+  font-weight: 900;
+  left: calc(100% + 10px);
+}
+[data-chart-type=horizontal] .chart-graphic {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+[data-chart-type=pie] {
+  --pie-size: 500px;
+  height: var(--pie-size);
+}
+[data-chart-type=pie] .chart-graphic {
+  background: conic-gradient(#e5e5ff 54%, #d3356b 0 75%, #333333 0 86%, #767676 0 97%, #cc9ca4 0);
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--pie-size);
+  height: var(--pie-size);
+}
+[data-chart-type=pie] .chart-graphic:before, [data-chart-type=pie] .chart-graphic:after {
+  display: none;
+}
+
+[data-chart-type=vertical] {
+  --label-font-size: .75em;
+  --label-width: 100px;
+}
+[data-chart-type=vertical] [data-chart-value="1"] {
+  height: 1%;
+}
+[data-chart-type=vertical] [data-chart-value="2"] {
+  height: 2%;
+}
+[data-chart-type=vertical] [data-chart-value="3"] {
+  height: 3%;
+}
+[data-chart-type=vertical] [data-chart-value="4"] {
+  height: 4%;
+}
+[data-chart-type=vertical] [data-chart-value="5"] {
+  height: 5%;
+}
+[data-chart-type=vertical] [data-chart-value="6"] {
+  height: 6%;
+}
+[data-chart-type=vertical] [data-chart-value="7"] {
+  height: 7%;
+}
+[data-chart-type=vertical] [data-chart-value="8"] {
+  height: 8%;
+}
+[data-chart-type=vertical] [data-chart-value="9"] {
+  height: 9%;
+}
+[data-chart-type=vertical] [data-chart-value="10"] {
+  height: 10%;
+}
+[data-chart-type=vertical] [data-chart-value="11"] {
+  height: 11%;
+}
+[data-chart-type=vertical] [data-chart-value="12"] {
+  height: 12%;
+}
+[data-chart-type=vertical] [data-chart-value="13"] {
+  height: 13%;
+}
+[data-chart-type=vertical] [data-chart-value="14"] {
+  height: 14%;
+}
+[data-chart-type=vertical] [data-chart-value="15"] {
+  height: 15%;
+}
+[data-chart-type=vertical] [data-chart-value="16"] {
+  height: 16%;
+}
+[data-chart-type=vertical] [data-chart-value="17"] {
+  height: 17%;
+}
+[data-chart-type=vertical] [data-chart-value="18"] {
+  height: 18%;
+}
+[data-chart-type=vertical] [data-chart-value="19"] {
+  height: 19%;
+}
+[data-chart-type=vertical] [data-chart-value="20"] {
+  height: 20%;
+}
+[data-chart-type=vertical] [data-chart-value="21"] {
+  height: 21%;
+}
+[data-chart-type=vertical] [data-chart-value="22"] {
+  height: 22%;
+}
+[data-chart-type=vertical] [data-chart-value="23"] {
+  height: 23%;
+}
+[data-chart-type=vertical] [data-chart-value="24"] {
+  height: 24%;
+}
+[data-chart-type=vertical] [data-chart-value="25"] {
+  height: 25%;
+}
+[data-chart-type=vertical] [data-chart-value="26"] {
+  height: 26%;
+}
+[data-chart-type=vertical] [data-chart-value="27"] {
+  height: 27%;
+}
+[data-chart-type=vertical] [data-chart-value="28"] {
+  height: 28%;
+}
+[data-chart-type=vertical] [data-chart-value="29"] {
+  height: 29%;
+}
+[data-chart-type=vertical] [data-chart-value="30"] {
+  height: 30%;
+}
+[data-chart-type=vertical] [data-chart-value="31"] {
+  height: 31%;
+}
+[data-chart-type=vertical] [data-chart-value="32"] {
+  height: 32%;
+}
+[data-chart-type=vertical] [data-chart-value="33"] {
+  height: 33%;
+}
+[data-chart-type=vertical] [data-chart-value="34"] {
+  height: 34%;
+}
+[data-chart-type=vertical] [data-chart-value="35"] {
+  height: 35%;
+}
+[data-chart-type=vertical] [data-chart-value="36"] {
+  height: 36%;
+}
+[data-chart-type=vertical] [data-chart-value="37"] {
+  height: 37%;
+}
+[data-chart-type=vertical] [data-chart-value="38"] {
+  height: 38%;
+}
+[data-chart-type=vertical] [data-chart-value="39"] {
+  height: 39%;
+}
+[data-chart-type=vertical] [data-chart-value="40"] {
+  height: 40%;
+}
+[data-chart-type=vertical] [data-chart-value="41"] {
+  height: 41%;
+}
+[data-chart-type=vertical] [data-chart-value="42"] {
+  height: 42%;
+}
+[data-chart-type=vertical] [data-chart-value="43"] {
+  height: 43%;
+}
+[data-chart-type=vertical] [data-chart-value="44"] {
+  height: 44%;
+}
+[data-chart-type=vertical] [data-chart-value="45"] {
+  height: 45%;
+}
+[data-chart-type=vertical] [data-chart-value="46"] {
+  height: 46%;
+}
+[data-chart-type=vertical] [data-chart-value="47"] {
+  height: 47%;
+}
+[data-chart-type=vertical] [data-chart-value="48"] {
+  height: 48%;
+}
+[data-chart-type=vertical] [data-chart-value="49"] {
+  height: 49%;
+}
+[data-chart-type=vertical] [data-chart-value="50"] {
+  height: 50%;
+}
+[data-chart-type=vertical] [data-chart-value="51"] {
+  height: 51%;
+}
+[data-chart-type=vertical] [data-chart-value="52"] {
+  height: 52%;
+}
+[data-chart-type=vertical] [data-chart-value="53"] {
+  height: 53%;
+}
+[data-chart-type=vertical] [data-chart-value="54"] {
+  height: 54%;
+}
+[data-chart-type=vertical] [data-chart-value="55"] {
+  height: 55%;
+}
+[data-chart-type=vertical] [data-chart-value="56"] {
+  height: 56%;
+}
+[data-chart-type=vertical] [data-chart-value="57"] {
+  height: 57%;
+}
+[data-chart-type=vertical] [data-chart-value="58"] {
+  height: 58%;
+}
+[data-chart-type=vertical] [data-chart-value="59"] {
+  height: 59%;
+}
+[data-chart-type=vertical] [data-chart-value="60"] {
+  height: 60%;
+}
+[data-chart-type=vertical] [data-chart-value="61"] {
+  height: 61%;
+}
+[data-chart-type=vertical] [data-chart-value="62"] {
+  height: 62%;
+}
+[data-chart-type=vertical] [data-chart-value="63"] {
+  height: 63%;
+}
+[data-chart-type=vertical] [data-chart-value="64"] {
+  height: 64%;
+}
+[data-chart-type=vertical] [data-chart-value="65"] {
+  height: 65%;
+}
+[data-chart-type=vertical] [data-chart-value="66"] {
+  height: 66%;
+}
+[data-chart-type=vertical] [data-chart-value="67"] {
+  height: 67%;
+}
+[data-chart-type=vertical] [data-chart-value="68"] {
+  height: 68%;
+}
+[data-chart-type=vertical] [data-chart-value="69"] {
+  height: 69%;
+}
+[data-chart-type=vertical] [data-chart-value="70"] {
+  height: 70%;
+}
+[data-chart-type=vertical] [data-chart-value="71"] {
+  height: 71%;
+}
+[data-chart-type=vertical] [data-chart-value="72"] {
+  height: 72%;
+}
+[data-chart-type=vertical] [data-chart-value="73"] {
+  height: 73%;
+}
+[data-chart-type=vertical] [data-chart-value="74"] {
+  height: 74%;
+}
+[data-chart-type=vertical] [data-chart-value="75"] {
+  height: 75%;
+}
+[data-chart-type=vertical] [data-chart-value="76"] {
+  height: 76%;
+}
+[data-chart-type=vertical] [data-chart-value="77"] {
+  height: 77%;
+}
+[data-chart-type=vertical] [data-chart-value="78"] {
+  height: 78%;
+}
+[data-chart-type=vertical] [data-chart-value="79"] {
+  height: 79%;
+}
+[data-chart-type=vertical] [data-chart-value="80"] {
+  height: 80%;
+}
+[data-chart-type=vertical] [data-chart-value="81"] {
+  height: 81%;
+}
+[data-chart-type=vertical] [data-chart-value="82"] {
+  height: 82%;
+}
+[data-chart-type=vertical] [data-chart-value="83"] {
+  height: 83%;
+}
+[data-chart-type=vertical] [data-chart-value="84"] {
+  height: 84%;
+}
+[data-chart-type=vertical] [data-chart-value="85"] {
+  height: 85%;
+}
+[data-chart-type=vertical] [data-chart-value="86"] {
+  height: 86%;
+}
+[data-chart-type=vertical] [data-chart-value="87"] {
+  height: 87%;
+}
+[data-chart-type=vertical] [data-chart-value="88"] {
+  height: 88%;
+}
+[data-chart-type=vertical] [data-chart-value="89"] {
+  height: 89%;
+}
+[data-chart-type=vertical] [data-chart-value="90"] {
+  height: 90%;
+}
+[data-chart-type=vertical] [data-chart-value="91"] {
+  height: 91%;
+}
+[data-chart-type=vertical] [data-chart-value="92"] {
+  height: 92%;
+}
+[data-chart-type=vertical] [data-chart-value="93"] {
+  height: 93%;
+}
+[data-chart-type=vertical] [data-chart-value="94"] {
+  height: 94%;
+}
+[data-chart-type=vertical] [data-chart-value="95"] {
+  height: 95%;
+}
+[data-chart-type=vertical] [data-chart-value="96"] {
+  height: 96%;
+}
+[data-chart-type=vertical] [data-chart-value="97"] {
+  height: 97%;
+}
+[data-chart-type=vertical] [data-chart-value="98"] {
+  height: 98%;
+}
+[data-chart-type=vertical] [data-chart-value="99"] {
+  height: 99%;
+}
+[data-chart-type=vertical] [data-chart-value="100"] {
+  height: 100%;
+}
+[data-chart-type=vertical] .chart-data-label,
+[data-chart-type=vertical] .chart-data-value {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+[data-chart-type=vertical] .chart-data-label {
+  font-size: var(--label-font-size);
+  top: calc(100% + 20px);
+  text-align: center;
+  width: var(--label-width);
+}
+[data-chart-type=vertical] .chart-data-value {
+  font-weight: 900;
+  bottom: calc(100% + 10px);
+}
+
+/*# sourceMappingURL=charts.css.map */

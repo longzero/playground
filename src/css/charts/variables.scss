@@ -1,0 +1,68 @@
+// SITE SETTINGS
+// Used to calculate other variables
+$site-margin: 20px;
+$site-width: 1220px;
+$site-width-small: 1010px;
+
+
+// BREAKPOINTS
+$breakpoint-android: 360px;
+$breakpoint-iphone: 375px;
+$breakpoint-iphone-plus: 414px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 600px;
+$breakpoint-ipad: 768px;
+$breakpoint-desktop: 991px;
+$breakpoint-ipad-landscape: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-air: 1400px;
+$breakpoint-big: 1600px;
+$breakpoint-hd: 1900px;
+
+$breakpoint-navigation: $breakpoint-air;
+$breakpoint-site-width: $site-width + 2 * $site-margin;
+$breakpoint-site-width-small: $site-width-small + 2 * $site-margin;
+
+
+// COLORS
+// Basic colours
+$color-1: #000;
+$color-2: #1f1f1f;
+$color-3: #aeded2;
+$color-4: #000000;
+$color-5: #fdc5a8;
+$color-6: #99c9bd;
+
+// Brands
+$color-facebook: #3b5998;
+$color-instagram: #c13584;
+$color-linkedin: #0077b5;
+$color-pinterest: #bd081c;
+$color-spotify: #1db954;
+$color-twitter: #1da1f2;
+$color-youtube: #ff0000;
+
+// Specific colours
+$color-active: $color-1;
+$color-copy: $color-2;
+$color-hover: $color-1;
+$color-link: $color-1;
+
+
+// FONTS
+$font-1: Helvetica, Arial, sans-serif;
+$font-2: Garamond, Georgia, serif;
+$font-default: $font-1;
+$font-family: $font-default;
+$font-heading: $font-2;
+$font-line-height: 1.2;
+$font-size: 16px;
+$font-size-unitless: 16;
+$font-body-size: $font-size;
+$font-weight: 400;
+$font-semibold: 600;
+$font-bold: 800;
+
+
+// OTHER VARIABLES
+$layer-header: 100;
