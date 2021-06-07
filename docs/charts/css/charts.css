@@ -1,3 +1,58 @@
+.sr-only,
+.visually-hidden,
+.visuallyhidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.sr-only.focusable:active, .sr-only.focusable:focus,
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus,
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.sr-only-undo,
+.visually-hidden-undo,
+.visuallyhidden-undo {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+  white-space: normal;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+.sr-only-undo.focusable:active, .sr-only-undo.focusable:focus,
+.visually-hidden-undo.focusable:active,
+.visually-hidden-undo.focusable:focus,
+.visuallyhidden-undo.focusable:active,
+.visuallyhidden-undo.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -226,11 +281,19 @@ p:last-child, ul:last-child, ol:last-child {
 }
 
 [data-chart-type=vertical] {
+  --bar-width: 20px;
   --label-font-size: .75em;
   --label-width: 100px;
+  height: auto;
+}
+@media (min-width: 600px) {
+  [data-chart-type=vertical] {
+    --bar-width: 65px;
+  }
 }
 [data-chart-type=vertical] .chart-data {
   --data-chart-value: 0;
+  width: var(--bar-width);
   height: calc(var(--data-chart-value) * 1%);
 }
 [data-chart-type=vertical] .chart-data-label,
@@ -245,9 +308,51 @@ p:last-child, ul:last-child, ol:last-child {
   text-align: center;
   width: var(--label-width);
 }
+[data-chart-type=vertical] .chart-data-label span {
+  display: block;
+}
+@media (min-width: 600px) {
+  [data-chart-type=vertical] .chart-data-label span {
+    display: none;
+  }
+}
+[data-chart-type=vertical] .chart-data-label span + span {
+  display: none;
+}
+@media (min-width: 600px) {
+  [data-chart-type=vertical] .chart-data-label span + span {
+    display: block;
+  }
+}
 [data-chart-type=vertical] .chart-data-value {
   font-weight: 900;
   bottom: calc(100% + 10px);
+}
+[data-chart-type=vertical] .chart-graphic {
+  height: 300px;
+}
+[data-chart-type=vertical] .chart-vertical-labels-mobile {
+  --chart-vertical-labels-width: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+@media (min-width: 600px) {
+  [data-chart-type=vertical] .chart-vertical-labels-mobile {
+    display: none;
+  }
+}
+[data-chart-type=vertical] .chart-vertical-labels-mobile__column,
+[data-chart-type=vertical] .chart-vertical-labels-mobile__label {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-bottom: 1em;
+}
+[data-chart-type=vertical] .chart-vertical-labels-mobile__column {
+  width: var(--chart-vertical-labels-width);
+}
+[data-chart-type=vertical] .chart-vertical-labels-mobile__label {
+  width: calc(100% - var(--chart-vertical-labels-width));
 }
 
 /*# sourceMappingURL=charts.css.map */

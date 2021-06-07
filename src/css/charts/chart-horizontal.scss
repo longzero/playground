@@ -9,23 +9,6 @@
   height: auto;
   padding-left: var(--label-width);
 
-  // @for $i from 1 through 100 {
-  //   $value: ($i * 1%);
-
-  //   [data-chart-value="#{$i}"] {
-  //     width: $value;
-  //   }
-  // }
-
-  &:before {
-    // left: calc(var(--label-width) + 20px);
-  }
-
-  &:after {
-    // left: var(--label-width);
-    // width: calc(100% - var(--label-width));
-  }
-
   [data-chart-value] {
     height: 50px;
   }
