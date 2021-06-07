@@ -2,12 +2,17 @@
   --label-font-size: .75em;
   --label-width: 100px;
 
-  @for $i from 1 through 100 {
-    $value: ($i * 1%);
+  // @for $i from 1 through 100 {
+  //   $value: ($i * 1%);
 
-    [data-chart-value="#{$i}"] {
-      height: $value;
-    }
+  //   [data-chart-value="#{$i}"] {
+  //     height: $value;
+  //   }
+  // }
+
+  .chart-data {
+    --data-chart-value: 0;
+    height: calc(var(--data-chart-value) * 1%);
   }
 
   .chart-data-label,

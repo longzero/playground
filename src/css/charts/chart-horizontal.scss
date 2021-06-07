@@ -1,17 +1,21 @@
 [data-chart-type="horizontal"] {
   --label-font-size: .75em;
-  --label-width: 160px;
+  --label-width: 100px;
+
+  @media (min-width: $breakpoint-mobile) {
+    --label-width: 160px;
+  }
 
   height: auto;
   padding-left: var(--label-width);
 
-  @for $i from 1 through 100 {
-    $value: ($i * 1%);
+  // @for $i from 1 through 100 {
+  //   $value: ($i * 1%);
 
-    [data-chart-value="#{$i}"] {
-      width: $value;
-    }
-  }
+  //   [data-chart-value="#{$i}"] {
+  //     width: $value;
+  //   }
+  // }
 
   &:before {
     // left: calc(var(--label-width) + 20px);
@@ -27,7 +31,13 @@
   }
 
   .chart-data {
-    margin: 20px 0;
+    --bar-spacing: 40px;
+    @media (min-width: $breakpoint-mobile) {
+      --bar-spacing: 20px;
+    }
+    --data-chart-value: 0;
+    margin: var(--bar-spacing) 0;
+    width: calc(var(--data-chart-value) * 1%);
   }
 
   .chart-data-label,
