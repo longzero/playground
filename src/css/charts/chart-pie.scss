@@ -1,6 +1,14 @@
 [data-chart-type="pie"] {
-  --pie-size: 500px;
+  --label-font-size: calc(12 / 16 * 1rem);
+  --pie-size: 150px;
 
+  @media (min-width: $breakpoint-ipad) {
+    --pie-size: 300px;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--pie-size);
   height: var(--pie-size);
 
   .chart-data {
@@ -28,16 +36,24 @@
     }
 
     &:nth-child(4) {
-      top: 0;
-      left: 0;
+      bottom: 95%;
+      right: 80%;
+      text-align: right;
     }
 
     &:nth-child(5) {
       bottom: 100%;
-      left: 50%;
+      left: 65%;
       margin-left: -40px;
       margin-bottom: 10px;
+      @media (min-width: $breakpoint-ipad) {
+        left: 55%;
+      }
     }
+  }
+
+  .chart-data-label {
+    font-size: var(--label-font-size);
   }
 
   .chart-graphic {
@@ -55,6 +71,7 @@
 
     &:before,
     &:after {
+      // By default, these are XY axes.
       display: none;
     }
   }

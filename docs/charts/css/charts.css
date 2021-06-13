@@ -180,15 +180,24 @@ p:last-child, ul:last-child, ol:last-child {
 
 [data-chart-type=donut],
 [data-chart-type=doughnut] {
-  --donut-size: 500px;
-  --donut-thickness: 300px;
+  --donut-size: 150px;
+  --donut-thickness: 50px;
+  --label-font-size: calc(12 / 16 * 1rem);
   height: var(--donut-size);
+}
+@media (min-width: 768px) {
+  [data-chart-type=donut],
+[data-chart-type=doughnut] {
+    --donut-size: 300px;
+    --donut-thickness: 100px;
+  }
 }
 [data-chart-type=donut] .chart-data,
 [data-chart-type=doughnut] .chart-data {
   background-color: transparent;
   position: absolute;
   width: 200px;
+  z-index: 1;
 }
 [data-chart-type=donut] .chart-data:nth-child(1),
 [data-chart-type=doughnut] .chart-data:nth-child(1) {
@@ -211,15 +220,26 @@ p:last-child, ul:last-child, ol:last-child {
 }
 [data-chart-type=donut] .chart-data:nth-child(4),
 [data-chart-type=doughnut] .chart-data:nth-child(4) {
-  top: 0;
-  left: 0;
+  bottom: 95%;
+  right: 80%;
+  text-align: right;
 }
 [data-chart-type=donut] .chart-data:nth-child(5),
 [data-chart-type=doughnut] .chart-data:nth-child(5) {
   bottom: 100%;
-  left: 50%;
+  left: 65%;
   margin-left: -40px;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  [data-chart-type=donut] .chart-data:nth-child(5),
+[data-chart-type=doughnut] .chart-data:nth-child(5) {
+    left: 55%;
+  }
+}
+[data-chart-type=donut] .chart-data-label,
+[data-chart-type=doughnut] .chart-data-label {
+  font-size: var(--label-font-size);
 }
 [data-chart-type=donut] .chart-graphic,
 [data-chart-type=doughnut] .chart-graphic {
@@ -298,8 +318,17 @@ p:last-child, ul:last-child, ol:last-child {
 }
 
 [data-chart-type=pie] {
-  --pie-size: 500px;
+  --label-font-size: calc(12 / 16 * 1rem);
+  --pie-size: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--pie-size);
   height: var(--pie-size);
+}
+@media (min-width: 768px) {
+  [data-chart-type=pie] {
+    --pie-size: 300px;
+  }
 }
 [data-chart-type=pie] .chart-data {
   background-color: transparent;
@@ -323,14 +352,23 @@ p:last-child, ul:last-child, ol:last-child {
   text-align: right;
 }
 [data-chart-type=pie] .chart-data:nth-child(4) {
-  top: 0;
-  left: 0;
+  bottom: 95%;
+  right: 80%;
+  text-align: right;
 }
 [data-chart-type=pie] .chart-data:nth-child(5) {
   bottom: 100%;
-  left: 50%;
+  left: 65%;
   margin-left: -40px;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  [data-chart-type=pie] .chart-data:nth-child(5) {
+    left: 55%;
+  }
+}
+[data-chart-type=pie] .chart-data-label {
+  font-size: var(--label-font-size);
 }
 [data-chart-type=pie] .chart-graphic {
   border-radius: 50%;

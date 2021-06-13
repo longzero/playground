@@ -1,7 +1,13 @@
 [data-chart-type="donut"],
 [data-chart-type="doughnut"] {
-  --donut-size: 500px;
-  --donut-thickness: 300px;
+  --donut-size: 150px;
+  --donut-thickness: 50px;
+  --label-font-size: calc(12 / 16 * 1rem);
+
+  @media (min-width: $breakpoint-ipad) {
+    --donut-size: 300px;
+    --donut-thickness: 100px;
+  }
 
   height: var(--donut-size);
 
@@ -9,6 +15,7 @@
     background-color: transparent;
     position: absolute;
     width: 200px;
+    z-index: 1;
 
     &:nth-child(1) {
       top: 50%;
@@ -30,16 +37,24 @@
     }
 
     &:nth-child(4) {
-      top: 0;
-      left: 0;
+      bottom: 95%;
+      right: 80%;
+      text-align: right;
     }
 
     &:nth-child(5) {
       bottom: 100%;
-      left: 50%;
+      left: 65%;
       margin-left: -40px;
       margin-bottom: 10px;
+      @media (min-width: $breakpoint-ipad) {
+        left: 55%;
+      }
     }
+  }
+
+  .chart-data-label {
+    font-size: var(--label-font-size);
   }
 
   .chart-graphic {
