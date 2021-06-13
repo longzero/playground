@@ -2,23 +2,27 @@
 const colors = ['rgb(229,229,299)', 'rgb(211,53,107)', 'rgb(51,51,51)', 'rgb(118,118,118)', 'rgb(204,156,164)',
 'rgb(229,229,299)', 'rgb(211,53,107)', 'rgb(51,51,51)', 'rgb(118,118,118)', 'rgb(204,156,164)']
 
+// The following code should work for both pie charts and donut charts.
 const chartPie = document.querySelectorAll('[data-chart-type="donut"], [data-chart-type="pie"]')
+
 if (chartPie) {
   for (let i = 0; i < chartPie.length; i++) {
-    let chartValue = chartPie[i].querySelectorAll('[data-chart-value]')
+    let chartValue = chartPie[i].querySelectorAll('[data-chart-value]') // Get data
+
+    // Example of CSS property if this was hardcoded in CSS.
     // background: conic-gradient(rgb(229,229,299) 0 54%, rgb(211,53,107) 0 75%, rgb(51,51,51) 0 86%, rgb(118,118,118) 0 97%, rgb(204,156,164) 0 0%);
-    let chartData = ''
-    let cumulativeValue = 0
+
+    let chartData = '' // This is the value that goes inside conic-gradient()
+    let cumulativeValue = 0 // To avoid seeing a gradient, the value must be added to the previous ones.
+
+    // Loop through each data
     for (let j = 0; j < chartValue.length; j++) {
-      if (chartData != '') chartData += ', '
-      cumulativeValue = parseFloat(cumulativeValue) + parseFloat(chartValue[j].dataset.chartValue)
-      chartData += colors[j] + ' 0 ' + cumulativeValue + '%'
+      if (chartData != '') chartData += ', ' // Before concatenating another value, add a comma.
+      cumulativeValue = parseFloat(cumulativeValue) + parseFloat(chartValue[j].dataset.chartValue) // Add to previous cumulative value.
+      chartData += colors[j] + ' 0 ' + cumulativeValue + '%' // Build the string that will be part of the CSS value.
     }
-    // let chartDraw = 'background: conic-gradient(' + chartData + ');'
-    let chartDraw = 'conic-gradient(' + chartData + ')'
-    // console.warn(chartDraw)
-    // console.log("conic-gradient(rgb(229,229,299) 0 54%, rgb(211,53,107) 0 75%, rgb(51,51,51) 0 86%, rgb(118,118,118) 0 97%, rgb(204,156,164) 0 0%)")
-    chartPie[i].querySelector('.chart-graphic').style.backgroundImage = chartDraw
+    let chartDraw = 'conic-gradient(' + chartData + ')' // This is the final CSS value.
+    chartPie[i].querySelector('.chart-graphic').style.backgroundImage = chartDraw // Apply the CSS value.
   }
 }
 
