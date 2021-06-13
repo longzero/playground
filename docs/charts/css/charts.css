@@ -184,9 +184,45 @@ p:last-child, ul:last-child, ol:last-child {
   --donut-thickness: 300px;
   height: var(--donut-size);
 }
+[data-chart-type=donut] .chart-data,
+[data-chart-type=doughnut] .chart-data {
+  background-color: transparent;
+  position: absolute;
+  width: 200px;
+}
+[data-chart-type=donut] .chart-data:nth-child(1),
+[data-chart-type=doughnut] .chart-data:nth-child(1) {
+  top: 50%;
+  left: 100%;
+  margin-left: 20px;
+}
+[data-chart-type=donut] .chart-data:nth-child(2),
+[data-chart-type=doughnut] .chart-data:nth-child(2) {
+  top: 70%;
+  right: 100%;
+  text-align: right;
+}
+[data-chart-type=donut] .chart-data:nth-child(3),
+[data-chart-type=doughnut] .chart-data:nth-child(3) {
+  top: 20%;
+  right: 100%;
+  margin-right: 20px;
+  text-align: right;
+}
+[data-chart-type=donut] .chart-data:nth-child(4),
+[data-chart-type=doughnut] .chart-data:nth-child(4) {
+  top: 0;
+  left: 0;
+}
+[data-chart-type=donut] .chart-data:nth-child(5),
+[data-chart-type=doughnut] .chart-data:nth-child(5) {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+  margin-bottom: 10px;
+}
 [data-chart-type=donut] .chart-graphic,
 [data-chart-type=doughnut] .chart-graphic {
-  background: conic-gradient(#e5e5ff 54%, #d3356b 0 75%, #333333 0 86%, #767676 0 97%, #cc9ca4 0);
   border-radius: 50%;
   padding: 0;
   position: absolute;
@@ -265,8 +301,38 @@ p:last-child, ul:last-child, ol:last-child {
   --pie-size: 500px;
   height: var(--pie-size);
 }
+[data-chart-type=pie] .chart-data {
+  background-color: transparent;
+  position: absolute;
+  width: 200px;
+}
+[data-chart-type=pie] .chart-data:nth-child(1) {
+  top: 50%;
+  left: 100%;
+  margin-left: 20px;
+}
+[data-chart-type=pie] .chart-data:nth-child(2) {
+  top: 70%;
+  right: 100%;
+  text-align: right;
+}
+[data-chart-type=pie] .chart-data:nth-child(3) {
+  top: 20%;
+  right: 100%;
+  margin-right: 20px;
+  text-align: right;
+}
+[data-chart-type=pie] .chart-data:nth-child(4) {
+  top: 0;
+  left: 0;
+}
+[data-chart-type=pie] .chart-data:nth-child(5) {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+  margin-bottom: 10px;
+}
 [data-chart-type=pie] .chart-graphic {
-  background: conic-gradient(#e5e5ff 54%, #d3356b 0 75%, #333333 0 86%, #767676 0 97%, #cc9ca4 0);
   border-radius: 50%;
   padding: 0;
   position: absolute;

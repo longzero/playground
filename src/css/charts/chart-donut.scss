@@ -5,11 +5,49 @@
 
   height: var(--donut-size);
 
+  .chart-data {
+    background-color: transparent;
+    position: absolute;
+    width: 200px;
+
+    &:nth-child(1) {
+      top: 50%;
+      left: 100%;
+      margin-left: 20px;
+    }
+
+    &:nth-child(2) {
+      top: 70%;
+      right: 100%;
+      text-align: right;
+    }
+
+    &:nth-child(3) {
+      top: 20%;
+      right: 100%;
+      margin-right: 20px;
+      text-align: right;
+    }
+
+    &:nth-child(4) {
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(5) {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -40px;
+      margin-bottom: 10px;
+    }
+  }
+
   .chart-graphic {
+    // This is just an example to show how it is done.
     // The 0 after the color enables solid colors.
     // What follows the 0 must be a cumulative value.
     // 54, 21 = 75, 11 = 86, 11 = 97, 3 = 0
-    background: conic-gradient(rgb(229,229,299) 54%, rgb(211,53,107) 0 75%, rgb(51,51,51) 0 86%, rgb(118,118,118) 0 97%, rgb(204,156,164) 0);
+    // background-image: conic-gradient(rgb(229,229,299) 54%, rgb(211,53,107) 0 75%, rgb(51,51,51) 0 86%, rgb(118,118,118) 0 97%, rgb(204,156,164) 0);
     border-radius: 50%;
     padding: 0;
     position: absolute;
@@ -23,6 +61,7 @@
       display: none;
     }
 
+    // This is a disc in the middle to make the donut
     &:before {
       background-color: #fff; // Should be color of background of parent
       border-radius: 50%;
