@@ -2,14 +2,17 @@
   --label-font-size: calc(12 / 16 * 1rem);
   --pie-size: 150px;
 
-  @media (min-width: $breakpoint-ipad) {
-    --pie-size: 300px;
-  }
-
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 900px;
   width: var(--pie-size);
   height: var(--pie-size);
+
+  @media (min-width: $breakpoint-ipad) {
+    --pie-size: 300px;
+
+    margin-bottom: 200px;
+  }
 
   .chart-data {
     background-color: transparent;
@@ -73,6 +76,14 @@
     &:after {
       // By default, these are XY axes.
       display: none;
+    }
+  }
+
+  .chart-vertical-labels-mobile {
+    padding-top: 200px;
+
+    @media (min-width: $breakpoint-ipad) {
+      padding-top: 0;
     }
   }
 }
