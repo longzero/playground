@@ -1,3 +1,7 @@
+const BREAKPOINT_TABLET = 600;
+const BREAKPOINT_TABLET_MAX = BREAKPOINT_TABLET - 1;
+
+
 // ---------------------------------
 // DONUT AND PIE CHARTS
 // ---------------------------------
@@ -8,7 +12,6 @@ const colors = ['rgb(229,229,299)', 'rgb(211,53,107)', 'rgb(51,51,51)', 'rgb(118
 
 // The following code should work for both pie charts and donut charts.
 const chartPie = document.querySelectorAll('[data-chart-type="donut"], [data-chart-type="pie"]')
-
 if (chartPie) {
   for (let i = 0; i < chartPie.length; i++) {
     let chartValue = chartPie[i].querySelectorAll('[data-chart-value]') // Get data
@@ -34,6 +37,7 @@ if (chartPie) {
 
 // ---------------------------------
 // RESPONSIVE CHARTS
+// This should be executed BEFORE other responsive chart stuff.
 // ---------------------------------
 
 const responsiveCharts = document.querySelectorAll('[data-chart-responsive=true]')
@@ -76,6 +80,39 @@ if (responsiveCharts) {
     }
   }
 }
+
+
+
+// ---------------------------------
+// RESPONSIVE DONUT AND PIE CHARTS
+// This should be executed AFTER creating legends.
+// ---------------------------------
+
+// The following code should work for both pie charts and donut charts.
+const chartPieResponsive = document.querySelectorAll('[data-chart-type="donut"][data-chart-responsive=true], [data-chart-type="pie"][data-chart-responsive=true]')
+if (chartPieResponsive) {
+  for (let i = 0; i < chartPieResponsive.length; i++) {
+    // console.log(chartPieResponsive[i])
+    // console.log(i)
+    if (document.documentElement.clientWidth < BREAKPOINT_TABLET) {
+      let chartClass = 'chart-donut-pie-responsive-' + i
+      chartPieResponsive[i].classList.add(chartClass)
+
+      // Calculate height of the legend of THIS chart
+      let legendHeight = window.getComputedStyle(chartPieResponsive[i].querySelector('.chart-vertical-labels-mobile'), null).getPropertyValue('height')
+
+      // Create styling with margin-bottom by calculating the height of the legend.
+      let responsiveChartsMargin = document.createElement('style')
+      responsiveChartsMargin.innerHTML = ''
+        + '@media (max-width: '+ BREAKPOINT_TABLET_MAX +'px) {'
+          + '.' + chartClass + '{margin-bottom: ' + legendHeight + '}'
+        + '}'
+      console.log(responsiveChartsMargin)
+      chartPieResponsive[i].prepend(responsiveChartsMargin)
+    }
+  }
+}
+
 
 
 console.log("charts.js loaded")

@@ -1,0 +1,13 @@
+[data-chart-type="donut"],
+[data-chart-type="pie"] {
+
+  &[data-chart-responsive=true] {
+
+    .chart-vertical-labels-mobile {
+      padding: 0 $site-margin; // Prevent the sides from sticking to the viewport.
+      padding-top: calc(50px + var(--pie-size)); // Prevent the legend from sticking to the chart.
+      transform: translateX(calc(.5 * var(--pie-size) - 50%)); // Center the legend.
+      width: 100vw; // Give the chart a proper width.
+    }
+  }
+}

@@ -271,6 +271,14 @@ p:last-child, ul:last-child, ol:last-child {
   z-index: 1;
 }
 
+[data-chart-type=donut][data-chart-responsive=true] .chart-vertical-labels-mobile,
+[data-chart-type=pie][data-chart-responsive=true] .chart-vertical-labels-mobile {
+  padding: 0 20px;
+  padding-top: calc(50px + var(--pie-size));
+  transform: translateX(calc(.5 * var(--pie-size) - 50%));
+  width: 100vw;
+}
+
 [data-chart-type=horizontal] {
   --label-font-size: .75em;
   --label-width: 100px;
@@ -337,7 +345,6 @@ p:last-child, ul:last-child, ol:last-child {
   --chart-vertical-labels-width: 50px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4em;
 }
 @media (min-width: 600px) {
   [data-chart-responsive=true] .chart-vertical-labels-mobile {
@@ -362,7 +369,6 @@ p:last-child, ul:last-child, ol:last-child {
   --pie-size: 150px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 900px;
   width: var(--pie-size);
   height: var(--pie-size);
 }
@@ -424,14 +430,6 @@ p:last-child, ul:last-child, ol:last-child {
 }
 [data-chart-type=pie] .chart-graphic:before, [data-chart-type=pie] .chart-graphic:after {
   display: none;
-}
-[data-chart-type=pie] .chart-vertical-labels-mobile {
-  padding-top: 200px;
-}
-@media (min-width: 768px) {
-  [data-chart-type=pie] .chart-vertical-labels-mobile {
-    padding-top: 0;
-  }
 }
 
 [data-chart-type=vertical] {

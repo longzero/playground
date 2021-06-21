@@ -4,7 +4,6 @@
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 900px;
   width: var(--pie-size);
   height: var(--pie-size);
 
@@ -76,14 +75,6 @@
     &:after {
       // By default, these are XY axes.
       display: none;
-    }
-  }
-
-  .chart-vertical-labels-mobile {
-    padding-top: 200px;
-
-    @media (min-width: $breakpoint-ipad) {
-      padding-top: 0;
     }
   }
 }
