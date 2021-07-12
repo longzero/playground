@@ -49,7 +49,7 @@ if (responsiveCharts) {
 
       // Create the container for the legend
       let mobileChartLabel = document.createElement('div')
-      mobileChartLabel.classList.add('chart-vertical-labels-mobile')
+      mobileChartLabel.classList.add('chart-labels-mobile')
       mobileChartLabel.setAttribute('aria-hidden', 'true')
 
       // Loop through labels to add them to the legend
@@ -57,13 +57,13 @@ if (responsiveCharts) {
 
         // This is the symbol for the legend.
         let chartLabelColumn = document.createElement('div')
-        chartLabelColumn.classList.add('chart-vertical-labels-mobile__column')
+        chartLabelColumn.classList.add('chart-labels-mobile__column')
         chartLabelColumn.innerHTML = alphabet[j]
         mobileChartLabel.appendChild(chartLabelColumn)
 
         // This is the label for the legend.
         let chartLabelLabel = document.createElement('div')
-        chartLabelLabel.classList.add('chart-vertical-labels-mobile__label')
+        chartLabelLabel.classList.add('chart-labels-mobile__label')
         chartLabelLabel.innerHTML = chartLabels[j].innerHTML
         mobileChartLabel.appendChild(chartLabelLabel)
 
@@ -99,7 +99,7 @@ if (chartPieResponsive) {
       chartPieResponsive[i].classList.add(chartClass)
 
       // Calculate height of the legend of THIS chart
-      let legendHeight = window.getComputedStyle(chartPieResponsive[i].querySelector('.chart-vertical-labels-mobile'), null).getPropertyValue('height')
+      let legendHeight = window.getComputedStyle(chartPieResponsive[i].querySelector('.chart-labels-mobile'), null).getPropertyValue('height')
 
       // Create styling with margin-bottom by calculating the height of the legend.
       let responsiveChartsMargin = document.createElement('style')

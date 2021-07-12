@@ -44,7 +44,16 @@ $breakpoint-vertical-chart-label: 600px;
     bottom: calc(100% + 10px);
   }
 
-  .chart-graphic {
+  .chart-graphic,
+  .chart-group {
     height: 300px;
+  }
+
+  .chart-group {
+    width: 30%;
+  }
+
+  .chart-labels-mobile {
+    margin-top: 40px;
   }
 }

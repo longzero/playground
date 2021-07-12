@@ -15,7 +15,7 @@
     }
   }
 
-  .chart-vertical-labels-mobile {
+  .chart-labels-mobile {
     --chart-vertical-labels-width: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -26,18 +26,18 @@
     }
   }
 
-  .chart-vertical-labels-mobile__column,
-  .chart-vertical-labels-mobile__label {
+  .chart-labels-mobile__column,
+  .chart-labels-mobile__label {
     flex-grow: 0;
     flex-shrink: 0;
     margin-bottom: 1em;
   }
 
-  .chart-vertical-labels-mobile__column {
+  .chart-labels-mobile__column {
     width: var(--chart-vertical-labels-width);
   }
 
-  .chart-vertical-labels-mobile__label {
+  .chart-labels-mobile__label {
     width: calc(100% - var(--chart-vertical-labels-width));
   }
 }
