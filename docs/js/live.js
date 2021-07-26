@@ -136,8 +136,8 @@
 	            }
 	            // if changed, act
 	            if (hasChanged) {
-                console.log("File changed: " + url);
 	              Live.refreshResource(url, contentType);
+                console.log("File changed: " + url);
 	              break;
 	            }
 	          }
