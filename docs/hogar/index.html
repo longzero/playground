@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<script>
+  const DEBUG = true
+
+  // TURN OFF CONSOLE MESSAGES BY UNCOMMENTING THESE LINES
+  // https://stackoverflow.com/questions/1215392/how-to-quickly-and-conveniently-disable-all-console-log-statements-in-my-code
+  // console.error = function() {}
+  // console.info = function() {}
+  // console.log = function() {}
+  // console.warn = function() {}
+  DEBUG && console.log("JS")
+</script>
+<script type="text/javascript" src="../js/live.js"></script>
+
+
+<div class="hogar-landing-page">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -22,9 +38,10 @@
     * {box-sizing: border-box; margin: 0; padding: 0;}
     html {font-size: 16px;}
     body {font-family: 'Ubuntu', sans-serif; padding-bottom: 100px;}
-    a {color: var(--color-link); text-decoration: none;}
+    a {color: var(--color-link) !important; text-decoration: none;}
+    a:hover {text-decoration: none;}
     figcaption {color: var(--color-copy); font-size: calc(12 / 16 * 1rem); line-height: calc(16 / 12); text-transform: uppercase;}
-    h1,h2 {line-height: 1;}
+    h1,h2 {color: var(--color-copy-2); line-height: 1;}
     h1 {font-size: calc(32 / 16 * 1rem); font-weight: 400; margin-bottom: 60px; text-align: center; text-transform: uppercase;}
     h2 {font-size: calc(30 / 16 * 1rem); font-weight: 500; margin: 80px auto 100px; position: relative;}
     h2 span {background-color: var(--color-1); color: #fff; display: block; font-size: calc(14 / 16 * 1rem); line-height: 1; margin-left: -20px; margin-bottom: 10px; padding: 4px 10px; text-align: right; width: 81px; text-transform: uppercase; vertical-align: middle;}
@@ -51,13 +68,16 @@
     .location-item:last-child {border-bottom: 0;}
     .location-link-box {display: flex; align-items: center; justify-content: space-between; padding: 1rem; width: 100%; height: 100%;}
     .location-list {list-style: none;}
-    .location-map {width: 100%; height: 245px; overflow: hidden;}
+    .location-map {margin-left: -20px; margin-right: -20px; width: 100vw; height: 245px; overflow: hidden;}
     .location-map img {object-fit: cover; object-position: center center; width: 100%; height: 100%;}
     .location-name {font-weight: bold; margin-bottom: 5px;}
     .logo-box {margin: 100px auto 55px; width: 229px; height: 95px;}
     .section-iconic .container {display: flex; flex-wrap: wrap; justify-content: space-between;}
     .section-iconic figure {margin-bottom: 40px; text-align: center; width: calc(50% - 10px);}
     .section-iconic figure:nth-child(n+6) {margin-bottom: 0;}
+
+    /*Magento*/
+    .page-title-wrapper {display: none;}
 
     @media (min-width: 768px) {
       figcaption {font-size: calc(13 / 16 * 1rem);}
@@ -80,7 +100,7 @@
       .copy-style {border-left: 10px solid var(--color-1); padding: 1rem 0 1rem 20px;}
       .location-box {display: flex; flex-direction: row-reverse;}
       .location-list {flex-shrink: 0; margin-right: 60px; width: 342px;}
-      .location-map {height: auto;}
+      .location-map {margin: 0; width: 100%; height: auto;}
     }
   </style>
 
@@ -90,7 +110,7 @@
 
   <hr style="">
 
-  <h1 class="">Decorative vinyl floor mats</h1>
+  <h1 class="container container--small">Decorative vinyl floor mats</h1>
 
   <div class="container container--small copy-style">
     <p>Enter the future of home decor with our HÖGAR STUDIO printed vinyl floor mats. Inspired by traditional and modern patterns, these carpets are perfectly designed for high-traffic areas as they are quick and easy to maintain.</p>
@@ -103,12 +123,12 @@
   </h2>
 
   <div class="container container--small image-grid">
-    <a target="_blank" href="https://hogarstudio.com/en_ca/pablo"><img src="images/Image 1_Pablo.jpg" alt=""></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/angelina"><img src="images/Image 2_Angelina.jpg" alt=""></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/mila"><img src="images/Image 3_Mila.jpg" alt=""></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/luka"><img src="images/Image 4_Luka.jpg" alt=""></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/lorenzo"><img src="images/Image 5_Lorenzo.jpg" alt=""></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/matteo "><img src="images/Image 6_Matteo.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/pablo"><img src="images/hogar-landing-page/Image 1_Pablo.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/angelina"><img src="images/hogar-landing-page/Image 2_Angelina.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/mila"><img src="images/hogar-landing-page/Image 3_Mila.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/luka"><img src="images/hogar-landing-page/Image 4_Luka.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/lorenzo"><img src="images/hogar-landing-page/Image 5_Lorenzo.jpg" alt=""></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/matteo "><img src="images/hogar-landing-page/Image 6_Matteo.jpg" alt=""></a>
   </div>
 
   <a href="#" class="container container--small" style="display: block; font-weight: bold; margin-bottom: 100px; text-align: center; text-transform: uppercase;">
@@ -116,7 +136,7 @@
     <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
   </a>
 
-  <section class="section-iconic" style="background-color: #F9F9F9; padding-top: 55px; padding-bottom: 55px;">
+  <div class="section-iconic" style="background-color: #F9F9F9; padding-top: 55px; padding-bottom: 55px;">
     <div class="container container--small">
       <figure>
         <div class="icon-box">
@@ -167,13 +187,13 @@
         <figcaption>Does not leave marks when weighed down by furniture</figcaption>
       </figure>
     </div>
-  </section>
+  </div>
 
   <h2 class="container container--small">Find a Home Depot store near you</h2>
 
   <div class="container location-box js-location-box">
     <div class="location-map">
-      <img class="location-image js-location-image" src="images/location-map.jpg" alt="Map with locations">
+      <img class="location-image js-location-image" src="images/hogar-landing-page/location-map.jpg" alt="Map with locations">
     </div>
     <ul class="location-list">
       <li class="location-item js-location-item">
@@ -288,33 +308,20 @@
   </div>
 
   <script>
-    const DEBUG = true
-
-    // TURN OFF CONSOLE MESSAGES BY UNCOMMENTING THESE LINES
-    // https://stackoverflow.com/questions/1215392/how-to-quickly-and-conveniently-disable-all-console-log-statements-in-my-code
-    // console.error = function() {}
-    // console.info = function() {}
-    // console.log = function() {}
-    // console.warn = function() {}
-    DEBUG && console.log("JS")
-  </script>
-  <script type="text/javascript" src="../js/live.js"></script>
-
-  <script>
     const locationAddress = document.querySelectorAll('.js-location-address');
     const locationBox = document.querySelector('.js-location-box');
     const locationImage = document.querySelector('.js-location-image');
-    const locationImageSrc = document.querySelector('.js-location-image').src;
+    const locationImageSrc = "images/hogar-landing-page/location-map.jpg"
     const locationImages = [
-      'images/maps/1.jpg',
-      'images/maps/2.jpg',
-      'images/maps/3.jpg',
-      'images/maps/4.jpg',
-      'images/maps/5.jpg',
-      'images/maps/6.jpg',
-      'images/maps/7.jpg',
-      'images/maps/8.jpg',
-      'images/maps/9.jpg'
+      "images/hogar-landing-page/maps/1.jpg",
+      "images/hogar-landing-page/maps/2.jpg",
+      "images/hogar-landing-page/maps/3.jpg",
+      "images/hogar-landing-page/maps/4.jpg",
+      "images/hogar-landing-page/maps/5.jpg",
+      "images/hogar-landing-page/maps/6.jpg",
+      "images/hogar-landing-page/maps/7.jpg",
+      "images/hogar-landing-page/maps/8.jpg",
+      "images/hogar-landing-page/maps/9.jpg"
 
     ]
     const locationItem = document.querySelectorAll('.js-location-item');
@@ -331,6 +338,8 @@
       }
     }
   </script>
+
+</div>
 
 </body>
 </html>
