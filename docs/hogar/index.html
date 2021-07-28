@@ -49,13 +49,19 @@
     img,svg {max-width: 100%;}
     p {margin-bottom: 1em;}
     p:last-child {margin-bottom: 0;}
+    .animate-arrow-hover svg {transition-duration: .3s;}
+    .animate-arrow-hover:hover svg {transform: translateX(10px);}
     .container {margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; max-width: 1220px; width: 100%;}
     .container--small {max-width: 1000px;}
     .copy-style {color: var(--color-copy); font-style: italic; line-height: 2;}
     .icon-box {margin-bottom: 20px;}
     .icon-box svg {width: 100px; height: 100px;}
     .image-grid {display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 100px;}
-    .image-grid a {display: block; margin-bottom: 10px; margin-right: 10px; max-width: calc(50% - 5px); max-height: 280px; width: 100%;}
+    .image-grid a {display: block; margin-bottom: 10px; margin-right: 10px; position: relative; max-width: calc(50% - 5px); max-height: 280px; width: 100%;}
+    .image-grid a span {background-color: rgba(255,255,255,.8); display: flex; align-items: center; justify-content: center; font-weight: bold; opacity: 0; position: absolute; top: 0; left: 0; text-transform: uppercase; transition-duration: .3s; width: 100%; height: 100%;}
+    .image-grid a span svg {transition-duration: .3s;}
+    .image-grid a:hover span {opacity: 1;}
+    .image-grid a:hover span svg {transform: translateX(10px);}
     .image-grid a:nth-child(2n+2) {margin-right: 0;}
     .image-grid a:nth-last-child(-n+2) {margin-bottom: 0;}
     .image-grid img {object-fit: cover; width: 100%; height: 100%;}
@@ -71,7 +77,7 @@
     .location-map {margin-left: -20px; margin-right: -20px; width: 100vw; height: 245px; overflow: hidden;}
     .location-map img {object-fit: cover; object-position: center center; width: 100%; height: 100%;}
     .location-name {font-weight: bold; margin-bottom: 5px;}
-    .logo-box {margin: 100px auto 55px; width: 229px; height: 95px;}
+    .logo-box {display: block; margin: 100px auto 55px; width: 229px; height: 95px;}
     .section-iconic .container {display: flex; flex-wrap: wrap; justify-content: space-between;}
     .section-iconic figure {margin-bottom: 40px; text-align: center; width: calc(50% - 10px);}
     .section-iconic figure:nth-child(n+6) {margin-bottom: 0;}
@@ -104,9 +110,9 @@
     }
   </style>
 
-  <div class="logo-box">
+  <a class="logo-box" href="/en_ca/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 170 400 165"><path d="M182.1 316.8s2.9 3.1 7.7 3.1c2.8 0 5.2-1.4 5.2-4.1 0-5.6-13.9-4.2-13.9-12.6 0-4.6 4.1-7.1 8.8-7.1 5.4 0 7.9 2.8 7.9 2.8l-1.6 2.7s-2.2-2.4-6.4-2.4c-2.6 0-5.1 1.1-5.1 4 0 5.7 13.9 4.1 13.9 12.6 0 4.2-3.6 7.2-8.8 7.2-6.2 0-9.5-3.7-9.5-3.7l1.8-2.5zM206 299.9h-3.4V297h3.4v-7.4h3.4v7.4h6.4v2.9h-6.4v12.8c0 6 3.8 6.8 5.8 6.8.7 0 1.2-.1 1.2-.1v3.1s-.6.1-1.5.1c-3 0-9-1-9-9.6v-13.1zM221.8 296.7h3.5v15.5c0 4 .6 7.6 5.6 7.6 5.9 0 9.5-5.2 9.5-10.7v-12.3h3.5v25.7h-3.4v-3.8c0-1.1.1-2 .1-2h-.1c-1 2.5-4.4 6.5-10.1 6.5-6 0-8.6-3.3-8.6-10v-16.5zM262.1 296c6.2 0 8.4 4.9 8.4 4.9h.1s-.1-.9-.1-1.9v-12.5h3.5v36h-3.4v-2.7c0-1.1.1-1.8.1-1.8h-.1s-2.1 5.2-8.9 5.2c-6.9 0-11.2-5.5-11.2-13.5 0-8.3 4.8-13.7 11.6-13.7zm.2 23.9c4.3 0 8.3-3.1 8.3-10.4 0-5.2-2.7-10.3-8.2-10.3-4.6 0-8.3 3.8-8.3 10.3 0 6.3 3.3 10.4 8.2 10.4zM282.3 286.4h3.6v4.4h-3.6v-4.4zm.1 10.3h3.5v25.7h-3.5v-25.7zM306 296c7.5 0 13.6 5.7 13.6 13.4 0 7.8-6.1 13.6-13.6 13.6s-13.6-5.8-13.6-13.6c-.1-7.6 6-13.4 13.6-13.4zm0 23.9c5.5 0 10-4.5 10-10.5 0-5.8-4.5-10.2-10-10.2s-10 4.4-10 10.2c-.1 6 4.4 10.5 10 10.5z"/><g><path d="M73.6 193.7h4.5v34.2h46.1v-34.2h4.5v72.7h-4.5V232H78.1v34.4h-4.5v-72.7zM182.8 192.5c20.3 0 36.8 16.2 36.8 37.1 0 21.4-16.5 38.1-36.8 38.1S146 250.9 146 229.5c0-20.8 16.5-37 36.8-37zm0 70.9c17.8 0 32.1-14.7 32.1-33.9 0-18.6-14.3-32.8-32.1-32.8s-32.1 14.2-32.1 32.8c0 19.2 14.3 33.9 32.1 33.9zm-9.5-86.4h4.8v7.6h-4.8V177zm14.3 0h4.8v7.6h-4.8V177zM268.3 192.5c16.4 0 25.3 8.2 25.3 8.2l-2.7 3.4s-8.7-7.4-22.6-7.4c-18.3 0-31.6 14.5-31.6 33.3 0 18.9 13 33.3 31 33.3 15.6 0 24.9-11.9 24.9-11.9v-14h-13v-4.2H297v33.1h-4.5V260c0-1.6.1-3.1.1-3.1h-.2s-8.7 10.7-24.8 10.7c-20.3 0-35.6-16.5-35.6-37.6 0-20.9 15.7-37.5 36.3-37.5zM351.2 241.3h-30.8l-9.3 25.1h-4.8l27.2-72.7h4.8l27.2 72.7h-4.8l-9.5-25.1zm-15.5-42.4s-1.6 5.6-2.7 8.7l-11.1 29.5h27.7l-11-29.5c-1.1-3.1-2.7-8.7-2.7-8.7h-.2zM378.5 193.7h21.3c6.8 0 10.2.7 13.1 2.2 6 3 10.1 9.1 10.1 17.4 0 10.4-6 18.2-14.5 20v.2s.7.8 1.7 2.6l16.3 30.2h-5.3L404 234.1h-21v32.2h-4.5v-72.6zm24.2 36.4c9.6 0 15.6-6.9 15.6-16.7 0-6.4-3.2-11.6-8.5-14-2.1-.9-4.4-1.5-10.2-1.5H383v32.2h19.7z"/></g></svg>
-  </div>
+  </a>
 
   <hr style="">
 
@@ -123,15 +129,51 @@
   </h2>
 
   <div class="container container--small image-grid">
-    <a target="_blank" href="https://hogarstudio.com/en_ca/pablo"><img src="images/hogar-landing-page/Image 1_Pablo.jpg" alt="" loading="lazy"></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/angelina"><img src="images/hogar-landing-page/Image 2_Angelina.jpg" alt="" loading="lazy"></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/mila"><img src="images/hogar-landing-page/Image 3_Mila.jpg" alt="" loading="lazy"></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/luka"><img src="images/hogar-landing-page/Image 4_Luka.jpg" alt="" loading="lazy"></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/lorenzo"><img src="images/hogar-landing-page/Image 5_Lorenzo.jpg" alt="" loading="lazy"></a>
-    <a target="_blank" href="https://hogarstudio.com/en_ca/matteo "><img src="images/hogar-landing-page/Image 6_Matteo.jpg" alt="" loading="lazy"></a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/pablo">
+      <img src="images/hogar-landing-page/Image 1_Pablo.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/angelina">
+      <img src="images/hogar-landing-page/Image 2_Angelina.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/mila">
+      <img src="images/hogar-landing-page/Image 3_Mila.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/luka">
+      <img src="images/hogar-landing-page/Image 4_Luka.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/lorenzo">
+      <img src="images/hogar-landing-page/Image 5_Lorenzo.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
+    <a target="_blank" href="https://hogarstudio.com/en_ca/matteo ">
+      <img src="images/hogar-landing-page/Image 6_Matteo.jpg" alt="" loading="lazy">
+      <span>
+        SHOP
+        <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
+      </span>
+    </a>
   </div>
 
-  <a href="#" class="container container--small" style="display: block; font-weight: bold; margin-bottom: 100px; text-align: center; text-transform: uppercase;">
+  <a href="/en_ca/" class="container container--small animate-arrow-hover" style="display: block; font-weight: bold; margin-bottom: 100px; text-align: center; text-transform: uppercase;">
     <span style="margin-right: 10px;">Shop all our products</span>
     <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
   </a>
