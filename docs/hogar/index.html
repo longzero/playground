@@ -43,8 +43,9 @@
     figcaption {color: var(--color-copy); font-size: calc(12 / 16 * 1rem); line-height: calc(16 / 12); text-transform: uppercase;}
     h1,h2 {color: var(--color-copy-2); line-height: 1;}
     h1 {font-size: calc(32 / 16 * 1rem); font-weight: 400; margin-bottom: 60px; text-align: center; text-transform: uppercase;}
-    h2 {font-size: calc(30 / 16 * 1rem); font-weight: 500; margin: 80px auto 100px; position: relative;}
+    h2 {font-size: calc(30 / 16 * 1rem); font-weight: 500; line-height: calc(40 / 32); margin: 60px auto; position: relative;}
     h2 span {background-color: var(--color-1); color: #fff; display: block; font-size: calc(14 / 16 * 1rem); line-height: 1; margin-left: -20px; margin-bottom: 10px; padding: 4px 10px; text-align: right; width: 81px; text-transform: uppercase; vertical-align: middle;}
+    h2 + .image-grid {margin-top: -20px;}
     hr {background-color: var(--color-1); border: 0; margin: 0 auto 70px; width: 180px; height: 1px;}
     img,svg {max-width: 100%;}
     p {margin-bottom: 1em;}
@@ -56,7 +57,7 @@
     .copy-style {color: var(--color-copy); font-style: italic; line-height: 2;}
     .icon-box {margin-bottom: 20px;}
     .icon-box svg {width: 100px; height: 100px;}
-    .image-grid {display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 100px;}
+    .image-grid {display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 60px;}
     .image-grid a {display: block; margin-bottom: 10px; margin-right: 10px; position: relative; max-width: calc(50% - 5px); max-height: 280px; width: 100%;}
     .image-grid a span {background-color: rgba(255,255,255,.8); display: flex; align-items: center; justify-content: center; font-weight: bold; opacity: 0; position: absolute; top: 0; left: 0; text-transform: uppercase; transition-duration: .3s; width: 100%; height: 100%;}
     .image-grid a span svg {transition-duration: .3s;}
@@ -65,6 +66,7 @@
     .image-grid a:nth-child(2n+2) {margin-right: 0;}
     .image-grid a:nth-last-child(-n+2) {margin-bottom: 0;}
     .image-grid img {object-fit: cover; width: 100%; height: 100%;}
+    .image-grid + a {margin-bottom: 60px;}
     .location-address,
     .location-name {display: block;}
     .location-address {font-size: calc(13 / 16 * 1rem); line-height: calc(20 / 13);}
@@ -88,15 +90,18 @@
     @media (min-width: 768px) {
       figcaption {font-size: calc(13 / 16 * 1rem);}
       h1 {font-size: calc(40 / 16 * 1rem);}
-      h2 {text-align: center;}
+      h2 {margin: 80px auto 100px; text-align: center;}
       h2 span {display: inline-block; font-size: calc(20 / 16 * 1rem); margin-bottom: 3px; margin-left: 0; margin-right: 10px; width: auto;}
+      h2 + .image-grid {margin-top: 0;}
       hr {width: 368px;}
       .copy-style {color: var(--color-copy-2); line-height: 1.5;}
+      .image-grid {margin-bottom: 100px;}
       .image-grid a {margin-bottom: 35px; max-width: calc(100% / 3 - 24px); max-height: 507px;}
       .image-grid a {margin-right: 35px;}
       .image-grid a:nth-child(2n+2) {margin-right: 35px;}
       .image-grid a:nth-child(3n+3) {margin-right: 0;}
       .image-grid a:nth-last-child(-n+3) {margin-bottom: 0;}
+      .image-grid + a {margin-bottom: 100px;}
       .location-map {height: 400px;}
       .section-iconic figure {margin-bottom: 60px; width: calc(25% - 10px);}
       .section-iconic figure:nth-child(n+4) {margin-bottom: 0;}
@@ -173,7 +178,7 @@
     </a>
   </div>
 
-  <a href="/en_ca/" class="container container--small animate-arrow-hover" style="display: block; font-weight: bold; margin-bottom: 100px; text-align: center; text-transform: uppercase;">
+  <a href="/en_ca/" class="container container--small animate-arrow-hover" style="display: block; font-weight: bold; text-align: center; text-transform: uppercase;">
     <span style="margin-right: 10px;">Shop all our products</span>
     <svg width="7" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.143L4.375 6.5 0 1.857.875 0 7 6.5.875 13 0 11.143z" fill="#1B536C"/></svg>
   </a>
