@@ -70,7 +70,7 @@
     .location-address,
     .location-name {display: block;}
     .location-address {font-size: calc(13 / 16 * 1rem); line-height: calc(20 / 13);}
-    .location-item {border-bottom: 1px solid #ddd;}
+    .location-item {border-bottom: 1px solid #ddd; margin-bottom: 0;}
     .location-item svg {width: 20px; height: 28px;}
     .location-item:hover {background-color: #F9F9F9;}
     .location-item:last-child {border-bottom: 0;}
@@ -80,6 +80,7 @@
     .location-map img {object-fit: cover; object-position: center center; width: 100%; height: 100%;}
     .location-name {font-weight: bold; margin-bottom: 5px;}
     .logo-box {display: block; margin: 100px auto 55px; width: 229px; height: 95px;}
+    .message.global.gdpr-cookie {display: none !important;}
     .section-iconic .container {display: flex; flex-wrap: wrap; justify-content: space-between;}
     .section-iconic figure {margin-bottom: 40px; text-align: center; width: calc(50% - 10px);}
     .section-iconic figure:nth-child(n+6) {margin-bottom: 0;}
@@ -90,11 +91,12 @@
     @media (min-width: 768px) {
       figcaption {font-size: calc(13 / 16 * 1rem);}
       h1 {font-size: calc(40 / 16 * 1rem);}
-      h2 {margin: 80px auto 100px; text-align: center;}
+      h2 {margin: 100px auto; text-align: center;}
       h2 span {display: inline-block; font-size: calc(20 / 16 * 1rem); margin-bottom: 3px; margin-left: 0; margin-right: 10px; width: auto;}
       h2 + .image-grid {margin-top: 0;}
       hr {width: 368px;}
       .copy-style {color: var(--color-copy-2); line-height: 1.5;}
+      .copy-style + h2 {margin-top: 80px;}
       .image-grid {margin-bottom: 100px;}
       .image-grid a {margin-bottom: 35px; max-width: calc(100% / 3 - 24px); max-height: 507px;}
       .image-grid a {margin-right: 35px;}
