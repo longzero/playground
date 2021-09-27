@@ -1,0 +1,413 @@
+// This file is named student-report, but why affects does it affect everything under interactive?
+
+.interactive {
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        max-width: 900px;
+        @media (min-width: $break-xlarge) {
+            max-width: 1200px;
+        }
+    }
+
+    /*---------- Side Nav ----------*/
+
+    .sticky-nav {
+        position: absolute;
+        top: 100px;
+    }
+
+    .slider-nav {
+        display: none;
+        @media (min-width: $break-large) {
+            display: block;
+            padding: 20px 20px 20px 0;
+            top: 100px;
+            left: 0;
+            width: 120px;
+            z-index: 1500;
+        }
+        @media (min-width: $break-xlarge) {
+            width: 150px;
+        }
+    }
+
+    .slider-nav__item {
+        display: flex;
+        align-items: center;
+        padding: 0 0 15px 0;
+    }
+
+    .slider-nav__link {
+        color: $gray-med;
+        font-family: $source-sans;
+        font-size: rem(13);
+        list-style-type: none;
+        position: relative;
+        padding: 0 0 0 15px;
+        @media (min-width: $break-xlarge) {
+            font-size: rem(14);
+            padding: 0 0 0 25px;
+        }
+        &:hover {
+            color: $pink;
+        }
+        &:before {
+            @media (min-width: $break-xlarge) {
+                content: '';
+                position: absolute;
+                border-top: 1px solid $gray-med;
+                width: 10px;
+                top: 50%;
+                left: 0;
+                transition: border-color ease 0.3s;
+            }
+        }
+    }
+
+    .fix-nav {
+        position: fixed;
+        top: 200px;
+        right: 0;
+    }
+
+    /*---------- Structure ----------*/
+
+    .section {
+        overflow: auto;
+        padding: 60px 30px;
+        margin: 0 auto;
+        @media (min-width: $break-medium) {
+            padding: 100px 8%;
+        }
+
+        @media (min-width: $break-large) {
+            padding: 100px 8% 100px 12%;
+        }
+
+        @media (min-width: $break-xlarge) {
+            padding: 100px 50px 100px 8%;
+        }
+        @media (min-width: 1250px) {
+            padding: 100px 0 100px 8%;
+        }
+    }
+
+    .section-intro-wrap {
+        background: $pink;
+        background-image: linear-gradient(to bottom left, $pink, $purple);
+        padding: 20px;
+        .wrapper {
+            padding: 25px;
+            margin: 0 auto;
+        }
+        @media (min-width: $break-medium) {
+            padding: 40px;
+        }
+        @media (min-width: $break-large) {
+            .wrapper {
+                padding: 0 50px;
+            }
+        }
+    }
+
+    .section-intro__left {
+        width: calc(calc(12 / 12 * 100%));
+        @media (min-width: $break-large) {
+            width: calc(calc(6 / 12 * 100%));
+        }
+    }
+
+    .section-intro__right {
+        width: calc(calc(12 / 12 * 100%));
+        @media (min-width: $break-large) {
+            width: calc(calc(6 / 12 * 100%));
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (min-width: $break-xlarge) {
+            padding: 0 50px;
+        }
+    }
+
+    .left-col {
+        width: calc(calc(12 / 12 * 100%));
+        @media (min-width: $break-large) {
+            width: calc(calc(5 / 12 * 100%));
+            float: left;
+        }
+    }
+
+    .right-col {
+        width: calc(calc(12 / 12 * 100%));
+        @media (min-width: $break-large) {
+            width: calc(calc(6 / 12 * 100%));
+            margin: 0;
+            float: right;
+        }
+    }
+
+    .row {
+        overflow: auto;
+        padding: 15px 0;
+    }
+
+    .stat-block {
+        padding: 0 0 40px;
+        @media (min-width: $break-medium) {
+            padding: 40px 0;
+        }
+    }
+
+    .white-section {
+        background: white;
+        padding: 0;
+        @media (min-width: $break-medium) {
+            padding: 50px 0;
+        }
+    }
+
+    .section-bg-white {
+        background: white;
+        margin: 0;
+        display: block;
+        position: relative;
+        @media (min-width: $break-medium) {
+            padding: 50px 0;
+            &.section-testimonial {
+                padding: 0;
+            }
+        }
+        @media (min-width: $break-xlarge) {
+            &.section-testimonial {
+                padding: 50px 0;
+            }
+        }
+    }
+
+    .purple-section {
+        background: $purple-lighter;
+        @media (min-width: $break-medium) {
+            padding: 50px 0;
+            margin: auto;
+        }
+    }
+
+    .grey-section-wrap {
+        background: $gray-lightest;
+        padding: 20px;
+        .section-bg-white {
+            padding: 0;
+        }
+        @media (min-width: $break-medium) {
+            padding: 40px;
+        }
+    }
+
+    .takeaway {
+        background: white;
+        padding: 30px 40px;
+    }
+
+    .takeaway--pink {
+        border: 1px solid $pink;
+        h3 {
+            color: $pink;
+            margin: 0 0 20px;
+        }
+    }
+
+    .testimonial-wrapper {
+        background: $purple-lighter;
+        display: table;
+        margin: 0 auto;
+        max-width: 1200px;
+        min-height: 400px;
+        padding: 50px 20px;
+        @media (min-width: $break-medium) {
+            padding: 50px 100px;
+        }
+    }
+
+    .testimonial-center {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .about {
+        padding: 60px 30px;
+        @media (min-width: $break-medium) {
+            padding: 100px;
+        }
+    }
+
+    .about-img {
+        padding: 0 0 40px;
+    }
+
+    .cta {
+        @media (min-width: $break-medium) {
+            margin: 0 0 100px;
+        }
+        h2 {
+            max-width: 750px;
+            display: block;
+            margin: 0 auto 25px;
+        }
+        .purple-section {
+            padding: 80px;
+        }
+    }
+
+    .section-img {
+        max-width: 100%;
+        padding: 30px 0;
+        @media (min-width: $break-small) {
+            max-width: 380px;
+            margin: 0 auto;
+            display: block;
+        }
+        @media (min-width: $break-large) {
+            max-width: 100%;
+            padding: auto;
+        }
+    }
+
+    .report {
+        position: relative;
+    }
+
+    /*---------- Plugin Overwrites ----------*/
+    //importants overwrite javascript plugin
+
+    .pin-nav {
+        .slider-nav {
+            background: white;
+        }
+    }
+
+    .pin-div {
+        position: relative;
+        @media (max-width: $break-large - 1px) {
+            left: 0 !important;
+            position: relative !important;
+            top: auto !important;
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+
+    .Zebra_Pin_Clone {
+        display: none !important;
+        @media (min-width: $break-large) {
+            display: block;
+        }
+    }
+
+    .slick-dots {
+        bottom: 50px;
+        li {
+            button {
+                &:before {
+                    color: $gray-dark;
+                }
+            }
+            &.slick-active {
+                border: 1px solid $pink;
+                border-radius: 255px;
+                button {
+                    &:before {
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-dotted.slick-slider {
+        margin: 0;
+    }
+
+    /* Font Styles */
+
+    h1 {
+        font-family: $source-sans;
+        font-size: rem(42);
+        font-weight: 700;
+        line-height: 1.1;
+        @media (min-width: $break-medium) {
+            font-size: rem(72);
+        }
+    }
+
+    h2 {
+        font-family: $source-sans;
+        font-size: rem(32);
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0 0 25px 0;
+        @media (min-width: $break-medium) {
+            font-size: rem(38);
+            margin: 0 0 50px 0;
+        }
+    }
+
+    h3,
+    h4 {
+        font-family: $source-sans;
+        font-size: rem(22);
+        font-weight: 600;
+        margin: 30px 0 15px;
+        @media (min-width: $break-medium) {
+            font-size: rem(26);
+        }
+    }
+
+    small {
+        font-size: rem(14);
+    }
+
+    .lead {
+        line-height: 1.5;
+        padding: 30px 0 15px;
+    }
+
+    .count {
+        color: $pink;
+        font-family: $source-sans;
+        font-size: rem(73);
+        font-weight: 700;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .purple-text {
+        color: $purple;
+    }
+
+    .testimonial-text {
+        font-family: $source-sans;
+        font-size: rem(24);
+        font-weight: 600;
+        padding: 30px 0 50px;
+        @media (min-width: $break-medium) {
+            font-size: rem(32);
+        }
+    }
+
+    .yellow-underline {
+        border-bottom: 5px solid $yellow;
+    }
+
+    .padding-top-30 {
+        padding: 30px 0 0;
+    }
+}

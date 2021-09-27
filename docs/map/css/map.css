@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #1f1f1f;
+  font-family: "din-2014", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.625rem;
+  }
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+iframe, img, video {
+  max-width: 100%;
+}
+
+p, ul, ol {
+  margin-bottom: 1em;
+}
+p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1220px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container--10 {
+    max-width: 1000px;
+  }
+}
+
+.container--small {
+  max-width: 1010px;
+}
+@media (min-width: 1050px) {
+  .container--small {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=map.css.map */

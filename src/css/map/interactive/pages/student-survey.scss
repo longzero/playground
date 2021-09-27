@@ -1,0 +1,337 @@
+.interactive.student-survey {
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .chart-box {
+        max-width: 100%;
+        + .chart-box {
+            margin-top: 50px;
+            @media (min-width: $breakpoint-ipad) {
+                margin-top: 0;
+            }
+        }
+    }
+    .chart-box__caption {
+        background-image: url(/wp-content/themes/TOPHAT01/build/images/interactive/student-report-2/grid.png);
+        background-position: 6px 48px;
+        color: $color-13;
+        font-size: rem(14);
+        font-weight: 600;
+        line-height: 1.3;
+        margin-top: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        &:before {
+            background-color: #eee;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
+        }
+        div {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .columns {
+        display: flex;
+    }
+    .container {
+        @media (min-width: $breakpoint-site-width) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .page-section-section {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .data-box {
+        .columns {
+            @media (max-width: $breakpoint-ipad - 1) {
+                display: block;
+            }
+        }
+        .column-50:nth-child(n + 2) {
+            padding-left: 0;
+        }
+    }
+    .footnotes-list {
+        list-style: decimal;
+        padding-left: 20px;
+        li {
+            margin-bottom: 1em;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .interactive-section-header-label {
+        margin-bottom: 15px;
+        margin-left: 30px; // due to .highlight-text-2
+        font-size: rem(24);
+        font-weight: bold;
+    }
+    .interactive-section-header-title {
+        line-height: 1.4;
+        margin-left: 30px; // due to .highlight-text
+        font-size: rem(36);
+        font-weight: bold;
+        @media (min-width: $breakpoint-ipad) {
+            font-size: rem(46);
+            margin-bottom: 0;
+        }
+        @media (min-width: $breakpoint-ipad-landscape) {
+            font-size: rem(72);
+        }
+    }
+    .long-page-header {
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        height: auto;
+
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 0;
+        }
+        h1 {
+            margin-bottom: 0;
+            font-size: rem(36);
+            font-weight: bold;
+            @media (min-width: $breakpoint-ipad) {
+                font-size: rem(46);
+            }
+            @media (min-width: $breakpoint-ipad-landscape) {
+                font-size: rem(73);
+            }
+        }
+        h4 {
+            @extend .highlight-text-2;
+            padding: 10px 0;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            z-index: 1;
+            font-size: rem(18);
+            @media (min-width: $breakpoint-ipad) {
+                font-size: rem(20);
+            }
+            @media (min-width: $breakpoint-ipad-landscape) {
+                font-size: rem(22);
+            }
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            @media (min-width: $breakpoint-ipad-landscape) {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+    }
+    .page-section {
+        background-color: #fff;
+    }
+    .page-section--border {
+        background-color: #f9e9d5;
+        padding: 30px 20px;
+        @media (min-width: $breakpoint-ipad-landscape) {
+            padding: 30px;
+        }
+    }
+    .page-section--border__body {
+        background-color: #fff;
+        padding: 50px 20px;
+        @media (min-width: $breakpoint-ipad-landscape) {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+    }
+    .page-section-column {
+        &:first-child {
+            @media (max-width: $breakpoint-ipad - 1) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .page-section-header {
+        background-position: 0 380px;
+        background-repeat: repeat-x;
+        padding: 75px 20px;
+        max-width: 100%;
+        min-height: 0;
+        @media (min-width: $breakpoint-ipad-landscape) {
+            padding: 0 0 175px;
+        }
+        > div {
+            &:first-child {
+                display: flex;
+                flex-direction: column-reverse;
+                @media (min-width: $breakpoint-ipad) {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                div {
+                    @media (min-width: $breakpoint-ipad) {
+                        max-width: calc(50% - 20px);
+                    }
+                }
+            }
+        }
+        .page-header-content {
+            background-color: #fff;
+            border: 1px solid $color-6;
+            font-size: rem(18);
+            padding: 20px;
+            text-align: center;
+            @media (min-width: $breakpoint-ipad) {
+                font-size: rem(24);
+                margin-top: 120px;
+            }
+            @media (min-width: $breakpoint-ipad-landscape) {
+                padding: 60px 75px;
+            }
+            p {
+                font-size: inherit;
+            }
+        }
+    }
+    .page-section--background-callout {
+        background-color: #f9e9d5;
+        margin-bottom: 0;
+        &:before,
+        &:after {
+            display: none;
+        }
+        .callout-box {
+            padding: 0;
+            div {
+                background-color: #fff;
+                color: #000;
+                content: '';
+                display: block;
+                font-size: rem(24);
+                font-weight: 400;
+                padding: 20px;
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                @media (min-width: $breakpoint-ipad) {
+                    padding: 60px 75px;
+                }
+            }
+        }
+        .callout-box__background-1,
+        .callout-box__background-2 {
+            position: absolute;
+            z-index: 0;
+        }
+        .callout-box__background-1 {
+            top: -20px;
+            left: -20px;
+        }
+        .callout-box__background-2 {
+            right: -20px;
+            bottom: -20px;
+        }
+    }
+
+    .page-section {
+        overflow: visible;
+    }
+
+    .section-title {
+        font-size: rem(26);
+        font-weight: 700;
+        text-transform: none;
+        @media (min-width: $breakpoint-ipad) {
+            font-size: rem(42);
+        }
+    }
+
+    .speech-person {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-bottom: 70px;
+        max-width: 210px;
+        overflow: hidden;
+        @media (min-width: $breakpoint-ipad) {
+            margin-right: 50px;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-right: 21px;
+        }
+        @media (min-width: $breakpoint-large) {
+            margin-right: 65px;
+        }
+        &:nth-child(3n) {
+            @media (min-width: $breakpoint-ipad) and (max-width: $breakpoint-ipad-landscape - 1) {
+                margin-right: 0;
+            }
+        }
+        &:nth-child(4n) {
+            @media (min-width: $breakpoint-ipad-landscape) {
+                margin-right: 0;
+            }
+        }
+    }
+    .speech-bubble {
+        background-color: $color-13;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 15px;
+        text-align: center;
+    }
+    .speech-bubble--arrow-down {
+        position: relative;
+        &:before {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5LjcxNCAyMEwzOC42Ny4yODZIMEwxOS43MTQgMjB6IiBmaWxsPSIjMkQxMTU5Ii8+PC9zdmc+');
+            background-repeat: no-repeat;
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -19px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 20px;
+        }
+    }
+    .speech-bubble-label {
+        font-size: rem(14);
+        line-height: calc(21 / 14);
+    }
+    .speech-bubble-value {
+        font-size: rem(63);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    .speech-media {
+        margin-top: 40px;
+        height: 225px;
+    }
+}

@@ -1,0 +1,55 @@
+.masonry-box {
+    border: 1px solid $color-1;
+    margin-bottom: 20px;
+    padding: 40px 30px;
+    &:last-child {
+        @media (min-width: $breakpoint-ipad) {
+            margin-bottom: 0;
+        }
+    }
+    h3 {
+        color: #000;
+        display: flex;
+        align-items: flex-start;
+        font-weight: 600;
+        margin-bottom: 30px;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+        img {
+            margin-right: 20px;
+            margin-top: -10px;
+        }
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-section--masonry {
+    .column-50 {
+        padding: 0;
+        @media (min-width: $breakpoint-ipad) {
+            flex-basis: calc(50% - 10px);
+            margin-top: 50px;
+            width: calc(50% - 10px);
+        }
+    }
+    .page-section-column {
+        @media (min-width: $breakpoint-ipad) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        h2,
+        h3,
+        p {
+            width: 100%;
+        }
+    }
+    .page-section-column--one {
+        @media (min-width: $breakpoint-ipad) {
+            margin-right: calc(100% / 12);
+        }
+    }
+}

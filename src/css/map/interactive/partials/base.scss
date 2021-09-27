@@ -1,0 +1,71 @@
+.interactive * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.interactive {
+    background-color: #fff;
+    color: $color-copy;
+    font-family: $font-default;
+    font-weight: $font-weight;
+    line-height: 1;
+    width: 100%;
+
+    a {
+        color: $color-link;
+        cursor: pointer;
+        font-weight: $bold;
+        text-decoration: none;
+        word-wrap: break-word;
+        &:focus {
+            @include focus-shadow($colour: $pink);
+        }
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: rem(32);
+        @media (min-width: $breakpoint-ipad) {
+            font-size: rem(42);
+        }
+    }
+
+    h3 {
+        font-size: rem(26);
+    }
+
+    iframe,
+    img,
+    video {
+        max-width: 100%;
+    }
+    p,
+    ul,
+    ol {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    p,
+    li {
+        line-height: 1.5;
+    }
+}

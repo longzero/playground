@@ -1,0 +1,46 @@
+// Remove the unit of a length
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@mixin btn-arrow-h() {
+    @include sans-serif($bold);
+    position: relative;
+    border: none;
+    background: none;
+    color: $pink;
+    text-transform: capitalize;
+    padding-right: 0.75rem;
+
+    &:after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 600;
+        font-size: rem(14);
+        margin-left: 0.6em;
+        position: relative;
+        top: 0;
+        right: -0.1rem;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        &:after {
+            animation: hover-slide 1s ease infinite;
+        }
+    }
+    @keyframes hover-slide {
+        0%,
+        100% {
+            right: -0.1rem;
+        }
+
+        50% {
+            right: -0.3rem;
+        }
+    }
+}

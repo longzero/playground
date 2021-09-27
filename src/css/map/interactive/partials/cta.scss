@@ -1,0 +1,62 @@
+.cta-full {
+    @extend .h-center;
+    background-color: #eee;
+    font-size: rem(26);
+    font-weight: bold;
+    margin: 0 auto $site-margin;
+    padding: 20px;
+    text-align: center;
+    min-height: 311px;
+    width: calc(100% - 2 * #{$site-margin});
+
+    @media (min-width: $breakpoint-ipad) {
+        font-size: rem(32);
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    p {
+        line-height: 1.27;
+    }
+}
+
+.btn-pink {
+    padding: 8px 20px 10px;
+    font-weight: $bold;
+    color: white;
+    font-size: rem(18);
+
+    &:hover,
+    &:focus {
+        color: $pink;
+    }
+}
+
+.cta-scroll {
+    @include btn-arrow();
+    color: $pink;
+    font-size: rem(18);
+    font-weight: $bold;
+    margin: 1rem 2rem 1rem 1rem;
+    padding: 0;
+    display: inline-block;
+    @media (min-width: $breakpoint-tablet) {
+        padding-right: 3rem;
+        margin: 0;
+    }
+    &:hover {
+        color: $pink-dark;
+        &:after {
+            color: $pink-dark;
+            margin-top: -10px;
+        }
+    }
+    &:after {
+        color: $pink;
+        top: 0;
+    }
+
+    &:focus {
+        @include focus-shadow($colour: $pink);
+    }
+}

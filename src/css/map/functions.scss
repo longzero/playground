@@ -1,0 +1,12 @@
+// Convert to px to rem
+@function rem($size) {
+  @return $size / strip-unit($font-size) * 1rem;
+}
+
+// Remove the unit of a length
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}

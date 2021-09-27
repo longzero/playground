@@ -1,0 +1,406 @@
+var allLocations = {
+  "locations": [
+    {
+      "placeId": "",
+      "name": "Valleyfield",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Valleyfield",
+      "province": "Quebec",
+      "postal code": "",
+      "longitude": -74.10599063174485,
+      "latitude": 45.27266422578156,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNTExIn0_"
+    },
+    {
+      "placeId": "",
+      "name": "Rigaud",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Rigaud",
+      "province": "Quebec",
+      "postal code": "",
+      "longitude": -74.29317164034747,
+      "latitude": 45.47980492642751,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDg1In0_"
+    },
+    {
+      "placeId": "",
+      "name": "Mirabel",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Mirabel",
+      "province": "Quebec",
+      "postal code": "",
+      "longitude": -74.09703562883963,
+      "latitude": 45.70125390697782,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDg2In0_"
+    },
+    {
+      "placeId": "",
+      "name": "Alfred",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Alfred",
+      "province": "Ontario",
+      "postal code": "",
+      "longitude": -74.89918296959878,
+      "latitude": 45.553964382352014,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDg3In0_"
+    },
+    {
+      "placeId": "",
+      "name": "Casselman",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Casselman",
+      "province": "Ontario",
+      "postal code": "",
+      "longitude": -75.0798051246867,
+      "latitude": 45.30695279541793,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDg4In0_"
+    },
+    {
+      "placeId": "",
+      "name": "Roxboro",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Roxboro",
+      "province": "Quebec",
+      "postal code": "",
+      "longitude": -73.79470535443811,
+      "latitude": 45.50630722718627,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDg5In0_"
+    },
+    {
+      "placeId": "",
+      "name": "Saint-Clotilde-de-Châteauguay",
+      "phone": "",
+      "address": "",
+      "address2": "",
+      "city": "Saint-Clotilde-de-Châteauguay",
+      "province": "Quebec",
+      "postal code": "",
+      "longitude": -73.7055019409021,
+      "latitude": 45.149357564944225,
+      "website": "https://app.mynjobs.com/e/materiaux_pont_masson/fr/eyJkIjp0cnVlLCJsIjoiNDkwIn0_"
+    }
+  ]
+}
+
+var coordinates = []
+var clusterOn = false
+var defaultZoom = 9 // Lower to zoom out. Higher to zoom in.
+var locationAddresses = []
+var locationNumber = 0
+var locationPlaceId = 0
+var markers = []
+var markersLinks = []
+var markerContent
+var restaurantCount
+
+var markerIcon = {
+  // path: "M459.107 230c0 126.5323-102.5747 229.107-229.107 229.107C103.4676 459.107.893 356.5323.893 230 .893 103.4677 103.4675.893 230 .893 356.5323.893 459.107 103.4676 459.107 230z", // circle
+  path: "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z", // location pin
+  fillColor: '#080033',
+  fillOpacity: 1,
+  anchor: new google.maps.Point(230,230),
+  strokeWeight: 0,
+  scale: .06
+}
+
+var clusterStyles = [
+  {
+    backgroundPosition: 'center center',
+    textColor: 'white',
+    url: 'vendors/markerclusterer/m1.png',
+    height: 50,
+    width: 50
+  },
+  {
+    backgroundPosition: 'center center',
+    textColor: 'white',
+    url: 'vendors/markerclusterer/m2.png',
+    height: 50,
+    width: 50
+  },
+  {
+    backgroundPosition: 'center center',
+    textColor: 'white',
+    url: 'vendors/markerclusterer/m3.png',
+    height: 50,
+    width: 50
+  }
+];
+
+
+// if you want multiple infoWindows to be opened at a time, move this right before declaring markerContent
+var infoWindow = new google.maps.InfoWindow()
+
+var gestureHandling = 'greedy' //($(window).width() < 1025) ? 'cooperative' : 'greedy'
+// console.log(gestureHandling)
+
+var mapOptions = {
+  center: {lat: 45.48526842024089, lng: -74.30963726479378}, // Rigaud
+  disableDefaultUI: false,
+  fullscreenControl: false,
+  gestureHandling: gestureHandling,
+  mapTypeControl: false,
+  rotateControl: false,
+  scrollwheel: true,
+  scaleControl: false,
+  streetViewControl: false,
+  styles: [{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}],
+  zoom: defaultZoom, // higher is closer to the ground
+  maxZoom: 19,
+  minZoom: 5,
+  zoomControl: true
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+// var bounds = new google.maps.LatLngBounds();
+var service = new google.maps.places.PlacesService(map);
+
+var level1 = ""
+
+// https://codepen.io/Marnoto/pen/xboPmG?editors=1010
+function customInfoWindow() {
+    // *
+    // START INFOWINDOW CUSTOMIZE.
+    // The google.maps.event.addListener() event expects
+    // the creation of the infowindow HTML structure 'domready'
+    // and before the opening of the infowindow, defined styles are applied.
+    // *
+    google.maps.event.addListener(infoWindow, 'domready', function() {
+        // Reference to the DIV that wraps the bottom of infowindow
+        var iwOuter = $('.gm-style .gm-style-iw-c');
+
+        // Border radius
+        iwOuter.css({'border-radius': '0'})
+
+        // Close button
+        var iwClose = $('button[title="Close"]');
+        iwClose.css({
+          'top': '0',
+          'right': '0'
+        })
+    });
+}
+
+function formatInfoWindow(key, location, level1) {
+  let infoWindowHTML = "<div class='map-location-content js-map-location-content' data-map-content='" + key + "' data-place-id='" + location['placeId'] + "'>"
+    infoWindowHTML += "<div class='map-location-content-body'>"
+      infoWindowHTML += "<h3 class='map-location-name'>" + location['name'] + "</h3>"
+      infoWindowHTML += "<div class='map-location-details'>"
+        // if (typeof location['address'] !== 'undefined' && location['address'].length > 0)
+        //   infoWindowHTML += location['address'] + "<br>"
+        // if (typeof location['city'] !== 'undefined' && location['city'].length > 0 && typeof location['province'] !== 'undefined' && location['province'].length > 0)
+        //   infoWindowHTML += location['city'] + ", " + location['province'] + "<br>"
+        // if (typeof location['postal code'] !== 'undefined' && location['postal code'].length > 0)
+        //   infoWindowHTML += location['postal code'] + "<br>"
+        // if (typeof location['phone'] !== 'undefined' && location['phone'].length > 0)
+        //   infoWindowHTML += location['phone'] + "<br>"
+        if (typeof location['website'] !== 'undefined' && location['website'].length > 0)
+          infoWindowHTML += "<a class='map-location-website-link' target='_blank' href='"+ location['website'] + "'>"+ "Voir les offres d’emploi de cette succursale" + "</a>"
+      infoWindowHTML += "</div>" // map-location-details
+    infoWindowHTML += "</div>" // map-location-content-body
+    infoWindowHTML += "<a class='map-location-website-link' target='_blank' href='"+ location['website'] + "'>"
+    infoWindowHTML += '<svg viewBox="0 0 17 17" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="8.119" cy="8.486" rx="8.119" ry="8.486" fill="#080033"></ellipse><path d="M11.507 9.017a.736.736 0 0 0 0-1.031l-4.25-4.25c-.312-.313-.78-.313-1.062 0l-.719.687c-.281.313-.281.782 0 1.063l3.031 3.031-3.03 3c-.282.281-.282.75 0 1.063l.718.687c.281.313.75.313 1.062 0l4.25-4.25z" fill="#ee2726"></path></svg>'
+    infoWindowHTML += "</a>"
+  infoWindowHTML += "</div>" // map-location-content
+  return infoWindowHTML
+}
+
+function formatLocation(key, location, level1) {
+  return "<a class='map-location-content js-map-location-content' data-map-content='" + key + "'>" +
+      location['name'] +
+    "</a>"
+}
+
+function loadJSON(jsonFile) {
+  setCoordinates("")
+  setAddresses("")
+  drop()
+
+  // console.log(jsonFile)
+  // $.getJSON(jsonFile, function(data) {
+  //   // console.log(data)
+  //   allLocations = data
+  //   console.log(allLocations)
+  //   // locationListHTML()
+  //   // locationSelect()
+  //   setCoordinates("")
+  //   setAddresses("")
+  //   drop()
+  // });
+}
+
+
+var selectedCity = ""
+
+function locationInfo(locationInfo) {
+  var address = locationInfo.adr_address;
+  var newAddr = address.split("</span>,");
+  locationInfoHTML = "<div class='map-location-content'>"
+      + "<h3 class='map-location-name'>" + locationInfo.name + "</h3>"
+      + newAddr[0] + "<br>"
+      + newAddr[1] + "<br>"
+      + newAddr[2]
+      + "</div>"
+}
+
+function locationListHTML() {
+  var locationsMap = [];
+  var locationsList = [];
+  $.each(allLocations, function( level1, region ) {
+    // console.log(region)
+    $.each(region, function(key, location) {
+      if (level1 == "locations") {
+        locationsMap.push(formatInfoWindow(key, location, level1))
+        locationsList.push(formatLocation(key, location, level1))
+      }
+    })
+  });
+  $(".js-map-location-list").html(locationsList.join(""))
+}
+
+function locationSelect() {
+  var cityLabel = ""
+  var locations = []
+  $.each(allLocations, function( level1, region ) {
+    cityLabel = level1
+    if (cityLabel == "laval") cityLabel = "Laval"
+    else if (cityLabel == "montreal") cityLabel = "Montréal"
+    locations.push('<option value="' + level1 + '">' + cityLabel + '</option>')
+  });
+  $(".js-location-select").append(locations.join(""))
+}
+
+function mapLocation(placeId) {
+  service.getDetails({
+    placeId: placeId
+  }, function (result, status) {
+    // result contains everything about the location
+    locationInfo(locationInfo)
+    // if (status === google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+    //   console.log(status);
+    //   setTimeout(function() {
+    //     mapMarker(result)
+    //   }, 2000 );
+    // }
+    // else if (status != google.maps.places.PlacesServiceStatus.OK) {
+    //   console.log(status);
+    //   return;
+    // }
+    // else {
+    //   console.log(status);
+    //   mapMarker(result)
+    // }
+  });
+}
+
+function setCoordinates(selectedCity) {
+  var coordinatesObject = {}
+  $.each(allLocations, function( level1, region ) {
+    $.each(region, function(key, location) {
+      coordinatesObject = {lat: parseFloat(location['latitude']), lng: parseFloat(location['longitude'])}
+      if (selectedCity == "") coordinates.push(coordinatesObject)
+      else if (level1 == selectedCity) coordinates.push(coordinatesObject)
+    })
+  });
+}
+
+function setAddresses(selectedCity) {
+  $.each(allLocations, function( level1, region ) {
+    $.each(region, function(key, location) {
+      if (selectedCity == "") locationAddresses.push(formatInfoWindow(key, location, level1))
+      else if (level1 == selectedCity) locationAddresses.push(formatInfoWindow(key, location, level1))
+    })
+  });
+}
+
+function drop() {
+  clearMarkers();
+  for (var i = 0; i < coordinates.length; i++) {
+    if (i == coordinates.length - 1) restaurantCount = i
+    addMarkerWithTimeout(coordinates[i], locationAddresses[i], i * 0)
+  }
+
+  if (clusterOn) mapClusters()
+
+  // for (var i = 0; i < coordinates.length; i++) {
+  //   bounds.extend(coordinates[i]);
+  // }
+  // map.fitBounds(bounds);
+  // map.panToBounds(bounds);
+}
+
+function addMarkerWithTimeout(position, infoContent, timeout) {
+  // window.setTimeout(function() {
+    var marker = new google.maps.Marker({
+      // animation: google.maps.Animation.DROP,
+      icon: markerIcon,
+      map: map,
+      position: position,
+      locationInfoWindow: new google.maps.InfoWindow({
+        content : '<div class="info-content">' + infoContent + '</div>'
+      })
+    })
+
+    // markerContent = infoContent
+    customInfoWindow()
+
+    google.maps.event.addListener(marker,'click', (function(marker,infoContent,infoWindow){
+      // console.log(document.body.data);
+      return function() {
+        // map.setZoom(14) // If you enable this again, say why
+        infoWindow.setContent(infoContent);
+        map.panTo(marker.getPosition()); // Center the marker with its infoWindow
+        infoWindow.open(map,marker);
+      };
+    })(marker,infoContent,infoWindow));
+
+    // Event that closes the Info Window with a click on the map
+    google.maps.event.addListener(map, 'click', function() {
+      infoWindow.close();
+    });
+
+    markers.push(marker);
+    markersLinks.push(marker);
+  // }, timeout);
+}
+
+function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers = [];
+}
+
+function mapClusters() {
+  // Add a marker clusterer to manage the markers.
+  var markerCluster = new MarkerClusterer(map, markers, {gridSize: 50, styles: clusterStyles});
+  // var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+
+loadJSON("data/locations-restaurants.json")
+
+$(window).on('load', function(){
+
+  // $('.js-map-location-list .map-location-content').click(function(){
+  //   // On click of element outside map, open the appropriate infoWindow
+  //   // http://jsfiddle.net/9vnpP/2/
+  //   locationNumber = $(this).data('map-content')
+  //   // locationPlaceId = $(this).data('place-id')
+  //   google.maps.event.trigger(markersLinks[locationNumber + 1],'click')
+  // })
+
+}) // document load
+
+
+console.log("🌎 Map loaded 🌎")
