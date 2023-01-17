@@ -1,0 +1,137 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-brunch h2 {
+  font-size: 48px !important;
+  line-height: 1 !important;
+  margin-top: 0 !important;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch h2 {
+    font-size: 64px !important;
+  }
+}
+.infographic-brunch .brunch-container {
+  background-color: #fff9de;
+  background-size: cover;
+  border-bottom: 1px dotted the-grey-dotted;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  max-width: breakpoint-ipad;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-container {
+    max-width: none;
+    height: 903px;
+  }
+}
+.infographic-brunch .brunch-container:last-child {
+  border-bottom: 0;
+}
+.infographic-brunch .brunch-container.avocat {
+  background: url("/coded-infographics/images/brunch/Avocado-Background.svg") no-repeat;
+  background-size: cover;
+}
+.infographic-brunch .brunch-container.melon {
+  background: url("/coded-infographics/images/brunch/Melon-Background.svg") no-repeat;
+  background-size: cover;
+}
+.infographic-brunch .brunch-container.pain {
+  background: url("/coded-infographics/images/brunch/Bread-Background.svg") no-repeat;
+  background-size: cover;
+}
+.infographic-brunch .brunch-container .line-box-1-image,
+.infographic-brunch .brunch-container .line-box-2-image {
+  display: none;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-container .line-box-1-image,
+  .infographic-brunch .brunch-container .line-box-2-image {
+    display: block;
+    position: absolute;
+  }
+}
+.infographic-brunch .brunch-container .line-box-1-image {
+  top: 46%;
+  left: 35%;
+}
+.infographic-brunch .brunch-container .line-box-2-image {
+  top: 55%;
+  left: 61%;
+}
+.infographic-brunch .brunch-group {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-group {
+    position: absolute;
+    width: 50%;
+  }
+}
+.infographic-brunch .brunch-group img {
+  display: inline;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-group img {
+    width: 384px;
+    height: 384px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-group-1 {
+    top: 72px;
+    left: 2%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-group-2 {
+    top: 150px;
+    left: 49%;
+  }
+}
+.infographic-brunch .brunch-group-2 .brunch-group-label {
+  text-align: right;
+}
+.infographic-brunch .brunch-group-image {
+  width: 130px;
+}
+.infographic-brunch .brunch-group-label {
+  color: the-red;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  text-transform: uppercase;
+}
+.infographic-brunch .brunch-main-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-main-image {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+.infographic-brunch .brunch-title {
+  color: the-red;
+  font-family: font-face-heading !important;
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-brunch .brunch-title {
+    font-size: 64px !important;
+  }
+}

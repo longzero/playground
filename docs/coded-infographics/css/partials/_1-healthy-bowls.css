@@ -1,0 +1,550 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-healthy-bowls {
+  color: the-red;
+}
+.infographic-healthy-bowls .circle-item {
+  margin: 0 20px 2em;
+  text-align: center;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .circle-item {
+    position: absolute;
+    text-align: left;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(1) {
+    left: 64%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(1) .line-box {
+    top: 13px;
+    left: -20px;
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(2) {
+    left: 70%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(2) .line-box {
+    top: 13px;
+    left: -110px;
+    width: 200px;
+    height: 200px;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(3) {
+    left: 66%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(3) .line-box {
+    top: 13px;
+    left: -20px;
+    -webkit-transform: scale(-1);
+        -ms-transform: scale(-1);
+            transform: scale(-1);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4) {
+    right: 66%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4) .line-box {
+    top: 13px;
+    right: -20px;
+    -webkit-transform: scaleY(-1) translateX(100%);
+        -ms-transform: scaleY(-1) translateX(100%);
+            transform: scaleY(-1) translateX(100%);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(5) {
+    right: 70%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(5) .line-box {
+    top: 13px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(6) {
+    right: 64%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(6) h3 {
+    padding-left: 60px;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(6) .line-box {
+    top: 13px;
+    right: -20px;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(1),
+  .infographic-healthy-bowls .circle-item:nth-child(6) {
+    top: 13%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(2),
+  .infographic-healthy-bowls .circle-item:nth-child(5) {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(2) h3,
+  .infographic-healthy-bowls .circle-item:nth-child(5) h3 {
+    border-bottom: 0;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(2) .line-box,
+  .infographic-healthy-bowls .circle-item:nth-child(5) .line-box {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(3),
+  .infographic-healthy-bowls .circle-item:nth-child(4) {
+    top: 68%;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4),
+  .infographic-healthy-bowls .circle-item:nth-child(5),
+  .infographic-healthy-bowls .circle-item:nth-child(6) {
+    text-align: right;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4) h3:before,
+  .infographic-healthy-bowls .circle-item:nth-child(5) h3:before,
+  .infographic-healthy-bowls .circle-item:nth-child(6) h3:before {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4) h3 span,
+  .infographic-healthy-bowls .circle-item:nth-child(5) h3 span,
+  .infographic-healthy-bowls .circle-item:nth-child(6) h3 span {
+    padding-right: 34px;
+  }
+  .infographic-healthy-bowls .circle-item:nth-child(4) .ingredient-list,
+  .infographic-healthy-bowls .circle-item:nth-child(5) .ingredient-list,
+  .infographic-healthy-bowls .circle-item:nth-child(6) .ingredient-list {
+    padding-right: 34px;
+  }
+}
+.infographic-healthy-bowls .circle-item h3 {
+  border-bottom: 2px dotted the-red;
+  color: the-red;
+  font-size: 19px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .circle-item h3 {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+.infographic-healthy-bowls .circle-item h3:before,
+.infographic-healthy-bowls .circle-item h3 .number {
+  background-color: the-red;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: normal;
+  margin-top: -3px;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 2px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .circle-item h3:before,
+  .infographic-healthy-bowls .circle-item h3 .number {
+    font-size: 0.9em;
+    margin-left: 0;
+    margin-right: 5px;
+    width: 23px;
+    height: 23px;
+  }
+}
+.infographic-healthy-bowls .circle-item h3 span {
+  display: block;
+  font-size: 0.7em;
+  margin-top: 0.4em;
+  padding-left: 34px;
+}
+.infographic-healthy-bowls .circle-item .line-box {
+  display: none;
+  position: absolute;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .circle-item .line-box {
+    display: block;
+  }
+}
+.infographic-healthy-bowls .circle-list {
+  list-style: none;
+}
+.infographic-healthy-bowls .circle-list .owl-prev,
+.infographic-healthy-bowls .circle-list .owl-next {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 20px;
+}
+.infographic-healthy-bowls .circle-list .owl-next {
+  left: auto;
+  right: 20px;
+}
+.infographic-healthy-bowls .dressing-container {
+  text-align: center;
+}
+.infographic-healthy-bowls .dressing-header h3 {
+  color: the-red;
+  margin-bottom: 0.5em;
+}
+.infographic-healthy-bowls .dressing-header .line-horizontal-red-dotted {
+  position: static;
+  margin: 0 auto;
+  width: 66%;
+}
+.infographic-healthy-bowls .dressing-header .line-vertical-red-dotted {
+  position: static;
+  margin: 0 auto;
+  height: 25px;
+}
+.infographic-healthy-bowls .dressing-image {
+  border-radius: 50%;
+}
+.infographic-healthy-bowls .dressing-image-container {
+  border: 2px dotted the-red;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .dressing-image-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+.infographic-healthy-bowls .dressing-item {
+  font-size: 0.8em;
+  margin: 0 20px 20px;
+  padding: 0 5px 20px;
+  position: relative;
+  -webkit-flex-basis: calc((100% - 60px) / 3);
+      -ms-flex-preferred-size: calc((100% - 60px) / 3);
+          flex-basis: calc((100% - 60px) / 3);
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-healthy-bowls .dressing-item {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .dressing-item {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.ie .infographic-healthy-bowls .dressing-item {
+  -webkit-flex-basis: calc((100% - 60px) / 3 - 40px);
+      -ms-flex-preferred-size: calc((100% - 60px) / 3 - 40px);
+          flex-basis: calc((100% - 60px) / 3 - 40px);
+}
+.infographic-healthy-bowls .dressing-item h4 {
+  color: the-red;
+  margin-bottom: 15px;
+}
+.infographic-healthy-bowls .dressing-item .arrow-down-image {
+  display: inline;
+  margin-bottom: 10px;
+}
+.infographic-healthy-bowls .dressing-item .line-vertical-red-dotted {
+  position: static;
+  margin: 0 auto;
+  height: 15px;
+}
+.infographic-healthy-bowls .dressing-item .line-vertical-red-dotted.first {
+  margin-bottom: 2px;
+  height: 30px;
+}
+.infographic-healthy-bowls .dressing-list,
+.infographic-healthy-bowls .dressing-ingredient-list {
+  list-style: none;
+}
+.infographic-healthy-bowls .dressing-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.infographic-healthy-bowls .dressing-ingredient-list {
+  border: 2px dotted the-red;
+  color: the-red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.infographic-healthy-bowls .infographic-header {
+  background: url("/coded-infographics/images/healthy-bowls/Header-Background-Desktop.svg") no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .infographic-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .infographic-header {
+    margin-bottom: 0;
+  }
+}
+.infographic-healthy-bowls .infographic-header h2,
+.infographic-healthy-bowls .infographic-header .infographic-summary {
+  position: relative;
+  z-index: 2;
+}
+.infographic-healthy-bowls .infographic-header h2 {
+  border-top: 1px solid the-red;
+  color: the-red;
+  line-height: 1;
+  margin: 0 auto 20px;
+  padding-top: 5px;
+  text-align: center;
+  width: 300px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .infographic-header h2 {
+    width: 400px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-healthy-bowls .infographic-header h2 {
+    width: 500px;
+  }
+}
+.infographic-healthy-bowls .infographic-header h2 small {
+  font-weight: 300;
+}
+.infographic-healthy-bowls .infographic-header .main-title {
+  font-family: font-face-heading;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .infographic-header .main-title {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-healthy-bowls .infographic-header .main-title {
+    font-size: 3em;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .healthy-bowls-1-image,
+  .infographic-healthy-bowls .healthy-bowls-2-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.infographic-healthy-bowls .healthy-bowls-1-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  width: 300px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .healthy-bowls-1-image {
+    top: 130px;
+    left: -145px;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    width: 300px;
+  }
+}
+.infographic-healthy-bowls .healthy-bowls-2-image {
+  display: none;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .healthy-bowls-2-image {
+    display: block;
+    left: auto;
+    right: -160px;
+    top: -100px;
+    width: 320px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-healthy-bowls .healthy-bowls-2-image {
+    width: 320px;
+  }
+}
+.infographic-healthy-bowls .infographic-summary {
+  color: the-grey-dotted;
+  font-size: 0.9em;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-healthy-bowls .infographic-summary {
+    width: 400px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-healthy-bowls .infographic-summary {
+    width: 500px;
+  }
+}
+.infographic-healthy-bowls .ingredient-list {
+  color: the-red;
+  font-size: 14px;
+  list-style: none;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .ingredient-list {
+    padding-left: 34px;
+  }
+}
+.infographic-healthy-bowls .line-horizontal-red-dotted {
+  display: block;
+}
+.infographic-healthy-bowls .line-vertical-red-dotted {
+  display: block;
+}
+.infographic-healthy-bowls .line-vertical-red-dotted.choose {
+  display: none;
+  top: 66%;
+  left: 49.9%;
+  height: 230px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .line-vertical-red-dotted.choose {
+    display: block;
+  }
+}
+.infographic-healthy-bowls .healthy-container {
+  position: relative;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .healthy-container {
+    height: 700px;
+  }
+}
+.infographic-healthy-bowls .healthy-image {
+  border-radius: 50%;
+}
+.infographic-healthy-bowls .healthy-image-container {
+  border: 4px solid the-red;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .healthy-image-container {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+.infographic-healthy-bowls .healthy-number {
+  background-color: the-red;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-healthy-bowls .healthy-number {
+    display: none;
+  }
+}
+.infographic-healthy-bowls .healthy-number:nth-child(1) {
+  top: 17%;
+  left: 61%;
+}
+.infographic-healthy-bowls .healthy-number:nth-child(2) {
+  top: 45%;
+  left: 77%;
+}
+.infographic-healthy-bowls .healthy-number:nth-child(3) {
+  top: 73%;
+  left: 61%;
+}
+.infographic-healthy-bowls .healthy-number:nth-child(4) {
+  top: 73%;
+  left: 29%;
+}
+.infographic-healthy-bowls .healthy-number:nth-child(5) {
+  top: 45%;
+  left: 15%;
+}
+.infographic-healthy-bowls .healthy-number:nth-child(6) {
+  top: 17%;
+  left: 29%;
+}
+.infographic-healthy-bowls .healthy-slice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}

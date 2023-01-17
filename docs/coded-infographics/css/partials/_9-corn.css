@@ -1,0 +1,176 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-corn {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn {
+    background-image: url("/coded-infographics/images/corn/Corn.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+  }
+}
+.infographic-corn h3 {
+  background-color: the-grey-dotted;
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: normal;
+  margin: 0 auto 1em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 270px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn h3 {
+    background-color: transparent;
+    color: the-red;
+    width: auto;
+  }
+}
+.infographic-corn .ingredient-item {
+  line-height: 1;
+}
+.infographic-corn .ingredient-item:after {
+  color: the-red;
+  content: ' + ';
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 1.4;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn .ingredient-item:after {
+    color: the-red;
+    line-height: 1;
+  }
+}
+.infographic-corn .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-corn .ingredient-item-content {
+  background-color: the-red;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 270px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn .ingredient-item-content {
+    background-color: transparent;
+    color: #4b443e;
+  }
+}
+.infographic-corn .ingredient-list {
+  font-size: 0.9em;
+  list-style: none;
+  text-align: center;
+}
+.infographic-corn .corn-box {
+  background-image: url("/coded-infographics/images/corn/Corn-Mobile.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  border-bottom: 1px dotted the-grey-dotted;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-bottom: 3em;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn .corn-box {
+    background-image: none;
+    border-bottom: 0;
+    -webkit-flex-basis: 310px;
+        -ms-flex-preferred-size: 310px;
+            flex-basis: 310px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-corn .corn-box {
+    position: relative;
+  }
+}
+.infographic-corn .corn-box.indian,
+.infographic-corn .corn-box.thai {
+  margin-bottom: 0;
+}
+.infographic-corn .corn-container {
+  position: relative;
+}
+.infographic-corn .corn-image {
+  display: block;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-corn .corn-image {
+    transition: 0.1s;
+  }
+  .infographic-corn .corn-image:hover {
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+}
+.infographic-corn .corn-image-container {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  width: 270px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-corn .corn-image-container {
+    width: 310px;
+  }
+}
+.corn-line-image {
+  display: none;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .corn-line-image {
+    display: block;
+    position: absolute;
+  }
+  .quebec .corn-line-image {
+    top: 310px;
+    left: 260px;
+  }
+  .italian .corn-line-image {
+    top: 335px;
+    left: -117px;
+  }
+  .asian .corn-line-image {
+    top: 220px;
+    left: 308px;
+  }
+  .tex-mex .corn-line-image {
+    top: 255px;
+    left: -160px;
+  }
+  .indian .corn-line-image {
+    top: -130px;
+    left: 260px;
+  }
+  .thai .corn-line-image {
+    top: -50px;
+    left: -140px;
+  }
+}

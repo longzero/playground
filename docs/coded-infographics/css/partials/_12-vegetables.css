@@ -1,0 +1,758 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-vegetables {
+  color: the-red;
+}
+.infographic-vegetables .circle-item {
+  border-bottom: 2px dotted the-red;
+  color: #4b443e;
+  counter-increment: list-counter;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14.4px;
+  margin: 0 20px 2em;
+  padding-bottom: 2em;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .circle-item {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    position: absolute;
+  }
+  .infographic-vegetables .circle-item:nth-child(3),
+  .infographic-vegetables .circle-item:last-child {
+    max-width: 48%;
+  }
+  .infographic-vegetables .circle-item:nth-child(3) {
+    border-right: 2px dotted the-red;
+    padding-right: 20%;
+    bottom: 0;
+  }
+  .infographic-vegetables .circle-item:last-child {
+    border-left: 2px dotted the-red;
+    padding-left: 22%;
+    left: 55%;
+    bottom: 0;
+  }
+}
+.infographic-vegetables .circle-item:before {
+  background-color: the-red;
+  border-radius: 50%;
+  color: #fff;
+  content: counter(list-counter);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-basis: 19px;
+      -ms-flex-preferred-size: 19px;
+          flex-basis: 19px;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-right: 10px;
+  margin-bottom: 0.3em;
+  padding: 2px;
+  text-align: center;
+  width: 19px;
+  height: 19px;
+}
+.infographic-vegetables .circle-item p {
+  margin-bottom: 0.3em;
+}
+.infographic-vegetables .circle-list {
+  counter-reset: list-counter;
+  list-style: none;
+}
+.infographic-vegetables .infographic-header {
+  background: url("/coded-infographics/images/vegetables/Header-Background-Desktop.svg") center center no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header {
+    margin-bottom: 20px;
+    text-align: center;
+    height: 213px;
+  }
+}
+.infographic-vegetables .infographic-header:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+.infographic-vegetables .infographic-header h2 {
+  border-top: 1px solid the-red;
+  color: the-red;
+  line-height: 1.2;
+  margin-top: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-vegetables .infographic-header h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header h2 {
+    display: inline-block;
+    margin-top: 40px;
+    width: 400px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-vegetables .infographic-header h2 {
+    width: auto;
+  }
+}
+.infographic-vegetables .infographic-header h2 small {
+  font-weight: 300;
+}
+.infographic-vegetables .infographic-header .main-title {
+  display: block;
+  font-family: font-face-heading;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-vegetables .infographic-header .main-title {
+    font-size: 52px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header .main-title {
+    font-size: 62px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header .vegetables-cauliflower-image,
+  .infographic-vegetables .infographic-header .vegetables-soup-image {
+    display: block;
+    position: absolute;
+    width: 400px;
+  }
+}
+.infographic-vegetables .infographic-header .vegetables-cauliflower-image {
+  display: none;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header .vegetables-cauliflower-image {
+    display: block;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translate(-28%, 50%);
+        -ms-transform: translate(-28%, 50%);
+            transform: translate(-28%, 50%);
+  }
+}
+.infographic-vegetables .infographic-header .vegetables-soup-image {
+  margin-top: -220px;
+  margin-bottom: 20px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-vegetables .infographic-header .vegetables-soup-image {
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(60%, -40%);
+        -ms-transform: translate(60%, -40%);
+            transform: translate(60%, -40%);
+  }
+}
+.infographic-vegetables .infographic-summary {
+  color: #4b443e;
+  font-size: 0.9em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-vegetables .infographic-summary {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+}
+.vegetables-image-container {
+  margin: 0 auto 20px;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-image-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .vegetables-image-container {
+    width: 450px;
+  }
+}
+.vegetables-image-container .number {
+  background-color: the-red;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-image-container .number {
+    display: none;
+  }
+}
+.celery .vegetables-image-container .number:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+.celery .vegetables-image-container .number:nth-child(2) {
+  top: 37%;
+  left: 35%;
+}
+.celery .vegetables-image-container .number:nth-child(3) {
+  top: 60%;
+  left: 41%;
+}
+.celery .vegetables-image-container .number:nth-child(4) {
+  top: 74%;
+  left: 42%;
+}
+.celery .vegetables-image-container .number:nth-child(5) {
+  top: 23%;
+  left: 68%;
+}
+.celery .vegetables-image-container .number:nth-child(6) {
+  top: 68%;
+  left: 52%;
+}
+.celery .vegetables-image-container .number:nth-child(7) {
+  top: 84%;
+  left: 47%;
+}
+.leek .vegetables-image-container .number:nth-child(1) {
+  top: 10%;
+  left: 35%;
+}
+.leek .vegetables-image-container .number:nth-child(2) {
+  top: 37%;
+  left: 45%;
+}
+.leek .vegetables-image-container .number:nth-child(3) {
+  top: 87%;
+  left: 45%;
+}
+.leek .vegetables-image-container .number:nth-child(4) {
+  top: 21%;
+  left: 56%;
+}
+.leek .vegetables-image-container .number:nth-child(5) {
+  top: 68%;
+  left: 43%;
+}
+.broccoli .vegetables-image-container .number:nth-child(1) {
+  top: 25%;
+  left: 25%;
+}
+.broccoli .vegetables-image-container .number:nth-child(2) {
+  top: 64%;
+  left: 46%;
+}
+.broccoli .vegetables-image-container .number:nth-child(3) {
+  top: 76%;
+  left: 38%;
+}
+.broccoli .vegetables-image-container .number:nth-child(4) {
+  top: 30%;
+  left: 75%;
+}
+.broccoli .vegetables-image-container .number:nth-child(5) {
+  top: 82%;
+  left: 53%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(1) {
+  top: 13%;
+  left: 41%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(2) {
+  top: 39%;
+  left: 15%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(3) {
+  top: 63%;
+  left: 40%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(4) {
+  top: 17%;
+  left: 66%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(5) {
+  top: 34%;
+  left: 57%;
+}
+.cauliflower .vegetables-image-container .number:nth-child(6) {
+  top: 55%;
+  left: 77%;
+}
+.beets .vegetables-image-container .number:nth-child(1) {
+  top: 10%;
+  left: 8%;
+}
+.beets .vegetables-image-container .number:nth-child(2) {
+  top: 62%;
+  left: 30%;
+}
+.beets .vegetables-image-container .number:nth-child(3) {
+  top: 74%;
+  left: 44%;
+}
+.beets .vegetables-image-container .number:nth-child(4) {
+  top: 10%;
+  left: 51%;
+}
+.beets .vegetables-image-container .number:nth-child(5) {
+  top: 26%;
+  left: 86%;
+}
+.beets .vegetables-image-container .number:nth-child(6) {
+  top: 65%;
+  left: 68%;
+}
+.beets .vegetables-image-container .number:nth-child(7) {
+  top: 27%;
+  left: 49%;
+}
+.vegetables-container {
+  margin-bottom: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container {
+    border-bottom: 1px dotted #4b443e;
+    padding-bottom: 100%;
+    height: 0;
+  }
+}
+.vegetables-container:last-child {
+  border-bottom: 0;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.beets {
+    padding-bottom: 65%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.beets .circle-item {
+    max-width: 180px;
+  }
+  .vegetables-container.beets .circle-item:nth-child(1),
+  .vegetables-container.beets .circle-item:nth-child(2),
+  .vegetables-container.beets .circle-item:nth-child(3) {
+    left: 0;
+  }
+  .vegetables-container.beets .circle-item:nth-child(4),
+  .vegetables-container.beets .circle-item:nth-child(5),
+  .vegetables-container.beets .circle-item:nth-child(6),
+  .vegetables-container.beets .circle-item:nth-child(7) {
+    max-width: none;
+  }
+  .vegetables-container.beets .circle-item:nth-child(3),
+  .vegetables-container.beets .circle-item:nth-child(7) {
+    max-width: 48%;
+  }
+  .vegetables-container.beets .circle-item:nth-child(1) {
+    top: 0;
+    max-width: 24%;
+  }
+  .vegetables-container.beets .circle-item:nth-child(2) {
+    padding-right: 5%;
+    top: 48%;
+    max-width: 30%;
+  }
+  .vegetables-container.beets .circle-item:nth-child(3) {
+    border-right: 2px dotted the-red;
+    padding-right: 20%;
+    bottom: 0;
+  }
+  .vegetables-container.beets .circle-item:nth-child(4) {
+    padding-left: 3%;
+    left: 75%;
+    top: 0;
+  }
+  .vegetables-container.beets .circle-item:nth-child(5) {
+    padding-left: 10%;
+    left: 66%;
+    top: 30%;
+  }
+  .vegetables-container.beets .circle-item:nth-child(6) {
+    padding-left: 8%;
+    left: 68%;
+    top: 51%;
+  }
+  .vegetables-container.beets .circle-item:nth-child(7) {
+    border-left: 2px dotted the-red;
+    padding-left: 22%;
+    left: 55%;
+    bottom: 0;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.broccoli {
+    padding-bottom: 74%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.broccoli .circle-item {
+    max-width: 180px;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(1),
+  .vegetables-container.broccoli .circle-item:nth-child(2),
+  .vegetables-container.broccoli .circle-item:nth-child(3) {
+    left: 0;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(4),
+  .vegetables-container.broccoli .circle-item:nth-child(5),
+  .vegetables-container.broccoli .circle-item:nth-child(6),
+  .vegetables-container.broccoli .circle-item:nth-child(7) {
+    max-width: none;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(1) {
+    padding-right: 6%;
+    top: 4%;
+    max-width: 33%;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(2) {
+    padding-right: 10%;
+    top: 41%;
+    max-width: 50%;
+    width: 33%;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(3) {
+    border-right: 0;
+    border-bottom: 2px dotted the-red;
+    padding-right: 10%;
+    top: 66%;
+    bottom: auto;
+    max-width: 38%;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(4) {
+    padding-left: 8%;
+    left: 72%;
+    top: 8%;
+  }
+  .vegetables-container.broccoli .circle-item:nth-child(5) {
+    border-left: 0;
+    padding-left: 10%;
+    top: 53%;
+    left: 60%;
+    bottom: auto;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.cauliflower {
+    padding-bottom: 0;
+    height: 520px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .vegetables-container.cauliflower {
+    padding-bottom: 0;
+    height: 600px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.cauliflower .circle-item {
+    max-width: 180px;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(1),
+  .vegetables-container.cauliflower .circle-item:nth-child(2),
+  .vegetables-container.cauliflower .circle-item:nth-child(3) {
+    left: 0;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(4),
+  .vegetables-container.cauliflower .circle-item:nth-child(5),
+  .vegetables-container.cauliflower .circle-item:nth-child(6),
+  .vegetables-container.cauliflower .circle-item:nth-child(7) {
+    max-width: none;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(3),
+  .vegetables-container.cauliflower .circle-item:nth-child(7) {
+    max-width: 48%;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(1) {
+    padding-right: 3%;
+    top: 0;
+    max-width: 29%;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(2) {
+    padding-right: 7%;
+    top: 37%;
+    max-width: 28%;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(3) {
+    border-right: 2px dotted the-red;
+    bottom: 35px;
+    padding-right: 17%;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(4) {
+    padding-left: 4%;
+    left: 70%;
+    top: 0;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(5) {
+    padding-left: 5%;
+    left: 74%;
+    top: 30%;
+  }
+  .vegetables-container.cauliflower .circle-item:nth-child(6) {
+    bottom: 35px;
+    padding-left: 18%;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .vegetables-container.cauliflower .circle-item:nth-child(3),
+  .vegetables-container.cauliflower .circle-item:nth-child(6) {
+    bottom: 85px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.celery {
+    height: 700px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .vegetables-container.celery {
+    padding-bottom: 0;
+    height: 850px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.celery .circle-item {
+    max-width: 180px;
+  }
+  .vegetables-container.celery .circle-item:nth-child(1),
+  .vegetables-container.celery .circle-item:nth-child(2),
+  .vegetables-container.celery .circle-item:nth-child(4) {
+    left: 0;
+  }
+  .vegetables-container.celery .circle-item:nth-child(3),
+  .vegetables-container.celery .circle-item:nth-child(5),
+  .vegetables-container.celery .circle-item:nth-child(6),
+  .vegetables-container.celery .circle-item:nth-child(7) {
+    max-width: none;
+  }
+  .vegetables-container.celery .circle-item:nth-child(4),
+  .vegetables-container.celery .circle-item:nth-child(7) {
+    bottom: 95px;
+    max-width: 48%;
+  }
+  .vegetables-container.celery .circle-item:nth-child(1) {
+    top: 0;
+    max-width: 270px;
+  }
+  .vegetables-container.celery .circle-item:nth-child(2) {
+    padding-right: 95px;
+    top: 26%;
+    max-width: 39%;
+  }
+  .vegetables-container.celery .circle-item:nth-child(3) {
+    border-right: 0;
+    padding-right: 130px;
+    left: 0;
+    top: 44%;
+    bottom: auto;
+    max-width: 42%;
+  }
+  .vegetables-container.celery .circle-item:nth-child(4) {
+    border-right: 2px dotted the-red;
+    padding-right: 10%;
+    min-height: 83px;
+  }
+  .vegetables-container.celery .circle-item:nth-child(5) {
+    padding-left: 65px;
+    left: 69%;
+    top: 18%;
+  }
+  .vegetables-container.celery .circle-item:nth-child(6) {
+    padding-left: 100px;
+    left: 58%;
+    top: 43%;
+  }
+  .vegetables-container.celery .circle-item:nth-child(7) {
+    border-left: 2px dotted the-red;
+    padding-left: 16%;
+    left: 55%;
+    min-height: 83px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .vegetables-container.celery .circle-item:nth-child(4),
+  .vegetables-container.celery .circle-item:nth-child(7) {
+    bottom: 65px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.leek {
+    padding-bottom: 82%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-container.leek .circle-item {
+    max-width: 180px;
+  }
+  .vegetables-container.leek .circle-item:nth-child(1),
+  .vegetables-container.leek .circle-item:nth-child(2),
+  .vegetables-container.leek .circle-item:nth-child(3) {
+    left: 0;
+  }
+  .vegetables-container.leek .circle-item:nth-child(4),
+  .vegetables-container.leek .circle-item:nth-child(5) {
+    max-width: none;
+  }
+  .vegetables-container.leek .circle-item:nth-child(1) {
+    padding-right: 6%;
+    top: 0;
+    max-width: 34%;
+  }
+  .vegetables-container.leek .circle-item:nth-child(2) {
+    padding-right: 10%;
+    top: 45%;
+    max-width: 42%;
+    width: 100%;
+  }
+  .vegetables-container.leek .circle-item:nth-child(3) {
+    border-right: 0;
+    padding-right: 20%;
+    top: 70%;
+    bottom: auto;
+    max-width: 42%;
+  }
+  .vegetables-container.leek .circle-item:nth-child(4) {
+    padding-left: 13%;
+    left: 62%;
+    top: 10%;
+  }
+  .vegetables-container.leek .circle-item:nth-child(5) {
+    border-left: 0;
+    padding-left: 17%;
+    top: 45%;
+    left: 54%;
+    bottom: auto;
+  }
+}
+.vegetable-name-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 33px;
+}
+@media (min-width: breakpoint-ipad) {
+  .broccoli .vegetable-name-image {
+    top: 90%;
+  }
+}
+.celery .vegetable-name-image {
+  top: 48%;
+}
+@media (min-width: breakpoint-ipad) {
+  .celery .vegetable-name-image {
+    top: 95%;
+  }
+}
+.cauliflower .vegetable-name-image {
+  top: 79%;
+}
+@media (min-width: breakpoint-ipad) {
+  .cauliflower .vegetable-name-image {
+    top: 84%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .leek .vegetable-name-image {
+    top: 75%;
+  }
+}
+.vegetables-nav-item {
+  display: inline-block;
+}
+.vegetables-nav-link {
+  background-color: the-red;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 1;
+  margin: 0 2px 8px;
+  padding: 9.5px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-nav-link {
+    font-size: 15px;
+    padding: 13px 20px;
+  }
+}
+.vegetables-nav-link:hover {
+  background-color: the-red-hover;
+  color: #fff;
+}
+.vegetables-nav-list {
+  text-align: center;
+}
+.vegetables-navigation {
+  margin-bottom: 10px;
+}
+@media (min-width: breakpoint-ipad) {
+  .vegetables-navigation {
+    margin-bottom: 40px;
+  }
+}
+.vegetables-wrapper {
+  margin-bottom: 100px;
+}

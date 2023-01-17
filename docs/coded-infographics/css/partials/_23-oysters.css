@@ -1,0 +1,265 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-oysters {
+  background-image: url("../images/lobster/Lobster-Background.svg");
+  background-size: cover;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.infographic-oysters .circle-item {
+  border-bottom: 1px dotted #4b443e;
+  counter-increment: list-counter;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 2em;
+  padding-bottom: 1.6em;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .circle-item {
+    border-bottom: 0;
+    -webkit-flex-basis: calc((100% - 20px * 4) / 2);
+        -ms-flex-preferred-size: calc((100% - 20px * 4) / 2);
+            flex-basis: calc((100% - 20px * 4) / 2);
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 400px;
+  }
+  .infographic-oysters .circle-item:nth-child(1),
+  .infographic-oysters .circle-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .infographic-oysters .circle-item:nth-child(3),
+  .infographic-oysters .circle-item:nth-child(4) {
+    margin-top: 0;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-oysters .circle-item {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.infographic-oysters .circle-item:last-child {
+  border-bottom: 0;
+}
+.infographic-oysters .circle-item h3 {
+  color: the-red;
+  font-family: font-face-heading;
+  font-size: 22.4px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .circle-item h3 {
+    white-space: nowrap;
+  }
+}
+.infographic-oysters .circle-item h3:before {
+  color: the-red;
+  content: counter(list-counter) ".";
+  display: inline-block;
+  margin-right: 5px;
+}
+.infographic-oysters .circle-item h3 span {
+  display: block;
+  font-size: 0.7em;
+  margin-top: 0.4em;
+}
+.infographic-oysters .circle-item:nth-child(3) .item-image-container,
+.infographic-oysters .circle-item:nth-child(4) .item-image-container {
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .circle-item:nth-child(3) .item-image-container,
+  .infographic-oysters .circle-item:nth-child(4) .item-image-container {
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.infographic-oysters .circle-item:nth-child(1) .item-image-caption {
+  border-radius: 50%;
+  bottom: 0;
+  right: 55%;
+  width: 120px;
+  height: 120px;
+}
+.infographic-oysters .circle-item:nth-child(2) .item-image-caption {
+  bottom: 20px;
+  left: 55%;
+  width: 120px;
+}
+.infographic-oysters .circle-item:nth-child(4) .ingredient-item:last-child {
+  display: none;
+}
+.infographic-oysters .circle-list {
+  border-top: 1px solid #fff;
+  counter-reset: list-counter;
+  list-style: none;
+  margin-top: 20px;
+  padding-top: 30px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .circle-list {
+    border-top: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.infographic-oysters .ingredient-item {
+  display: inline;
+  font-size: 13.6px;
+}
+.infographic-oysters .ingredient-item:after {
+  color: the-red;
+  content: ' + ';
+}
+.infographic-oysters .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-oysters .ingredient-list {
+  list-style: none;
+  margin-bottom: 1em;
+  padding-right: 20px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .ingredient-list {
+    margin-bottom: 2em;
+  }
+}
+.infographic-oysters .item-image {
+  background-color: rgba(255,255,255,0.5);
+  border: 2px dashed the-red;
+  border-radius: 50%;
+  width: 260px;
+}
+.infographic-oysters .item-image-caption {
+  background-color: #fff;
+  border: 1px solid the-red;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+.infographic-oysters .item-image-caption.circle {
+  border: 0;
+}
+.infographic-oysters .item-image-caption .item-image {
+  border: 0;
+}
+.infographic-oysters .item-image-container {
+  margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+}
+.infographic-oysters .item-image-container img {
+  display: inline;
+}
+.infographic-oysters .oysters-container {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 70%;
+  position: relative;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .oysters-container {
+    background-position: center;
+    background-size: 60%;
+    padding-top: 0;
+  }
+}
+.infographic-oysters .oysters-header {
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.infographic-oysters .oysters-header img {
+  display: inline;
+}
+.infographic-oysters .oysters-header small,
+.infographic-oysters .oysters-header span {
+  display: block;
+  line-height: 1;
+}
+.infographic-oysters .oysters-header small {
+  font-weight: 100;
+  margin-bottom: 7px;
+}
+.infographic-oysters .oysters-header small:last-child {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+.infographic-oysters .oysters-header span {
+  font-family: font-face-heading;
+  font-size: 3.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.infographic-oysters .oysters-header .bottom-line {
+  color: #000;
+  font-weight: 500;
+}
+.infographic-oysters .oysters-header .fancy-container {
+  margin-bottom: 0.4em;
+}
+.infographic-oysters .oysters-header .number {
+  font-size: 2em;
+  font-weight: bold;
+}
+.infographic-oysters .oysters-header .title-container {
+  color: #fff;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .oysters-header .title-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+}
+.infographic-oysters .oysters-main-image-container {
+  margin: 0 auto 20px;
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-oysters .oysters-main-image-container {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}

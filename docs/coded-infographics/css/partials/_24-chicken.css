@@ -1,0 +1,453 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-chicken {
+  padding-top: 10px;
+}
+.infographic-chicken .action-container {
+  text-align: center;
+}
+.infographic-chicken .action-link {
+  background-color: the-red;
+  border-radius: 4px;
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+.infographic-chicken .action-link:hover {
+  background-color: the-red-hover;
+}
+.infographic-chicken .action-link img {
+  margin: -10px -20px -10px 0;
+  width: 50px;
+  height: 50px;
+}
+.infographic-chicken .chicken {
+  border-bottom: 2px dotted #4b443e;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .chicken {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.infographic-chicken .chicken:last-child {
+  border-bottom: 0;
+}
+.infographic-chicken .chicken-image {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-chicken .chicken-image {
+    width: 312px;
+  }
+}
+.infographic-chicken .cooking-mode-container {
+  margin-bottom: 0px;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .cooking-mode-container {
+    margin-bottom: 40px;
+  }
+}
+.infographic-chicken .cooking-mode-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.infographic-chicken .cooking-mode-status {
+  background-color: #ffa500;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+.infographic-chicken .equation-element {
+  position: relative;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element {
+    -webkit-flex-basis: 140px;
+        -ms-flex-preferred-size: 140px;
+            flex-basis: 140px;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    margin-bottom: 1em;
+    height: 140px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-chicken .equation-element {
+    transition: 0.1s;
+  }
+  .infographic-chicken .equation-element:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+.infographic-chicken .equation-element:first-child {
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element:first-child {
+    width: 240px;
+    height: 180px;
+  }
+}
+.safari .infographic-chicken .equation-element:first-child img {
+  max-width: 100%;
+}
+.infographic-chicken .equation-element.middle {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element.middle {
+    width: 260px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element:first-child,
+  .infographic-chicken .equation-element.middle {
+    -webkit-flex-basis: 200px;
+        -ms-flex-preferred-size: 200px;
+            flex-basis: 200px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 200px;
+  }
+}
+@media (min-width: breakpoint-desktop) {
+  .infographic-chicken .equation-element:first-child,
+  .infographic-chicken .equation-element.middle {
+    -webkit-flex-basis: 260px;
+        -ms-flex-preferred-size: 260px;
+            flex-basis: 260px;
+    height: 260px;
+  }
+}
+.infographic-chicken .equation-element:first-child img,
+.infographic-chicken .equation-element.middle img {
+  width: 200px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element:first-child img,
+  .infographic-chicken .equation-element.middle img {
+    width: 260px;
+  }
+}
+.infographic-chicken .equation-element:last-child {
+  -webkit-flex-basis: 160px;
+      -ms-flex-preferred-size: 160px;
+          flex-basis: 160px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 160px;
+  height: 160px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-chicken .equation-element:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.infographic-chicken .equation-element:last-child img {
+  border-radius: 50%;
+  margin-bottom: 0.4em;
+}
+.infographic-chicken .equation-element img {
+  display: block;
+  margin: 0 auto;
+}
+.infographic-chicken .equation-element .special-touch-label {
+  color: the-red;
+  font-family: 'Lucida Console';
+  font-size: 0.8em;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  width: 100%;
+  height: 100%;
+}
+.infographic-chicken .equation-element .special-touch-label .char1 {
+  -webkit-transform: rotate(5.384615384615385deg);
+      -ms-transform: rotate(5.384615384615385deg);
+          transform: rotate(5.384615384615385deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char2 {
+  -webkit-transform: rotate(10.76923076923077deg);
+      -ms-transform: rotate(10.76923076923077deg);
+          transform: rotate(10.76923076923077deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char3 {
+  -webkit-transform: rotate(16.153846153846153deg);
+      -ms-transform: rotate(16.153846153846153deg);
+          transform: rotate(16.153846153846153deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char4 {
+  -webkit-transform: rotate(21.53846153846154deg);
+      -ms-transform: rotate(21.53846153846154deg);
+          transform: rotate(21.53846153846154deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char5 {
+  -webkit-transform: rotate(26.923076923076927deg);
+      -ms-transform: rotate(26.923076923076927deg);
+          transform: rotate(26.923076923076927deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char6 {
+  -webkit-transform: rotate(32.30769230769231deg);
+      -ms-transform: rotate(32.30769230769231deg);
+          transform: rotate(32.30769230769231deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char7 {
+  -webkit-transform: rotate(37.69230769230769deg);
+      -ms-transform: rotate(37.69230769230769deg);
+          transform: rotate(37.69230769230769deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char8 {
+  -webkit-transform: rotate(43.07692307692308deg);
+      -ms-transform: rotate(43.07692307692308deg);
+          transform: rotate(43.07692307692308deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char9 {
+  -webkit-transform: rotate(48.46153846153847deg);
+      -ms-transform: rotate(48.46153846153847deg);
+          transform: rotate(48.46153846153847deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char10 {
+  -webkit-transform: rotate(53.846153846153854deg);
+      -ms-transform: rotate(53.846153846153854deg);
+          transform: rotate(53.846153846153854deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char11 {
+  -webkit-transform: rotate(59.23076923076923deg);
+      -ms-transform: rotate(59.23076923076923deg);
+          transform: rotate(59.23076923076923deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char12 {
+  -webkit-transform: rotate(64.61538461538461deg);
+      -ms-transform: rotate(64.61538461538461deg);
+          transform: rotate(64.61538461538461deg);
+}
+.infographic-chicken .equation-element .special-touch-label .char13 {
+  -webkit-transform: rotate(70deg);
+      -ms-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char1 {
+  -webkit-transform: rotate(5.333333333333333deg);
+      -ms-transform: rotate(5.333333333333333deg);
+          transform: rotate(5.333333333333333deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char2 {
+  -webkit-transform: rotate(10.666666666666666deg);
+      -ms-transform: rotate(10.666666666666666deg);
+          transform: rotate(10.666666666666666deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char3 {
+  -webkit-transform: rotate(16deg);
+      -ms-transform: rotate(16deg);
+          transform: rotate(16deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char4 {
+  -webkit-transform: rotate(21.333333333333332deg);
+      -ms-transform: rotate(21.333333333333332deg);
+          transform: rotate(21.333333333333332deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char5 {
+  -webkit-transform: rotate(26.666666666666664deg);
+      -ms-transform: rotate(26.666666666666664deg);
+          transform: rotate(26.666666666666664deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char6 {
+  -webkit-transform: rotate(32deg);
+      -ms-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char7 {
+  -webkit-transform: rotate(37.33333333333333deg);
+      -ms-transform: rotate(37.33333333333333deg);
+          transform: rotate(37.33333333333333deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char8 {
+  -webkit-transform: rotate(42.666666666666664deg);
+      -ms-transform: rotate(42.666666666666664deg);
+          transform: rotate(42.666666666666664deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char9 {
+  -webkit-transform: rotate(48deg);
+      -ms-transform: rotate(48deg);
+          transform: rotate(48deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char10 {
+  -webkit-transform: rotate(53.33333333333333deg);
+      -ms-transform: rotate(53.33333333333333deg);
+          transform: rotate(53.33333333333333deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char11 {
+  -webkit-transform: rotate(58.666666666666664deg);
+      -ms-transform: rotate(58.666666666666664deg);
+          transform: rotate(58.666666666666664deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char12 {
+  -webkit-transform: rotate(64deg);
+      -ms-transform: rotate(64deg);
+          transform: rotate(64deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char13 {
+  -webkit-transform: rotate(69.33333333333333deg);
+      -ms-transform: rotate(69.33333333333333deg);
+          transform: rotate(69.33333333333333deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char14 {
+  -webkit-transform: rotate(74.66666666666666deg);
+      -ms-transform: rotate(74.66666666666666deg);
+          transform: rotate(74.66666666666666deg);
+}
+.infographic-chicken .equation-element .special-touch-label.fr .char15 {
+  -webkit-transform: rotate(80deg);
+      -ms-transform: rotate(80deg);
+          transform: rotate(80deg);
+}
+.infographic-chicken .equation-element .special-touch-label span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  width: 20px;
+  height: 100px;
+}
+.infographic-chicken .equation-operation {
+  color: the-red;
+  -webkit-flex-basis: 20px;
+      -ms-flex-preferred-size: 20px;
+          flex-basis: 20px;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+}
+.infographic-chicken .ingredient-item {
+  display: inline-block;
+  font-size: 16px;
+}
+.infographic-chicken .ingredient-item:after {
+  color: the-red;
+  content: ' + ';
+  font-weight: bold;
+  margin-right: 3px;
+}
+.infographic-chicken .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-chicken .ingredient-item span {
+  font-weight: normal;
+}
+.infographic-chicken .ingredient-list {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.infographic-chicken .section-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.infographic-chicken .section-title {
+  color: the-orange;
+  font-family: font-face-heading !important;
+  font-size: 3.2em !important;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-chicken .section-title {
+    font-size: 3.8em !important;
+  }
+}
+.infographic-chicken .section-title .line-1,
+.infographic-chicken .section-title .line-2 {
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-chicken .section-title .line-1,
+  .infographic-chicken .section-title .line-2 {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+.infographic-chicken .section-title .line-2 {
+  margin-bottom: 3px;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-chicken .section-title .line-2 {
+    margin-bottom: 0;
+  }
+  .infographic-chicken .section-title .line-2 + small {
+    margin-top: -5px;
+    margin-bottom: 22px;
+  }
+}
+.infographic-chicken .section-title small {
+  display: block;
+  font-family: font-face;
+  font-size: 0.54em;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0;
+}

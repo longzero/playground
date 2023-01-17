@@ -1,0 +1,112 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-recipes {
+  padding-top: 40px;
+}
+.infographic-recipes .ingredient-item {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-recipes .ingredient-item-image {
+    transition: 0.1s;
+  }
+  .infographic-recipes .ingredient-item-image:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+.infographic-recipes .ingredient-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0 10px;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-recipes .ingredient-list {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+.infographic-recipes .main-image-container {
+  display: none;
+  text-align: center;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-recipes .main-image-container {
+    display: block;
+  }
+}
+.infographic-recipes .main-image-container.mobile {
+  display: block;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-recipes .main-image-container.mobile {
+    display: none;
+  }
+}
+.infographic-recipes .main-image-container img {
+  display: inline;
+}
+.infographic-recipes .recipe-add {
+  color: the-red;
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 4px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 140px;
+}
+.infographic-recipes .recipe-container {
+  border-bottom: 1px dotted #4b443e;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.infographic-recipes .recipe-header {
+  color: the-red;
+  text-align: center;
+}
+.infographic-recipes .recipe-header h2 {
+  color: the-red;
+  font-family: font-face-heading;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-iphone-plus) {
+  .infographic-recipes .recipe-header h2 {
+    font-size: 3em;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-recipes .recipe-header h2 {
+    font-size: 60px;
+    margin-bottom: 0.2em;
+    padding-top: 20px;
+  }
+}
+.infographic-recipes .recipe-header strong {
+  display: block;
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-recipes .recipe-header strong {
+    font-size: 1.6em;
+  }
+}

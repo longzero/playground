@@ -1,0 +1,186 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-smoothies {
+  padding-top: 40px;
+}
+.infographic-smoothies section {
+  border-bottom: 2px dotted #4b443e;
+  margin: 0 10px 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+}
+.infographic-smoothies section:last-child {
+  border-bottom: 0;
+}
+.infographic-smoothies .equation-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies .equation-container {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.infographic-smoothies .equation-element {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies .equation-element {
+    -webkit-flex-basis: calc((100% - 50px * 5) / 6);
+        -ms-flex-preferred-size: calc((100% - 50px * 5) / 6);
+            flex-basis: calc((100% - 50px * 5) / 6);
+  }
+}
+.smoothie-soleil .infographic-smoothies .equation-element {
+  -webkit-flex-basis: calc((100% - 50px * 4) / 5);
+      -ms-flex-preferred-size: calc((100% - 50px * 4) / 5);
+          flex-basis: calc((100% - 50px * 4) / 5);
+}
+.infographic-smoothies .equation-element img {
+  display: inline;
+}
+.infographic-smoothies .equation-operation {
+  color: the-red;
+  display: none;
+  -webkit-flex-basis: 20px;
+      -ms-flex-preferred-size: 20px;
+          flex-basis: 20px;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies .equation-operation {
+    display: block;
+  }
+}
+.infographic-smoothies .section-header {
+  font-weight: normal;
+  text-align: center;
+}
+.infographic-smoothies .section-header h2 {
+  font-family: font-face-heading;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-smoothies .section-header h2 {
+    font-size: 48px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-smoothies .section-header h2 .section-number {
+    font-size: 28.8px;
+  }
+}
+.infographic-smoothies .section-name {
+  display: inline;
+  vertical-align: middle;
+}
+.infographic-smoothies .section-number {
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: font-face;
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-smoothies .section-number {
+    width: 39px;
+    height: 39px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies .section-number {
+    font-size: 0.6em;
+    margin-right: 10px;
+  }
+}
+.infographic-smoothies .section-tagline {
+  color: #767676;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-smoothies .section-tagline {
+    font-size: 1.4em;
+  }
+}
+.infographic-smoothies .section-title {
+  font-size: 2em;
+  font-family: font-face-heading;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-smoothies .section-title {
+    font-size: 3em;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-smoothies .section-title {
+    font-size: 3em;
+  }
+}
+.smoothie-vert .section-number {
+  background-color: #4b9f21;
+}
+.smoothie-vert .section-title {
+  color: #4b9f21;
+}
+.smoothie-gateau .section-number {
+  background-color: the-red;
+}
+.smoothie-gateau .section-title {
+  color: the-red;
+}
+.smoothie-soleil .section-number {
+  background-color: #f09130;
+}
+.smoothie-soleil .section-title {
+  color: #f09130;
+}
+.smoothie-cremeux .section-number {
+  background-color: #7896b4;
+}
+.smoothie-cremeux .section-title {
+  color: #7896b4;
+}

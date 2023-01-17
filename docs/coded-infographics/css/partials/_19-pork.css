@@ -1,0 +1,362 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-pork .expert-box {
+  background-color: #4b443e;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pork .expert-box {
+    height: 150px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pork .expert-box {
+    height: 115px;
+  }
+}
+.infographic-pork .expert-box h3,
+.infographic-pork .expert-box p {
+  color: #fff;
+}
+.infographic-pork .expert-box h3 {
+  font-weight: 100;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.infographic-pork .expert-box p {
+  font-size: 0.85em;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.infographic-pork .pork-digit {
+  background-color: the-red;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pork .pork-digit {
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+  }
+}
+.infographic-pork .pork-digit:nth-child(1) {
+  top: 3%;
+  left: 30%;
+}
+.infographic-pork .pork-digit:nth-child(2) {
+  top: 10%;
+  left: 47%;
+}
+.infographic-pork .pork-digit:nth-child(3) {
+  top: 38%;
+  left: 11%;
+}
+.infographic-pork .pork-digit:nth-child(4) {
+  top: 23%;
+  left: 32%;
+}
+.infographic-pork .pork-digit:nth-child(5) {
+  top: 23%;
+  left: 59%;
+}
+.infographic-pork .pork-digit:nth-child(6) {
+  top: 40%;
+  left: 46%;
+}
+.infographic-pork .pork-digit:hover .tooltip {
+  display: block;
+  font-weight: normal;
+}
+.infographic-pork .pork-digit .tooltip {
+  background-color: #4b443e;
+  color: #fff;
+  display: none;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 50%;
+  z-index: 1;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+/* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+/* this border color controlls the outside, thin border */
+}
+.infographic-pork .pork-digit .tooltip:after,
+.infographic-pork .pork-digit .tooltip:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+.infographic-pork .pork-digit .tooltip:after {
+  left: 50%;
+  border-color: transparent transparent #4b443e transparent;
+  border-width: 9px;
+}
+.infographic-pork .pork-digit .tooltip:before {
+  left: 50%;
+  border-color: transparent transparent #4b443e transparent;
+  border-style: solid;
+  border-width: 9px;
+}
+.infographic-pork .pork-header {
+  margin-bottom: 2em;
+  position: relative;
+  text-align: center;
+}
+.infographic-pork .pork-header h2 {
+  background-color: the-red;
+  color: #fff;
+  font-family: font-face-heading;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-pork .pork-header h2 {
+    font-size: 3em;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-pork .pork-header h2 {
+    font-size: 5em;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-pork .pork-header br {
+    display: inline;
+  }
+}
+.infographic-pork .pork-instruction {
+  background-color: #fff;
+  color: the-red;
+  font-weight: 300;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pork .pork-instruction {
+    display: inline-block;
+    font-size: 1.5em;
+    width: auto;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-pork .pork-instruction {
+    font-size: 2em;
+  }
+}
+.infographic-pork .pork-main-image-container {
+  margin: 0 auto 40px;
+  position: relative;
+  width: 80%;
+}
+.infographic-pork .pork-box {
+  background-color: #ccc;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 10px 40px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pork .pork-box {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pork .pork-box {
+    -webkit-flex-basis: 48%;
+        -ms-flex-preferred-size: 48%;
+            flex-basis: 48%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.infographic-pork .pork-box h2 {
+  font-family: font-face-heading;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: 0;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-pork .pork-box h2 {
+    font-size: 41.6px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pork .pork-boxes {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+@media (min-width: breakpoint-desktop) {
+  .infographic-pork .pork-boxes {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.infographic-pork .pork-content {
+  padding: 20px 20px 0;
+}
+.infographic-pork .pork-cta-button {
+  background-color: the-red;
+  border-radius: 4px;
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 0 0 0 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.infographic-pork .pork-cta-button:hover {
+  background-color: the-red-hover;
+}
+.infographic-pork .pork-cta-button img {
+  width: 35px;
+  height: 35px;
+}
+.infographic-pork .pork-cta-container {
+  text-align: center;
+}
+.infographic-pork .pork-icon-caption {
+  color: the-red;
+}
+.infographic-pork .pork-icon-container {
+  -webkit-flex-basis: 40%;
+      -ms-flex-preferred-size: 40%;
+          flex-basis: 40%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  text-align: center;
+}
+.infographic-pork .pork-icon-container img {
+  display: inline;
+}
+.infographic-pork .pork-image {
+  display: block;
+  width: 100%;
+}
+.infographic-pork .pork-image-caption {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-pork .pork-image-caption {
+    font-size: 32px;
+  }
+}
+.infographic-pork .pork-image-caption img {
+  display: inline;
+  margin-right: 10px;
+}
+.infographic-pork .pork-image-container {
+  position: relative;
+}
+.infographic-pork .pork-item {
+  border-bottom: 1px solid #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 10px 20px 0;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pork .pork-item {
+    padding-right: 30px;
+  }
+}
+.infographic-pork .pork-item-content {
+  font-size: 0.85em;
+}
+.infographic-pork .pork-title {
+  background-color: the-red;
+  color: #fff;
+  font-family: font-face-heading;
+  font-size: 2em;
+  font-weight: normal;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-pork .pork-title {
+    font-size: 2.6em;
+  }
+}

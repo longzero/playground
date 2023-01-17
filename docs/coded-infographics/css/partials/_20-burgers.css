@@ -1,0 +1,262 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-burgers {
+  padding-top: 40px;
+}
+.infographic-burgers .burger-container {
+  border-bottom: 1px dotted #4b443e;
+  color: the-red;
+  margin: 0 20px;
+  padding-bottom: 40px;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-burgers .burger-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 0 20px 60px;
+    padding-bottom: 60px;
+  }
+  .infographic-burgers .burger-container:nth-child(2n+2) {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .infographic-burgers .burger-container:nth-child(2n+2) .burger-header .burger-empty-box {
+    border-left: 0;
+    margin-left: 0;
+    margin-right: 50%;
+  }
+  .infographic-burgers .burger-container:nth-child(2n+2) .burger-layer {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+@media (min-width: 700px) {
+  .infographic-burgers .burger-container {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+.infographic-burgers .burger-empty-box {
+  display: none;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  margin-left: 50%;
+  width: 50%;
+  height: 50%;
+}
+@media (min-width: 700px) {
+  .infographic-burgers .burger-empty-box {
+    display: block;
+  }
+  .infographic-burgers .burger-empty-box:first-child {
+    border-top: 1px solid the-red;
+  }
+  .infographic-burgers .burger-empty-box:last-child {
+    border-bottom: 1px solid the-red;
+  }
+}
+.infographic-burgers .burger-header {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+@media (min-width: 700px) {
+  .infographic-burgers .burger-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: 23%;
+        -ms-flex-preferred-size: 23%;
+            flex-basis: 23%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .infographic-burgers .burger-header:after {
+    background-color: the-red;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-burgers .burger-image {
+    transition: 0.1s;
+  }
+  .infographic-burgers .burger-image:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+.infographic-burgers .burger-layer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-burgers .burger-layer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-burgers .burger-layer figcaption {
+    -webkit-flex-basis: 200px;
+        -ms-flex-preferred-size: 200px;
+            flex-basis: 200px;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+  }
+}
+.infographic-burgers .burger-layer-name {
+  font-size: 0.8em;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-burgers .burger-layer-name {
+    -webkit-flex-basis: 200px;
+        -ms-flex-preferred-size: 200px;
+            flex-basis: 200px;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-burgers .burger-layer-name {
+    font-size: 1.2em;
+  }
+}
+.infographic-burgers .burger-layers-container {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+@media (min-width: 700px) {
+  .infographic-burgers .burger-layers-container {
+    -webkit-flex-basis: 66%;
+        -ms-flex-preferred-size: 66%;
+            flex-basis: 66%;
+  }
+}
+.infographic-burgers .burger-name {
+  font-family: font-face-heading;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-burgers .burger-name {
+    font-size: 4em;
+  }
+}
+@media (min-width: 700px) {
+  .infographic-burgers .burger-name {
+    font-size: 3em;
+  }
+}
+@media (min-width: 768px) {
+  .infographic-burgers .burger-name {
+    font-size: 2em;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-burgers .burger-name {
+    font-size: 4em;
+  }
+}
+.infographic-burgers .burger-operation {
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-burgers .burger-operation {
+    display: block;
+    font-size: 2em;
+  }
+}
+.infographic-burgers .burger-title {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.infographic-burgers .burger-title small {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1;
+}
+@media (min-width: breakpoint-iphone) {
+  .infographic-burgers .burger-title small {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 768px) {
+  .infographic-burgers .burger-title small {
+    font-size: 1em;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-burgers .burger-title small {
+    font-size: 1.4em;
+  }
+}
+.infographic-burgers .image-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 1px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-burgers .image-container {
+    width: 400px;
+  }
+}

@@ -1,0 +1,177 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-side-dish .duration-box-container {
+  text-align: center;
+}
+.infographic-side-dish .duration-box {
+  background-color: #ffa500;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 5px 15px;
+}
+.infographic-side-dish .equation-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-side-dish .equation-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+.infographic-side-dish .equation-element {
+  -webkit-flex-basis: 240px;
+      -ms-flex-preferred-size: 240px;
+          flex-basis: 240px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  height: 240px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-side-dish .equation-element {
+    -webkit-flex-basis: 300px;
+        -ms-flex-preferred-size: 300px;
+            flex-basis: 300px;
+    width: 300px;
+    height: 300px;
+  }
+}
+.infographic-side-dish .equation-element:first-child {
+  border: 2px dashed the-red;
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  width: 240px;
+  height: 240px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-side-dish .equation-element:first-child {
+    -webkit-flex-basis: 300px;
+        -ms-flex-preferred-size: 300px;
+            flex-basis: 300px;
+    width: 300px;
+    height: 300px;
+  }
+}
+.infographic-side-dish .equation-element:first-child img {
+  max-width: 120%;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-side-dish .equation-element:first-child img {
+    width: 355px;
+    height: 355px;
+  }
+}
+.safari .infographic-side-dish .equation-element:first-child img {
+  max-width: 100%;
+  height: 100%;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-side-dish .equation-element img {
+    transition: 0.1s;
+  }
+  .infographic-side-dish .equation-element img:hover {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+.infographic-side-dish .equation-operation {
+  color: the-red;
+  -webkit-flex-basis: 20px;
+      -ms-flex-preferred-size: 20px;
+          flex-basis: 20px;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-side-dish .equation-operation {
+    font-size: 5em;
+  }
+}
+.infographic-side-dish .ingredient-item {
+  display: inline-block;
+}
+.infographic-side-dish .ingredient-item:after {
+  color: the-red;
+  content: ' + ';
+  font-weight: bold;
+  margin-right: 5px;
+}
+.infographic-side-dish .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-side-dish .ingredient-item span {
+  font-weight: normal;
+}
+.infographic-side-dish .ingredient-list {
+  font-size: 15px;
+  line-height: 1.4;
+  list-style: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.infographic-side-dish .section-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.infographic-side-dish .section-header h2 {
+  line-height: 1;
+}
+.infographic-side-dish .section-title {
+  color: the-orange;
+  font-weight: 400;
+  line-height: 1;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-side-dish .section-title {
+    font-size: 2.2em;
+  }
+}
+.infographic-side-dish .section-title small,
+.infographic-side-dish .section-title span {
+  display: block;
+}
+.infographic-side-dish .section-title small {
+  font-family: roboto;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 0.2em;
+}
+.infographic-side-dish .section-title span {
+  font-family: font-face-heading;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.infographic-side-dish .side-dish {
+  border-bottom: 2px dotted the-grey-dotted;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+}

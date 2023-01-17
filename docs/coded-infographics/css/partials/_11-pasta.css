@@ -1,0 +1,350 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-pasta {
+  overflow-x: hidden;
+}
+.infographic-pasta .ingredient-caption {
+  background-color: the-red;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px 10px;
+}
+.infographic-pasta .ingredient-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+.infographic-pasta .ingredient-center .ingredient-caption {
+  font-size: 19px;
+  margin-bottom: 0.6em;
+}
+.infographic-pasta .ingredient-item-content {
+  -webkit-transform: rotate(-29deg);
+      -ms-transform: rotate(-29deg);
+          transform: rotate(-29deg);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  transition: 0.3s;
+  width: 200px;
+  height: 200px;
+}
+.infographic-pasta .ingredient-list {
+  background: transparent url("/coded-infographics/images/pasta/styled-circles.png") center center no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+  -webkit-transform: rotate(29deg);
+      -ms-transform: rotate(29deg);
+          transform: rotate(29deg);
+  transition: 0.3s;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+.infographic-pasta .ingredient-list .ingredient-item {
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(1) {
+  -webkit-transform: rotate(0deg) translate(250px) rotate(0deg);
+      -ms-transform: rotate(0deg) translate(250px) rotate(0deg);
+          transform: rotate(0deg) translate(250px) rotate(0deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(2) {
+  -webkit-transform: rotate(60deg) translate(250px) rotate(-60deg);
+      -ms-transform: rotate(60deg) translate(250px) rotate(-60deg);
+          transform: rotate(60deg) translate(250px) rotate(-60deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(3) {
+  -webkit-transform: rotate(120deg) translate(250px) rotate(-120deg);
+      -ms-transform: rotate(120deg) translate(250px) rotate(-120deg);
+          transform: rotate(120deg) translate(250px) rotate(-120deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(4) {
+  -webkit-transform: rotate(180deg) translate(250px) rotate(-180deg);
+      -ms-transform: rotate(180deg) translate(250px) rotate(-180deg);
+          transform: rotate(180deg) translate(250px) rotate(-180deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(5) {
+  -webkit-transform: rotate(240deg) translate(250px) rotate(-240deg);
+      -ms-transform: rotate(240deg) translate(250px) rotate(-240deg);
+          transform: rotate(240deg) translate(250px) rotate(-240deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item:nth-child(6) {
+  -webkit-transform: rotate(300deg) translate(250px) rotate(-300deg);
+      -ms-transform: rotate(300deg) translate(250px) rotate(-300deg);
+          transform: rotate(300deg) translate(250px) rotate(-300deg);
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pasta .ingredient-list {
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 600px;
+    height: 600px;
+  }
+  .infographic-pasta .ingredient-list .ingredient-item {
+    margin: -100px;
+    width: 200px;
+    height: 200px;
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(1) {
+    -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+        -ms-transform: rotate(0deg) translate(300px) rotate(0deg);
+            transform: rotate(0deg) translate(300px) rotate(0deg);
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(2) {
+    -webkit-transform: rotate(60deg) translate(300px) rotate(-60deg);
+        -ms-transform: rotate(60deg) translate(300px) rotate(-60deg);
+            transform: rotate(60deg) translate(300px) rotate(-60deg);
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(3) {
+    -webkit-transform: rotate(120deg) translate(300px) rotate(-120deg);
+        -ms-transform: rotate(120deg) translate(300px) rotate(-120deg);
+            transform: rotate(120deg) translate(300px) rotate(-120deg);
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(4) {
+    -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+        -ms-transform: rotate(180deg) translate(300px) rotate(-180deg);
+            transform: rotate(180deg) translate(300px) rotate(-180deg);
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(5) {
+    -webkit-transform: rotate(240deg) translate(300px) rotate(-240deg);
+        -ms-transform: rotate(240deg) translate(300px) rotate(-240deg);
+            transform: rotate(240deg) translate(300px) rotate(-240deg);
+  }
+  .infographic-pasta .ingredient-list .ingredient-item:nth-child(6) {
+    -webkit-transform: rotate(300deg) translate(300px) rotate(-300deg);
+        -ms-transform: rotate(300deg) translate(300px) rotate(-300deg);
+            transform: rotate(300deg) translate(300px) rotate(-300deg);
+  }
+}
+.infographic-pasta .ingredient-list.five {
+  -webkit-transform: rotate(17deg);
+      -ms-transform: rotate(17deg);
+          transform: rotate(17deg);
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+.infographic-pasta .ingredient-list.five .ingredient-item {
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+}
+.infographic-pasta .ingredient-list.five .ingredient-item:nth-child(1) {
+  -webkit-transform: rotate(0deg) translate(250px) rotate(0deg);
+      -ms-transform: rotate(0deg) translate(250px) rotate(0deg);
+          transform: rotate(0deg) translate(250px) rotate(0deg);
+}
+.infographic-pasta .ingredient-list.five .ingredient-item:nth-child(2) {
+  -webkit-transform: rotate(72deg) translate(250px) rotate(-72deg);
+      -ms-transform: rotate(72deg) translate(250px) rotate(-72deg);
+          transform: rotate(72deg) translate(250px) rotate(-72deg);
+}
+.infographic-pasta .ingredient-list.five .ingredient-item:nth-child(3) {
+  -webkit-transform: rotate(144deg) translate(250px) rotate(-144deg);
+      -ms-transform: rotate(144deg) translate(250px) rotate(-144deg);
+          transform: rotate(144deg) translate(250px) rotate(-144deg);
+}
+.infographic-pasta .ingredient-list.five .ingredient-item:nth-child(4) {
+  -webkit-transform: rotate(216deg) translate(250px) rotate(-216deg);
+      -ms-transform: rotate(216deg) translate(250px) rotate(-216deg);
+          transform: rotate(216deg) translate(250px) rotate(-216deg);
+}
+.infographic-pasta .ingredient-list.five .ingredient-item:nth-child(5) {
+  -webkit-transform: rotate(288deg) translate(250px) rotate(-288deg);
+      -ms-transform: rotate(288deg) translate(250px) rotate(-288deg);
+          transform: rotate(288deg) translate(250px) rotate(-288deg);
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pasta .ingredient-list.five {
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 600px;
+    height: 600px;
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item {
+    margin: -100px;
+    width: 200px;
+    height: 200px;
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item:nth-child(1) {
+    -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+        -ms-transform: rotate(0deg) translate(300px) rotate(0deg);
+            transform: rotate(0deg) translate(300px) rotate(0deg);
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item:nth-child(2) {
+    -webkit-transform: rotate(72deg) translate(300px) rotate(-72deg);
+        -ms-transform: rotate(72deg) translate(300px) rotate(-72deg);
+            transform: rotate(72deg) translate(300px) rotate(-72deg);
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item:nth-child(3) {
+    -webkit-transform: rotate(144deg) translate(300px) rotate(-144deg);
+        -ms-transform: rotate(144deg) translate(300px) rotate(-144deg);
+            transform: rotate(144deg) translate(300px) rotate(-144deg);
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item:nth-child(4) {
+    -webkit-transform: rotate(216deg) translate(300px) rotate(-216deg);
+        -ms-transform: rotate(216deg) translate(300px) rotate(-216deg);
+            transform: rotate(216deg) translate(300px) rotate(-216deg);
+  }
+  .infographic-pasta .ingredient-list.five .ingredient-item:nth-child(5) {
+    -webkit-transform: rotate(288deg) translate(300px) rotate(-288deg);
+        -ms-transform: rotate(288deg) translate(300px) rotate(-288deg);
+            transform: rotate(288deg) translate(300px) rotate(-288deg);
+  }
+}
+.infographic-pasta .ingredient-list.five .ingredient-item-content {
+  -webkit-transform: rotate(-17deg);
+      -ms-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+}
+.infographic-pasta .ingredient-list .ingredient-item {
+  color: the-red;
+  display: block;
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.infographic-pasta .ingredient-list-toggle {
+  background-color: #fff;
+  border: 2px solid #767676;
+  border-radius: 5px;
+  color: #767676;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 2px 10px;
+  transition: 0.3s;
+}
+.infographic-pasta .ingredient-list-toggle:hover {
+  background-color: #767676;
+  color: #fff;
+}
+.infographic-pasta .ingredient-navigation {
+  margin: 0 auto;
+  position: relative;
+  z-index: 3000;
+  width: 320px;
+  height: 30px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pasta .ingredient-navigation {
+    display: none;
+  }
+}
+.infographic-pasta .ingredient-left,
+.infographic-pasta .ingredient-right {
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+}
+.infographic-pasta .ingredient-left {
+  left: 20px;
+}
+.infographic-pasta .ingredient-right {
+  right: 20px;
+  text-align: right;
+}
+.infographic-pasta .ingredient-left-arrow-image,
+.infographic-pasta .ingredient-right-arrow-image {
+  height: 30px;
+}
+.infographic-pasta .ingredients-container {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: 0.3s;
+  width: 600px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-pasta .ingredients-container {
+    top: -190px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pasta .ingredients-container {
+    top: 220px;
+  }
+}
+.infographic-pasta .pasta-container {
+  background: #fff url("/coded-infographics/images/pasta/background.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pasta .pasta-container {
+    border-bottom: 2px dotted #666;
+    height: 1030px;
+  }
+}
+.infographic-pasta .pasta-container:last-child {
+  border: 0;
+}
+.infographic-pasta .pasta-header {
+  background-color: the-red;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  position: relative;
+  z-index: 4000;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pasta .pasta-header {
+    background-color: transparent;
+    color: the-red;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
+.infographic-pasta .pasta-header h2 {
+  color: #fff;
+  line-height: 1;
+  margin-top: 0;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-pasta .pasta-header h2 {
+    color: the-red;
+  }
+}
+.infographic-pasta .pasta-header small,
+.infographic-pasta .pasta-header span {
+  display: block;
+  line-height: 1;
+}
+.infographic-pasta .pasta-header small {
+  font-size: 1.6em;
+}
+.infographic-pasta .pasta-header span {
+  font-family: font-face-heading;
+  font-size: 2.6em;
+  font-weight: normal;
+  text-transform: uppercase;
+}

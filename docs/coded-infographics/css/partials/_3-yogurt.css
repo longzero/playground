@@ -1,0 +1,237 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-yogurt section {
+  margin: 0 10px 40px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-yogurt section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt section {
+    border: 0;
+    width: 90%;
+  }
+}
+.infographic-yogurt .infographic-header {
+  background: url("/coded-infographics/images/yogurt/NewHeader-Background.jpg") left center no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 30px 10px;
+  position: relative;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt .infographic-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+}
+.infographic-yogurt .infographic-header h2 {
+  color: #fff;
+  margin: 0 auto 40px;
+  text-align: center;
+  position: relative;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt .infographic-header h2 {
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+    margin-bottom: 0;
+  }
+}
+.infographic-yogurt .infographic-header h2 small {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+.infographic-yogurt .infographic-header h2 span {
+  display: block;
+  font-family: font-face-heading;
+  font-size: 3.6em;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-yogurt .infographic-header {
+    padding-right: 45px;
+  }
+}
+.infographic-yogurt .infographic-header .background-dish {
+  background: url("/coded-infographics/images/yogurt/Bowl.png") center bottom no-repeat;
+  background-size: auto 57%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt .infographic-header .background-dish {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.infographic-yogurt .infographic-summary {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  display: none;
+  font-size: 0.9em;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 240px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt .infographic-summary {
+    border-color: the-red;
+    color: the-red;
+    display: block;
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    visibility: hidden;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-yogurt .infographic-summary {
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+    font-size: 0.9em;
+  }
+}
+.infographic-yogurt .yogurt-box {
+  border-bottom: 1px dotted the-grey-dotted;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  position: relative;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-yogurt .yogurt-box {
+    -webkit-flex-basis: calc(50% - 20px);
+        -ms-flex-preferred-size: calc(50% - 20px);
+            flex-basis: calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-yogurt .yogurt-box {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .ie .infographic-yogurt .yogurt-box {
+    -webkit-flex-basis: calc(50% - 80px);
+        -ms-flex-preferred-size: calc(50% - 80px);
+            flex-basis: calc(50% - 80px);
+  }
+}
+.infographic-yogurt .yogurt-box figcaption {
+  font-size: 0.9em;
+}
+.infographic-yogurt .yogurt-box h3 {
+  color: the-red;
+  font-family: roboto-regular;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 0.2em;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-yogurt .yogurt-box img {
+    transition: 0.1s;
+  }
+  .infographic-yogurt .yogurt-box img:hover {
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+}
+.infographic-yogurt .yogurt-box p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-yogurt .yogurt-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-yogurt .yogurt-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.infographic-yogurt .yogurt-header-image {
+  display: none;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-yogurt .yogurt-header-image {
+    display: block;
+    position: absolute;
+    right: -38px;
+    bottom: 0;
+    width: 65%;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-yogurt .yogurt-header-image {
+    right: 0;
+    width: 55%;
+  }
+}
+.infographic-yogurt .yogurt-number {
+  background-color: the-red;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+}

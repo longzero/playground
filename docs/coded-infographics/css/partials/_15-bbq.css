@@ -1,0 +1,1270 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-bbq {
+  background-color: #e9e9e9;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  transition: 0.3s;
+  width: 640px;
+  zoom: 0.5;
+}
+@media (min-width: 375px) {
+  .infographic-bbq {
+    zoom: calc(355 / 640);
+  }
+  .ios .infographic-bbq {
+    -webkit-text-size-adjust: auto;
+  }
+}
+@media (min-width: 414px) {
+  .infographic-bbq {
+    zoom: calc(394 / 640);
+  }
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-bbq {
+    zoom: calc(460 / 640);
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-bbq {
+    zoom: calc(680 / 640);
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-bbq {
+    zoom: calc(748 / 640);
+  }
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq {
+    width: 920px;
+    zoom: 1;
+  }
+}
+.infographic-bbq footer {
+  color: #b6b6b6;
+  font-size: 13px;
+  padding: 0 20px;
+}
+.infographic-bbq h2 {
+  color: #fff;
+  line-height: 1;
+  margin-top: 0;
+}
+.infographic-bbq h3 {
+  font-size: 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq h3 {
+    font-size: 20px;
+  }
+}
+.infographic-bbq p {
+  line-height: 1.2 !important;
+}
+.infographic-bbq section {
+  border-bottom: 1px dotted #4b443e;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  transition: 0.3s;
+  height: 1150px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq section {
+    margin-bottom: 0;
+  }
+}
+.infographic-bbq section.bbq-preparing {
+  height: 1150px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq section.bbq-preparing {
+    height: 435px;
+  }
+}
+.infographic-bbq section.bbq-grilling {
+  height: 1130px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq section.bbq-grilling {
+    height: 321px;
+  }
+}
+.infographic-bbq section.bbq-serving {
+  border-bottom: 0;
+  height: 775px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq section.bbq-serving {
+    height: 217px;
+  }
+}
+.bbq-box-child,
+.bbq-box-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s;
+}
+.bbq-box-child:hover,
+.bbq-box-light:hover {
+  opacity: 0.8;
+}
+.bbq-box-child {
+  border-radius: 10px;
+  color: #fff;
+}
+.bbq-preparing .bbq-box-child {
+  background-color: #e32119;
+}
+.bbq-grilling .bbq-box-child {
+  background-color: #bf0000;
+}
+.bbq-serving .bbq-box-child {
+  background-color: #7d0f0e;
+}
+.bbq-box-child p {
+  color: #fff;
+}
+.bbq-box-light {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #4b443e;
+  line-height: 1.2;
+}
+.bbq-box-light h3 {
+  background-color: #464646;
+  color: #fff;
+  font-weight: normal;
+}
+.bbq-box-light p {
+  line-height: 1.2;
+}
+.bbq-footer {
+  text-align: center;
+}
+.bbq-header {
+  background: url("/coded-infographics/images/bbq/BBQ-Header.jpg") right no-repeat;
+  color: #fff;
+  padding: 30px 20px;
+  position: relative;
+  text-align: center;
+  transition: 0.3s;
+  height: 300px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-header {
+    background-position: right -225px;
+  }
+}
+.bbq-header h2 {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding-top: 10px;
+  font-weight: normal;
+  line-height: 1 !important;
+  margin: 0 auto !important;
+  width: 280px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-header h2 {
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    width: 375px;
+  }
+}
+.bbq-header h2 img {
+  display: block;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-header h2 img {
+    margin-bottom: -5px;
+  }
+}
+.bbq-header small {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-header small {
+    font-size: 35px;
+  }
+}
+.bbq-header .main-title {
+  font-family: font-face-heading;
+  font-size: 3em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-header .main-title {
+    font-size: 100px;
+  }
+}
+.bbq-section-title {
+  border-radius: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-weight: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  position: static;
+  text-align: center;
+  text-transform: uppercase;
+  height: 75px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-section-title {
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+        -ms-transform: rotate(-90deg) translateX(-100%);
+            transform: rotate(-90deg) translateX(-100%);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    width: 429px;
+    height: 47px;
+  }
+  .bbq-grilling .bbq-section-title {
+    width: 283px;
+    -webkit-transform: rotate(-90deg) translateX(-107%);
+        -ms-transform: rotate(-90deg) translateX(-107%);
+            transform: rotate(-90deg) translateX(-107%);
+  }
+  .bbq-serving .bbq-section-title {
+    width: 198px;
+  }
+  .bbq-section-title.bbq-box-child {
+    transition: 0s;
+  }
+}
+.bbq-single {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-single {
+    font-size: 11px;
+  }
+}
+.bbq-preparing .clean {
+  top: 160px;
+  left: 20px;
+  width: 195px;
+  height: 74px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .clean {
+    top: 44px;
+    left: 80px;
+    width: 195px;
+    height: 50px;
+  }
+}
+.bbq-preparing .marinate {
+  top: 160px;
+  left: auto;
+  right: 20px;
+  width: 300px;
+  height: 74px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .marinate {
+    top: 138px;
+    left: 80px;
+    width: 195px;
+    height: 50px;
+  }
+}
+.bbq-preparing .wash {
+  padding: 25px;
+  top: 294px;
+  left: 20px;
+  width: 195px;
+  height: 307px;
+}
+.bbq-preparing .wash p {
+  font-size: 40px;
+  margin-bottom: 0.4em;
+}
+.bbq-preparing .wash .bbq-box-image {
+  margin-left: 45px;
+  width: 94px;
+  height: 102px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .wash {
+    padding: 10px 20px;
+    top: 24px;
+    left: 380px;
+    width: 265px;
+    height: 85px;
+  }
+  .bbq-preparing .wash p {
+    font-size: 26px;
+    width: 60%;
+  }
+  .bbq-preparing .wash .bbq-box-image {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 65px;
+  }
+}
+.bbq-preparing .fridge {
+  font-size: 34px;
+  padding: 25px;
+  top: 294px;
+  left: auto;
+  right: 20px;
+  width: 300px;
+  height: 307px;
+}
+.bbq-preparing .fridge p {
+  font-size: 34px;
+  width: 70%;
+}
+.bbq-preparing .fridge .bbq-box-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .fridge {
+    font-size: 20px;
+    top: 234px;
+    left: 80px;
+    right: auto;
+    width: 250px;
+    height: 180px;
+  }
+  .bbq-preparing .fridge p {
+    font-size: 20px;
+  }
+}
+.bbq-preparing .marinade {
+  top: 630px;
+  left: 20px;
+  width: 300px;
+  height: 493px;
+}
+.bbq-preparing .marinade h3 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 63px;
+}
+.bbq-preparing .marinade li {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+.bbq-preparing .marinade li:before {
+  color: the-red;
+  content: '+';
+  margin-right: 10px;
+}
+.bbq-preparing .marinade li:last-child {
+  margin-bottom: 0;
+}
+.bbq-preparing .marinade p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .marinade p {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+}
+.bbq-preparing .marinade p:last-child {
+  margin-bottom: 0;
+}
+.bbq-preparing .marinade ul {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .marinade ul {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+}
+.bbq-preparing .marinade .bbq-box-light-content {
+  font-size: 18px;
+  padding: 10px;
+}
+.bbq-preparing .marinade .bbq-box-light-cta {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bbq-preparing .marinade .bbq-box-light-cta img {
+  margin-left: 10px;
+  width: 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .marinade {
+    top: 24px;
+    left: auto;
+    right: 20px;
+    width: 222px;
+    height: 243px;
+  }
+  .bbq-preparing .marinade br {
+    display: none;
+  }
+  .bbq-preparing .marinade h3 {
+    font-size: 16px;
+    height: 35px;
+  }
+  .bbq-preparing .marinade li {
+    margin-bottom: 0;
+  }
+  .bbq-preparing .marinade p,
+  .bbq-preparing .marinade ul {
+    margin-bottom: 1em;
+  }
+  .bbq-preparing .marinade .bbq-box-light-content {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .bbq-preparing .marinade .bbq-box-light-cta {
+    font-size: 12px;
+  }
+  .bbq-preparing .marinade .bbq-box-light-cta img {
+    width: 17px;
+  }
+}
+.bbq-preparing .light {
+  font-size: 24px;
+  padding: 20px;
+  top: 630px;
+  left: auto;
+  right: 20px;
+  width: 270px;
+  height: 94px;
+}
+.bbq-preparing .light p {
+  font-size: 24px;
+  width: 50%;
+}
+.bbq-preparing .light .bbq-box-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .light {
+    padding: 10px 20px;
+    top: 204px;
+    left: 380px;
+    width: 265px;
+    height: 77px;
+  }
+}
+.bbq-preparing .temperature {
+  top: 755px;
+  left: auto;
+  right: 20px;
+  width: 270px;
+  height: 60px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .temperature {
+    top: 291px;
+    left: 410px;
+    right: auto;
+    width: 213px;
+    height: 28px;
+  }
+  .bbq-preparing .temperature br {
+    display: none;
+  }
+}
+.bbq-preparing .oil {
+  font-size: 28px;
+  padding: 15px 20px;
+  top: 875px;
+  left: 350px;
+  width: 121px;
+  height: 248px;
+}
+.bbq-preparing .oil p {
+  font-size: 28px;
+}
+.bbq-preparing .oil .bbq-box-image {
+  -webkit-transform: rotate(90deg) translate(93%, -20%) scale(1.8);
+      -ms-transform: rotate(90deg) translate(93%, -20%) scale(1.8);
+          transform: rotate(90deg) translate(93%, -20%) scale(1.8);
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .oil {
+    top: 353px;
+    left: 380px;
+    width: 265px;
+    height: 59px;
+  }
+  .bbq-preparing .oil .bbq-box-image {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    -webkit-transform: rotate(0deg) translate(0, 0) scale(1);
+        -ms-transform: rotate(0deg) translate(0, 0) scale(1);
+            transform: rotate(0deg) translate(0, 0) scale(1);
+  }
+}
+.bbq-preparing .beer {
+  font-size: 22px;
+  padding: 15px 20px;
+  top: 875px;
+  left: auto;
+  right: 20px;
+  width: 121px;
+  height: 248px;
+}
+.bbq-preparing .beer p {
+  font-size: 22px;
+}
+.bbq-preparing .beer .bbq-box-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-preparing .beer {
+    top: 282px;
+    left: auto;
+    right: 20px;
+    width: 222px;
+    height: 131px;
+  }
+  .bbq-preparing .beer p {
+    width: 50%;
+  }
+  .bbq-preparing .beer .bbq-box-image {
+    bottom: 13px;
+  }
+}
+.bbq-grilling .utensils {
+  font-size: 35px;
+  padding: 20px;
+  top: 154px;
+  left: 20px;
+  width: 300px;
+  height: 211px;
+}
+.bbq-grilling .utensils p {
+  font-size: 35px;
+  margin-bottom: 0.5em;
+}
+.bbq-grilling .utensils .bbq-box-image {
+  width: 250px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .utensils {
+    font-size: 17px;
+    padding: 15px 20px;
+    top: 20px;
+    left: 80px;
+    width: 156px;
+    height: 115px;
+  }
+  .bbq-grilling .utensils p {
+    font-size: 17px;
+    margin-bottom: 0.5em;
+  }
+}
+.bbq-grilling .sear {
+  font-size: 40px;
+  padding: 20px;
+  top: 154px;
+  left: auto;
+  right: 20px;
+  width: 272px;
+  height: 277px;
+}
+.bbq-grilling .sear p {
+  font-size: 40px;
+}
+.bbq-grilling .sear .bbq-box-image {
+  float: right;
+  margin-left: 30px;
+  height: 180px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .sear {
+    font-size: 18px;
+    padding: 15px 20px;
+    top: 20px;
+    left: 267px;
+    width: 155px;
+    height: 157px;
+  }
+  .bbq-grilling .sear p {
+    font-size: 18px;
+  }
+  .bbq-grilling .sear .bbq-box-image {
+    height: 100px;
+  }
+}
+.bbq-grilling .spices {
+  font-size: 30px;
+  padding: 20px;
+  top: 460px;
+  left: 20px;
+  right: 20px;
+  height: 199px;
+}
+.bbq-grilling .spices footer {
+  background-color: #af0000;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+}
+@media (min-width: breakpoint-iphone) {
+  .bbq-grilling .spices footer {
+    font-size: 18px;
+  }
+}
+.bbq-grilling .spices p {
+  font-size: 30px;
+}
+.bbq-grilling .spices .bbq-box-image {
+  float: right;
+  margin-left: 150px;
+  margin-right: 40px;
+  width: 100px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .spices {
+    font-size: 20px;
+    padding: 10px 20px;
+    top: 190px;
+    left: 80px;
+    width: 342px;
+    height: 113px;
+  }
+  .bbq-grilling .spices footer {
+    font-size: 10px;
+  }
+  .bbq-grilling .spices p {
+    font-size: 20px;
+    width: 70%;
+  }
+  .bbq-grilling .spices .bbq-box-image {
+    margin-top: -6px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 50px;
+  }
+}
+.bbq-grilling .turn,
+.bbq-grilling .sprinkle {
+  font-size: 25px;
+  padding: 20px;
+  top: 719px;
+  left: 20px;
+  width: 271px;
+  height: 161px;
+}
+.bbq-grilling .turn p,
+.bbq-grilling .sprinkle p {
+  font-size: 25px;
+}
+.bbq-grilling .turn .bbq-box-image,
+.bbq-grilling .sprinkle .bbq-box-image {
+  float: right;
+  margin-left: 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .turn,
+  .bbq-grilling .sprinkle {
+    font-size: 18px;
+    padding: 15px 20px;
+    top: 182px;
+    left: 452px;
+    width: 197px;
+    height: 120px;
+  }
+  .bbq-grilling .turn p,
+  .bbq-grilling .sprinkle p {
+    font-size: 16px;
+  }
+  .bbq-grilling .turn .bbq-box-image,
+  .bbq-grilling .sprinkle .bbq-box-image {
+    margin-left: 0;
+  }
+}
+.bbq-grilling .sprinkle {
+  top: 938px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .sprinkle {
+    top: 20px;
+    height: 115px;
+  }
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .turn p {
+    font-size: 18px;
+  }
+}
+.bbq-grilling .cooking {
+  top: 685px;
+  left: auto;
+  right: 20px;
+  width: 301px;
+  height: 413px;
+}
+.bbq-grilling .cooking h3 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+  text-align: center;
+  height: 62px;
+}
+.bbq-grilling .cooking h4 {
+  margin-bottom: 0;
+}
+.bbq-grilling .cooking li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+.bbq-grilling .cooking .bbq-box-light-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 10px;
+}
+.bbq-grilling .cooking .bbq-quadrant {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 14px;
+  text-align: center;
+}
+.ie .bbq-grilling .cooking .bbq-quadrant {
+  -webkit-flex-basis: calc(50% - 12px);
+      -ms-flex-preferred-size: calc(50% - 12px);
+          flex-basis: calc(50% - 12px);
+}
+.bbq-grilling .cooking .bbq-quadrant:nth-child(1) {
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+.bbq-grilling .cooking .bbq-quadrant:nth-child(2) {
+  border-bottom: 1px solid #444;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+.bbq-grilling .cooking .bbq-quadrant:nth-child(3) {
+  border-right: 1px solid #444;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+.bbq-grilling .cooking .bbq-quadrant:nth-child(4) {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.bbq-grilling .cooking .bbq-quadrant ul {
+  margin-left: 0;
+}
+.bbq-grilling .cooking .bbq-quadrant .two {
+  text-align: right;
+}
+.bbq-grilling .cooking .bbq-quadrant-image {
+  display: inline;
+  margin-bottom: 0;
+  width: 50px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-grilling .cooking {
+    top: 20px;
+    left: auto;
+    right: 20px;
+    width: 222px;
+    height: 282px;
+  }
+  .bbq-grilling .cooking h3 {
+    font-size: 16px;
+    height: 35px;
+  }
+  .bbq-grilling .cooking h4 {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  .bbq-grilling .cooking .bbq-box-light-content {
+    padding: 10px;
+  }
+  .bbq-grilling .cooking .bbq-quadrant {
+    font-size: 12px;
+  }
+  .bbq-grilling .cooking .bbq-quadrant-image {
+    margin-bottom: 0;
+    width: 50px;
+  }
+}
+.bbq-serving .rest {
+  padding: 20px;
+  top: 154px;
+  left: 20px;
+  right: 20px;
+  height: 277px;
+}
+.bbq-serving .rest h4 {
+  color: #fff;
+  font-size: 37px;
+  line-height: 1;
+  margin-bottom: 0.7em;
+  width: 66%;
+}
+.bbq-serving .rest p {
+  font-size: 18px;
+  line-height: 1.4;
+  width: 70%;
+}
+.ios .bbq-serving .rest p {
+  font-size: 18px;
+}
+.bbq-serving .rest .bbq-box-image {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  height: 277px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .rest {
+    top: 20px;
+    left: 80px;
+    width: 344px;
+    height: 179px;
+  }
+  .bbq-serving .rest h4 {
+    font-size: 18px;
+    margin-bottom: 0.4em;
+    width: 80%;
+  }
+  .bbq-serving .rest p {
+    font-size: 13px;
+    width: 80%;
+  }
+  .bbq-serving .rest .bbq-box-image {
+    right: 15px;
+    height: 179px;
+  }
+}
+.bbq-serving .again,
+.bbq-serving .enjoy {
+  padding: 20px;
+  top: 563px;
+  left: 20px;
+  width: 287px;
+  height: 182px;
+}
+.bbq-serving .again p,
+.bbq-serving .enjoy p {
+  width: 50%;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .again p,
+  .bbq-serving .enjoy p {
+    font-size: 18px;
+  }
+}
+.bbq-serving .again .bbq-box-image,
+.bbq-serving .enjoy .bbq-box-image {
+  position: absolute;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .again,
+  .bbq-serving .enjoy {
+    padding: 8px 20px;
+    top: 138px;
+    left: 452px;
+    width: 224px;
+    height: 58px;
+  }
+  .bbq-serving .again p,
+  .bbq-serving .enjoy p {
+    width: 75%;
+  }
+}
+.bbq-serving .again {
+  font-size: 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .again {
+    width: 200px;
+  }
+}
+.bbq-serving .again p {
+  font-size: 30px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .again p {
+    font-size: 18px;
+  }
+}
+.bbq-serving .again .bbq-box-image {
+  right: 20px;
+  bottom: 20px;
+  width: 70px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .again .bbq-box-image {
+    bottom: 14px;
+    width: 35px;
+  }
+}
+.bbq-serving .enjoy {
+  font-size: 24px;
+  left: auto;
+  right: 20px;
+}
+.bbq-serving .enjoy p {
+  font-size: 24px;
+}
+.bbq-serving .enjoy .bbq-box-image {
+  right: 0;
+  top: 20px;
+  height: 130px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .enjoy .bbq-box-image {
+    top: 40px;
+    height: 100px;
+  }
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .enjoy {
+    padding: 15px 20px;
+    top: 20px;
+    width: 220px;
+    height: 177px;
+  }
+  .bbq-serving .enjoy p {
+    width: 60%;
+  }
+}
+.bbq-serving .plan {
+  top: 459px;
+  left: 172px;
+  width: 300px;
+  height: 75px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-serving .plan {
+    top: 20px;
+    left: 452px;
+    width: 200px;
+    height: 49px;
+  }
+  .bbq-serving .plan br {
+    display: none;
+  }
+}
+.bbq-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bbq-lines-desktop {
+  display: none;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-lines-desktop {
+    display: block;
+  }
+}
+.bbq-lines-desktop .bbq-line-1-image {
+  top: 92px;
+  left: 170px;
+}
+.bbq-lines-desktop .bbq-line-2-image {
+  top: 187px;
+  left: 170px;
+}
+.bbq-lines-desktop .bbq-line-3-image {
+  top: 65px;
+  left: 275px;
+}
+.bbq-lines-desktop .bbq-line-4-image {
+  top: 109px;
+  left: 272px;
+}
+.bbq-lines-desktop .bbq-line-5-image {
+  top: 260px;
+  left: 330px;
+}
+.bbq-lines-desktop .bbq-line-6-image {
+  top: 281px;
+  left: 509px;
+}
+.bbq-lines-desktop .bbq-line-7-image {
+  top: 319px;
+  left: 500px;
+}
+.bbq-lines-desktop .bbq-line-8-image {
+  top: 300px;
+  left: auto;
+  right: 228px;
+}
+.bbq-lines-desktop .bbq-line-9-image {
+  top: 77px;
+  left: 236px;
+}
+.bbq-lines-desktop .bbq-line-10-image {
+  top: 177px;
+  left: 343px;
+}
+.bbq-lines-desktop .bbq-line-11-image {
+  top: 133px;
+  left: 560px;
+}
+.bbq-lines-desktop .bbq-line-12-image {
+  top: 245px;
+  left: 423px;
+}
+.bbq-lines-desktop .bbq-line-13-image {
+  top: 46px;
+  left: 424px;
+}
+.bbq-lines-desktop .bbq-line-14-image {
+  top: 67px;
+  left: 555px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .bbq-lines-mobile {
+    display: none;
+  }
+}
+.bbq-lines-mobile .bbq-line-1-image {
+  top: 191px;
+  left: 215px;
+}
+.bbq-lines-mobile .bbq-line-2-image {
+  top: 234px;
+  left: 107px;
+}
+.bbq-lines-mobile .bbq-line-3-image {
+  top: 235px;
+  left: 215px;
+}
+.bbq-lines-mobile .bbq-line-4-image {
+  top: 234px;
+  left: 456px;
+}
+.bbq-lines-mobile .bbq-line-5-image {
+  top: 600px;
+  left: 486px;
+}
+.bbq-lines-mobile .bbq-line-6-image {
+  top: 724px;
+  left: 486px;
+}
+.bbq-lines-mobile .bbq-line-7-image {
+  top: 815px;
+  left: 395px;
+}
+.bbq-lines-mobile .bbq-line-8-image {
+  top: 815px;
+  left: 548px;
+}
+.bbq-lines-mobile .bbq-line-9-image {
+  top: 262px;
+  left: 320px;
+}
+.bbq-lines-mobile .bbq-line-10-image {
+  top: 430px;
+  left: 485px;
+}
+.bbq-lines-mobile .bbq-line-11-image {
+  top: 659px;
+  left: 158px;
+}
+.bbq-lines-mobile .bbq-line-12-image {
+  top: 880px;
+  left: 158px;
+}
+.bbq-lines-mobile .bbq-line-13-image {
+  top: 430px;
+  left: 320px;
+}
+.bbq-lines-mobile .bbq-line-14-image {
+  top: 495px;
+  left: 90px;
+}
+.bbq-lines-mobile .bbq-line-15-image {
+  top: 495px;
+  left: 470px;
+}
+.infographic-bbq.fr .bbq-lines-mobile .bbq-line-5-image {
+  top: 586px;
+  left: 464px;
+}
+.infographic-bbq.fr .bbq-lines-mobile .bbq-line-6-image {
+  top: 710px;
+  left: 464px;
+}
+.infographic-bbq.fr .bbq-preparing .bbq-box-light-content {
+  padding-bottom: 0;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-preparing .bbq-box-light-content {
+    padding-top: 7px;
+  }
+}
+.infographic-bbq.fr .bbq-preparing .beer {
+  font-size: 19px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-preparing .beer p {
+    width: 70%;
+  }
+}
+.infographic-bbq.fr .bbq-preparing .light p {
+  width: 66%;
+}
+.infographic-bbq.fr .bbq-preparing .marinade p,
+.infographic-bbq.fr .bbq-preparing .marinade ul {
+  margin-bottom: 20px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-preparing .marinade p,
+  .infographic-bbq.fr .bbq-preparing .marinade ul {
+    margin-bottom: 5px;
+  }
+}
+.infographic-bbq.fr .bbq-preparing .oil {
+  font-size: 25px;
+}
+.infographic-bbq.fr .bbq-preparing .wash {
+  font-size: 38px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-preparing .wash {
+    font-size: 27px;
+  }
+}
+.infographic-bbq.fr .bbq-grilling .sear {
+  font-size: 32px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-grilling .sear {
+    font-size: 13px;
+  }
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-grilling .spices {
+    font-size: 18px;
+  }
+}
+.infographic-bbq.fr .bbq-serving .rest h4 {
+  font-size: 35px;
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-serving .rest h4 {
+    font-size: 16px;
+  }
+}
+@media (min-width: breakpoint-infographic220px) {
+  .infographic-bbq.fr .bbq-serving .rest p {
+    font-size: 12px;
+  }
+}
+.infographic-bbq.fr .bbq-serving .again p,
+.infographic-bbq.fr .bbq-serving .enjoy p {
+  width: 59%;
+}
+.infographic-bbq.fr .bbq-serving .again p {
+  width: 75%;
+}

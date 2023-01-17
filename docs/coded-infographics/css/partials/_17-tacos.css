@@ -1,0 +1,191 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-tacos .flavoured-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.infographic-tacos .food-arc {
+  height: 100%;
+}
+.infographic-tacos .food-arc img {
+  display: inline-block;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-tacos .food-arc img {
+    position: absolute;
+    bottom: 0;
+  }
+  .infographic-tacos .food-arc img:first-child {
+    left: 0;
+  }
+  .infographic-tacos .food-arc img:nth-child(2) {
+    left: 10%;
+    bottom: 35%;
+  }
+  .infographic-tacos .food-arc img:nth-child(3) {
+    left: 30%;
+    bottom: 60%;
+  }
+  .infographic-tacos .food-arc img:nth-child(4) {
+    right: 30%;
+    bottom: 60%;
+  }
+  .infographic-tacos .food-arc img:nth-child(5) {
+    right: 10%;
+    bottom: 35%;
+  }
+  .infographic-tacos .food-arc img:last-child {
+    right: 0;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-tacos .food-center {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+.infographic-tacos .food-images-container {
+  position: relative;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-tacos .food-images-container {
+    padding-bottom: 58%;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-tacos .food-images-container {
+    opacity: 1;
+    transition: 0.1s;
+  }
+  .infographic-tacos .food-images-container:hover {
+    opacity: 0.9;
+  }
+}
+.infographic-tacos .ingredient-item {
+  display: inline-block;
+  font-size: 14px;
+}
+.infographic-tacos .ingredient-item:after {
+  color: the-red;
+  content: '+';
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.infographic-tacos .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-tacos .ingredient-item span {
+  font-weight: normal;
+}
+.infographic-tacos .ingredient-list {
+  list-style: none;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.tacos-container {
+  background: transparent url("../images/tacos/Background.svg") center center no-repeat;
+  background-size: cover;
+  border-bottom: 1px dotted the-grey-dotted;
+  padding-bottom: 100px;
+}
+.tacos-footer {
+  border-top: 1px solid the-red;
+  margin: 0 20px;
+  padding-top: 50px;
+  position: relative;
+  text-align: center;
+/* this CS forms the triangles-arrows */
+/* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+/* this border color controlls the outside, thin border */
+}
+@media (min-width: breakpoint-tablet) {
+  .tacos-footer {
+    margin: 0 40px;
+  }
+}
+.tacos-footer:after,
+.tacos-footer:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+.tacos-footer:after {
+  left: 50%;
+  border-color: #fff transparent transparent transparent;
+  border-width: 25px;
+}
+.tacos-footer:before {
+  left: 50%;
+  border-color: the-red transparent transparent transparent;
+  border-style: solid;
+  border-width: 26px;
+}
+.tacos-footer img {
+  display: inline-block;
+  width: 60%;
+}
+.tacos-header {
+  color: the-red;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.tacos-header .title-line {
+  background-color: the-red;
+  display: inline-block;
+  height: 1px;
+}
+.tacos-header h2 {
+  color: the-red;
+  display: inline-block;
+  font-family: font-face-heading !important;
+  font-size: 32px !important;
+  font-weight: normal;
+  line-height: 1 !important;
+  margin: 0 auto;
+  margin-top: 0 !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media (min-width: breakpoint-tablet) {
+  .tacos-header h2 {
+    font-size: 57.6px !important;
+  }
+}
+.tacos-top {
+  padding: 40px 20px 30px;
+}
+@media (min-width: breakpoint-tablet) {
+  .tacos-top {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

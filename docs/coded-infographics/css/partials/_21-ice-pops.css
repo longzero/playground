@@ -1,0 +1,340 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-ice-pops .ingredient-item {
+  color: the-red;
+  font-weight: 300;
+  line-height: 1;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ingredient-item {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ingredient-item {
+    font-size: 20px;
+  }
+}
+.infographic-ice-pops .ingredient-item:after {
+  content: ' + ';
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+.infographic-ice-pops .ingredient-item:last-child:after {
+  content: '';
+}
+.infographic-ice-pops .ingredient-item span {
+  font-weight: normal;
+}
+.infographic-ice-pops .ingredient-list {
+  list-style: none;
+  margin-bottom: 2em;
+  text-align: center;
+}
+@media (min-width: breakpoint-iphone-plus) {
+  .infographic-ice-pops .ingredient-list {
+    margin-top: 100px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ingredient-list {
+    margin-top: 60px;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    z-index: 5;
+    width: 160px;
+  }
+}
+.infographic-ice-pops .protip {
+  background-color: #fff;
+  margin: 10px 10px 0;
+  padding: 10px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .protip {
+    padding: 20px 30px;
+  }
+}
+.infographic-ice-pops .protip h3 {
+  color: the-red;
+}
+.infographic-ice-pops .protip p {
+  font-size: 14px;
+  margin: 0;
+}
+.infographic-ice-pops .steps-container {
+  clear: both;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .steps-container {
+    margin-bottom: 4em;
+    max-width: 33%;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .steps-container {
+    padding-left: 40px;
+  }
+}
+.infographic-ice-pops .steps-container h3 {
+  color: the-red;
+  font-size: 18.72px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.infographic-ice-pops .steps-list {
+  counter-reset: list-counter;
+}
+.infographic-ice-pops .step-item {
+  counter-increment: list-counter;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+.infographic-ice-pops .step-item:before {
+  color: the-red;
+  content: counter(list-counter) ".";
+  -webkit-flex-basis: 20px;
+      -ms-flex-preferred-size: 20px;
+          flex-basis: 20px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-weight: bold;
+}
+.infographic-ice-pops .ice-pop-container {
+  background-color: #eee;
+  background-position: center 70px;
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+  border-bottom: 1px dotted the-grey-dotted;
+  padding: 20px 10px;
+  position: relative;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ice-pop-container {
+    background-position: center 90px;
+    background-size: 60%;
+    padding: 20px;
+    min-height: 800px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-container {
+    height: 940px;
+  }
+}
+.infographic-ice-pops .ice-pop-container:last-child {
+  border-bottom: 0;
+}
+.infographic-ice-pops .ice-pop-container.coco {
+  background-color: #dffbfe;
+}
+.infographic-ice-pops .ice-pop-container.coco .ice-pop-header h2 span {
+  background-color: #dffbfe;
+}
+.infographic-ice-pops .ice-pop-container.mocha {
+  background-color: #fefbcd;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ice-pop-container.mocha {
+    min-height: 900px;
+  }
+}
+.infographic-ice-pops .ice-pop-container.mocha .ice-pop-header h2 span {
+  background-color: #fefbcd;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-container.mocha .steps-container {
+    margin-bottom: 2em;
+  }
+}
+.infographic-ice-pops .ice-pop-container.orange {
+  background-color: #edfabe;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-container.orange {
+    height: 910px;
+  }
+}
+.infographic-ice-pops .ice-pop-container.orange .ice-pop-header h2 span {
+  background-color: #edfabe;
+}
+.infographic-ice-pops .ice-pop-container.frosty {
+  background-color: #fadad6;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-container.frosty {
+    height: 910px;
+  }
+}
+.infographic-ice-pops .ice-pop-container.frosty .ice-pop-header h2 span {
+  background-color: #fadad6;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ice-pop-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    z-index: 5;
+  }
+}
+.infographic-ice-pops .ice-pop-header {
+  color: the-red;
+  position: relative;
+  text-align: center;
+}
+.infographic-ice-pops .ice-pop-header h2 {
+  color: the-red;
+  font-family: font-face-heading;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ice-pop-header h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-header h2 {
+    font-size: 60px;
+  }
+}
+.infographic-ice-pops .ice-pop-header h2:after {
+  background-color: the-red;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+}
+.infographic-ice-pops .ice-pop-header h2 span {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  z-index: 10;
+}
+.infographic-ice-pops .ice-pop-header .nickname {
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-header .nickname {
+    font-size: 22px;
+  }
+}
+.infographic-ice-pops .ice-pop-back-image,
+.infographic-ice-pops .ice-pop-front-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.infographic-ice-pops .ice-pop-back-image {
+  -webkit-animation: ice-pop-frames-reverse 2.5s infinite linear;
+          animation: ice-pop-frames-reverse 2.5s infinite linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+.infographic-ice-pops .ice-pop-front-image {
+  -webkit-animation: ice-pop-frames 2.5s infinite linear;
+          animation: ice-pop-frames 2.5s infinite linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  z-index: 3;
+}
+.infographic-ice-pops .ice-pop-image-container {
+  margin: 0 auto 20px;
+  position: relative;
+  width: 250px;
+}
+@media (min-width: breakpoint-iphone-plus) {
+  .infographic-ice-pops .ice-pop-image-container {
+    float: left;
+    width: 300px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-ice-pops .ice-pop-image-container {
+    float: none;
+    width: 400px;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-ice-pops .ice-pop-image-container {
+    width: 540px;
+  }
+}
+.infographic-ice-pops .ice-pop-main-image {
+  position: relative;
+  z-index: 2;
+}
+@-webkit-keyframes ice-pop-frames {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes ice-pop-frames {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes ice-pop-frames-reverse {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+@keyframes ice-pop-frames-reverse {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}

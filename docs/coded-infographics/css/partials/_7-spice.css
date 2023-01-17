@@ -1,0 +1,287 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-spice {
+  text-align: center;
+  width: 300px;
+  overflow-x: hidden;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-spice {
+    width: 460px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice {
+    width: 680px;
+  }
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-spice {
+    width: 740px;
+  }
+}
+@media (min-width: breakpoint-desktop) {
+  .infographic-spice {
+    width: auto;
+  }
+}
+.infographic-spice .perfect-box {
+  border: 1px solid the-red;
+  color: #fff;
+  margin-bottom: 1em;
+  padding: 10px;
+  position: relative;
+}
+.infographic-spice .perfect-box .round {
+  background-color: #fff;
+  z-index: 10;
+}
+.infographic-spice .perfect-box .round.round-1 {
+  top: -21px;
+  left: -21px;
+}
+.infographic-spice .perfect-box .round.round-2 {
+  top: -21px;
+  right: -21px;
+}
+.infographic-spice .perfect-box .round.round-3 {
+  bottom: -21px;
+  right: -21px;
+}
+.infographic-spice .perfect-box .round.round-4 {
+  bottom: -21px;
+  left: -21px;
+}
+.infographic-spice .perfect-border {
+  background-color: the-red;
+  border: 1px solid #fff;
+  padding: 10px;
+  position: relative;
+}
+.infographic-spice .perfect-border .round {
+  background-color: #fff;
+  z-index: 5;
+  width: 25px;
+  height: 25px;
+}
+.infographic-spice .perfect-border .round:before {
+  border-top-color: #fff;
+}
+.infographic-spice .perfect-border .round.round-1 {
+  top: -12px;
+  left: -12px;
+}
+.infographic-spice .perfect-border .round.round-2 {
+  top: -12px;
+  right: -12px;
+}
+.infographic-spice .perfect-border .round.round-3 {
+  bottom: -12px;
+  right: -12px;
+}
+.infographic-spice .perfect-border .round.round-4 {
+  bottom: -12px;
+  left: -12px;
+}
+.infographic-spice .perfect-list {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+  list-style: none;
+}
+.infographic-spice .perfect-title {
+  background-color: #fff;
+  color: the-red;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.infographic-spice .round {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.infographic-spice .round:before {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  border-top-color: the-red;
+  color: transparent;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+}
+.infographic-spice .round-1 {
+  top: -21px;
+  left: -21px;
+}
+.infographic-spice .round-1:before {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.infographic-spice .round-2 {
+  top: -21px;
+  right: -21px;
+}
+.infographic-spice .round-2:before {
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+.infographic-spice .round-3 {
+  bottom: -21px;
+  right: -21px;
+}
+.infographic-spice .round-3:before {
+  -webkit-transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+.infographic-spice .round-4 {
+  bottom: -21px;
+  left: -21px;
+}
+.infographic-spice .round-4:before {
+  -webkit-transform: rotate(405deg);
+      -ms-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+.infographic-spice .spice-container {
+  border: 1px solid the-red;
+  margin: 4em 10px;
+  padding: 50px 10px 40px;
+  position: relative;
+  max-width: 760px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-spice .spice-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-container {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+.infographic-spice .spice-container h2 {
+  line-height: 1;
+  margin-top: 0;
+}
+.infographic-spice .spice-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  width: 98%;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-spice .spice-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-content {
+    width: 55%;
+  }
+}
+.infographic-spice .spice-image-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  width: 70%;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-image-container {
+    margin-right: 20px;
+    margin-bottom: 0;
+    width: 45%;
+  }
+}
+.infographic-spice .spice-ingredients {
+  font-size: 16px;
+  list-style: none;
+  text-transform: uppercase;
+}
+.infographic-spice .spice-ingredients .ingredient {
+  border-bottom: 1px solid the-red;
+  color: #767676;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.infographic-spice .spice-ingredients .ingredient:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.infographic-spice .spice-name {
+  background-color: #fff;
+  color: the-red;
+  display: inline-block;
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-spice .spice-name {
+    font-size: 2.4em;
+  }
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-name {
+    font-size: 3em;
+  }
+}
+.infographic-spice .spice-name small,
+.infographic-spice .spice-name span {
+  display: block;
+  white-space: nowrap;
+}
+.infographic-spice .spice-name small {
+  font-family: roboto;
+  font-size: 11px;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-name small {
+    font-size: 15px;
+  }
+}
+.infographic-spice .spice-name span {
+  font-family: font-face-heading;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-spice .spice-name span {
+    font-size: 48px;
+  }
+}

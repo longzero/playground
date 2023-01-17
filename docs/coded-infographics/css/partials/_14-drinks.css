@@ -1,0 +1,239 @@
+/* Generated on: Thu Nov 03 2016 21:12:29 GMT-0400 (EDT) */
+.infographic-drinks {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.infographic-drinks section {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.infographic-drinks .equation-container {
+  border-bottom: 1px dotted the-grey-dotted;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.infographic-drinks .equation-element {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  text-align: center;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-drinks .equation-element {
+    -webkit-flex-basis: calc((100% - 30px * 3) / 4);
+        -ms-flex-preferred-size: calc((100% - 30px * 3) / 4);
+            flex-basis: calc((100% - 30px * 3) / 4);
+  }
+}
+.infographic-drinks .equation-element figcaption {
+  font-size: 0.9em;
+}
+@media (min-width: breakpoint-ipad) {
+  .infographic-drinks .equation-element img {
+    transition: 0.1s;
+  }
+  .infographic-drinks .equation-element img:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+.infographic-drinks .equation-header {
+  color: the-red;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: -5px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  white-space: nowrap;
+}
+.infographic-drinks .equation-name {
+  display: inline-block;
+  font-family: font-face-heading;
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .equation-name {
+    font-size: 2em;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-drinks .equation-name {
+    font-size: 2.8em;
+  }
+}
+.infographic-drinks .equation-number {
+  background-color: the-red;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-drinks .equation-number {
+    font-size: 1.2em;
+    width: 38px;
+    height: 38px;
+  }
+}
+.infographic-drinks .equation-operation {
+  color: the-red;
+  display: none;
+  -webkit-flex-basis: 20px;
+      -ms-flex-preferred-size: 20px;
+          flex-basis: 20px;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-drinks .equation-operation {
+    display: block;
+  }
+}
+.infographic-drinks .infographic-header {
+  background: url("/coded-infographics/images/drinks/Drinks-Header.jpg") no-repeat;
+  background-size: cover;
+  display: none;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-drinks .infographic-header {
+    padding-top: 50px;
+    padding-left: 60px;
+    height: 300px;
+  }
+}
+.infographic-drinks .infographic-header:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+.infographic-drinks .infographic-header.fr h2 {
+  width: auto;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .infographic-header.fr h2 {
+    width: 400px;
+  }
+}
+.infographic-drinks .infographic-header.fr .first {
+  margin-bottom: 10px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .infographic-header.fr .first {
+    font-size: 1.35em;
+  }
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .infographic-header.fr .main-title {
+    font-size: 2.7em;
+  }
+}
+.infographic-drinks .infographic-header h2 {
+  border-bottom: 1px solid the-red;
+  color: the-red;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: 0;
+  width: 280px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .infographic-header h2 {
+    width: 400px;
+  }
+}
+.infographic-drinks .infographic-header .first {
+  font-size: 0.7em;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-drinks .infographic-header .first {
+    font-size: 1em;
+  }
+}
+.infographic-drinks .infographic-header .main-title {
+  display: block;
+  font-family: font-face-heading;
+  font-size: 2em;
+  font-weight: normal;
+  white-space: nowrap;
+}
+@media (min-width: breakpoint-tablet) {
+  .infographic-drinks .infographic-header .main-title {
+    font-size: 2.4em;
+  }
+}
+@media (min-width: breakpoint-infographic) {
+  .infographic-drinks .infographic-header .main-title {
+    line-height: 1;
+  }
+}
+.infographic-drinks .infographic-summary {
+  color: the-red;
+  font-size: 0.9em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 280px;
+}
+@media (min-width: breakpoint-mobile) {
+  .infographic-drinks .infographic-summary {
+    width: 400px;
+  }
+}

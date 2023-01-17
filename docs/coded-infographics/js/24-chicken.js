@@ -1,0 +1,1 @@
+$('.special-touch-label').lettering();
