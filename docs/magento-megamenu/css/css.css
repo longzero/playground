@@ -1,0 +1,69 @@
+* {box-sizing: border-box;}
+
+/*.vmagicmenu:hover .block-vmagicmenu-content .vmagicmenu-narrow {display: block;}*/
+
+/* CSS JUST FOR DEVELOPMENT */
+.vmagicmenu .block-vmagicmenu-content .vmagicmenu-narrow > .level0:nth-child(3) .level-top-mega,
+.vmagicmenu .block-vmagicmenu-content .vmagicmenu-narrow {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* REAL CSS */
+@media (min-width: 992px) {
+  .header-bottom {max-width: 100%;}
+  /* Can't make position static for .nav-sections .vmagicmenu because it breaks hovering */
+  .header-bottom .col-lg-12,
+  .header-bottom .col-md-12,
+  .nav-sections .vmagicmenu,
+  .nav-sections-item-content .magicmenu,
+  .vmagicmenu li.level0 {position: static;}
+  .vmagicmenu .block-vmagicmenu-content {
+    --color-alizarin: #EE2726;
+    --color-prussian: #080033;
+    --color-1: #EE2726;
+    --color-2: #080033;
+    --main-column-width: 250px;
+    --megamenu-padding: 40px;
+    --navigation-height: 45px;
+    position: absolute; top: var(--navigation-height); left: 0; z-index: 100;
+    max-width: 100%;
+    max-height: calc(100vh - var(--navigation-height));
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .vmagicmenu .block-vmagicmenu-content .vmagicmenu-narrow {border: 0; padding-top: var(--megamenu-padding); padding-bottom: var(--megamenu-padding); position: relative;}
+  .vmagicmenu .level0 .level-top-mega, .vmagicmenu .level0 .level-top-mega .content-mega {box-shadow: none;}
+  .vmagicmenu .level0 .level-top-mega {border: 0; position: fixed; top: var(--navigation-height) !important; left: var(--main-column-width); width: calc(100vw - var(--main-column-width)); height: 100%;}
+  .vmagicmenu .level0 .level-top-mega .content-mega {padding: var(--megamenu-padding); max-height: calc(100vh - var(--navigation-height)); width: 100%; height: 100%; overflow: auto;}
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega {column-count: 2; column-gap: 20px; float: none;}
+  /* Use padding instead of margin to avoid causing a gap at the top of any column. */
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega > li {break-inside: avoid; padding-bottom: 40px;}
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega > li > a {display: inline-block; line-height: 1.4; padding-bottom: 10px; position: relative;}
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega > li > a::after {background-color: var(--color-1); content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;}
+  .vmagicmenu .level0 .level-top-mega .mage-column .children {width: auto;}
+  .vmagicmenu .level1 .submenu {display: block;}
+  .vmagicmenu .vmagicmenu-narrow > li, .vmagicmenu .vmagicmenu-narrow > li:nth-child(n+11) {display: block;}
+  .vmagicmenu .vmagicmenu-narrow > li {padding-left: 0; padding-top: .5rem; padding-bottom: .5rem;}
+  /* These selectors target the same element, but they are both there for the purpose of overriding. */
+  .vmagicmenu .vmagicmenu-narrow > .level0 > .level-top,
+  .vmagicmenu .vmagicmenu-narrow > li > a {border: 0; line-height: 1.4; padding-left: 20px; max-width: var(--main-column-width);}
+}
+
+
+
+@media (min-width: 1024px) {
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega {column-count: 3;}
+}
+
+
+
+@media (min-width: 1300px) {
+  .vmagicmenu .block-vmagicmenu-content {
+    --main-column-width: 443px;
+  }
+  .vmagicmenu .level0 .level-top-mega .content-mega .cat-mega {column-count: 4;}
+}
