@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>page-scroll-animation inside laptop</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/css.css"> -->
+  <script type="text/javascript" src="../js/live.js"></script>
+
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .laptop-image {display: block; position: relative; z-index: var(--layer-laptop); width: 100%;}
+    .laptop-screen {
+      margin: var(--laptop-image-edge-top-percentage) auto 0;
+      position: absolute; top: 0; left: 50%; z-index: var(--layer-screenshot); transform: translateX(-50%);
+      width: var(--laptop-image-resolution-width-percentage);
+      height: var(--laptop-image-resolution-height-percentage);
+    }
+    .laptop-screenshot {
+      animation: scroll 20s ease-in-out infinite;
+      display: block;
+    }
+    .laptop-wrapper {
+      --layer-laptop: 100;
+      --layer-screenshot: calc(var(--layer-laptop) - 1);
+      --laptop-image-width: 826;
+      --laptop-image-height: 468;
+      --laptop-image-resolution-width: 580;
+      --laptop-image-resolution-height: 363; /* Measurement must include the top edge */
+      --laptop-image-resolution-width-percentage: calc(100% * var(--laptop-image-resolution-width) / var(--laptop-image-width));
+      --laptop-image-resolution-height-percentage: calc(100% * var(--laptop-image-resolution-height) / var(--laptop-image-height));
+      --laptop-image-edge-top: 13; /* Don't know why the percentage does not work with 25 (actual px measure when laptop is real size) */
+      --laptop-image-edge-top-percentage: calc(100% * var(--laptop-image-edge-top) / var(--laptop-image-height));
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .laptop-wrapper img {max-width: 100%;}
+  </style>
+</head>
+<body>
+
+<div class="laptop-wrapper" style="width: 200px;">
+  <img class="laptop-image" src="images/laptop.png" alt="">
+  <div class="laptop-screen">
+    <img class="laptop-screenshot" src="images/screenshot.png" alt="">
+  </div>
+</div>
+
+<div class="laptop-wrapper">
+  <img class="laptop-image" src="images/laptop.png" alt="">
+  <div class="laptop-screen">
+    <img class="laptop-screenshot" src="images/screenshot.png" alt="">
+  </div>
+</div>
+
+</body>
+</html>
