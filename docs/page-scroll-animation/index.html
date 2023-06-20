@@ -9,12 +9,8 @@
 
   <style>
     @keyframes scroll {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-100%);
-      }
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-100%);}
     }
 
     .laptop-image {display: block; position: relative; z-index: var(--layer-laptop); width: 100%;}
@@ -24,10 +20,7 @@
       width: var(--laptop-image-resolution-width-percentage);
       height: var(--laptop-image-resolution-height-percentage);
     }
-    .laptop-screenshot {
-      animation: scroll 20s ease-in-out infinite;
-      display: block;
-    }
+    .laptop-screenshot {animation: scroll 20s ease-in-out infinite; display: block;}
     .laptop-wrapper {
       --layer-laptop: 100;
       --layer-screenshot: calc(var(--layer-laptop) - 1);
