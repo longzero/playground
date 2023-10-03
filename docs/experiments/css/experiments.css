@@ -1,0 +1,28 @@
+:root {
+  --color-1: #639;
+  --color-link: var(--color-1);
+  --site-width: 1220px;
+  --site-width-small: 1000px;
+}
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+html, body {min-height: 100vh; width: 100%;}
+html {font-size: 16px; scroll-behavior: smooth;}
+body {background-color: #fff; font-family: Helvetica, Arial, sans-serif; line-height: 1.4; overflow-x: hidden;}
+a {color: var(--color-link); cursor: pointer; text-decoration: none;}
+button {cursor: pointer;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600; margin-bottom: 1rem;}
+iframe, img, video {max-width: 100%;}
+p, ul, ol {margin-bottom: 1em;}
+p:last-child, ul:last-child, ol:last-child {margin-bottom: 0;}
+ul, ol {padding-left: 20px;}
+li::marker {color: var(--color-1);}
+.container {margin: 0 auto; padding: 0 20px; max-width: var(--site-width); width: 100%;}
+.container--small {max-width: var(--site-width-small);}
+
+.testing-css-clamp {font-size: clamp(20px, 3vw, 50px);}
+
+/* Breakpoint is established by using --site-width-small and adding padding left and right. */
+@media (min-width: 1040px) {
+  .container--small {padding: 0;}
+}
