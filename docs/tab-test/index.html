@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>page-scroll-animation inside laptop</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/css.css"> -->
+  <script type="text/javascript" src="../js/live.js"></script>
+
+  <style type="text/css">
+    .category-selector-content {display: none;}
+    .category-selector-content.active {display: block;}
+    .category-selector-mobile-item {
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%228%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%232B2B2B%22%20d%3D%22M6%207.206a.803.803%200%200%200%20.584-.264l4.771-4.884a.715.715%200%200%200%20.214-.521.74.74%200%200%200-.741-.747c-.201%200-.396.082-.54.226l-4.282%204.4-4.294-4.4a.781.781%200%200%200-.54-.226.74.74%200%200%200-.74.747c0%20.207.075.383.213.521l4.778%204.884c.17.176.357.264.577.264Z%22%2F%3E%3C%2Fsvg%3E');
+        background-color: #F7F7F7; background-position: calc(100% - 12px) 50%; background-repeat: no-repeat;
+        border: 1px solid #D6D6D6; border-radius: var(--radius); display: block; font-size: 1rem; line-height: 1; margin-bottom: 16px; padding: 12px 8px; position: relative; width: 100%;
+    }
+    /*.category-selector-mobile-item::after {
+         content: ''; pointer-events: none; position: absolute; top: 50%; right: 12px; transform: translateY(-50%);
+    }*/
+    .category-selector-tab-item {display: none;}
+    .category-selector-title {display: flex; align-items: center; gap: 20px; font-size: calc(20 * var(--rem)); font-weight: 800; margin-top: 20px; margin-bottom: 20px;}
+    .category-selector-title svg {display: block;}
+
+    @media (min-width: 768px) {
+        .category-selector-header {display: flex;  align-items: center; justify-content: space-between;}
+        .category-selector-mobile-item {display: none;}
+        .category-selector-tabs {display: flex; gap: 10px;}
+        .category-selector-tab-item {background-color: #fff; border: 1px solid rgba(237, 237, 237, 1); border-radius: 50px; box-shadow: 0px 2px 6px 0px rgba(28, 39, 49, 0.08); cursor: pointer; display: block; font-weight: 800; line-height: calc(22 / 16); padding: 11px 20px; transition: .3s;}
+        .category-selector-tab-item:hover, .category-selector-tab-item.active {background-color: var(--color-1); color: #fff;}
+    }
+
+
+    .container {margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; max-width: var(--site-width); width: 100%;}
+    @media (min-width: 1320px) {
+      .container {padding-left: 0; padding-right: 0;}
+    }
+
+    .data-card {background-color: #fff; border: 0.699029px solid #EDEDED; border-radius: 7px; box-shadow: 0px 1.398058295249939px 4.194174766540527px 0px rgba(28, 39, 49, 0.08); color: #0F1121; margin-left: auto; margin-right: auto; margin-bottom: 16px; max-width: 412px; width: 100%; overflow: hidden;}
+    .data-card .card {color: inherit;}
+    .data-card .card__image--author .card__content > a {font-weight: 800;}
+    .data-card .ratio--16-9 {display: block;}
+    .data-card-content {display: block; padding: 14px;}
+    .data-card-date {font-size: calc(12 * var(--rem)); margin-top: 5px; margin-bottom: 10px;}
+    .data-card-excerpt {color: #6F707A; font-size: calc(13 * var(--rem)); line-height: calc(18 / 13); margin-bottom: 7px;}
+    .data-card-tag {background-color: var(--color-1); color: #fff; border-radius: 20px; display: block; font-size: calc(12 * var(--rem)); font-weight: 800; float: right; padding: 3px 7px;}
+    .data-card-title {display: block; font-size: calc(17 * var(--rem)); font-weight: 800; line-height: calc(22 / 17); margin-bottom: 7px;}
+
+    @media (min-width: 768px) {
+        .category-selector-content.active {
+            --column-count: 2; --gap: 22px; --gap-count: calc(var(--column-count) - 1);
+            display: flex; flex-wrap: wrap; gap: var(--gap);
+        }
+        .data-card {max-width: calc(100% / var(--column-count) - var(--gap) * var(--gap-count) / var(--column-count));}
+    }
+    @media (min-width: 1024px) {
+        .category-selector-content.active {--column-count: 3;}
+    }
+  </style>
+</head>
+<body>
+
+  <section class="container category-selector">
+    <header class="category-selector-header">
+      <div class="category-selector-title">
+      <svg viewBox="0 0 38 39" xmlns="http://www.w3.org/2000/svg" width="38" height="39" fill="none"><path fill="#D2E4DB" d="M9.355 17.859a8.555 8.555 0 1 0 0-17.109 8.555 8.555 0 0 0 0 17.109Z"></path><path fill="#D2E4DB" d="M29.674 15.013a2.565 2.565 0 0 1-1.024-1.543 2.612 2.612 0 0 1 .271-1.844c.998-1.775-.331-3.849-2.147-3.849a2.54 2.54 0 0 0-.753.119 2.454 2.454 0 0 1-1.82-.142 2.538 2.538 0 0 1-1.243-1.367 2.551 2.551 0 0 0-.92-1.177 2.465 2.465 0 0 0-2.818 0c-.415.289-.736.7-.92 1.177-.23.6-.674 1.089-1.242 1.368-.569.28-1.219.33-1.821.14-1.72-.54-3.248.848-3.248 2.447.002.449.12.89.342 1.276a2.61 2.61 0 0 1 .271 1.844 2.562 2.562 0 0 1-1.024 1.543c-.337.23-.614.541-.804.907-.19.366-.29.774-.288 1.189a2.58 2.58 0 0 0 .596 1.683c.391.469.935.777 1.532.866a2.49 2.49 0 0 1 1.52.861c.39.463.605 1.054.606 1.665 0 .064 0 .127-.008.191-.025.353.02.708.136 1.042.115.334.296.64.532.899.237.259.523.465.841.605.318.14.661.21 1.008.208a2.423 2.423 0 0 0 1.681-.686 2.471 2.471 0 0 1 1.7-.681c.63 0 1.236.243 1.699.68.277.27.612.469.979.581.366.112.753.135 1.129.066a2.48 2.48 0 0 0 1.495-.862c.383-.46.594-1.043.595-1.647 0-.068 0-.136-.008-.203-.007-.068 0-.127 0-.188 0-.612.215-1.203.605-1.667.39-.464.93-.77 1.521-.863a2.475 2.475 0 0 0 1.534-.865 2.58 2.58 0 0 0 .596-1.684c0-.414-.101-.822-.293-1.186a2.483 2.483 0 0 0-.808-.903Zm-5.722 3.079a4.246 4.246 0 0 1-2.049 1.407 4.161 4.161 0 0 1-2.468.005 4.246 4.246 0 0 1-2.055-1.397 4.428 4.428 0 0 1-.473-4.805 4.3 4.3 0 0 1 1.741-1.788 4.173 4.173 0 0 1 4.702.463c.432.362.79.807 1.054 1.31a4.418 4.418 0 0 1 .323 3.311 4.38 4.38 0 0 1-.781 1.497l.006-.003Z"></path><path fill="#044424" d="M23.872 11.324a4.983 4.983 0 0 0-5.612-.554 5.135 5.135 0 0 0-2.08 2.133 5.288 5.288 0 0 0 .56 5.737 5.07 5.07 0 0 0 2.452 1.67 4.97 4.97 0 0 0 2.946-.002 5.072 5.072 0 0 0 2.448-1.676 5.275 5.275 0 0 0 1.122-3.804 5.23 5.23 0 0 0-1.837-3.502l.001-.002Zm-.569 6.235c-.281.366-.63.671-1.029.897a3.37 3.37 0 0 1-2.635.296 3.398 3.398 0 0 1-1.195-.647 3.485 3.485 0 0 1-.856-1.07 3.555 3.555 0 0 1-.237-2.7c.138-.443.361-.854.657-1.208a3.409 3.409 0 0 1 1.03-.87 3.337 3.337 0 0 1 1.623-.412c.647 0 1.281.189 1.828.543.547.355.984.86 1.26 1.46a3.568 3.568 0 0 1-.446 3.711Z"></path><path fill="#044424" d="M30.142 14.314a1.724 1.724 0 0 1-.684-1.033c-.093-.42-.03-.86.178-1.235a3.422 3.422 0 0 0 0-3.394 3.374 3.374 0 0 0-1.21-1.25 3.28 3.28 0 0 0-1.66-.467 3.394 3.394 0 0 0-1 .154 1.64 1.64 0 0 1-1.432-.217 1.696 1.696 0 0 1-.615-.785 3.394 3.394 0 0 0-1.225-1.566 3.28 3.28 0 0 0-1.875-.59c-.668 0-1.322.205-1.874.59-.553.384-.98.93-1.225 1.566-.155.4-.452.725-.832.91-.38.186-.813.218-1.215.09a3.218 3.218 0 0 0-2.945.506 3.394 3.394 0 0 0-1.3 2.042c-.171.822-.037 1.68.377 2.407.212.373.278.813.186 1.234-.093.42-.337.79-.684 1.035a3.32 3.32 0 0 0-1.07 1.21 3.405 3.405 0 0 0-.383 1.584 3.447 3.447 0 0 0 .797 2.234 3.308 3.308 0 0 0 2.033 1.153c.396.063.756.269 1.017.579.26.31.405.705.406 1.115v.129c-.037.464.021.93.17 1.37a3.37 3.37 0 0 0 3.173 2.292 3.22 3.22 0 0 0 2.244-.911 1.66 1.66 0 0 1 1.136-.453c.422 0 .827.162 1.137.453l.24.225h.025c.57.444 1.266.685 1.982.686.193 0 .385-.018.575-.052a3.31 3.31 0 0 0 1.985-1.154 3.448 3.448 0 0 0 .79-2.19c0-.087 0-.174-.009-.263v-.128c.002-.409.147-.804.407-1.114.26-.31.62-.515 1.016-.58a3.307 3.307 0 0 0 2.034-1.152c.52-.623.804-1.416.798-2.234 0-.554-.133-1.1-.39-1.587a3.323 3.323 0 0 0-1.078-1.209Zm-1.63 4.506a3.294 3.294 0 0 0-2.03 1.144 3.432 3.432 0 0 0-.8 2.223c0 .082 0 .165.008.246v.145c0 .405-.141.797-.4 1.105-.257.308-.615.51-1.007.572a1.582 1.582 0 0 1-1.406-.436l-.24-.225h-.027a3.297 3.297 0 0 0-2.169-.671 3.311 3.311 0 0 0-2.09.895 1.61 1.61 0 0 1-1.119.461 1.724 1.724 0 0 1-.688-.15 1.758 1.758 0 0 1-.575-.415 1.685 1.685 0 0 1-.426-1.282c0-.085.009-.168.009-.251a3.474 3.474 0 0 0-.811-2.213 3.336 3.336 0 0 0-2.019-1.15 1.647 1.647 0 0 1-1.03-.58 1.717 1.717 0 0 1-.394-1.133c-.002-.277.064-.55.192-.793a1.64 1.64 0 0 1 .54-.603 3.41 3.41 0 0 0 1.366-2.054 3.474 3.474 0 0 0-.36-2.457 1.73 1.73 0 0 1-.23-.853c.003-.27.068-.537.19-.777a1.73 1.73 0 0 1 .51-.608 1.602 1.602 0 0 1 1.475-.248 3.262 3.262 0 0 0 2.422-.184 3.375 3.375 0 0 0 1.655-1.818c.124-.32.339-.593.617-.786a1.65 1.65 0 0 1 1.884 0c.278.193.493.467.616.786.309.797.9 1.445 1.655 1.816.755.37 1.619.437 2.42.186.167-.053.34-.08.515-.082.293.005.58.087.83.24.253.153.46.37.605.632a1.695 1.695 0 0 1 0 1.702 3.492 3.492 0 0 0-.354 2.455 3.428 3.428 0 0 0 1.36 2.054c.226.152.411.36.539.604.127.244.193.516.19.793.009.414-.132.816-.394 1.131a1.647 1.647 0 0 1-1.03.58Z"></path><path fill="#044424" d="m23.604 32.85-2.17-2.219a1.19 1.19 0 0 0-.855-.361 1.17 1.17 0 0 0-.856.37l-2.083 2.178V25.46h-1.656v8.481c-.002.246.07.487.203.692.133.204.324.363.546.456a1.18 1.18 0 0 0 1.321-.284l2.539-2.643 2.615 2.674a1.18 1.18 0 0 0 1.31.262c.22-.093.408-.25.54-.453.132-.202.202-.44.203-.682v-9.445h-1.657v8.332Z"></path></svg>
+      <span>Must read</span>
+    </div>
+    <div class="category-selector-tabs">
+      <button class="category-selector-tab-item" data-category-tab="1">
+      Beauty
+      </button>
+      <button class="category-selector-tab-item" data-category-tab="2">
+      Food
+      </button>
+      <button class="category-selector-tab-item" data-category-tab="3">
+      Health
+      </button>
+      <button class="category-selector-tab-item" data-category-tab="4">
+      Life
+      </button>
+      <button class="category-selector-tab-item" data-category-tab="5">
+      Travel
+      </button>
+      <select class="category-selector-mobile-item" name="" id="">
+        <option class="category-selector-mobile-item" data-category-tab="1">
+          Beauty
+        </option>
+        <option class="category-selector-mobile-item" data-category-tab="2">
+          Food
+        </option>
+        <option class="category-selector-mobile-item" data-category-tab="3">
+          Health
+        </option>
+        <option class="category-selector-mobile-item" data-category-tab="4">
+          Life
+        </option>
+        <option class="category-selector-mobile-item" data-category-tab="5">
+          Travel
+        </option>
+      </select>
+    </div>
+  </header>
+  <div class="category-selector-content" data-category-content="1">
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/beauty/best-shampoo-hair-type-budget/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="411px" alt="The best shampoo for each hair type and budget" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-754x523.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-600x416.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-377x261.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w" srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-754x523.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-600x416.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-377x261.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="The best shampoo for each hair type and budget" data-sizes="auto" class="lazyautosizes lazyloaded" src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-150x150.jpg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/best-shampoo-hair-type-150x150.jpg" sizes="411px">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">January 11, 2022</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/beauty/best-shampoo-hair-type-budget/">The best shampoo for each hair type and budget</a>
+          <div class="data-card-excerpt">When you're standing in front of the shampoo aisle at the store, you might wonder why in the world...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/amuraviov/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/amuraviov/">Alexandre</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/beauty/10-outfits-prove-meghan-markle-queen-fashion/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="411px" alt="10 outfits that prove Meghan Markle is the queen of fashion" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-1000x667.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-754x503.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-600x400.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-377x252.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w" srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-1000x667.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-754x503.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-600x400.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-377x252.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="10 outfits that prove Meghan Markle is the queen of fashion" data-sizes="auto" class="lazyautosizes lazyloaded" src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-150x150.jpg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/gettyimages-937000624-1523650865-150x150.jpg" sizes="411px">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">September 6, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/beauty/10-outfits-prove-meghan-markle-queen-fashion/">10 outfits that prove Meghan Markle is the queen of fashion</a>
+          <div class="data-card-excerpt">Some celebrities have trouble finding their own personal style and are unfortunately&nbsp;often...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/beauty/heres-prolong-tan-summer-ends/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="411px" alt="Here’s how to prolong your tan after summer ends" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage-377x211.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w" srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage-377x211.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="Here’s how to prolong your tan after summer ends" data-sizes="auto" class="lazyautosizes lazyloaded" src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage-150x150.jpg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bronzage-150x150.jpg" sizes="411px">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 30, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/beauty/heres-prolong-tan-summer-ends/">Here’s how to prolong your tan after summer ends</a>
+          <div class="data-card-excerpt">The summer season is a favourable time for various outdoor activities. Whether you enjoy hiking,...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category-selector-content" data-category-content="2">
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/food/vegan-keto-breakfast-ideas/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="Vegan keto breakfast ideas for egg-free mornings" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21-600x413.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21-377x259.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="Vegan keto breakfast ideas for egg-free mornings" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2022/01/Capture-d’écran-le-2019-04-20-à-08.40.21-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">January 11, 2022</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/food/vegan-keto-breakfast-ideas/">Vegan keto breakfast ideas for egg-free mornings</a>
+          <div class="data-card-excerpt">Adding variety into your low carb plant-based lunches and dinners can be quite easy. But when it...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/amuraviov/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/amuraviov/">Alexandre</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/food/10-banana-bread-recipes-for-every-taste/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="10 banana bread recipes for every taste" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh-377x274.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="10 banana bread recipes for every taste" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/htrhtrhrh-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">March 25, 2020</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/food/10-banana-bread-recipes-for-every-taste/">10 banana bread recipes for every taste</a>
+          <div class="data-card-excerpt">It's raining, you are bored and a couple of forgotten bananas in your fruit bowl are starting...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/amuraviov/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/amuraviov/">Alexandre</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/food/keto-guide-eating-fast-food-united-states/">
+
+          <picture gr-vgrid="mb-1">
+            <source type="image/webp" alt="Keto guide to eating fast food in the United States" sizes="auto" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.webp 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.webp 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.webp 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf-377x272.webp 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.webp 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <source sizes="auto" alt="Keto guide to eating fast food in the United States" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf-377x272.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="Keto guide to eating fast food in the United States" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/09/ngfngfngfnf-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">September 6, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/food/keto-guide-eating-fast-food-united-states/">Keto guide to eating fast food in the United States</a>
+          <div class="data-card-excerpt">Whether you’re on the go, with friends or stuck with an undying desire to hit the closest fast...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/mrocheleau/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(https://secure.gravatar.com/avatar/c5c5fb18e180d679bdfa710733d06eb1?s=80&amp;d=mm&amp;r=g)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/mrocheleau/">Marie-Joël Rocheleau</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category-selector-content" data-category-content="3">
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/health/most-and-least-tax-friendly-states-in-the-us-for-seniors/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="Most and Least Tax-Friendly States in the US for Seniors" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors-1000x562.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors-754x423.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors-600x337.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors-377x212.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="Most and Least Tax-Friendly States in the US for Seniors" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2019/11/most-least-tax-friendly-states-us-seniors-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">November 6, 2019</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/health/most-and-least-tax-friendly-states-in-the-us-for-seniors/">Most and Least Tax-Friendly States in the US for Seniors</a>
+          <div class="data-card-excerpt">During your retirement years, you will need to ensure you make the most out of your finances. When...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/amuraviov/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/amuraviov/">Alexandre</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/health/10-superb-pokemon-planters-created-with-game-boy-consoles/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="10 superb Pokemon planters created with Game Boy consoles" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida-600x423.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida-377x266.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="10 superb Pokemon planters created with Game Boy consoles" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/projet-waku-waku-island-jardins-pokémon-game-boy-winnie-sumida-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 30, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/health/10-superb-pokemon-planters-created-with-game-boy-consoles/">10 superb Pokemon planters created with Game Boy consoles</a>
+          <div class="data-card-excerpt">Creativity is&nbsp;an aptitude&nbsp;not everybody is born with or can develop. It takes a lot of...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/health/10-step-morning-routine-worthy-wellness-influencer/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="The 10 step morning routine worthy of a wellness influencer" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth-377x268.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="The 10 step morning routine worthy of a wellness influencer" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythytyhth-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 29, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/health/10-step-morning-routine-worthy-wellness-influencer/">The 10 step morning routine worthy of a wellness influencer</a>
+          <div class="data-card-excerpt">They are radiant, zen and full of energy. Influencers have&nbsp;a je-ne-sais-quoi so many women yearn...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category-selector-content" data-category-content="4">
+    <p>No posts.</p>
+  </div>
+  <div class="category-selector-content" data-category-content="5">
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/travel/prettiest-islands-visit-caribbean-holiday/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="The prettiest islands to visit during your Caribbean holiday" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-754x424.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-600x337.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-377x212.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="The prettiest islands to visit during your Caribbean holiday" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bfbfdbfdb-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 29, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/travel/prettiest-islands-visit-caribbean-holiday/">The prettiest islands to visit during your Caribbean holiday</a>
+          <div class="data-card-excerpt">The Caribbean is a&nbsp;travel destination favoured by many people. In fact, people like to go there...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/life/top-10-prettiest-apple-orchards-united-states/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="Top 10 prettiest apple orchards in the United States" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt-600x447.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt-377x281.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="Top 10 prettiest apple orchards in the United States" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/hythtyhyt-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 29, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/life/top-10-prettiest-apple-orchards-united-states/">Top 10 prettiest apple orchards in the United States</a>
+          <div class="data-card-excerpt">The arrival of September is synonymous with many things but for fall amateurs as well as...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-card data-card--article">
+      <div class="card card--hover" data-gtag-event-action="homepage" data-gtag-event-category="navigation" data-gtag-event-label="categories">
+        <a class="ratio--16-9" href="https://betterbe.atddev.dev/travel/10-wine-bar-suggestions-try-new-york-city/">
+
+          <picture gr-vgrid="mb-1">
+            <source sizes="auto" alt="10 wine bar suggestions to try in New York City" data-srcset="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city-1000x625.jpg 1000w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city-754x471.jpg 640w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city-600x375.jpg 600w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city-377x236.jpg 320w,
+            https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city.jpg 100w,
+            https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg 32w">
+            <img alt="10 wine bar suggestions to try in New York City" data-sizes="auto" class="lazyload" src="https://betterbe.atddev.dev/wp-content/themes/magnify/dist/img/betterbe/placeholder.svg" data-src="https://betterbe.atddev.dev/wp-content/uploads/sites/12/2018/08/bar-vin-new-york-city-150x150.jpg">
+
+          </picture>
+        </a>
+        <div class="data-card-content">
+          <div class="data-card-tag">this is a category name</div>
+          <div class="data-card-date">August 29, 2018</div>
+          <a class="data-card-title" href="https://betterbe.atddev.dev/travel/10-wine-bar-suggestions-try-new-york-city/">10 wine bar suggestions to try in New York City</a>
+          <div class="data-card-excerpt">For wine lovers, travelling is the perfect opportunity to discover new grape varieties and new...</div>
+          <div class="author-small" gr-vgrid="mth-1">
+            <div class="card card--horizontal card--author card--author--small">
+              <a class="card__image card__image--author card__image--author--small" href="https://betterbe.atddev.dev/author/estirling/">
+                <div class="ratio--1-1 card__image__author" style="background-image: url(/wp-content/uploads/sites/12/2018/09/meghan-markle_2-80x80.jpg)">
+                </div>
+              </a>
+              <div class="card__content u-text-small">
+                <a href="https://betterbe.atddev.dev/author/estirling/">EMMA EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let categoryContent = document.querySelectorAll('[data-category-content]')
+    let categoryTabs = document.querySelectorAll('[data-category-tab]')
+    if (categoryContent.length && categoryTabs.length) {
+      let oneTabIsActive = false // When the page load, show the first category.
+      for (let i = 0; i < categoryContent.length; i++) {
+        if (categoryTabs[i].classList.contains('active')) {
+          oneTabIsActive = true
+        }
+        categoryTabs[i].addEventListener('click', function(){
+          for (let j = 0; j < categoryContent.length; j++) {
+            categoryTabs[j].classList.remove('active')
+            categoryContent[j].classList.remove('active')
+          }
+          this.classList.add('active')
+          categoryContent[i].classList.add('active')
+        })
+      }
+      if (oneTabIsActive === false) {
+        categoryContent[0].classList.add('active')
+        categoryTabs[0].classList.add('active')
+      }
+    }
+  </script>
+
+  </section>
+</body>
+</html>
