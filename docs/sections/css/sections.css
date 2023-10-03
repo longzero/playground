@@ -11,15 +11,17 @@ p:last-child, ul:last-child, ol:last-child {margin-bottom: 0;}
 .container {margin: 0 auto; padding: 0 20px; max-width: 1220px; width: 100%;}
 .container--small {max-width: 1010px;}
 
-.layout-columns {--gap: 20px; flex-wrap: wrap; justify-content: space-between; gap: var(--gap);}
+.layout-columns {--gap: 20px; display: flex; flex-wrap: wrap; gap: var(--gap);}
 .layout-column {
   --column-count: 1; --gap-count: calc(var(--column-count) - 1);
-  max-width: calc(100% / var(--column-count) - var(--gap) * var(--gap-count) / var(--column-count));
-  width: 100%;
+  flex-shrink: 0;
+  width: calc(100% / var(--column-count) - var(--gap) * var(--gap-count) / var(--column-count));
 }
+/* Use this class to let column fill the space */
+.layout-column--grow {flex-grow: 1;}
 
 @media (min-width: 768px) {
-  .layout-columns {--column-count: 2; display: flex; align-items: center; justify-content: space-between;}
+  .layout-columns {--column-count: 2;}
   .layout-columns--reverse {flex-direction: row-reverse;}
   .layout-column--50 {--column-count: 2;}
 }
