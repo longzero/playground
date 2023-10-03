@@ -1,0 +1,29 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+html, body {overflow-x: hidden;}
+html {font-size: 16px; scroll-behavior: smooth;}
+body {background-color: #fff; color: #000;}
+a {cursor: pointer; text-decoration: none;}
+button {cursor: pointer;}
+h1, h2, h3, h4, h5, h6, p, ul, ol {margin-bottom: 1rem;}
+iframe, img, svg, video {max-width: 100%;}
+p:last-child, ul:last-child, ol:last-child {margin-bottom: 0;}
+
+.container {margin: 0 auto; padding: 0 20px; max-width: 1220px; width: 100%;}
+.container--small {max-width: 1010px;}
+
+.layout-columns {--gap: 20px; flex-wrap: wrap; justify-content: space-between; gap: var(--gap);}
+.layout-column {
+  --column-count: 1; --gap-count: calc(var(--column-count) - 1);
+  max-width: calc(100% / var(--column-count) - var(--gap) * var(--gap-count) / var(--column-count));
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .layout-columns {--column-count: 2; display: flex; align-items: center; justify-content: space-between;}
+  .layout-columns--reverse {flex-direction: row-reverse;}
+  .layout-column--50 {--column-count: 2;}
+}
+
+@media (min-width: 1024px) {
+  .layout-column--30 {--column-count: 3;}
+}
