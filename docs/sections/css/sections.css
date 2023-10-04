@@ -1,3 +1,7 @@
+@import url("imports/blog-cards.css");
+@import url("imports/cards.css");
+@import url("imports/two-columns.css");
+
 * {box-sizing: border-box; margin: 0; padding: 0;}
 html, body {overflow-x: hidden;}
 html {font-size: 16px; scroll-behavior: smooth;}
@@ -23,9 +27,10 @@ p:last-child, ul:last-child, ol:last-child {margin-bottom: 0;}
 @media (min-width: 768px) {
   .layout-columns {--column-count: 2;}
   .layout-columns--reverse {flex-direction: row-reverse;}
-  .layout-column--50 {--column-count: 2;}
+  .layout-column--25, .layout-column--50 {--column-count: 2;}
 }
 
 @media (min-width: 1024px) {
+  .layout-column--25 {--column-count: 4;}
   .layout-column--30 {--column-count: 3;}
 }

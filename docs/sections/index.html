@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Sections</title>
+
+  <link  rel="stylesheet" type="text/css"  media="all" href="https://cfmoto.ca/static/version1693221252/_cache/merged/64104aa188e2cd6c9d574f3c470b4b27.min.css" />
+  <link  rel="stylesheet" type="text/css"  media="all" href="https://cfmoto.ca/static/version1693221252/_cache/merged/2dd680664a687a8bf38218bfd0cbd2bf.min.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap" rel="stylesheet">
@@ -11,29 +15,26 @@
     body {font-family: 'DM Sans', sans-serif;}
   </style>
   <link rel="stylesheet" type="text/css" href="css/sections.css">
+
+  <style>
+    :root {
+      --font-size: 16;
+      --rem: 1 / var(--font-size) * 1rem;
+    }
+  </style>
 </head>
 <body>
 
-  <style>
-    .two-columns {padding-top: 50px; padding-bottom: 50px;}
-    .two-columns__heading {font-size: 3em; font-weight: 700; line-height: 1.1;}
-    @media (min-width: 768px) {
-      .two-columns__heading {margin-bottom: 0;}
-    }
-  </style>
+  <section class="site-section" w3-include-html="includes/two-columns.html"></section>
+  <!-- <hr style="margin: 100px 0;"> -->
+  <section class="site-section" w3-include-html="includes/cards.html"></section>
+  <!-- <hr style="margin: 100px 0;"> -->
+  <section class="site-section" w3-include-html="includes/blog-cards.html"></section>
 
-  <div class="container layout-columns two-columns rte">
-    <div class="layout-column layout-column--50 layout-column--grow two-columns__heading">
-      More great content for SEO
-    </div>
-    <div class="layout-column layout-column--50 layout-column--grow two-columns__details">
-      Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ducimus quidem, quasi? Quis deleniti reiciendis est consectetur aliquam asperiores vero quas dicta fugit incidunt, earum voluptatem, voluptatibus, nulla dignissimos dolorum eaque!
-    </div>
-  </div>
 
   <!-- <hr style="margin: 100px 0;"> -->
 
-  <div class="container layout-columns rte">
+  <!-- <div class="container layout-columns rte">
     <div class="layout-column layout-column--30">
       <img src="images/baby-yoda-11.jpg" alt="">
     </div>
@@ -43,9 +44,11 @@
     <div class="layout-column layout-column--30">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis inventore explicabo aperiam, qui dolore, sed, similique, fuga corporis laboriosam commodi at voluptate magnam? Cumque nam veritatis delectus labore, ratione aut!
     </div>
-  </div>
+  </div> -->
 
-  <div class="container layout-columns rte">
+  <!-- <hr style="margin: 100px 0;"> -->
+
+  <!-- <div class="container layout-columns rte">
     <div class="layout-column layout-column--50 ">
       <img src="images/baby-yoda-11.jpg" alt="">
     </div>
@@ -61,7 +64,7 @@
     <div class="layout-column layout-column--50">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ut, provident facere velit, iusto neque quod nulla laborum nemo, nesciunt at harum. Provident incidunt, consequatur odit quasi corporis nihil, et pariatur vel eos ullam. Culpa voluptatem aut dignissimos magnam ad, ab modi, sequi perferendis, enim eos laborum quaerat nam, illo quos! Voluptatum, perferendis, minima consequuntur aspernatur expedita obcaecati! Laboriosam praesentium molestias, mollitia beatae, a fugiat suscipit veritatis accusamus dolores, odit voluptatum doloremque enim debitis commodi nam quasi earum temporibus, voluptas dignissimos quibusdam tempore eos hic illo dolorum sequi? Quam officia at nemo facilis est laudantium maiores rerum repudiandae autem veritatis!
     </div>
-  </div>
+  </div> -->
 
 
 
