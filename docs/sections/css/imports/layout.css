@@ -1,0 +1,27 @@
+.container {margin: 0 auto; padding: 0 20px; max-width: 1220px; width: 100%;}
+.container--small {max-width: 1010px;}
+
+.layout-columns {--gap: 20px; display: flex; flex-wrap: wrap; gap: var(--gap);}
+.layout-column {
+  --column-count: 1; --gap-count: calc(var(--column-count) - 1);
+  --column-width: calc(100% / var(--column-count) - var(--gap) * var(--gap-count) / var(--column-count));
+  flex-shrink: 0;
+  width: var(--column-width);
+}
+/* Use this class to let column fill the space */
+.layout-column--grow {flex-grow: 1;}
+
+@media (min-width: 768px) {
+  .layout-columns {--column-count: 2;}
+  .layout-columns--reverse {flex-direction: row-reverse;}
+  .layout-column--25, .layout-column--50 {--column-count: 2;}
+}
+
+@media (min-width: 1024px) {
+  .layout-column--25 {--column-count: 4;}
+  .layout-column--30 {--column-count: 3;}
+}
+
+@media (min-width: 1220px) {
+  .layout-columns {--gap: 25px;}
+}
