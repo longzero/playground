@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Charts</title>
+  <style>
+    body {font-family: system-ui, sans-serif;}
+    [data-count-up] {font-size: 3rem; margin-bottom: 1em;}
+  </style>
+  <!-- <link rel="stylesheet" type="text/css" href="css/count-up.css"> -->
+</head>
+<body>
+
+  <div class="container container--small" style="margin: 0 auto; max-width: 400px;">
+    <h1 style="margin: 1em 0 2em;">countUp</h1>
+
+    <div data-count-up>123</div>
+    <div data-count-up>123123123</div>
+  </div>
+
+  <script>
+    const DEBUG = true
+
+    // TURN OFF CONSOLE MESSAGES BY UNCOMMENTING THESE LINES
+    // https://stackoverflow.com/questions/1215392/how-to-quickly-and-conveniently-disable-all-console-log-statements-in-my-code
+    // console.error = function() {}
+    // console.info = function() {}
+    // console.log = function() {}
+    // console.warn = function() {}
+
+    DEBUG && console.log("JS")
+
+  </script>
+
+
+  <script type="text/javascript" src="../js/live.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="js/countUp.js"></script>
+
+</body>
+</html>
