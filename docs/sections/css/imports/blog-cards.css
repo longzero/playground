@@ -17,7 +17,7 @@
   .blog-card .button {margin: 0 var(--card-spacing-padding) var(--card-spacing-padding)}
 }
 @media (min-width: 1300px) {
-  .blog-card {--card-spacing-padding: 40px;}
+  .blog-card {--card-spacing-padding: 40px; --card-spacing-gap: 40px;}
 }
 @media (max-width: 1023px) {
   .blog-card .button {border-left: 0; border-right: 0; border-bottom: 0; border-color: currentColor; border-radius: 0; width: 100%;}

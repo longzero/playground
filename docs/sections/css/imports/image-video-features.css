@@ -11,7 +11,7 @@
 .image-video--features .image-video__media {margin: 0;}
 .image-video--features .image-video__media img, .image-video--features .image-video__media video {display: block;}
 .image-video--features .image-video__media img {object-fit: cover; width: 100%; height: 100%;}
-.image-video--features .image-video__title {font-size: clamp(30px, 5vw, 70px)}
+.image-video--features .image-video__title {font-size: clamp(30px, 5vw, 70px); margin-bottom: clamp(20px, 3vw, 45px)}
 
 @media (min-width: 768px) {
   .image-video--features .container {display: flex; align-items: stretch; flex-direction: row;}
