@@ -3,6 +3,12 @@
     font-size: clamp(30px, 4vw, 70px);
     font-weight: 700; line-height: 1.1;
 }
+
 @media (min-width: 768px) {
+  .two-columns__details, .two-columns__heading {align-self: center;}
   .two-columns__heading {margin-bottom: 0;}
+}
+
+@media (min-width: 1400px) {
+  .two-columns {--gap: 50px;}
 }

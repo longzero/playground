@@ -1,0 +1,41 @@
+.model-banner {background-color: var(--color-3); color: #000; margin-bottom: 50px; padding: 0;}
+.model-banner + .model-banner {margin-top: -50px;}
+.model-banner .container {padding: 0}
+
+.model-banner__description {font-size: calc(18 * var(--rem)); font-weight: 500; margin-top: 1em;}
+.model-banner__details {
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: clamp(20px, 3.65vw, 70px);
+  padding-top: clamp(40px, 5vw, 60px); padding-bottom: clamp(40px, 5.75vw, 110px);
+}
+.model-banner__details-top {margin-bottom: clamp(45px, 8.35vw, 160px);}
+.model-banner__media img {object-fit: cover; width: 100%; height: 100%;}
+.model-banner__media img:nth-child(1), .owl-carousel .owl-item .model-banner__media img:nth-child(1) {display: none}
+.model-banner__media-details {
+  background-color: var(--color-1); color: #fff; font-size: clamp(30px, 3vw, 45px); font-weight: 700;
+  line-height: 1.2; padding: 50px; text-align: center;
+}
+.model-banner__media-details .button {border-color: currentColor; color: currentColor;}
+.model-banner__media-one-liner {margin-bottom: 20px;}
+.model-banner__note {color: #555; font-size: calc(14 * var(--rem)); margin-top: 20px;}
+.model-banner__options {margin-top: clamp(20px, 3vw, 50px);}
+.model-banner__options > a {margin: 5px 0;}
+.model-banner__price-value, .model-banner__promo-value {font-weight: 500; line-height: 1;}
+.model-banner__price-value {font-size: clamp(26px, 3vw, 50px); margin-bottom: 5px;}
+.model-banner__promo-value {color: var(--color-2); font-size: clamp(1rem, 3vw, 30px);}
+.model-banner__title {font-size: clamp(30px, 5.3vw, 100px); font-weight: 700; line-height: 1;}
+
+@media (min-width: 1024px) {
+  .model-banner .container {display: flex; align-items: stretch; gap: 0;}
+  .model-banner__details, .model-banner__media {flex-shrink: 0; width: 50%;}
+  .model-banner__media {position: relative;}
+  .model-banner__media img:nth-child(1), .owl-carousel .owl-item .model-banner__media img:nth-child(1) {display: block}
+  .model-banner__media img:nth-child(2), .owl-carousel .owl-item .model-banner__media img:nth-child(2) {display: none}
+  .model-banner__media-details {
+    background-color: transparent; color: #ddd; padding: 0;
+    position: absolute; top: clamp(20px, 3.7vw, 70px); right: clamp(20px, 3.7vw, 70px);
+    text-align: right; max-width: 50%;
+  }
+  .model-banner--reverse .model-banner__details {order: 1000;}
+  .model-banner--reverse .model-banner__media-details {right: auto; left: clamp(20px, 3.7vw, 70px); text-align: left;}
+}
