@@ -25,6 +25,7 @@
 .model-banner__promo-value {color: var(--color-2); font-size: clamp(1rem, 3vw, 30px);}
 .model-banner__title {font-size: clamp(30px, 5.3vw, 100px); font-weight: 700; line-height: 1;}
 
+.model-banner-slider {margin-bottom: 50px;}
 .model-banner-slider .model-banner {margin-bottom: 0;}
 .model-banner-slider.owl-carousel button.owl-dot {border: 1px solid #aaa; border-radius: 50%; line-height: 1; margin: 0 5px; min-height: 0; width: 20px; height: 20px;}
 .model-banner-slider.owl-carousel button.owl-dot.active {background-color: var(--color-1); border-color: var(--color-1)}

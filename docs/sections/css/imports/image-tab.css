@@ -1,0 +1,23 @@
+.image-tab {
+  --background-color: var(--color-1); --copy-color: #fff;
+  color: var(--copy-color); margin-bottom: 100px; padding: 0; position: relative; text-align: center;
+}
+.image-tab .container {align-items: stretch; gap: 0; padding: 0;}
+.image-tab .image-video {padding: 0;}
+.image-tab__body {align-self: center; flex-grow: 1; padding: clamp(20px, 3vw, 50px);}
+.image-tab__image {display: block; object-fit: cover; width: 100%; height: 100%;}
+.image-tab__media {color: #fff; position: relative; width: 100%;}
+.image-tab__navigation {padding: 20px; position: absolute; bottom: 0; left: 0; z-index: 1000; text-align: left; text-shadow: 0 0 10px rgba(0,0,0,.7); text-transform: uppercase; width: 100%}
+.image-tab__navigation-link {color: currentColor; display: block; margin-top: 20px; transition: .3s; white-space: nowrap;}
+.image-tab__navigation-link:hover {color: var(--color-1)}
+.image-tab__text {font-size: calc(20 * var(--rem))}
+.image-tab__text ul {list-style-position: inside; padding: 0;}
+.image-tab__title {font-size: clamp(30px, 3.8vw, 70px); font-weight: 700; text-transform: uppercase}
+.image-tab__title + .image-tab__text {margin-top: clamp(1rem, 3vw, 2rem);}
+.image-tab__track {background-color: var(--background-color);}
+
+@media (min-width: 1024px) {
+  .image-tab__media, .image-tab__navigation {flex-shrink: 0; max-width: calc(100% * 1118 / 1920); width: 100%;}
+  .image-tab__navigation {text-align: center;}
+  .image-tab__navigation-link {display: inline-block; margin: 0 20px;}
+}
