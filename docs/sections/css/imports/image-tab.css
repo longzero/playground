@@ -7,9 +7,27 @@
 .image-tab__body {align-self: center; flex-grow: 1; padding: clamp(20px, 3vw, 50px);}
 .image-tab__image {display: block; object-fit: cover; width: 100%; height: 100%;}
 .image-tab__media {color: #fff; position: relative; width: 100%;}
-.image-tab__navigation {padding: 20px; position: absolute; bottom: 0; left: 0; z-index: 1000; text-align: left; text-shadow: 0 0 10px rgba(0,0,0,.7); text-transform: uppercase; width: 100%}
-.image-tab__navigation-link {color: currentColor; display: block; margin-top: 20px; transition: .3s; white-space: nowrap;}
-.image-tab__navigation-link:hover {color: var(--color-1)}
+.image-tab__navigation {
+  display: flex; align-items: flex-end; padding: 20px;
+  position: absolute; top: 0; left: 0; z-index: 1000;
+  text-align: center; text-shadow: 0 0 10px rgba(0,0,0,.7); text-transform: uppercase; width: 100%;
+  overflow: auto;
+}
+.image-tab__navigation::before {
+  content: ''; display: block; padding-bottom: 100%; width: 100%;
+}
+.image-tab__navigation-link {
+  color: currentColor; display: inline-block; margin-top: 20px; margin: 0 20px;
+  position: relative; transition: .3s; white-space: nowrap;
+}
+/*.image-tab__navigation-link:hover {color: var(--color-1)}*/
+.image-tab__navigation-link::after, .image-tab__navigation-link::after {
+  background-color: #fff; content: ''; display: block; position: absolute; bottom: 0; left: 0;
+  transform: scaleX(0); transition: .3s; width: 100%; height: 2px;
+}
+.image-tab__navigation-link:hover::after, .image-tab__navigation-link.active::after {
+  box-shadow: 0 0 10px rgba(0,0,0,.7); transform: scaleX(1);
+}
 .image-tab__text {font-size: calc(20 * var(--rem))}
 .image-tab__text ul {list-style-position: inside; padding: 0;}
 .image-tab__title {font-size: clamp(30px, 3.8vw, 70px); font-weight: 700; text-transform: uppercase}

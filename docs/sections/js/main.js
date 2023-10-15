@@ -92,9 +92,10 @@ $(imageTabSelector).owlCarousel({
 
 $(imageTabSelector).find('img').removeAttr('loading');
 
-$('.js-image-tab--ID .js-image-tab-navigation-item').click(function(){
-  console.log($(this).index())
+$('.js-image-tab--ID .js-image-tab-navigation-link').click(function(){
   $('.js-image-tab--ID .owl-carousel').trigger('to.owl.carousel', $(this).index())
+  $('.js-image-tab--ID .js-image-tab-navigation-link').removeClass('active')
+  $(this).addClass('active')
 });
 
 
