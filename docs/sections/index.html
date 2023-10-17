@@ -25,19 +25,12 @@
       return hasTrailingSlash;
     }
 
+    // If the URL has no trailing slash and does not end with a file extension, change it so it includes a trailing slash.
     if (!hasTrailingSlash() && !hasFileExtension()) {
       console.log("no trailing slash")
       url += '/';
       window.location.href = url
     }
-    else if (hasFileExtension()) {
-      console.log("hasFileExtension")
-    }
-    else {
-      console.log("hasTrailingSlash")
-    }
-    console.log("trailing " + url)
-    // window.location.href = url
   </script>
 
   <meta charset="utf-8">
