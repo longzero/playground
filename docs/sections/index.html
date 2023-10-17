@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <script>
+    // Get the current URL.
+    let url = window.location.href;
+
+    function hasFileExtension() {
+      // Split the URL to check the last part to see if there is a dot which would likely indicate a file extension.
+      const parts = url.split('/');
+
+      // Check if the URL ends with a file extension.
+      const hasFileExtension = parts[parts.length - 1].indexOf('.') !== -1;
+
+      // Return true if the URL has a trailing slash and does not end with a file extension.
+      return hasFileExtension;
+    }
+
+    function hasTrailingSlash() {
+      // Check if the URL ends with a trailing slash.
+      const hasTrailingSlash = url.endsWith('/');
+
+      // Return true if the URL has a trailing slash and does not end with a file extension.
+      return hasTrailingSlash;
+    }
+
+    if (!hasTrailingSlash() && !hasFileExtension()) {
+      console.log("no trailing slash")
+      url += '/';
+      window.location.href = url
+    }
+    else if (hasFileExtension()) {
+      console.log("hasFileExtension")
+    }
+    else {
+      console.log("hasTrailingSlash")
+    }
+    console.log("trailing " + url)
+    // window.location.href = url
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Sections</title>
