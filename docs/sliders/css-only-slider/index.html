@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Pure CSS Premium Slider</title>
+    <meta name="description" content="A high-end, smooth CSS-only slider showcasing luxury travel destinations with zero JavaScript.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero-header">
+        <nav class="nav-bar">
+            <div class="logo">LUMINA<span>.</span></div>
+            <div class="nav-links">
+                <a href="#">Expeditions</a>
+                <a href="#">Privé</a>
+                <a href="#">Journal</a>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Escape the Ordinary<span>.</span></h1>
+            <p>Curated luxury experiences for the discerning traveler. Explore our most exclusive destinations through this seamless pure CSS experience.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="slider-section">
+            <div class="slider-container">
+                <!-- Radio inputs for CSS control -->
+                <input type="radio" name="slider" id="slide-1" checked>
+                <input type="radio" name="slider" id="slide-2">
+                <input type="radio" name="slider" id="slide-3">
+                <input type="radio" name="slider" id="slide-4">
+                <input type="radio" name="slider" id="slide-5">
+
+                <!-- The Slider -->
+                <div class="slides">
+                    <!-- Slide 1 -->
+                    <div class="slide bg-overlay" style="--bg-url: url('assets/resort-1.png')">
+                        <div class="slide-info">
+                            <span class="location">Maldives</span>
+                            <h2>Azure Serenity</h2>
+                            <p>Overwater villas with private lagoons and endless horizon views.</p>
+                            <a href="#" class="btn-primary">Reserve Suite</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide bg-overlay" style="--bg-url: url('https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&q=80&w=1400')">
+                        <div class="slide-info">
+                            <span class="location">Swiss Alps</span>
+                            <h2>Alpine Zenith</h2>
+                            <p>Modern luxury meets the raw beauty of the snow-capped peak peaks.</p>
+                            <a href="#" class="btn-primary">View Chalet</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide bg-overlay" style="--bg-url: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1400')">
+                        <div class="slide-info">
+                            <span class="location">Kyoto, Japan</span>
+                            <h2>Koto Sanctuary</h2>
+                            <p>Traditional aesthetics blended with contemporary comfort in the heart of Gion.</p>
+                            <a href="#" class="btn-primary">Explore Ryokan</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide bg-overlay" style="--bg-url: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1400')">
+                        <div class="slide-info">
+                            <span class="location">Dubai, UAE</span>
+                            <h2>Skyline Aura</h2>
+                            <p>Ultra-luxury rooftop living with breathtaking panoramas of the global city.</p>
+                            <a href="#" class="btn-primary">Book Penthouse</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide bg-overlay" style="--bg-url: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1400')">
+                        <div class="slide-info">
+                            <span class="location">Serengeti, Tanzania</span>
+                            <h2>Wild Horizon</h2>
+                            <p>An immersive safari experience with zero compromise on luxury.</p>
+                            <a href="#" class="btn-primary">Start Safari</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="dots">
+                    <label for="slide-1" class="dot" id="dot-1"></label>
+                    <label for="slide-2" class="dot" id="dot-2"></label>
+                    <label for="slide-3" class="dot" id="dot-3"></label>
+                    <label for="slide-4" class="dot" id="dot-4"></label>
+                    <label for="slide-5" class="dot" id="dot-5"></label>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="prev-arrows">
+                    <label for="slide-5" class="arrow prev" id="prev-1"></label>
+                    <label for="slide-1" class="arrow prev" id="prev-2"></label>
+                    <label for="slide-2" class="arrow prev" id="prev-3"></label>
+                    <label for="slide-3" class="arrow prev" id="prev-4"></label>
+                    <label for="slide-4" class="arrow prev" id="prev-5"></label>
+                </div>
+                <div class="next-arrows">
+                    <label for="slide-2" class="arrow next" id="next-1"></label>
+                    <label for="slide-3" class="arrow next" id="next-2"></label>
+                    <label for="slide-4" class="arrow next" id="next-3"></label>
+                    <label for="slide-5" class="arrow next" id="next-4"></label>
+                    <label for="slide-1" class="arrow next" id="next-5"></label>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>0% JavaScript</h3>
+                <p>Built entirely with CSS logic, ensuring maximum performance and reliability across all devices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Hardware Accelerated</h3>
+                <p>Uses GPU-powered transitions for buttery smooth scrolling even on low-powered mobile displays.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Adapts fluidly to any screen size while maintaining the premium aesthetic and tactile feel.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lumina Luxury Travel. All Rights Reserved. Crafted with Pure CSS.</p>
+    </footer>
+
+</body>
+</html>
