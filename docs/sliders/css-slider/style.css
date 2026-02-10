@@ -287,8 +287,20 @@ body {
 .nav-arrow.prev::after { transform: rotate(-135deg); margin-left: 4px; }
 .nav-arrow.next::after { transform: rotate(45deg); margin-right: 4px; }
 
+.nav-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.nav-arrow.disabled:hover {
+  background: var(--glass);
+  border-color: var(--glass-border);
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
-  .nav-arrow { display: none; }
+  /* .nav-arrow { display: none; } */
 }
 
 /* Info Section */

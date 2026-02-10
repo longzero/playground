@@ -43,11 +43,21 @@ To change dot styling (colors, size):
 
 ### 3. Disabling/Enabling Arrows
 To remove the arrows:
-- **HTML**: Delete or comment out the `<button>` elements with IDs `prevBtn` and `nextBtn`.
+- **HTML**: Delete or comment out the `<button>` elements with classes `nav-arrow prev` and `nav-arrow next`.
 - **CSS**: You can hide them on specific screen sizes by modifying the `.nav-arrow` class in `style.css`. By default, they are hidden on mobile using a media query:
   ```css
   @media (max-width: 768px) {
     .nav-arrow { display: none; }
+  }
+  ```
+
+To customize the disabled state (when arrows are at boundaries or content fits in viewport):
+- Modify the `.nav-arrow.disabled` class in `style.css`:
+  ```css
+  .nav-arrow.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
   ```
 
@@ -82,5 +92,7 @@ Change the core look in the `:root` block of `style.css`:
 
 - **Native Scrolling**: Uses standard browser scrolling with `scroll-snap-type: x mandatory`.
 - **Adaptive Dots**: The JS calculates `numDots = Math.ceil(maxScroll / slideWidth) + 1` so that dots only appear for reachable "pages" in the current viewport.
+- **Intelligent Arrows**: Arrows automatically hide when all slides fit in the viewport. When scrollable, they disable at boundaries (prev at start, next at end) with visual feedback.
 - **Hardware Acceleration**: Transitions use `transform` and `opacity` to maintain 60FPS.
 - **Accessibility**: Arrows and dots include `aria-labels`, and slides are focusable via `tabindex`.
+- **Multi-Slider Support**: Multiple independent sliders can coexist on the same page without conflicts.

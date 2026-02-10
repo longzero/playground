@@ -1,128 +1,195 @@
-const slider = document.getElementById('slider');
-const dotsContainer = document.getElementById('dotsContainer');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const slides = document.querySelectorAll('.slide');
-
 /**
- * 1. Helper to get dynamic metrics
- * Returns the width of one slide step (slide + gap)
+ * Multi-Slider Support
+ * Initializes all sliders on the page independently
  */
-function getSlideMetrics() {
-    if (!slides.length) return { gap: 0, slideWidth: 0 };
+class HorizonSlider {
+    constructor(wrapperElement) {
+        this.wrapper = wrapperElement;
+        this.slider = wrapperElement.querySelector('.slider-container');
+        this.dotsContainer = wrapperElement.querySelector('.nav-dots');
+        this.prevBtn = wrapperElement.querySelector('.nav-arrow.prev');
+        this.nextBtn = wrapperElement.querySelector('.nav-arrow.next');
+        this.slides = this.slider.querySelectorAll('.slide');
+        this.isScrolling = null;
 
-    const style = window.getComputedStyle(slider);
-    const gap = parseInt(style.gap) || 0;
+        this.init();
+    }
 
-    // We use the first slide to determine the base width
-    // OffsetWidth includes padding and border but not margin/gap
-    const slideWidth = slides[0].offsetWidth + gap;
+    /**
+     * Get dynamic metrics for this slider
+     */
+    getSlideMetrics() {
+        if (!this.slides.length) return { gap: 0, slideWidth: 0 };
 
-    return { gap, slideWidth };
-}
+        const style = window.getComputedStyle(this.slider);
+        const gap = parseInt(style.gap) || 0;
+        const slideWidth = this.slides[0].offsetWidth + gap;
 
-/**
- * 2. Initialize Navigation Dots
- * Adaptively creates dots based on how many "steps" are actually reachable in the viewport
- */
-function initDots() {
-    if (!dotsContainer || !slides.length) return;
+        return { gap, slideWidth };
+    }
 
-    dotsContainer.innerHTML = '';
-    const { slideWidth } = getSlideMetrics();
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    /**
+     * Initialize navigation dots adaptively
+     */
+    initDots() {
+        if (!this.dotsContainer || !this.slides.length) return;
 
-    // Calculate how many dots we actually need.
-    // We only need dots for positions that are scrollable.
-    const numDots = Math.max(1, Math.ceil(maxScroll / slideWidth) + 1);
+        this.dotsContainer.innerHTML = '';
+        const { slideWidth } = this.getSlideMetrics();
+        const maxScroll = this.slider.scrollWidth - this.slider.clientWidth;
 
-    for (let i = 0; i < numDots; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Go to section ${i + 1}`);
+        // Calculate how many dots we actually need
+        const numDots = Math.max(1, Math.ceil(maxScroll / slideWidth) + 1);
 
-        dot.addEventListener('click', () => {
-            const targetLeft = Math.min(i * slideWidth, maxScroll);
-            slider.scrollTo({
-                left: targetLeft,
-                behavior: 'smooth'
+        for (let i = 0; i < numDots; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Go to section ${i + 1}`);
+
+            dot.addEventListener('click', () => {
+                const targetLeft = Math.min(i * slideWidth, maxScroll);
+                this.slider.scrollTo({
+                    left: targetLeft,
+                    behavior: 'smooth'
+                });
             });
+            this.dotsContainer.appendChild(dot);
+        }
+    }
+
+    /**
+     * Update active dot based on scroll position
+     */
+    updateActiveDot() {
+        const { slideWidth } = this.getSlideMetrics();
+        if (!slideWidth || !this.dotsContainer) return;
+
+        const scrollLeft = this.slider.scrollLeft;
+        const maxScroll = this.slider.scrollWidth - this.slider.clientWidth;
+
+        // Calculate active index
+        let activeIndex;
+        if (scrollLeft >= maxScroll - 10) {
+            activeIndex = this.dotsContainer.children.length - 1;
+        } else {
+            activeIndex = Math.round(scrollLeft / slideWidth);
+        }
+
+        const dots = this.dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
         });
-        dotsContainer.appendChild(dot);
+    }
+
+    /**
+     * Update arrow visibility and state based on scroll position
+     */
+    updateArrows() {
+        if (!this.prevBtn || !this.nextBtn) return;
+
+        const scrollLeft = this.slider.scrollLeft;
+        const maxScroll = this.slider.scrollWidth - this.slider.clientWidth;
+
+        // Add disabled class if content fits in viewport (nothing to scroll)
+        if (maxScroll <= 1) {
+            this.prevBtn.classList.add('disabled');
+            this.nextBtn.classList.add('disabled');
+            this.prevBtn.disabled = true;
+            this.nextBtn.disabled = true;
+            return;
+        }
+
+        // Remove disabled class if content is scrollable
+        this.prevBtn.classList.remove('disabled');
+        this.nextBtn.classList.remove('disabled');
+
+        // Disable prev arrow at the start
+        if (scrollLeft <= 1) {
+            this.prevBtn.disabled = true;
+            this.prevBtn.classList.add('disabled');
+        } else {
+            this.prevBtn.disabled = false;
+            this.prevBtn.classList.remove('disabled');
+        }
+
+        // Disable next arrow at the end
+        if (scrollLeft >= maxScroll - 1) {
+            this.nextBtn.disabled = true;
+            this.nextBtn.classList.add('disabled');
+        } else {
+            this.nextBtn.disabled = false;
+            this.nextBtn.classList.remove('disabled');
+        }
+    }
+
+    /**
+     * Arrow navigation logic
+     */
+    scrollSteps(direction) {
+        const { slideWidth } = this.getSlideMetrics();
+        const currentScroll = this.slider.scrollLeft;
+
+        let targetScroll;
+        if (direction === 'next') {
+            targetScroll = Math.floor((currentScroll + slideWidth + 10) / slideWidth) * slideWidth;
+        } else {
+            targetScroll = Math.ceil((currentScroll - slideWidth - 10) / slideWidth) * slideWidth;
+        }
+
+        this.slider.scrollTo({
+            left: targetScroll,
+            behavior: 'smooth'
+        });
+    }
+
+    /**
+     * Initialize event listeners
+     */
+    init() {
+        // Arrow click events
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.scrollSteps('prev'));
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.scrollSteps('next'));
+        }
+
+        // Scroll event for updating dots and arrows
+        this.slider.addEventListener('scroll', () => {
+            window.clearTimeout(this.isScrolling);
+            this.isScrolling = setTimeout(() => {
+                this.updateActiveDot();
+                this.updateArrows();
+            }, 50);
+        }, { passive: true });
+
+        // Initial build
+        this.initDots();
+        this.updateArrows();
+    }
+
+    /**
+     * Refresh slider (useful for resize events)
+     */
+    refresh() {
+        this.initDots();
+        this.updateActiveDot();
+        this.updateArrows();
     }
 }
 
 /**
- * 3. Update Active Dot on Scroll
- * Handles the mapping between scroll position and adaptive dots
+ * Initialize all sliders on the page
  */
-function updateActiveDot() {
-    const { slideWidth } = getSlideMetrics();
-    if (!slideWidth) return;
-
-    const scrollLeft = slider.scrollLeft;
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-    // Calculate index. If we are near the very end, highlight the last dot.
-    let activeIndex;
-    if (scrollLeft >= maxScroll - 10) {
-        activeIndex = dotsContainer.children.length - 1;
-    } else {
-        activeIndex = Math.round(scrollLeft / slideWidth);
-    }
-
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === activeIndex);
-    });
-}
+const sliders = [];
+document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
+    sliders.push(new HorizonSlider(wrapper));
+});
 
 /**
- * 4. Arrow Navigation Logic
- * Moves the slider by exactly one slide width (plus gap)
+ * Handle window resize for all sliders
  */
-function scrollSteps(direction) {
-    const { slideWidth } = getSlideMetrics();
-    const currentScroll = slider.scrollLeft;
-
-    // Calculate target scroll point
-    // We additive/subtract slideWidth and round to nearest step to avoid drift
-    let targetScroll;
-    if (direction === 'next') {
-        targetScroll = Math.floor((currentScroll + slideWidth + 10) / slideWidth) * slideWidth;
-    } else {
-        targetScroll = Math.ceil((currentScroll - slideWidth - 10) / slideWidth) * slideWidth;
-    }
-
-    slider.scrollTo({
-        left: targetScroll,
-        behavior: 'smooth'
-    });
-}
-
-/**
- * Event Listeners & Initialization
- */
-
-// Click events for arrows
-if (prevBtn) prevBtn.addEventListener('click', () => scrollSteps('prev'));
-if (nextBtn) nextBtn.addEventListener('click', () => scrollSteps('next'));
-
-// Scroll event for updating dots
-// We use a light debounce/timeout to avoid excessive updates but keep it feeling responsive
-let isScrolling;
-slider.addEventListener('scroll', () => {
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(updateActiveDot, 50);
-}, { passive: true });
-
-// Initial build
-initDots();
-
-// Re-init/Update on resize
-// Important for responsive layouts where slide widths AND reachable dots change
 window.addEventListener('resize', () => {
-    initDots();
-    updateActiveDot();
+    sliders.forEach(slider => slider.refresh());
 });
