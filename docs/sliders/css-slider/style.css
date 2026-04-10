@@ -122,7 +122,8 @@ body {
 }
 
 /* Base Slider Container */
-.slider-wrapper {
+.slider-wrapper,
+.js-horizon-slider {
   position: relative;
   width: 100%;
   margin-bottom: 5rem;

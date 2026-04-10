@@ -1,98 +1,117 @@
-# Lumina Slider | Premium JS-Enhanced Navigation
+# Horizon | Universal Premium Slider
 
-A high-performance, premium slider built with **CSS Scroll-Snap** and enhanced with **JavaScript** for intelligent navigation. This project combines native browser performance with custom UI features like adaptive dots and smart arrows.
-
----
-
-## 🚀 Quick Start
-
-1.  Open `index.html` in your browser.
-2.  Use the mouse wheel, swipe, arrows, or dots to navigate.
+A high-performance, autonomous slider built with **CSS Scroll-Snap** and enhanced with a **Universal JavaScript Module**. Optimized for both vanilla web projects and enterprise platforms like **Magento 2**.
 
 ---
 
-## 🛠 Customization Guide
+## 🚀 One-Class Activation
 
-### 1. Changing the Number of Slides
-The slider is designed to be dynamic. To add or remove slides:
-- Open `index.html`.
-- Locate the `<div class="slider-container" id="slider">` section.
-- Add or remove `<article class="slide">` blocks.
-- **Note:** The JavaScript will automatically detect the new slide count and recalculate the navigation dots.
+The slider is now self-sufficient. You can activate it by simply adding a class and a container.
+
+### Minimal HTML
+You do not need to manually write arrows or dots; the JavaScript will inject them automatically if they are enabled in the options (enabled by default).
 
 ```html
-<!-- Example of a single slide structure -->
-<article class="slide" tabindex="0">
-  <img src="your-image.jpg" alt="Description">
-  <div class="slide-content">
-    <span class="location">Location Name</span>
-    <h3>Slide Title</h3>
-    <p>Subtitle or Price</p>
-    <a href="#" class="btn-primary">Action Button</a>
+<div class="js-horizon-slider">
+  <div class="slider-container">
+    <!-- Your Slides Here -->
+    <article class="slide">...</article>
+    <article class="slide">...</article>
   </div>
-</article>
+</div>
 ```
 
-### 2. Disabling/Enabling Navigation Dots
-To remove the dots entirely:
-- **HTML**: Delete or comment out `<div class="nav-dots" id="dotsContainer"></div>` in `index.html`.
-- **JS**: The script is robust; if it doesn't find the `dotsContainer`, it will simply skip the dot initialization without throwing errors.
+---
 
-To change dot styling (colors, size):
-- Modify the `--dot-size`, `--nav-color`, and `--nav-active` variables in the `:root` section of `style.css`.
+## 🛠 Usage Modes
 
-### 3. Disabling/Enabling Arrows
-To remove the arrows:
-- **HTML**: Delete or comment out the `<button>` elements with classes `nav-arrow prev` and `nav-arrow next`.
-- **CSS**: You can hide them on specific screen sizes by modifying the `.nav-arrow` class in `style.css`. By default, they are hidden on mobile using a media query:
-  ```css
-  @media (max-width: 768px) {
-    .nav-arrow { display: none; }
-  }
-  ```
+### 1. Vanilla JavaScript
+If you are using the slider in a standard HTML/JS project:
 
-To customize the disabled state (when arrows are at boundaries or content fits in viewport):
-- Modify the `.nav-arrow.disabled` class in `style.css`:
-  ```css
-  .nav-arrow.disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-  ```
+```html
+<!-- 1. Include the Script -->
+<script src="path/to/script.js"></script>
 
-### 4. Adjusting Slides Per View
-The slider uses CSS variables to determine how many slides are visible at different breakpoints. Locate these in the `:root` of `style.css`:
+<!-- 2. Initialize All Sliders -->
+<script>
+  // Simple activation for all sliders with the default class
+  HorizonSlider.initAll('.js-horizon-slider');
+
+  // OR initialize a specific slider with custom options
+  new HorizonSlider('#my-special-slider', {
+    arrows: true,
+    dots: false
+  });
+</script>
+```
+
+### 2. Magento 2 (RequireJS)
+The script is [UMD-compliant](https://github.com/umdjs/umd), meaning it works perfectly with Magento's RequireJS system.
+
+**Step 1: Map the component** (in `requirejs-config.js`):
+```javascript
+var config = {
+    map: {
+        '*': {
+            'horizonSlider': 'Project_Module/js/horizon-slider'
+        }
+    }
+};
+```
+
+**Step 2: Initialize in your template or JS file**:
+```javascript
+require(['horizonSlider'], function(HorizonSlider) {
+    // Standard initialization
+    HorizonSlider.initAll('.js-horizon-slider');
+});
+```
+
+---
+
+## ⚙️ Configuration Options
+
+When initializing manually via `new HorizonSlider(element, options)`, you can pass the following:
+
+| Option | Default | Description |
+| :--- | :--- | :--- |
+| `arrows` | `true` | Set to `false` to disable arrow navigation and injection. |
+| `dots` | `true` | Set to `false` to disable dots navigation and injection. |
+| `nextLabel` | `'Next slide'` | Accessibility label for the next arrow. |
+| `prevLabel` | `'Previous slide'` | Accessibility label for the previous arrow. |
+| `activationClass` | `'js-horizon-slider'` | The class used for automatic scanning. |
+| `sliderSelector` | `'.slider-container, .product-items'` | Selector for the inner scrolling element. |
+| `slideSelector` | `'.slide, .product-item'` | Selector for individual slides. |
+
+---
+
+## 🎨 Theming & Breakdown
+
+### CSS Variables
+The aesthetic is controlled via CSS variables in the `:root` of `style.css`:
 
 ```css
 :root {
-  --slides-per-view: 1.2;  /* Default (Mobile) */
-}
-
-@media (min-width: 640px) {
-  :root { --slides-per-view: 2.2; }
-}
-
-@media (min-width: 1024px) {
-  :root { --slides-per-view: 3.5; }
+  --primary: #9d00ff;       /* Main accent color */
+  --slides-per-view: 1.2;    /* How many slides visible (Mobile) */
+  --gap: 24px;              /* Space between slides */
+  --slider-padding: 5%;      /* Container horizontal padding */
 }
 ```
-*Tip: Using decimals (like `1.2`) helps indicate to users that there is more content to scroll to.*
 
-### 5. Theming & Colors
-Change the core look in the `:root` block of `style.css`:
-- `--primary`: The main accent color (default: luxury purple/gold).
-- `--bg-dark`: The background color.
-- `--accent`: Secondary glow colors.
-- `--glass`: The transparency/blur intensity of navigation cards.
+### Breakpoints
+Adjust visibility for different screens:
+- **Mobile**: `1.2` slides
+- **Tablet**: `2.2` slides
+- **Desktop**: `3.5` slides
+- **Wide**: `4.5` slides
 
 ---
 
-## 🧠 Technical Overview
+## 🧠 Technical Highlights
 
-- **Native Scrolling**: Uses standard browser scrolling with `scroll-snap-type: x mandatory`.
-- **Adaptive Dots**: The JS calculates `numDots = Math.ceil(maxScroll / slideWidth) + 1` so that dots only appear for reachable "pages" in the current viewport.
-- **Intelligent Arrows**: Arrows automatically hide when all slides fit in the viewport. When scrollable, they disable at boundaries (prev at start, next at end) with visual feedback.
-- **Hardware Acceleration**: Transitions use `transform` and `opacity` to maintain 60FPS.
-- **Accessibility**: Arrows and dots include `aria-labels`, and slides are focusable via `tabindex`.
-- **Multi-Slider Support**: Multiple independent sliders can coexist on the same page without conflicts.
+- **Universal Export**: Compatible with CommonJS, AMD (RequireJS), and Browser Globals.
+- **Auto-Injection**: Injects missing navigation controls into the DOM automatically.
+- **Hardware Enhanced**: Uses native CSS Scroll-Snap for buttery-smooth mobile swiping.
+- **Dynamic Metrics**: Recalculates dot counts and scroll offsets on window resize.
+- **Focus Control**: Compatible with screen readers and keyboard navigation (Left/Right arrows).

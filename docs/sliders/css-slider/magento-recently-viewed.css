@@ -1,0 +1,126 @@
+/**
+ * Magento Recently Viewed Slider
+ * Mapped to the standard Magento 2 Recently Viewed Products widget structure.
+ * 
+ * Target HTML: .block-viewed-products-grid
+ */
+
+/* 1. SLIDER OVERRIDES (The activation class) */
+.block-viewed-products-grid.js-horizon-slider {
+    position: relative;
+    width: 100%;
+}
+
+/* 2. CONTAINER (The scrolling list) */
+.block-viewed-products-grid .product-items {
+    display: flex !important; /* Override standard Magento grid */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Functional Spacing */
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+    gap: var(--gap, 24px);
+    
+    /* Hide scrollbar */
+    scrollbar-width: none;
+}
+.block-viewed-products-grid .product-items::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. SLIDES (The individual products) */
+.block-viewed-products-grid .product-item {
+    --slides-per-view: 1.2;
+    --gap-val: var(--gap, 24px);
+    
+    /* Calculation for responsive peeking */
+    --gap-count: calc(var(--slides-per-view) - 1);
+    flex: 0 0 calc((100% - (var(--gap-val) * var(--gap-count))) / var(--slides-per-view)) !important;
+    
+    scroll-snap-align: start;
+    margin: 0 !important; /* Remove Magento defaults */
+    position: relative;
+}
+
+/* Breakpoints for Recently Viewed */
+@media (min-width: 640px) {
+    .block-viewed-products-grid .product-item { --slides-per-view: 2.2; }
+}
+@media (min-width: 1024px) {
+    .block-viewed-products-grid .product-item { --slides-per-view: 4.2; }
+}
+
+/* 4. AUTO-INJECTED NAVIGATION */
+
+/* Arrows */
+.block-viewed-products-grid .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.block-viewed-products-grid .nav-arrow.prev { left: -25px; } /* Peek out of the container */
+.block-viewed-products-grid .nav-arrow.next { right: -25px; }
+
+/* Handle mobile accessibility - maybe center arrows or dots only */
+@media (max-width: 768px) {
+    .block-viewed-products-grid .nav-arrow { display: none; }
+}
+
+/* Dots */
+.block-viewed-products-grid .nav-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.block-viewed-products-grid .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.block-viewed-products-grid .dot.active {
+    background: #333;
+    width: 30px;
+    border-radius: 5px;
+}
+
+/* 5. PRODUCT ITEM STYLING HINTS (Functional Layout) */
+.block-viewed-products-grid .product-item-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.block-viewed-products-grid .product-item-photo {
+    display: block;
+    width: 100%;
+}
+
+.block-viewed-products-grid .product-item-details {
+    padding-top: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
