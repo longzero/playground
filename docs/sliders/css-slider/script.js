@@ -49,6 +49,7 @@
 
             this.slides = this.slider.querySelectorAll(this.options.slideSelector);
             this.isScrolling = null;
+            this.observer = null;
 
             // Navigation elements (find or create)
             this.prevBtn = null;
@@ -69,6 +70,33 @@
             if (this.options.dots) this.initDots();
             this.updateArrows();
             this.updateActiveDot();
+
+            // Observe for dynamic content changes
+            this._initObserver();
+        }
+
+        /**
+         * Setup MutationObserver to watch for newly rendered slides
+         */
+        _initObserver() {
+            if (!this.slider) return;
+
+            this.observer = new MutationObserver((mutations) => {
+                let shouldRefresh = false;
+                for (let mutation of mutations) {
+                    if (mutation.type === 'childList') {
+                        shouldRefresh = true;
+                        break;
+                    }
+                }
+                
+                if (shouldRefresh) {
+                    this.refresh();
+                }
+            });
+
+            // Watch for direct children being added/removed in the container
+            this.observer.observe(this.slider, { childList: true, subtree: false });
         }
 
         /**
@@ -261,12 +289,24 @@
         }
 
         /**
-         * Re-initialize logic (useful for resize)
+         * Re-initialize logic (useful for resize or dynamic content updates)
          */
         refresh() {
+            // Re-fetch slides in case they were added/removed dynamically
+            this.slides = this.slider.querySelectorAll(this.options.slideSelector);
+
             if (this.options.dots) this.initDots();
             this.updateActiveDot();
             this.updateArrows();
+        }
+
+        /**
+         * Clean up the slider instance
+         */
+        destroy() {
+            if (this.observer) {
+                this.observer.disconnect();
+            }
         }
 
         /**
