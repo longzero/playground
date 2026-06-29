@@ -39,7 +39,7 @@
             if (!this.container) return;
 
             this.options = { ...HorizonSlider.defaults, ...options };
-            
+
             // Core elements with smart detection
             this.slider = this.container.querySelector(this.options.sliderSelector);
             if (!this.slider) {
@@ -65,7 +65,7 @@
         _init() {
             this._setupElements();
             this._setupEvents();
-            
+
             // Initial render
             if (this.options.dots) this.initDots();
             this.updateArrows();
@@ -89,7 +89,7 @@
                         break;
                     }
                 }
-                
+
                 if (shouldRefresh) {
                     this.refresh();
                 }
@@ -136,7 +136,7 @@
 
             this.container.appendChild(prev);
             this.container.appendChild(next);
-            
+
             this.prevBtn = prev;
             this.nextBtn = next;
         }
@@ -279,7 +279,7 @@
             if (direction === 'next') {
                 targetScroll = Math.floor((currentScroll + slideWidth + 10) / slideWidth) * slideWidth;
             } else {
-                targetScroll = Math.ceil((currentScroll - slideWidth - 10) / slideWidth) * slideWidth;
+                targetScroll = Math.ceil((currentScroll - 2 * slideWidth) / slideWidth) * slideWidth;
             }
 
             this.slider.scrollTo({
@@ -315,7 +315,7 @@
         static initAll(selector = '.js-horizon-slider', options = {}) {
             const elements = document.querySelectorAll(selector);
             const instances = [];
-            
+
             elements.forEach(el => {
                 instances.push(new HorizonSlider(el, options));
             });
