@@ -172,6 +172,11 @@
                 }, 50);
             }, { passive: true });
 
+            this.slider.addEventListener('scrollend', () => {
+                this.updateActiveDot();
+                this.updateArrows();
+            });
+
             // Accessibility: allow keyboard nav
             this.container.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowLeft') this.scrollSteps('prev');
