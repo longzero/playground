@@ -1,0 +1,54 @@
+/* Demo page content only — not part of the popup component */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  max-width: 40rem;
+}
+
+/* Popup component */
+.newsletter-popup {
+  background: #fff; /* Customisation */
+  border: 1px solid #ddd; /* Customisation: drop for a flat/borderless look */
+  border-radius: 8px; /* Customisation */
+  bottom: 1rem; /* Customisation: position on screen */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .12); /* Customisation: drop for a flat look */
+  max-width: 20rem;
+  opacity: 0;
+  padding: 1rem 1.25rem;
+  pointer-events: none;
+  position: fixed;
+  right: 1rem; /* Customisation: position on screen */
+  transform: translateY(120%);
+  transition: transform .4s ease, opacity .4s ease; /* Customisation: animation speed/easing */
+}
+
+.newsletter-popup.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.newsletter-popup__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem; /* Customisation */
+  line-height: 1;
+  position: absolute;
+  right: .5rem;
+  top: .25rem;
+}
+
+.newsletter-popup__text {
+  margin: 0 1.5rem .75rem 0; /* right margin clears the close button */
+}
+
+.newsletter-popup__form {
+  display: flex;
+  gap: .5rem; /* Customisation */
+}
+
+.newsletter-popup__form input {
+  flex: 1;
+  min-width: 0;
+}

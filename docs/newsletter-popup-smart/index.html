@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter popup demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Demo page content only — not part of the popup component -->
+  <header>
+    <h1>Some Company</h1>
+  </header>
+  <main>
+    <p>This page stands in for a real site so you can see the popup in context. Reload it a couple of times (or add <code>?resetPopup</code> to the URL and reload) to see the visit-based behaviour.</p>
+    <p>Scroll around, nothing here matters — the popup logic lives in <code>script.js</code> and doesn't care about page content.</p>
+  </main>
+
+  <div id="newsletter-popup" class="newsletter-popup">
+    <button type="button" class="newsletter-popup__close" aria-label="Close">&times;</button>
+    <p class="newsletter-popup__text">Enjoying the site? Get updates in your inbox.</p>
+    <form class="newsletter-popup__form">
+      <input type="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
