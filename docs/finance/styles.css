@@ -1,0 +1,302 @@
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary: #3b82f6;
+  --section-spacing: 24px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: var(--section-spacing);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.file-input-wrapper {
+  position: relative;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.btn-upload {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-upload:hover {
+  background-color: #2563eb;
+}
+
+.filter-bar {
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: var(--section-spacing);
+  padding: 12px 16px;
+}
+
+.filter-bar label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.filter-bar select,
+.filter-bar input[type="date"],
+.filter-bar input[type="number"] {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  font: inherit;
+  padding: 6px 10px;
+}
+
+.filter-inline {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.filter-inline[hidden] {
+  display: none;
+}
+
+.whatif-checkbox {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.whatif-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.whatif-controls label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.whatif-controls input[type="number"] {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  font: inherit;
+  padding: 6px 10px;
+  width: 90px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.recurring-list {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
+}
+
+@media (max-width: 600px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card--full {
+  grid-column: 1 / -1;
+}
+
+.chart-card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.chart-caption {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin: -12px 0 16px;
+}
+
+.heatmap-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.heatmap-cell {
+  border-radius: 6px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.heatmap-cell-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.heatmap-cell-value {
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.chart-container {
+  position: relative;
+  height: 320px;
+}
+
+.table-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: var(--section-spacing);
+}
+
+.table-section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000;
+    --card-bg: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --primary: #3b82f6;
+  }
+
+  /* vanilla-datatables ships its own light-mode colors that CSS variables don't reach */
+  .dataTable-input,
+  .dataTable-selector {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+  }
+
+  .dataTable-pagination a {
+    color: var(--text-main);
+  }
+
+  .dataTable-pagination a:hover,
+  .dataTable-pagination .active a,
+  .dataTable-pagination .active a:focus,
+  .dataTable-pagination .active a:hover {
+    background-color: var(--border-color);
+  }
+
+  .dataTable-sorter::before {
+    border-top-color: var(--text-muted);
+  }
+
+  .dataTable-sorter::after {
+    border-bottom-color: var(--text-muted);
+  }
+
+  .dataTable-table > thead > tr > th {
+    border-bottom-color: var(--border-color);
+  }
+
+  .dataTable-table > tfoot > tr > th {
+    border-top-color: var(--border-color);
+  }
+
+  .dataTable-wrapper.no-header .dataTable-container {
+    border-top-color: var(--border-color);
+  }
+
+  .dataTable-wrapper.no-footer .dataTable-container {
+    border-bottom-color: var(--border-color);
+  }
+}

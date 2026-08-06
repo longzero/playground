@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Overview Dashboard</title>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!-- Vanilla DataTables -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div>
+        <h1>Financial Dashboard</h1>
+        <p style="margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem;">
+          Client-side CSV visualizer
+        </p>
+      </div>
+      <div class="file-input-wrapper">
+        <label for="csvFileInput" class="btn-upload">Upload CSV File</label>
+        <input type="file" id="csvFileInput" accept=".csv">
+      </div>
+    </header>
+
+    <!-- Date Range Filter -->
+    <div class="filter-bar">
+      <label for="datePreset">Date range</label>
+      <select id="datePreset">
+        <option value="all">All time</option>
+        <option value="thisMonth">This month</option>
+        <option value="lastMonth">Last month</option>
+        <option value="last3">Last 3 months</option>
+        <option value="last6">Last 6 months</option>
+        <option value="last12">Last 12 months</option>
+        <option value="lastN">Last N months&hellip;</option>
+        <option value="custom">Custom range&hellip;</option>
+      </select>
+
+      <span id="lastNWrapper" class="filter-inline" hidden>
+        <input type="number" id="presetMonths" min="1" value="1">
+        <label for="presetMonths">months</label>
+      </span>
+
+      <span id="customRangeWrapper" class="filter-inline" hidden>
+        <label for="rangeFrom">From</label>
+        <input type="date" id="rangeFrom">
+        <label for="rangeTo">To</label>
+        <input type="date" id="rangeTo">
+      </span>
+    </div>
+
+    <!-- KPI Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <div class="card-title">Total Spending (Withdrawals)</div>
+        <div class="card-value" id="kpiSpending">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Total Income (Loads)</div>
+        <div class="card-value" id="kpiIncome">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Net Difference</div>
+        <div class="card-value" id="kpiNet">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Recurring Merchants (detected)</div>
+        <div class="recurring-list" id="recurringList">None detected</div>
+      </div>
+    </div>
+
+    <!-- Income Volatility -->
+    <div class="summary-cards">
+      <div class="card">
+        <div class="card-title">Avg Monthly Income</div>
+        <div class="card-value" id="volAvg">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Min Monthly Income</div>
+        <div class="card-value" id="volMin">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Max Monthly Income</div>
+        <div class="card-value" id="volMax">$0.00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Income Std. Deviation</div>
+        <div class="card-value" id="volStdDev">$0.00</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid">
+      <div class="chart-card chart-card--full">
+        <h2>Balance Over Time</h2>
+        <div class="chart-container">
+          <canvas id="balanceChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h2>Monthly Overview (Income vs. Spending)</h2>
+        <div class="chart-container">
+          <canvas id="monthlyChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h2>Top Spending Merchants</h2>
+        <div class="chart-container">
+          <canvas id="merchantChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h2>Discretionary vs. Fixed Spending</h2>
+        <p class="chart-caption" id="discretionaryCaption"></p>
+        <div class="chart-container">
+          <canvas id="discretionaryChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h2>Savings Rate Trend</h2>
+        <p class="chart-caption">% of income left unspent each month (higher is better). Gaps = no income recorded.</p>
+        <div class="chart-container">
+          <canvas id="savingsRateChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h2>Spending by Day of Week</h2>
+        <p class="chart-caption">Total withdrawals grouped by weekday, in the current date range.</p>
+        <div class="heatmap-row" id="dayOfWeekHeatmap"></div>
+      </div>
+    </div>
+
+    <!-- Runway & What-If -->
+    <div class="table-section">
+      <h2>Runway &amp; What-If</h2>
+      <p class="chart-caption">
+        Projected from the average monthly income/spending in the current date range. Dashed line on
+        the balance chart above shows the projection.
+      </p>
+
+      <div class="whatif-controls">
+        <label class="whatif-checkbox">
+          <input type="checkbox" id="whatIfNoIncome">
+          Assume no income (worst case)
+        </label>
+
+        <label for="whatIfSpendingPct">
+          Adjust discretionary spending: <span id="whatIfSpendingPctLabel">0%</span>
+        </label>
+        <input type="range" id="whatIfSpendingPct" min="-50" max="100" step="5" value="0">
+
+        <label for="whatIfExtraExpense">Extra monthly expense ($)</label>
+        <input type="number" id="whatIfExtraExpense" value="0" step="10">
+      </div>
+
+      <div class="summary-cards">
+        <div class="card">
+          <div class="card-title">Net / Month (adjusted)</div>
+          <div class="card-value" id="whatIfNetMonthly">$0.00</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Runway</div>
+          <div class="card-value" id="whatIfRunway">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Largest Transactions -->
+    <div class="table-section">
+      <h2>Largest Transactions</h2>
+      <p class="chart-caption">Top 10 single withdrawals in the current date range.</p>
+      <table id="largestTransactionsTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Amount ($)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Data Table -->
+    <div class="table-section">
+      <h2>Transaction History</h2>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Loads ($)</th>
+            <th>Withdrawal ($)</th>
+            <th>Balance ($)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/projection.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
